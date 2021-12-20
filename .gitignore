@@ -71,3 +71,4 @@ node_modules/
 .publish/
 .idea/
 .c9/
+/.jekyll-cache/
