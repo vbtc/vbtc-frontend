@@ -1,32 +1,41 @@
-var fs = require('fs');
-var path = require('path');
-var gulp = require('gulp');
-var deploy = require('gulp-gh-pages');
-var exec = require("child_process").exec;
-var replace = require('gulp-replace-task');
-var git = require('git-rev-sync');
-var prompt = require('gulp-prompt');
-var yaml = require('js-yaml');
-var runSequence = require('run-sequence');
-var url = require('url');
-var branch = 'gh-pages';
+const fs = require('fs');
+//var path = require('path');
+const gulp = require('gulp');
+const deploy = require('gulp-gh-pages');
+const exec = require("child_process").exec;
+const replace = require('gulp-replace-task');
+const git = require('git-rev-sync');
+const prompt = require('gulp-prompt');
+const yaml = require('js-yaml');
+const runSequence = require('run-sequence');
+//const url = require('url');
+let branch = 'gh-pages';
 
-var newUrl = '';
-var newBaseUrl = '';
+let newUrl = '';
+let newBaseUrl = '';
 
-var URL_MSG = "Your Domain: \n\nThe name of your domain."+
+const URL_MSG = "Your Domain: \n\nThe name of your domain."+
               "\ne.g.:\nhttps://username.github.io or https://myexchange.com \n\ndefault: ";
 
-var BASEURL_MSG = "Your Base URL: \n\nYou can choose a base url followed by your domain:"+
+const BASEURL_MSG = "Your Base URL: \n\nYou can choose a base url followed by your domain:"+
                   "\ne.g.:\n/mybaseurl \n\nOr Just: `/`\n\nIt will result as"+
                   " https://myexchange.com/mybaseurl \n\ndefault: ";
 
-var BRANCH_MSG = "Github Branch: \n\n"+
+const BRANCH_MSG = "Github Branch: \n\n"+
                  "If your using your repository as `organization.github.io` you should use the `master` branch,\n"+
                  "otherwise, `gh-pages` branch."+
                  "\n\nSee more at: https://help.github.com/articles/user-organization-and-project-pages/"+
                  "\n\nChoose: ";
 
+function resolve(from, to) {
+    const resolvedUrl = new URL(to, new URL(from, 'resolve://'));
+    if (resolvedUrl.protocol === 'resolve:') {
+        // `from` is a relative URL.
+        const { pathname, search, hash } = resolvedUrl;
+        return pathname + search + hash;
+    }
+    return resolvedUrl.toString();
+}
 
 gulp.task('build', function(done){
     console.log('Building...');
@@ -41,13 +50,13 @@ gulp.task('build', function(done){
 });
 
 gulp.task('config', function(done){
-    var rev = git.short();
-    var config = yaml.safeLoad(fs.readFileSync('./_config.yml'));
+    const rev = git.short();
+    const config = yaml.safeLoad(fs.readFileSync('./_config.yml', ''));
 
     if(config.baseurl === undefined)
         return done(new Error('Baseurl not defined'));
 
-    var baseUrl = config.baseurl;
+    //const baseUrl = config.baseurl;
 
     return gulp.src('_config.yml')
     .pipe(prompt.prompt({
@@ -113,7 +122,7 @@ gulp.task('deployBranch', function(done){
 
 gulp.task('deploy', function(done){
     runSequence('config', 'build', 'deployBranch', function(){
-        console.log('\nOpen your browser at: '+ url.resolve(newUrl, newBaseUrl));
+        console.log('\nOpen your browser at: '+ resolve(newUrl, newBaseUrl));
         console.log('Done');
     })
 });
