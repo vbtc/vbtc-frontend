@@ -32,7 +32,7 @@
           }
 
           .dropdown-menu {
-            min-width: 0px;
+            min-width: 0;
             .btn-show-cum-qty, .btn-show-fees{
               @extend a;
               text-align: right;
@@ -41,7 +41,7 @@
             .active {
               box-shadow: none;
               padding-right: 10px!important;
-              @extend a:hover;
+              @extend a, :hover;
             }
           }
         }
