@@ -1,5 +1,4 @@
 const fs = require('fs');
-//var path = require('path');
 const gulp = require('gulp');
 const deploy = require('gulp-gh-pages');
 const exec = require("child_process").exec;
@@ -7,8 +6,6 @@ const replace = require('gulp-replace-task');
 const git = require('git-rev-sync');
 const prompt = require('gulp-prompt');
 const yaml = require('js-yaml');
-const runSequence = require('run-sequence');
-//const url = require('url');
 let branch = 'gh-pages';
 
 let newUrl = '';
@@ -42,7 +39,6 @@ gulp.task('build', function(done){
     exec('jekyll build', function(err, stdout, stderr){
         if(err)
             done(err);
-
         console.log(stdout);
         console.log(stderr);
         done();
@@ -51,7 +47,7 @@ gulp.task('build', function(done){
 
 gulp.task('config', function(done){
     const rev = git.short();
-    const config = yaml.safeLoad(fs.readFileSync('./_config.yml', ''));
+    const config = yaml.load(fs.readFileSync('./_config.yml', ''));
 
     if(config.baseurl === undefined)
         return done(new Error('Baseurl not defined'));
@@ -84,9 +80,9 @@ gulp.task('config', function(done){
         message: BRANCH_MSG,
         choices: ['master', 'gh-pages']
     }, function(res){
-        console.log('Git Rev : '+rev);
-        console.log('Branch  : '+res.branch);
-        console.log('BaseUrl : '+newBaseUrl);
+        console.log('Git Rev : ' + rev);
+        console.log('Branch  : ' + res.branch);
+        console.log('BaseUrl : ' + newBaseUrl);
 
         branch = res.branch;
     }))
@@ -120,11 +116,14 @@ gulp.task('deployBranch', function(done){
     .pipe(deploy({ branch: branch }));
 });
 
-gulp.task('deploy', function(done){
-    runSequence('config', 'build', 'deployBranch', function(){
+
+gulp.task('deploy', gulp.series('config', 'build', 'deployBranch', function(){
         console.log('\nOpen your browser at: '+ resolve(newUrl, newBaseUrl));
         console.log('Done');
     })
-});
+);
 
-gulp.task('default',[]);
+gulp.task('default', function(cb) {
+    // body omitted
+    cb();
+});
