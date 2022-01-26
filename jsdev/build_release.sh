@@ -9,7 +9,7 @@ rm -rf ./bitex/ui/*.soy.js
 #############################################
 # set defaults if they're not provided
 #############################################
-LANG=${LANG:=en_US}
+LANG="en_US.UTF8"
 THEME=${THEME:=default}
 
 #############################################
