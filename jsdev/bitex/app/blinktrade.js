@@ -3960,10 +3960,10 @@ bitex.app.BlinkTrade.prototype.onUserEnableTwoFactor_ = function(e){
     if (has_code && !msg['TwoFactorEnabled']) {
 
       /**
-       * @desc Error message when user missed the google authentication code
+       * @desc Error message when user missed the Google authentication code
        */
       var MSG_ERROR_SETTING_TWO_FACTOR = goog.getMsg('Wrong authentication code. ' +
-         'Please, make sure that you are using Google Authenticator and your cellphone time is exact synched with google servers.');
+         'Please, make sure that you are using Google Authenticator and your cellphone time is exact synced with google servers.');
 
       this.showDialog(MSG_ERROR_SETTING_TWO_FACTOR);
     }
