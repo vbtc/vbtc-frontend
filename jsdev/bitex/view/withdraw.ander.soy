@@ -1,16 +1,14 @@
 {namespace bitex.view.WithdrawView.templates}
 
 
-/**
-  * @param reason_id
-  * @param custom_reason_id
-  */
-{template .CancelWithdrawDialogContent}
+{template CancelWithdrawDialogContent}
+  {@param reason_id: string}
+  {@param custom_reason_id: string}
 <p>{msg desc="Cancel withdraw dialog message"}Enter a reason for cancelling the user withdraw{/msg}</p>
 <form class="form-horizontal">
   <fieldset>
     <div class="control-group">
-      <label class="control-label" for="{$reason_id}" >{msg desc="Cancel withdraw reason label"}Reason:{/msg}</label>
+      <label class="control-label" for="{$reason_id}">{msg desc="Cancel withdraw reason label"}Reason:{/msg}</label>
       <div class="controls">
         <select id="{$reason_id}">
           <option value="0">{msg desc="reason for cancelling withdraw"}Other{/msg}</option>
@@ -33,6 +31,3 @@
   </fieldset>
 </form>
 {/template}
-
-
-

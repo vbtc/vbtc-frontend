@@ -1,12 +1,11 @@
 {namespace bitex.view.SideBarView.templates}
 
-/**
-  * @param pattern
-  * @param desc
-  * @param variables
-  * @param formula
-  */
-{template .YourAccountPortfolioValue}
+
+{template YourAccountPortfolioValue}
+  {@param pattern: string}
+  {@param desc: string}
+  {@param variables: string}
+  {@param formula: string}
   <span class="balance-currency__name">
     <small title="{msg desc="Approx. balance help message in the Your Balance widget in the Sidebar"}
         Your total balance in {$desc} according to the most recent trade.
@@ -19,113 +18,106 @@
   {sp}
   <span class="balance-currency__amount">
     <span class="bitex-model"
-        data-model-key-list="{$variables}"
-        data-model-formula="{$formula}"
-        data-model-formatter="currency"
-        data-model-formatter-pattern="{$pattern}"
-        data-blink-class="balance-info-blink">
+          data-model-key-list="{$variables}"
+          data-model-formula="{$formula}"
+          data-model-formatter="currency"
+          data-model-formatter-pattern="{$pattern}"
+          data-blink-class="balance-info-blink">
     </span>
   </span>
 {/template}
 
 
-/**
-  * @param id
-  * @param boxes
-  */
-{template .YourAccountSummary}
-  {foreach $box in $boxes}
+{template YourAccountSummary}
+  {@param id: string}
+  {@param boxes: ?}
+  {for $box in $boxes}
     <ul class="balance__currencies balance__currency__{$box['title']}">
 
-        {if $box['title'] == 'fees' or $box['title'] == 'bonus' }
-            <li class="balance-currency">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <strong style="text-transform:uppercase;">{$box['title']}</strong>
-                    <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    {foreach $balance_info in $box['balances']}
-                        <li role="presentation" style="padding:6px!important;border-bottom:1px solid #ddd" >
-                            <span class="balance-currency__name">{$balance_info['currency']}</span>
-                            {sp}
-                            <span class="balance-currency__amount balance-dropdown bitex-model"
-                                    data-model-key-list="Balance_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
-                                    data-model-formula="Balance_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']} / 100000000"
-                                    data-model-formatter="currency"
-                                    data-model-formatter-pattern="{$balance_info['currencyPattern']}"
-                                    data-blink-class="balance-info-blink"></span>
-                            </span>
-                            {sp}
-                            <small title="{msg desc="Unconfirmed deposits"}Unconfirmed deposits{/msg}"
-                                        class="bitex-model"
-                                        data-model-action="show_element"
-                                        data-model-key-list="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
-                                        data-model-formula="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}">
-                                <em>
-                                <span class="bitex-model"
-                                        data-model-key-list="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
-                                        data-model-formula="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']} / 100000000"
-                                        data-model-formatter="currency"
-                                        data-model-formatter-pattern="{$balance_info['currencyPattern']}"
-                                        data-blink-class="balance-info-blink"></span>
-                                </em>
-                            </small>
-                        </li>
-                    {/foreach}
-                </ul>
-            </li>
-        {else}
-
-            {foreach $balance_info in $box['balances']}
-            <!-- .balance-currency -->
-            <li class="balance-currency">
+      {if $box['title'] == 'fees' or $box['title'] == 'bonus' }
+        <li class="balance-currency">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            <strong style="text-transform:uppercase;">{$box['title']}</strong>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            {for $balance_info in $box['balances']}
+              <li role="presentation" style="padding:6px!important;border-bottom:1px solid #ddd">
                 <span class="balance-currency__name">{$balance_info['currency']}</span>
                 {sp}
-                <span class="balance-currency__amount bitex-model"
-                        data-model-key-list="Balance_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
-                        data-model-formula="Balance_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']} / 100000000"
-                        data-model-formatter="currency"
-                        data-model-formatter-pattern="{$balance_info['currencyPattern']}"
-                        data-blink-class="balance-info-blink"></span>
-                </span>
+                <span class="balance-currency__amount balance-dropdown bitex-model"
+                      data-model-key-list="Balance_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
+                      data-model-formula="Balance_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']} / 100000000"
+                      data-model-formatter="currency"
+                      data-model-formatter-pattern="{$balance_info['currencyPattern']}"
+                      data-blink-class="balance-info-blink"></span>
                 {sp}
                 <small title="{msg desc="Unconfirmed deposits"}Unconfirmed deposits{/msg}"
-                            class="bitex-model"
-                            data-model-action="show_element"
-                            data-model-key-list="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
-                            data-model-formula="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}">
-                    <em>
-                    <span class="bitex-model"
-                            data-model-key-list="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
-                            data-model-formula="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']} / 100000000"
-                            data-model-formatter="currency"
-                            data-model-formatter-pattern="{$balance_info['currencyPattern']}"
-                            data-blink-class="balance-info-blink"></span>
-                    </em>
+                       class="bitex-model"
+                       data-model-action="show_element"
+                       data-model-key-list="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
+                       data-model-formula="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}">
+                  <em>
+                                <span class="bitex-model"
+                                      data-model-key-list="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
+                                      data-model-formula="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']} / 100000000"
+                                      data-model-formatter="currency"
+                                      data-model-formatter-pattern="{$balance_info['currencyPattern']}"
+                                      data-blink-class="balance-info-blink"></span>
+                  </em>
                 </small>
-                {sp}
-                {if $balance_info['showDeposit'] }
-                <a href="#" data-action="deposit" data-currency="{$balance_info['currency']}" class="btn-balance btn-deposit">
-                    <i data-action="deposit" data-currency="{$balance_info['currency']}" class="glyphicon glyphicon-save"></i>
-                </a>
-                {/if}
-                {sp}
-                {if $balance_info['showWithdraw'] }
-                <a href="#" data-action="withdraw" data-currency="{$balance_info['currency']}" class="btn-balance btn-withdraw">
-                    <i data-action="withdraw" data-currency="{$balance_info['currency']}" class="glyphicon glyphicon-open"></i>
-                </a>
-                <div class="separator"></div>
-                {/if}
-            </li>
-            <!-- /.balance-currency -->
+              </li>
+            {/for}
+          </ul>
+        </li>
+      {else}
 
-            {/foreach}
-        {/if}
-          <li id="{$id}_portfolio_value" class="balance-currency">
+        {for $balance_info in $box['balances']}
+          <!-- .balance-currency -->
+          <li class="balance-currency">
+            <span class="balance-currency__name">{$balance_info['currency']}</span>
+            {sp}
+            <span class="balance-currency__amount bitex-model"
+                  data-model-key-list="Balance_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
+                  data-model-formula="Balance_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']} / 100000000"
+                  data-model-formatter="currency"
+                  data-model-formatter-pattern="{$balance_info['currencyPattern']}"
+                  data-blink-class="balance-info-blink"></span>
+            {sp}
+            <small title="{msg desc="Unconfirmed deposits"}Unconfirmed deposits{/msg}"
+                   class="bitex-model"
+                   data-model-action="show_element"
+                   data-model-key-list="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
+                   data-model-formula="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}">
+              <em>
+                    <span class="bitex-model"
+                          data-model-key-list="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
+                          data-model-formula="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']} / 100000000"
+                          data-model-formatter="currency"
+                          data-model-formatter-pattern="{$balance_info['currencyPattern']}"
+                          data-blink-class="balance-info-blink"></span>
+              </em>
+            </small>
+            {sp}
+            {if $balance_info['showDeposit'] }
+              <a href="#" data-action="deposit" data-currency="{$balance_info['currency']}" class="btn-balance btn-deposit">
+                <i data-action="deposit" data-currency="{$balance_info['currency']}" class="glyphicon glyphicon-save"></i>
+              </a>
+            {/if}
+            {sp}
+            {if $balance_info['showWithdraw'] }
+              <a href="#" data-action="withdraw" data-currency="{$balance_info['currency']}" class="btn-balance btn-withdraw">
+                <i data-action="withdraw" data-currency="{$balance_info['currency']}" class="glyphicon glyphicon-open"></i>
+              </a>
+              <div class="separator"></div>
+            {/if}
           </li>
-     </ul>
-  {/foreach}
+          <!-- /.balance-currency -->
+
+        {/for}
+      {/if}
+      <li id="{$id}_portfolio_value" class="balance-currency">
+      </li>
+    </ul>
+  {/for}
 {/template}
-
-
-

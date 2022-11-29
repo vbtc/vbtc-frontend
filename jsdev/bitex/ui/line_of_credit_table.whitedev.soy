@@ -1,143 +1,136 @@
 {namespace bitex.ui.LineOfCreditTable.templates}
 
-/**
- * @param button1
- * @param button2
- * @param? button3
- * @param dataRow
- */
-{template .btnGroup}
+
+{template btnGroup}
+  {@param button1: string}
+  {@param button2: string}
+  {@param? button3: string}
+  {@param dataRow: string}
   <div class="btn-group">
     {if $button1 == 'info'}
-      {call .btnInfo }
+      {call btnInfo}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
     {if $button1 == 'enable'}
-      {call .btnEnable }
+      {call btnEnable}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
     {if $button1 == 'disable'}
-      {call .btnDisable }
+      {call btnDisable}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
     {if $button1 == 'get'}
-      {call .btnGet }
+      {call btnGet}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
     {if $button1 == 'payback'}
-      {call .btnPayback }
+      {call btnPayback}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
 
     {if $button2 == 'info'}
-      {call .btnInfo }
+      {call btnInfo}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
     {if $button2 == 'enable'}
-      {call .btnEnable }
+      {call btnEnable}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
     {if $button2 == 'disable'}
-      {call .btnDisable }
+      {call btnDisable}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
     {if $button2 == 'get'}
-      {call .btnGet }
+      {call btnGet}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
     {if $button2 == 'payback'}
-      {call .btnPayback }
+      {call btnPayback}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
 
     {if $button3 == 'info'}
-      {call .btnInfo }
+      {call btnInfo}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
     {if $button3 == 'enable'}
-      {call .btnEnable }
+      {call btnEnable}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
     {if $button3 == 'disable'}
-      {call .btnDisable }
+      {call btnDisable}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
     {if $button3 == 'get'}
-      {call .btnGet }
+      {call btnGet}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
     {if $button3 == 'payback'}
-      {call .btnPayback }
+      {call btnPayback}
         {param dataRow: $dataRow /}
       {/call}
     {/if}
   </div>
 {/template}
 
-/**
- * @param dataRow
- */
-{template .btnInfo}
+
+{template btnInfo}
+  {@param dataRow: string}
   <a class="btn btn-mini btn-info btn-line-of-credit-action btn-line-of-credit-info" href="#"
-  data-action="INFO" data-row="{$dataRow}">
+     data-action="INFO" data-row="{$dataRow}">
     {msg desc="info"}info{/msg}
     <i class="icon-white icon-search"></i>
   </a>
 {/template}
 
-/**
- * @param dataRow
- */
-{template .btnEnable}
+
+{template btnEnable}
+  {@param dataRow: string}
   <a class="btn btn-mini btn-success btn-line-of-credit-action btn-line-of-credit-enable" href="#"
-   data-action="ENABLE" data-row="{$dataRow}">
+     data-action="ENABLE" data-row="{$dataRow}">
     {msg desc="Enable"}Enable{/msg}
     <i class="icon-white icon-check"></i>
   </a>
 {/template}
 
-/**
- * @param dataRow
- */
-{template .btnDisable}
+
+{template btnDisable}
+  {@param dataRow: string}
   <a class="btn btn-mini btn-info btn-line-of-credit-action btn-line-of-credit-disable" href="#"
-   data-action="DISABLE" data-row="{$dataRow}">
+     data-action="DISABLE" data-row="{$dataRow}">
     {msg desc="Disable"}Disable{/msg}
     <i class="icon-white icon-remove"></i>
   </a>
 {/template}
 
-/**
- * @param dataRow
- */
-{template .btnGet}
+
+{template btnGet}
+  {@param dataRow: string}
   <a class="btn btn-mini btn-success btn-line-of-credit-action btn-line-of-credit-get" href="#"
-   data-action="GET" data-row="{$dataRow}">
+     data-action="GET" data-row="{$dataRow}">
     {msg desc="Get"}Get{/msg}
     <i class="icon-white icon-upload-alt"></i>
   </a>
 {/template}
 
-/**
- * @param dataRow
- */
-{template .btnPayback}
+{template btnPayback}
+  {@param dataRow: string}
   <a class="btn btn-mini btn-primary btn-line-of-credit-action btn-line-of-credit-payback" href="#"
-   data-action="PAYBACK" data-row="{$dataRow}">
+     data-action="PAYBACK" data-row="{$dataRow}">
     {msg desc="Pay back"}Pay back{/msg}
     <i class="icon-white icon-download-alt"></i>
   </a>

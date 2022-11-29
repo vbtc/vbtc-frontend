@@ -1,56 +1,51 @@
 {namespace bitex.ui.RemittancesBox.templates}
 
-/**
-  * @param id
-  * @param remittance_data_record
-  */
-{template .RemittancesBoxCurrency}
+
+{template RemittancesBoxCurrency}
+  {@param id: string}
+  {@param remittance_data_record: ?}
   <tr>
     <td style=""><strong>{$remittance_data_record[0]}</strong></td>
     <td style="">
       <!-- {$id} -->
-      {foreach $field_data in $remittance_data_record[3]}
+      {for $field_data, $i in $remittance_data_record[3]}
         <span class="bitex-model"
-        data-model-key-list="{$field_data[1]}"
-        data-model-formula="{$field_data[0]}"
-        data-model-formatter="currency"
-        data-model-formatter-pattern="{$remittance_data_record[2]}"
-        data-blink-class="md-blink"></span>
-        {if not isLast($field_data)}{sp}/{sp}{/if}
-      {/foreach}
+              data-model-key-list="{$field_data[1]}"
+              data-model-formula="{$field_data[0]}"
+              data-model-formatter="currency"
+              data-model-formatter-pattern="{$remittance_data_record[2]}"
+              data-blink-class="md-blink"></span>
+        {if $i + 1 < length($field_data)}{sp}/{sp}{/if}
+      {/for}
     </td>
   </tr>
 {/template}
 
-/**
-  * @param id
-  * @param remittance_data_table
-  */
-{template .RemittancesBox}
-  <div id="{$id}" class="remittance-box">
 
-  {foreach $remittance_data_record in $remittance_data_table}
-    {if length($remittance_data_record) == 1 }
-      {if not isFirst($remittance_data_record)}
+// TODO: This is probably incorrect
+{template RemittancesBox}
+  {@param id: string}
+  {@param remittance_data_table: ?}
+  <div id="{$id}" class="remittance-box">
+    {for $remittance_data_record, $i in $remittance_data_table}
+      {if length($remittance_data_record) == 1}
+        <table id="{$id}_{$remittance_data_record[0]}" style="display:none" class="ls-table remittance-box-table">
+          <thead>
+          <tr>
+            <td colspan="2">
+              <strong>{msg desc="Remittance box title"}Be your own Remittance Service{/msg}</strong>
+            </td>
+          </tr>
+          </thead>
+          <tbody class="remittance-box-content">
           </tbody>
         </table>
-      {/if}
-      <table id="{$id}_{$remittance_data_record[0]}" style="display:none" class="ls-table remittance-box-table">
-      <thead>
-        <tr>
-          <td colspan="2">
-            <strong>{msg desc="Remittance box title"}Be your own Remittance Service{/msg}</strong>
-          </td>
-        </tr>
-      </thead>
-      <tbody class="remittance-box-content">
-    {else}
-        {call .RemittancesBoxCurrency}
+      {else}
+        {call RemittancesBoxCurrency}
           {param id: $id /}
           {param remittance_data_record: $remittance_data_record /}
         {/call}
-    {/if}
-  {/foreach}
+      {/if}
+    {/for}
   </div>
 {/template}
-

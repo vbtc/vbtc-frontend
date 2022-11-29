@@ -1,70 +1,69 @@
 {namespace bitex.ui.DataGrid.templates}
 
-/**
- */
-{template .SortIconUp}
+
+{template SortIconUp}
   <div id='id_sort_icon' class='datagrid-sort'>
-    <i class='ls-ico-chevron-up datagrid-sort' />
+    <i class='ls-ico-chevron-up datagrid-sort'></i>
   </div>
 {/template}
 
-/**
- */
-{template .SortIconDown}
+
+{template SortIconDown}
   <div id='id_sort_icon' class='datagrid-sort'>
-    <i class='ls-ico-chevron-down datagrid-sort' />
+    <i class='ls-ico-chevron-down datagrid-sort'></i>
   </div>
 {/template}
 
-/**
-  * @param? title
-  * @param? id
-  * @param? wrapper_height Defaults to 360px
-  * @param? base_class
-  * @param? show_search
-  * @param? search_placeholder
-  * @param? button_filters
-  */
-{template .DataGrid}
-  <div {if $id}id="{$id}"{/if}  class="fuelux {if $base_class}{$base_class}{/if} col-md-12 no-padding" style="width:100%;">
+
+{template DataGrid}
+  {@param? title: string}
+  {@param? id: string}
+  {@param? wrapper_height: int}  // Defaults to 360px
+  {@param? base_class: string}
+  {@param? show_search: bool}
+  {@param? search_placeholder: string}
+  {@param? button_filters: ?}
+  <div {if $id}id="{$id}"{/if}  class="fuelux {if $base_class}{$base_class}{/if} col-md-12 no-padding"
+       style="width:100%;">
     <table class="ls-table ls-table-striped datagrid datagrid-stretch-header">
       <thead>
-        <tr>
-          <th colspan="4" {if not $title and not $show_search}style="display: none;"{/if}>
+      <tr>
+        <th colspan="4" {if not $title and not $show_search}style="display: none;"{/if}>
           
-            <header class="ls-info-header">
+          <header class="ls-info-header">
             <h2 class="ls-title-3 ls-ico-text">
-                <span class="datagrid-header-title"  {if not $title}style="display: none;"{/if} ><strong>{$title}</strong></span>
+              <span class="datagrid-header-title"  {if not $title}style="display: none;"{/if} ><strong>{$title}</strong></span>
             </h2>
-            </header>
-            <div class="datagrid-header-left col-md-12" {if not $show_search}style="display: none;"{/if}>
-                <div class="ls-input-group col-md-4 no-padding search datagrid-search">
-                  <input type="text" style="height:initial" class="col-md-8" placeholder="{$search_placeholder}">
-                  <button type="button" style="line-height:initial" class="ls-btn col-md-4"><i class="ls-ico-search"></i></button>
-                </div>
-
-                <div class="datagrid-header-right">
-                {if $button_filters}
-                    <div class="select filter datagrid-filter" data-resize="auto">
-                    <button type="button" data-toggle="dropdown" class="ls-btn-primary dropdown-toggle">
-                        {foreach $button in $button_filters}
-                        {if isFirst($button)}
-                            <span class="dropdown-label" style="min-width: 111px;color:white">{$button['label']}</span>
-                        {/if}
-                        {/foreach}
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        {foreach $button in $button_filters}
-                        <li data-value="{$button['value']}"><a href="#">{$button['label']}</a></li>
-                        {/foreach}
-                    </ul>
-                    </div>
-                {/if}
-                </div>
+          </header>
+          <div class="datagrid-header-left col-md-12" {if not $show_search}style="display: none;"{/if}>
+            <div class="ls-input-group col-md-4 no-padding search datagrid-search">
+              <input type="text" style="height:initial" class="col-md-8" placeholder="{$search_placeholder}">
+              <button type="button" style="line-height:initial" class="ls-btn col-md-4"><i class="ls-ico-search"></i>
+              </button>
             </div>
-          </th>
-        </tr>
+
+            <div class="datagrid-header-right">
+              {if $button_filters}
+                <div class="select filter datagrid-filter" data-resize="auto">
+                  <button type="button" data-toggle="dropdown" class="ls-btn-primary dropdown-toggle">
+                    {for $button, $i in $button_filters}
+                      {if $i == 0}
+                        <span class="dropdown-label" style="min-width: 111px;color:white">{$button['label']}</span>
+                      {/if}
+                    {/for}
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    {for $button in $button_filters}
+                      <li data-value="{$button['value']}"><a href="#">{$button['label']}</a></li>
+                    {/for}
+                  </ul>
+                </div>
+              {/if}
+            </div>
+          </div>
+        </th>
+      </tr>
       </thead>
     </table>
     <div class="datagrid-stretch-wrapper" style="height:{if $wrapper_height}{$wrapper_height}{else}360{/if}px;">

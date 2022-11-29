@@ -1,14 +1,12 @@
 {namespace bitex.templates}
 
 
-/**
-  * @param permissions
-  */
-{template .AlgoPermissionsDialogContent}
+{template AlgoPermissionsDialogContent}
+  {@param permissions: list<string>}
   <p class="lead"> {msg desc="Algorithm trading request permmissions dialog content"}This algorithm is requesting your permission to:{/msg}</p>
 
   <ul class="list-unstyled" style="line-height: 2">
-  {foreach $permission in  $permissions }
+  {for $permission in $permissions}
     <li><span class="fa fa-check text-success"></span>
     {switch $permission}
       {case 'notification'}
@@ -35,28 +33,27 @@
         {$permission}
     {/switch}
     </li>
-  {/foreach}
+  {/for}
   </ul>
 {/template}
 
-/**
-  * @param label
-  * @param key
-  * @param password
-  * @param secret
-  */
-{template .APIKeyCreatedDialogContent}
+
+{template APIKeyCreatedDialogContent}
+  {@param label: string}
+  {@param key: string}
+  {@param password: string}
+  {@param secret: string}
   <p>
-   {msg desc="API Key created dialog description"}The API Key '{{$label}}' has been created successfully. Please make sure to store the credentials below in a secure location.{/msg}
+   {msg desc="API Key created dialog description"}The API Key '{$label}' has been created successfully. Please make sure to store the credentials below in a secure location.{/msg}
   </p>
 
   <dl class="dl-horizontal">
     <dt>{msg desc="API Key label on API Keycreated dialog"}API Key{/msg}</dt>
-    <dd>{{$key}}</dd>
+    <dd>{$key}</dd>
     <dt>{msg desc="API Password label on API Keycreated dialog"}API Password{/msg}</dt>
-    <dd>{{$password}}</dd>
+    <dd>{$password}</dd>
     <dt>{msg desc="API Secret label on API Keycreated dialog"}API Secret{/msg}</dt>
-    <dd>{{$secret}}</dd>
+    <dd>{$secret}</dd>
   </dl>
 
   <div class="alert alert-error">
@@ -68,10 +65,9 @@
 {/template}
 
 
-/**
-  * @param msg_customer_detail
-  */
-{template .CustomerDetailDialog}
+// TODO: Add proper typing for this one, investigate usage
+{template CustomerDetailDialog}
+  {@param msg_customer_detail: ?}
   <div class="row">
     <div class="span6">
       {msg desc="Customer username"}Username:{/msg}{$msg_customer_detail['Username']}
@@ -79,11 +75,10 @@
   </div>
 {/template}
 
-/**
-  * @param error_message
-  * @param error_code
-  */
-{template .ErrorDialogContent}
+
+{template ErrorDialogContent}
+  {@param error_message: string}
+  {@param error_code: string}
   <p class="lead">{$error_message}</p>
   <dl class="dl-horizontal">
      <dt>{msg desc="Error code label on error dialog content"}Error code{/msg}</dt>
@@ -91,77 +86,73 @@
   </dl>
 {/template}
 
-/**
-  * @param filename
-  */
-{template .FileViewDialogContent}
+
+{template FileViewDialogContent}
+  {@param filename: string}
   <img src="{$filename}" style="width:500px"/>
 {/template}
 
-/**
-  * @param depositDetailData
-  * @param depositReceiptList
-  */
-{template .DepositDetailDialogContent}
+
+{template DepositDetailDialogContent}
+  {@param depositDetailData: ?}
+  {@param depositReceiptList: ?}
   <table class="table table-bordered table-condensed">
     <tbody>
-      {foreach $data in $depositDetailData}
+      {for $data in $depositDetailData}
         <tr>
-          <td>{{$data['key']}}{sp}:</td>
-          <td>{{$data['value']}}</td>
+          <td>{$data['key']}{sp}:</td>
+          <td>{$data['value']}</td>
         </tr>
-      {/foreach}
-      {if $depositReceiptList} 
+      {/for}
+      {if $depositReceiptList}
         <tr>
           <td>Recibo:</td>
           <td>
-          {foreach $receipt in $depositReceiptList}
-            <a href="{{$receipt['url']}}" target="_blank">{msg desc="Download picture link on deposit receipt dialog content"}Download{/msg}</a>{sp}
-          {/foreach}
+          {for $receipt in $depositReceiptList}
+            <a href="{$receipt['url']}" target="_blank">{msg desc="Download picture link on deposit receipt dialog content"}Download{/msg}</a>{sp}
+          {/for}
           </td>
         </tr>
 
-        {foreach $receipt in $depositReceiptList}
+        {for $receipt in $depositReceiptList}
           <tr>
             <td colspan="2">
               {if $receipt['type'] == 'image' }
-                <img width="100%" src="{{$receipt['url']}}"/>
+                <img width="100%" src="{$receipt['url']}"/>
               {else}
                 {if $receipt['type'] == 'pdf' }
-                  <iframe src="https://docs.google.com/gview?url={{$receipt['url']}}&embedded=true" style="width:515px; height:300px;" frameborder="0" />
+                  <iframe src="https://docs.google.com/gview?url={$receipt['url']}&embedded=true" style="width:515px; height:300px;" frameborder="0"></iframe>
                 {/if}
               {/if}
             </td>
           </tr>
-        {/foreach}
+        {/for}
       {/if}
     </tbody>
   </table>
 {/template}
 
-/**
-  * @param depositReceiptList
-  */
-{template .DepositReceiptDialogContent}
-  {foreach $receipt_url in $depositReceiptList}
-    <img width="100%" src="{{$receipt_url}}"/>
-    <a href="{{$receipt_url}}" target="_blank">{msg desc="Download picture link on deposit receipt dialog content"}Download{/msg}</a>
-  {/foreach}
+
+{template DepositReceiptDialogContent}
+  {@param depositReceiptList: list<string>}
+  {for $receipt_url in $depositReceiptList}
+    <img width="100%" src="{$receipt_url}"/>
+    <a href="{$receipt_url}" target="_blank">{msg desc="Download picture link on deposit receipt dialog content"}Download{/msg}</a>
+  {/for}
 {/template}
 
-/**
-  * @param id_value
-  * @param percentFeeID
-  * @param fixedFeeID
-  * @param totalFeesID
-  * @param netValueID
-  * @param controlNumber
-  * @param currencySign
-  * @param value
-  * @param percentFee
-  * @param fixedFee
-  */
-{template .BrokerConfirmDepositContent}
+
+{template BrokerConfirmDepositContent}
+  {@param id_value: string}
+  {@param percentFeeID: string}
+  {@param fixedFeeID: string}
+  {@param totalFeesID: string}
+  {@param netValueID: string}
+  {@param controlNumber: string}
+  {@param currencySign: string}
+  {@param value: string}
+  {@param percentFee: string}
+  {@param fixedFee: string}
   <form class="form-horizontal broker-confirm-deposit">
     <div class="control-group">
       <label class="control-label">{msg desc="Control number label"}Control number{/msg}</label>
@@ -214,18 +205,18 @@
   </form>
 {/template}
 
-/**
-  * @param variables
-  * @param pattern
-  * @param formula
-  * @param value
-  */
-{template .InstantFiatDepositDialogContent}
+
+{template InstantFiatDepositDialogContent}
+  {@param variables: string}
+  {@param currency: ?}
+  {@param pattern: string}
+  {@param formula: string}
+  {@param value: number}
   <div class="row-fluid" data-deposit-status="confirm">
       <p>{msg desc="Instant deposit fiat description 1"}Net value:{/msg}{sp}
         <span class="bitex-model"
               data-model-key-list="{$variables}"
-              data-model-formula="min( {$formula},  {$value} )"
+              data-model-formula="min( {$formula}, {$value} )"
               data-model-formatter="currency"
               data-model-formatter-pattern="{$pattern}"
               data-blink-class="balance-info-blink"></span>
@@ -256,11 +247,9 @@
 {/template}
 
 
-/**
-  * @param show_title
-  * @param msg_broker
-  */
-{template .BrokerView}
+{template BrokerView}
+  {@param show_title: bool}
+  {@param msg_broker: ?}
   {if $show_title}
   <div class="section-title">
     <h3>{msg desc="Title for the Broker view"}My broker{/msg}</h3>
@@ -289,13 +278,13 @@
             <h4>
               {msg desc="Allowed markets section subtitle on broker view"}Markets{/msg}
             </h4>
-            {foreach $allowed_market in keys($msg_broker['AllowedMarkets'])}
+            {for $allowed_market in keys($msg_broker['AllowedMarkets'])}
               <div class="row-fluid">
                 <div class="span12">
                   { $msg_broker['AllowedMarkets'][$allowed_market]['description']}
                 </div>
               </div>
-            {/foreach}
+            {/for}
           </div>
         </div>
       {/if}
@@ -347,13 +336,13 @@
                   </tr>
                 {/if}
               {/if}
-              {foreach $fee in $msg_broker['FeeStructure']}
+              {for $fee in $msg_broker['FeeStructure']}
                 <tr>
                   <td>{$fee['Operation']}</td>
                   <td>{$fee['Fee']}</td>
                   <td>{$fee['Terms']}</td>
                 </tr>
-              {/foreach}
+              {/for}
             </tbody>
           </table>
         {/if}
@@ -374,8 +363,8 @@
             </tr>
           </thead>
           <tbody>
-            {foreach $crypto_currencies in $msg_broker['CryptoCurrencies']}
-              {foreach $wallets in $crypto_currencies['Wallets'] }
+            {for $crypto_currencies in $msg_broker['CryptoCurrencies']}
+              {for $wallets in $crypto_currencies['Wallets'] }
                 <tr>
                   <td>{$crypto_currencies['CurrencyDescription']}</td>
                   <td>{$wallets['type'] }</td>
@@ -400,8 +389,8 @@
                   </td>
                   <td>{$wallets['managed_by'] }</td>
                 </tr>
-              {/foreach}
-            {/foreach}
+              {/for}
+            {/for}
           </tbody>
         </table>
       {/if}
@@ -417,11 +406,10 @@
 
 {/template}
 
-/**
-  * @param reason_id
-  * @param custom_reason_id
-  */
-{template .CancelDepositDialogContent}
+
+{template CancelDepositDialogContent}
+  {@param reason_id: string}
+  {@param custom_reason_id: string}
 <p>{msg desc="Cancel deposit dialog message"}Enter a reason for cancelling the deposit{/msg}</p>
 <form class="form-horizontal">
   <fieldset>
@@ -443,10 +431,7 @@
 {/template}
 
 
-
-/**
-  */
-{template .GoogleAuthenticationCodeDialogContent}
+{template GoogleAuthenticationCodeDialogContent}
   <form class="form-horizontal" data-deposit-status="prepare" data-uniform-control-holder-class="control-group">
     <fieldset>
       <div class="control-group">
@@ -454,8 +439,8 @@
               {msg desc="Google Authenticator code dialog label"}Google Authenticator code:{/msg}
         </label>
         <input name="token"
-               autocapitalize="off" 
-               autocorrect="off" 
+               autocapitalize="off"
+               autocorrect="off"
                autocomplete="off"
                autofocus
                id="id_input_google_authenticator"
@@ -470,9 +455,8 @@
   </form>
 {/template}
 
-/**
- */
-{template .AccountBlockedDialogContent}
+
+{template AccountBlockedDialogContent}
   <div class="row-fluid">
     <p class="text-justify">
       <strong>
@@ -489,9 +473,8 @@
   </div>
 {/template}
 
-/**
- */
-{template .AntiPhishingDialogContent}
+
+{template AntiPhishingDialogContent}
   <div class="row-fluid">
     <p class="text-justify">
       <strong>
@@ -502,16 +485,15 @@
       <br/>
        {msg desc="Authorization link dialog block warning during login"}
          IMPORTANT: The authorization link we sent to your email is only and
-only valid if accessed from this computer. Your account will be automatically 
+only valid if accessed from this computer. Your account will be automatically
 blocked if you try to access the authorization link from another computer.
        {/msg}
     </p>
   </div>
 {/template}
 
-/**
- */
-{template .InvalidOrExpiredAuthorizationLinkDialogContent}
+
+{template InvalidOrExpiredAuthorizationLinkDialogContent}
   <div class="row-fluid">
     <p class="text-justify">
       <strong>
@@ -528,12 +510,11 @@ blocked if you try to access the authorization link from another computer.
   </div>
 {/template}
 
-/**
-  * @param id
-  * @param description
-  * @param askForTrust
-  */
-{template .SecondFactorTokenDialogContent}
+
+{template SecondFactorTokenDialogContent}
+  {@param id: string}
+  {@param description: string}
+  {@param askForTrust: bool}
   <form class="form-horizontal" data-deposit-status="prepare" data-uniform-control-holder-class="control-group">
     <fieldset>
       <div class="control-group">
@@ -542,8 +523,8 @@ blocked if you try to access the authorization link from another computer.
         </label>
         <input name="token"
                id="{$id}_token"
-               autocapitalize="off" 
-               autocorrect="off" 
+               autocapitalize="off"
+               autocorrect="off"
                autocomplete="off"
                autofocus
                data-uniform-validators="required"
@@ -563,10 +544,9 @@ blocked if you try to access the authorization link from another computer.
   </form>
 {/template}
 
-/**
-  * @param id
-  */
-{template .BrokerChangeEmailDialogContent}
+
+{template BrokerChangeEmailDialogContent}
+  {@param id: string}
   <form class="form-horizontal" data-deposit-status="prepare" data-uniform-control-holder-class="control-group">
     <fieldset>
       <div class="alert alert-warning">
@@ -604,9 +584,8 @@ blocked if you try to access the authorization link from another computer.
   </form>
 {/template}
 
-/**
-  */
-{template .WithdrawConfirmationDialogContent}
+
+{template WithdrawConfirmationDialogContent}
   <form class="form-horizontal" data-deposit-status="prepare" data-uniform-control-holder-class="control-group">
     <fieldset>
       <p>
@@ -624,9 +603,8 @@ blocked if you try to access the authorization link from another computer.
   </form>
 {/template}
 
-/**
-  */
-{template .EmailGoogleAuthenticationCodeDialogContent}
+
+{template EmailGoogleAuthenticationCodeDialogContent}
   <form class="form-horizontal" data-deposit-status="prepare" data-uniform-control-holder-class="control-group">
     <fieldset>
       <p>
@@ -643,8 +621,8 @@ blocked if you try to access the authorization link from another computer.
               {msg desc="Google Authenticator code dialog label"}Google Authenticator code:{/msg}
         </label>
         <input name="token"
-               autocapitalize="off" 
-               autocorrect="off" 
+               autocapitalize="off"
+               autocorrect="off"
                autocomplete="off"
                id="id_input_google_authenticator"
                data-uniform-validators="required"
@@ -663,14 +641,12 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-/**
-  * @param id
-  * @param taker_buy_fee
-  * @param taker_sell_fee
-  * @param buy_fee
-  * @param sell_fee
-  */
-{template .UserFeesDialogContent}
+{template UserFeesDialogContent}
+  {@param id: string}
+  {@param taker_buy_fee: string}
+  {@param taker_sell_fee: string}
+  {@param buy_fee: string}
+  {@param sell_fee: string}
 
   <form class="form-horizontal">
 
@@ -726,15 +702,12 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-
-/**
-  * @param currencies
-  * @param? action
-  */
-{template .AccountBalances}
+{template AccountBalances}
+  {@param currencies: ?}
+  {@param? action: string}
   <table class="table table-striped" style="width: 350px">
     <tbody>
-      {foreach $currency in $currencies}
+      {for $currency in $currencies}
       <tr>
         <td>
           <strong>
@@ -747,7 +720,7 @@ blocked if you try to access the authorization link from another computer.
         {if $action == 'deposit'}
           <td>
             <button class="btn btn-mini" data-action="deposit"  data-currency="{$currency}">
-              <i data-action="deposit"  data-currency="{$currency}" class="icon-plus"/>
+              <i data-action="deposit"  data-currency="{$currency}" class="icon-plus"></i>
              {msg desc="Deposit button label"} Deposit{/msg}
             </button>
           </td>
@@ -755,22 +728,19 @@ blocked if you try to access the authorization link from another computer.
         {if $action == 'withdraw'}
           <td>
             <button class="btn btn-mini" data-action="withdraw" data-currency="{$currency}">
-              <i data-action="withdraw" data-currency="{$currency}" class="icon-minus"/>
+              <i data-action="withdraw" data-currency="{$currency}" class="icon-minus"></i>
              {msg desc="Deposit button label"} Withdraw{/msg}
             </button>
           </td>
         {/if}
       </tr>
-      {/foreach}
+      {/for}
     </tbody>
   </table>
 {/template}
 
 
-
-/**
-  */
-{template .WaitingForDepositResponseDialogContent}
+{template WaitingForDepositResponseDialogContent}
   <div class="row-fluid" data-deposit-status="processing">
     <h5 class="text-center">
        {msg desc="processing deposit request waiting dialog msg"}Processing deposit request...{/msg}
@@ -786,13 +756,11 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-/**
-  * @param deposit_message
-  * @param hasInstantDepositsEnabled
-  * @param? amount
-  * @param? formattedAmount
-  */
-{template .DepositCryptoCurrencyContentDialog}
+{template DepositCryptoCurrencyContentDialog}
+  {@param deposit_message: ?}
+  {@param hasInstantDepositsEnabled: bool}
+  {@param? amount: number}
+  {@param? formattedAmount: string}
   <div class="row-fluid" data-deposit-status="prepare">
     <h4 class="text-center">
       {$deposit_message['Data']['InputAddress'] }
@@ -821,10 +789,8 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-/**
-  * @param data
-  */
-{template .CryptoCurrencyQRContentDialog}
+{template CryptoCurrencyQRContentDialog}
+  {@param data: ?}
   <div class="row-fluid" data-deposit-status="prepare">
     <h4 class="text-center">
       {$data['Wallet']}
@@ -836,10 +802,8 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-/**
-  * @param data
-  */
-{template .ConfirmTrustedAddressContentDialog}
+{template ConfirmTrustedAddressContentDialog}
+  {@param data: ?}
   <div class="row-fluid">
     <h3 class="text-center">
       {msg desc="confirm trusted address dialog msg"} Do you want to enable instant deposits for this address?{/msg}
@@ -850,7 +814,7 @@ blocked if you try to access the authorization link from another computer.
       <input type="text"
              class="confirm-trusted-address-label"
              size="30"
-             placeholder="{msg desc="confirm trusted label placeholder"}Enter a label for this address.{/msg}"></input>
+             placeholder="{msg desc="confirm trusted label placeholder"}Enter a label for this address.{/msg}">
     </div>
 
     <h4 class="text-center">
@@ -871,14 +835,13 @@ blocked if you try to access the authorization link from another computer.
   </div>
 {/template}
 
-/**
-  * @param balanceKey
-  * @param currencyDescription
-  * @param depositFormattedBalance
-  * @param lockedFormattedBalance
-  * @param availableFormattedBalance
-  */
-{template .InsufficientFundsContentDialog}
+
+{template InsufficientFundsContentDialog}
+  {@param balanceKey: string}
+  {@param currencyDescription: string}
+  {@param depositFormattedBalance: string}
+  {@param lockedFormattedBalance: string}
+  {@param availableFormattedBalance: string}
   <div class="row-fluid">
     <p>
       {msg desc="Insufficient funds title"}You don't have enough funds for this operation.{/msg}
@@ -917,13 +880,12 @@ blocked if you try to access the authorization link from another computer.
   </div>
 {/template}
 
-/**
-  * @param amount
-  * @param price
-  * @param total
-  * @param side
-  */
-{template .ConfirmOrderContentDialog}
+
+{template ConfirmOrderContentDialog}
+  {@param amount: string}
+  {@param price: string}
+  {@param total: string}
+  {@param side: string}
   <div class="row-fluid">
     <p>
       {msg desc="Confirmation order title"}Confirm your order{/msg}
@@ -958,10 +920,8 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-/**
-  * @param currencydescription
-  */
-{template .ConfirmDepositCryptoCurrencyContentDialog}
+{template ConfirmDepositCryptoCurrencyContentDialog}
+  {@param currencydescription: string}
   <div class="row-fluid" data-deposit-status="confirm">
     <h3 class="text-center">
       {msg desc="deposit done dialog msg"} IMPORTANT! {/msg}
@@ -977,10 +937,9 @@ blocked if you try to access the authorization link from another computer.
   </div>
 {/template}
 
-/**
- * @param email
- */
-{template .ConfirmEmailSignupContentDialog}
+
+{template ConfirmEmailSignupContentDialog}
+  {@param email: string}
   <div class="row-fluid">
     <div class="control-group">
       <label for="email_confirm_field" style="display: none;">{$email}</label>
@@ -994,11 +953,10 @@ blocked if you try to access the authorization link from another computer.
   </div>
 {/template}
 
-/**
-  * @param rest_url
-  * @param deposit_id
-  */
-{template .DepositSlipContentDialog}
+
+{template DepositSlipContentDialog}
+  {@param rest_url: trusted_resource_uri}
+  {@param deposit_id: trusted_resource_uri}
   <div class="row-fluid" data-deposit-status="done">
     <iframe allowtransparency="true"
       src="{$rest_url}/get_deposit?deposit_id={$deposit_id}"
@@ -1007,9 +965,8 @@ blocked if you try to access the authorization link from another computer.
   </div>
 {/template}
 
-/**
-  */
-{template .BlankDepositSlipContentDialog}
+
+{template BlankDepositSlipContentDialog}
   <div class="row-fluid" data-deposit-status="done">
     <iframe allowtransparency="true"  src="about:blank" frameborder="0"
     style="width: 500px; height: 500px; border: none;" scrolling="yes">
@@ -1018,17 +975,15 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-/**
-  * @param currencySign
-  * @param percentFeeID
-  * @param fixedFeeID
-  * @param totalFeesID
-  * @param percentFee
-  * @param fixedFee
-  * @param netValueID
-  * @param? hideNetValueID
-  */
-{template .FeesFormControls}
+{template FeesFormControls}
+  {@param currencySign: string}
+  {@param percentFeeID: string}
+  {@param fixedFeeID: string}
+  {@param totalFeesID: string}
+  {@param percentFee: string}
+  {@param fixedFee: string}
+  {@param netValueID: string}
+  {@param? hideNetValueID: bool}
 <div class="control-group">
   <label class="control-label">{msg desc="Fee label"}Fees:{/msg}</label>
   <div class="controls">
@@ -1070,20 +1025,19 @@ blocked if you try to access the authorization link from another computer.
 </div>
 {/template}
 
-/**
-  * @param amountID
-  * @param amount
-  * @param formattedAmount
-  * @param currency
-  * @param currencySign
-  * @param percentFeeID
-  * @param fixedFeeID
-  * @param totalFeesID
-  * @param percentFee
-  * @param fixedFee
-  * @param netValueID
-  */
-{template .FeesForm}
+
+{template FeesForm}
+  {@param amountID: string}
+  {@param amount: string}
+  {@param formattedAmount: string}
+  {@param currency: string}
+  {@param currencySign: string}
+  {@param percentFeeID: string}
+  {@param fixedFeeID: string}
+  {@param totalFeesID: string}
+  {@param percentFee: string}
+  {@param fixedFee: string}
+  {@param netValueID: string}
   <form class="form-horizontal" data-deposit-status="prepare">
     <input type="hidden" name="Currency" value="{$currency}">
     <input id="{$amountID}" type="hidden" name="Amount" value="{$amount}">
@@ -1095,7 +1049,7 @@ blocked if you try to access the authorization link from another computer.
       </div>
     </div>
 
-  {call .FeesFormControls}
+  {call FeesFormControls}
     {param currencySign: $currencySign /}
     {param percentFeeID: $percentFeeID /}
     {param percentFee: $percentFee /}
@@ -1109,27 +1063,25 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-/**
-  * @param side
-  * @param? force_method
-  * @param currency
-  * @param currencySign
-  * @param methods
-  * @param methodID
-  * @param showFeeDataEntry
-  * @param amountID
-  * @param? amount
-  * @param? formattedAmount
-  * @param percentFeeID
-  * @param fixedFeeID
-  * @param totalFeesID
-  * @param netValueID
-  * @param hideNetAmount
-  * @param? verificationLevel
-  * @param type
-  * @param netAmountLabel
-  */
-{template .DepositWithdrawDialogContent}
+{template DepositWithdrawDialogContent}
+  {@param side: string}
+  {@param? force_method: bool}
+  {@param currency: string}
+  {@param currencySign: string}
+  {@param methods: ?}
+  {@param methodID: string}
+  {@param showFeeDataEntry: bool}
+  {@param amountID: string}
+  {@param? amount: number}
+  {@param? formattedAmount: ?}
+  {@param percentFeeID: string}
+  {@param fixedFeeID: string}
+  {@param totalFeesID: string}
+  {@param netValueID: string}
+  {@param hideNetAmount: bool}
+  {@param? verificationLevel: int}
+  {@param type: string}
+  {@param netAmountLabel: string}
   <form class="form-horizontal" data-deposit-status="prepare" data-uniform-control-holder-class="control-group">
   <fieldset>
 
@@ -1159,22 +1111,22 @@ blocked if you try to access the authorization link from another computer.
           <label class="control-label">{msg desc="method"}Method{/msg}</label>
           <div class="controls">
             <select id="{$methodID}" name="Method" class="withdraw-method-selector">
-              {foreach $method in $methods }
+              {for $method in $methods }
                <option value="{$method['method']}"
                     data-net-value="{$method['method']}_{$netValueID}"
                     data-percent-fee="{$method['method']}_{$percentFeeID}"
                     data-fixed-fee="{$method['method']}_{$fixedFeeID}">{$method['description']}</option>
-              {/foreach}
+              {/for}
             </select>
           </div>
         </div>
       {else}
-        {foreach $method in $methods }
-          <input  id="{$methodID}" type="hidden" name="Method"  value="{$method['method']}"
+        {for $method in $methods }
+          <input id="{$methodID}" type="hidden" name="Method"  value="{$method['method']}"
                 data-net-value="{$method['method']}_{$netValueID}"
                 data-percent-fee="{$method['method']}_{$percentFeeID}"
                 data-fixed-fee="{$method['method']}_{$fixedFeeID}">
-        {/foreach}
+        {/for}
       {/if}
     {/if}
 
@@ -1197,7 +1149,7 @@ blocked if you try to access the authorization link from another computer.
           </div>
         {/if}
      {/if}
-     {foreach $method in $methods }
+     {for $method, $i in $methods }
         {if $force_method}
           {if $method['method'] == $force_method}
 
@@ -1237,7 +1189,7 @@ blocked if you try to access the authorization link from another computer.
             {/if}
 
 
-            {foreach $field in $method['fields'] }
+            {for $field in $method['fields'] }
               {if $field['side'] == $side}
                 <div class="control-group">
                   <label class="control-label">{$field['label']}</label>
@@ -1250,7 +1202,7 @@ blocked if you try to access the authorization link from another computer.
                   </div>
                 </div>
               {/if}
-            {/foreach}
+            {/for}
             {if $side == 'client'}
               <div class="control-group" style="margin-bottom: 5px;">
                 <div class="controls">
@@ -1283,7 +1235,7 @@ blocked if you try to access the authorization link from another computer.
                   </div>
                 </div>
                 {if $showFeeDataEntry}
-                  {call .FeesFormControls}
+                  {call FeesFormControls}
                     {param currencySign: $currencySign /}
                     {param percentFeeID: $method['method'] + '_' + $percentFeeID /}
                     {param percentFee: $method['percent_fee']  /}
@@ -1312,7 +1264,7 @@ blocked if you try to access the authorization link from another computer.
                         type="text"
                         class="withdraw-field input-small"
                         size="16"
-                        name="Amount" {if not isFirst($method)}disabled{/if}>
+                        name="Amount" {if $i > 0}disabled{/if}>
                   </div>
                   {if $method['limits'][$verificationLevel]['enabled']}
                     <div>
@@ -1355,7 +1307,7 @@ blocked if you try to access the authorization link from another computer.
               </div>
             </div>
 
-            {foreach $field in $method['fields'] }
+            {for $field, $j in $method['fields'] }
               {if $field['side'] == $side}
                 <div class="control-group">
                   <label class="control-label">{$field['label']}</label>
@@ -1366,20 +1318,20 @@ blocked if you try to access the authorization link from another computer.
                            name="{$field['name']}"
                            label="{$field['placeholder']}"
                            value="{$field['value']}"
-                           {if not isFirst($method)}disabled{/if} />
+                           {if $j > 0}disabled{/if} />
                   </div>
                 </div>
               {/if}
-            {/foreach}
+            {/for}
           </div>
         {/if}
-     {/foreach}
+     {/for}
     </div>
 
 
     <div class="control-group dlg-response-group">
       <label class="control-label dlg-response-group-label"></label>
-      <div class="controls" class="dlg-response-group-value" >
+      <div class="controls dlg-response-group-value" >
       </div>
     </div>
     </fieldset>
@@ -1388,13 +1340,11 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-/**
-  * @param taker_buy_fee
-  * @param taker_sell_fee
-  * @param buy_fee
-  * @param sell_fee
-  */
-{template .YourFeesBalances}
+{template YourFeesBalances}
+  {@param taker_buy_fee: string}
+  {@param taker_sell_fee: string}
+  {@param buy_fee: string}
+  {@param sell_fee: string}
   <table class="table table-striped table-condensed">
     <tbody>
       <tr>
@@ -1471,13 +1421,11 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-/**
-  * @param currencies
-  */
-{template .YourAccountBalances}
+{template YourAccountBalances}
+  {@param currencies: ?}
   <table class="table table-striped" style="width: 350px">
     <tbody>
-      {foreach $currency in $currencies}
+      {for $currency in $currencies}
       <tr>
         <td>
           <strong>
@@ -1488,16 +1436,14 @@ blocked if you try to access the authorization link from another computer.
           <span class="bitex-model" data-model-key="formatted_balance_{$currency.model_key}" data-blink-class="balance-info-blink">{if $currency.balance}{$currency.balance}{else}-{/if}</span>
         </td>
       </tr>
-      {/foreach}
+      {/for}
     </tbody>
   </table>
 {/template}
 
 
-/**
-  * @param msg_customer_detail
-  */
-{template .AccountOverviewHeaderVerified}
+{template AccountOverviewHeaderVerified}
+  {@param msg_customer_detail: ?}
   <select id="id_select_new_verification_level" data-profile-change="Verified" >
     <option value="0" {if $msg_customer_detail['Verified']==0}selected{/if}>{msg desc="label on  overview header"}No{/msg}</option>
     <option value="1" {if $msg_customer_detail['Verified']==1}selected{/if}>{msg desc="label on  overview header"}Pending{/msg}</option>
@@ -1509,10 +1455,8 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-/**
-  * @param msg_customer_detail
-  */
-{template .AccountOverviewHeaderWithDrawEmailData}
+{template AccountOverviewHeaderWithDrawEmailData}
+  {@param msg_customer_detail: ?}
     {if $msg_customer_detail['NeedWithdrawEmail'] }
       <span class="label label-success">{msg desc="label on  overview header"}Enabled{/msg}</span> <a
         href="#" class="btn btn-primary btn-mini" data-action="SET_WITHDRAW_EMAIL" data-row="{$msg_customer_detail['ID']}">{msg desc="label on  overview header"}Disable{/msg}</a>
@@ -1522,10 +1466,9 @@ blocked if you try to access the authorization link from another computer.
     {/if}
 {/template}
 
-/**
-  * @param msg_customer_detail
-  */
-{template .AccountOverviewHeaderTwoFactors}
+
+{template AccountOverviewHeaderTwoFactors}
+  {@param msg_customer_detail: ?}
     {if $msg_customer_detail['TwoFactorEnabled'] }
       <span class="label label-success">{msg desc="label on  overview header"}Enabled{/msg}</span>
       <a href="#" class="btn btn-primary btn-mini" data-action="SET_TWO_FACTOR" data-row="{$msg_customer_detail['ID']}">{msg desc="label on  overview header"}Disable{/msg}</a>
@@ -1534,10 +1477,9 @@ blocked if you try to access the authorization link from another computer.
     {/if}
 {/template}
 
-/**
-  * @param msg_customer_detail
-  */
-{template .AccountOverviewHeaderEmailTwoFactors}
+
+{template AccountOverviewHeaderEmailTwoFactors}
+  {@param msg_customer_detail: ?}
     {if $msg_customer_detail['EmailTwoFactorEnabled'] }
       <span class="label label-success">{msg desc="label on  overview header"}Enabled{/msg}</span>
       <a href="#" class="btn btn-primary btn-mini" data-action="DISABLE_EMAIL_TWO_FACTOR" data-row="{$msg_customer_detail['ID']}">{msg desc="label on overview header"}Disable{/msg}</a>
@@ -1548,10 +1490,8 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-/**
-  * @param msg_customer_detail
-  */
-{template .AccountOverviewHeader}
+{template AccountOverviewHeader}
+  {@param msg_customer_detail: ?}
   <table class="table table-striped table-condensed account-overview-table" style="width: 350px">
     <tbody>
       <tr>
@@ -1584,7 +1524,7 @@ blocked if you try to access the authorization link from another computer.
       <tr>
          <td><strong>{msg desc="label on  overview header"}Is verified{/msg}</strong></td>
          <td class="account-overview-val account-overview-verified">
-          {call .AccountOverviewHeaderVerified}
+          {call AccountOverviewHeaderVerified}
             {param msg_customer_detail: $msg_customer_detail /}
           {/call}
          </td>
@@ -1593,7 +1533,7 @@ blocked if you try to access the authorization link from another computer.
       <tr>
          <td><strong>{msg desc="label on  overview header"}Has two step authentication{/msg}</strong></td>
          <td class="account-overview-val account-overview-two-factors" >
-          {call .AccountOverviewHeaderTwoFactors}
+          {call AccountOverviewHeaderTwoFactors}
             {param msg_customer_detail: $msg_customer_detail /}
           {/call}
          </td>
@@ -1601,7 +1541,7 @@ blocked if you try to access the authorization link from another computer.
       <tr>
          <td><strong>{msg desc="label on overview header"}Has two step authentication on email{/msg}</strong></td>
          <td class="account-overview-val account-overview-two-factors-email" >
-          {call .AccountOverviewHeaderEmailTwoFactors}
+          {call AccountOverviewHeaderEmailTwoFactors}
             {param msg_customer_detail: $msg_customer_detail /}
           {/call}
          </td>
@@ -1613,7 +1553,7 @@ blocked if you try to access the authorization link from another computer.
       <tr>
          <td><strong>{msg desc="label on  overview header"}Needs email confirmation on withdraw{/msg}</strong></td>
          <td class="account-overview-val account-overview-withdraw-email">
-          {call .AccountOverviewHeaderWithDrawEmailData}
+          {call AccountOverviewHeaderWithDrawEmailData}
             {param msg_customer_detail: $msg_customer_detail /}
           {/call}
          </td>
@@ -1624,19 +1564,16 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-/**
- * @param dataRow
- */
-{template .CustomerDetailButton}
+{template CustomerDetailButton}
+  {@param dataRow: string}
   <button class="btn btn-mini btn-primary btn-deposit" data-row="{$dataRow}">
     {msg desc="details"}details{/msg}
   </button>
 {/template}
 
-/**
-  * @param clientID
-  */
-{template .EnterVerificationDataDialogContent}
+
+{template EnterVerificationDataDialogContent}
+  {@param clientID: string}
   <form class="form-horizontal" data-deposit-status="prepare">
     <input type="hidden" name="ClientID" value="{$clientID}">
     <div class="control-group">
@@ -1648,16 +1585,15 @@ blocked if you try to access the authorization link from another computer.
   </form>
 {/template}
 
-/**
-  * @param id
-  * @param symbol
-  * @param side
-  * @param type
-  * @param hide_fee
-  * @param hide_client_id
-  * @param broker_id
-  */
-{template .OrderEntry}
+
+{template OrderEntry}
+  {@param id: string}
+  {@param symbol: string}
+  {@param side: string}
+  {@param type: string}
+  {@param hide_fee: bool}
+  {@param hide_client_id: bool}
+  {@param broker_id: string}
  <div id="{$id}" class="well span6 order-entry">
       <input type="hidden" name="symbol" class="order-entry-symbol" value="{$symbol}">
       <input type="hidden" name="side" class="order-entry-side" value="{$side}">
@@ -1712,16 +1648,14 @@ blocked if you try to access the authorization link from another computer.
 {/template}
 
 
-/**
-  * @param? title
-  * @param? id
-  * @param? wrapper_height Defaults to 360px
-  * @param? base_class
-  * @param? show_search
-  * @param? search_placeholder
-  * @param? button_filters
-  */
-{template .DataGrid}
+{template DataGrid}
+  {@param? title: ?}
+  {@param? id: ?}
+  {@param? wrapper_height: string} // Defaults to 360px
+  {@param? base_class: string}
+  {@param? show_search: bool}
+  {@param? search_placeholder: string}
+  {@param? button_filters: ?}
   <div {if $id}id="{$id}"{/if}  class="fuelux {if $base_class}{$base_class}{/if}" style="width:100%;">
     <table class="table table-bordered datagrid datagrid-stretch-header">
       <thead>
@@ -1740,17 +1674,17 @@ blocked if you try to access the authorization link from another computer.
               {if $button_filters}
                 <div class="select filter datagrid-filter" data-resize="auto">
                   <button type="button" data-toggle="dropdown" class="btn dropdown-toggle">
-                    {foreach $button in $button_filters}
-                      {if isFirst($button)}
+                    {for $button, $i in $button_filters}
+                      {if $i == 0}
                         <span class="dropdown-label" style="width: 111px;">{$button['label']}</span>
                       {/if}
-                    {/foreach}
+                    {/for}
                     <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu">
-                    {foreach $button in $button_filters}
+                    {for $button in $button_filters}
                       <li data-value="{$button['value']}"><a href="#">{$button['label']}</a></li>
-                    {/foreach}
+                    {/for}
                   </ul>
                 </div>
               {/if}

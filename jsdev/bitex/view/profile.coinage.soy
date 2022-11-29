@@ -1,16 +1,13 @@
 {namespace bitex.view.ProfileView.templates}
 
-/**
-  */
-{template .ProfileViewChangePasswordPlaceHolder}
+
+{template ProfileViewChangePasswordPlaceHolder}
   <div class="col-xs-12 col-md-6 page__section_white page__padding profile__change_password"></div>
 {/template}
 
 
-/**
-  * @param msg_customer_detail
-  */
-{template .AccountOverviewUserEmailLanguage}
+{template AccountOverviewUserEmailLanguage}
+  {@param msg_customer_detail: ?}
   <select id="id_select_new_email_language" data-profile-change="EmailLang" >
     <option value="en" {if $msg_customer_detail['EmailLang']=='en'}selected{/if}>
       {msg desc="English option on email language select"}English{/msg}
@@ -30,10 +27,9 @@
   </select>
 {/template}
 
-/**
-  * @param msg_customer_detail
-  */
-{template .AccountOverviewUser}
+
+{template AccountOverviewUser}
+  {@param msg_customer_detail: ?}
   <table class="profile-table table page__section_white">
     <tbody>
       <tr>
@@ -67,11 +63,10 @@
             {/switch}
          </td>
       </tr>
-
       <tr>
          <td><strong>{msg desc="label on  overview header"}Email preferred language{/msg}</strong></td>
           <td>
-            {call .AccountOverviewUserEmailLanguage}
+            {call AccountOverviewUserEmailLanguage}
               {param msg_customer_detail: $msg_customer_detail /}
             {/call}
          </td>
@@ -80,12 +75,9 @@
         <td><strong>{msg desc="Confirmation Order"}Confirmation Order{/msg}</strong></td>
         <td>
           <input type='checkbox' data-profile-change='ConfirmationOrder'
-          {if $msg_customer_detail['ConfirmationOrder'] == true}checked="true"{/if} />
+          {if $msg_customer_detail['ConfirmationOrder'] == true}checked{/if} />
         </td>
       </tr>
-
     </tbody>
   </table>
 {/template}
-
-
