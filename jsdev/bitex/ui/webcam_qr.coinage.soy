@@ -1,9 +1,8 @@
 {namespace bitex.ui.WebCamQR.templates}
 
-/**
-  * @param id
-  */
-{template .Video}
+
+{template Video}
+  {@param id: string}
   <div class="col-xs-2"></div>
   <div class="col-xs-10">
     <video id="{$id}_video" autoplay width="400"></video>

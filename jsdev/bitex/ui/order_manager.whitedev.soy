@@ -1,13 +1,11 @@
 {namespace bitex.ui.OrderManager.templates}
 
-/**
- * @param dataClientOrderId
- * @param? dataOrderId
- */
-{template .CancelOrder}
+
+{template CancelOrder}
+  {@param dataClientOrderId: string}
+  {@param? dataOrderId: string}
   <button class="ls-btn ls-btn-mini ls-btn-danger" data-action="cancel"
-    data-client-order-id="{$dataClientOrderId}" {if $dataOrderId}data-order-id="{$dataOrderId}"{/if}>
+          data-client-order-id="{$dataClientOrderId}" {if $dataOrderId}data-order-id="{$dataOrderId}"{/if}>
     {msg desc="cancel"}cancel{/msg}
   </button>
 {/template}
-

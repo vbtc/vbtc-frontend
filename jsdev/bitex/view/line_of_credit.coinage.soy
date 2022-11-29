@@ -1,11 +1,8 @@
 {namespace bitex.view.LineOfCreditView.templates}
 
 
-
-/**
-  * @param data
-  */
-{template .InfoLineOfCredit}
+{template InfoLineOfCredit}
+  {@param data: ?}
 /*
   data = {
     'ID': 1,
@@ -78,7 +75,7 @@
       <td>{$data['Created']} UTC</td>
     </tr>
 
-    {foreach $c in $data['DeliveryCurrencies'] }
+    {for $c in $data['DeliveryCurrencies'] }
       <tr>
         <td colspan="2"> {msg desc="Delivery currency title on credit info"}Get and pay back in {$c}{/msg}</td>
       </tr>
@@ -97,7 +94,6 @@
                   data-model-key-list="{$data['ContractInfo'][$c]['get_ticker']['market']}_
                                   {$data['ContractInfo'][$c]['get_ticker']['instrument']}_
                                   {$data['ContractInfo'][$c]['get_ticker']['column']}"></span>
-
             </td>
       </tr>
 
@@ -126,19 +122,15 @@
         </td>
       </tr>
 
-    {/foreach}
+    {/for}
 
   </table>
 {/template}
 
 
-
-
-/**
-  * @param id
-  * @param data
-  */
-{template .PayLineOfCredit}
+{template PayLineOfCredit}
+  {@param id: string}
+  {@param data: ?}
   <form  id="{$id}_form" class="pay-line-of-credit-data-entry-form form-horizontal">
     <input type="hidden" name="ID"  value="{$data['ID']}"/>
     <fieldset>
@@ -147,19 +139,19 @@
           <label class="control-label">{msg desc="method"}Currency{/msg}</label>
           <div class="controls">
             <select id="{$id}_form_delivery_currency" name="Currency" class="delivery-method-selector">
-              {foreach $c in $data['DeliveryCurrencies']}
-                <option {if isFirst($c)}selected{/if} value="{$c}">{$c}</option>
-              {/foreach}
+              {for $c, $i in $data['DeliveryCurrencies']}
+                <option {if $i == 0}selected{/if} value="{$c}">{$c}</option>
+              {/for}
             </select>
           </div>
         </div>
       {else}
-        {foreach $c in $data['DeliveryCurrencies']}
+        {for $c in $data['DeliveryCurrencies']}
           <input  id="{$id}_form_delivery_currency" type="hidden" name="Currency"  value="{$c}"/>
-        {/foreach}
+        {/for}
       {/if}
 
-      {foreach $c in $data['DeliveryCurrencies'] }
+      {for $c in $data['DeliveryCurrencies'] }
         <div class="line-of-credit-delivery-currency" data-delivery-currency="{$c}" style="">
           <div class="control-group">
             <label class="control-label">{msg desc="Amount to payback the line of credit withdow"}Amount:{/msg}</label>
@@ -234,19 +226,15 @@
                    data-model-key-list="ID_LOC_FORM_AMOUNT_{$c}_{$data['Currency']},ID_LOC_FORM_AMOUNT_{$c}_{$data['Currency']}_PREMIUM,{$data['ContractInfo'][$c]['payback_ticker']['ticker']}"></label>
           </div>
         </div>
-       {/foreach}
+       {/for}
     </fieldset>
   </form>
 {/template}
 
 
-
-
-/**
-  * @param id
-  * @param data
-  */
-{template .GetLineOfCredit}
+{template GetLineOfCredit}
+  {@param id: string}
+  {@param data: ?}
   <form  id="{$id}_form" class="get-line-of-credit-data-entry-form form-horizontal">
     <input type="hidden" name="ID"  value="{$data['ID']}"/>
     <fieldset>
@@ -255,21 +243,19 @@
           <label class="control-label">{msg desc="method"}Delivery method{/msg}</label>
           <div class="controls">
             <select id="{$id}_form_delivery_currency" name="DeliveryMethod" class="delivery-method-selector">
-              {foreach $c in $data['DeliveryCurrencies']}
-                <option {if isFirst($c)}selected{/if} value="{$c}">{$c}</option>
-              {/foreach}
+              {for $c, $i in $data['DeliveryCurrencies']}
+                <option {if $i == 0}selected{/if} value="{$c}">{$c}</option>
+              {/for}
             </select>
           </div>
         </div>
       {else}
-        {foreach $c in $data['DeliveryCurrencies']}
+        {for $c in $data['DeliveryCurrencies']}
           <input  id="{$id}_form_delivery_currency" type="hidden" name="DeliveryMethod"  value="{$c}"/>
-        {/foreach}
+        {/for}
       {/if}
 
-
-
-      {foreach $c in $data['DeliveryCurrencies'] }
+      {for $c in $data['DeliveryCurrencies'] }
         <div class="line-of-credit-delivery-currency" data-delivery-currency="{$c}" style="">
           <div class="control-group">
             <label class="control-label">{msg desc="Amount on get line of credit withdow"}Amount:{/msg}</label>
@@ -350,7 +336,6 @@
           </div>
         </div>
 
-
         <div class="control-group">
           <label class="control-label">{msg desc="Interest rate on get line of credit"}Daily interest rate:{/msg}</label>
           <div class="controls">
@@ -358,11 +343,9 @@
           </div>
         </div>
 
-       {/foreach}
+       {/for}
 
     </fieldset>
   </form>
 
 {/template}
-
-

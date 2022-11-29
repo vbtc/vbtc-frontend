@@ -1,29 +1,28 @@
 {namespace bitex.ui.OrderBook.templates}
 
-/**
-  * @param? side
-  * @param title
-  * @param columns
-  */
-{template .OrderBook}
-<div class="orders">
+
+{template OrderBook}
+  {@param? side: ?}          // TODO: Inconsistent between themes, this does ont exist in ander
+  {@param title: string}
+  {@param columns: ?}
+  <div class="orders">
     <!-- .orders__head -->
     <header class="orders__head">
       <div class="row">
         <h4 class="orders__title col-xs-6 {if $side == '0'} orders__title_center{/if}">{$title}</h4>
-        {if $side == '1' }
-        <div class="orders__head-buttons btn-group">
-          <button
-            title='{msg desc="Cumulative Description"}Cumulative OrderBook{/msg}'
-            class="btn btn-default btn-show-cum-qty">
-            {call .ShowCumQty}{/call}
-          </button>
-          <button
-            title='{msg desc="Fees Description"}Fees OrderBook{/msg}'
-            class="btn btn-default btn-show-fees">
-            {call .ShowFees}{/call}
-          </button>
-        </div>
+        {if $side == '1'}
+          <div class="orders__head-buttons btn-group">
+            <button
+                title='{msg desc="Cumulative Description"}Cumulative OrderBook{/msg}'
+                class="btn btn-default btn-show-cum-qty">
+              {call ShowCumQty}{/call}
+            </button>
+            <button
+                title='{msg desc="Fees Description"}Fees OrderBook{/msg}'
+                class="btn btn-default btn-show-fees">
+              {call ShowFees}{/call}
+            </button>
+          </div>
         {/if}
       </div>
     </header>
@@ -31,81 +30,72 @@
 
     <!-- .orders__body -->
     <div class="orders__body">
-        <!-- .table-responsive -->
-        <div class="table-responsive">
-            <!-- .orders-table -->
-            <table class="orders-table table">
-                <thead>
-                    <tr>
-                        {foreach $column in $columns}
-                        <th>{$column}</th>
-                        {/foreach}
-                    </tr>
-                </thead>
+      <!-- .table-responsive -->
+      <div class="table-responsive">
+        <!-- .orders-table -->
+        <table class="orders-table table">
+          <thead>
+          <tr>
+            {for $column in $columns}
+              <th>{$column}</th>
+            {/for}
+          </tr>
+          </thead>
 
-                <tbody>
-                </tbody>
-            </table>
-            <!-- /.orders-table -->
-        </div>
-        <!-- /.table-responsive -->
+          <tbody>
+          </tbody>
+        </table>
+        <!-- /.orders-table -->
+      </div>
+      <!-- /.table-responsive -->
     </div>
     <!-- /.orders__body -->
-</div>
+  </div>
 {/template}
 
-/**
- */
-{template .ShowCumQty}
+
+{template ShowCumQty}
   <div>
     {msg desc="Cumulative"}Cumulative{/msg}
   </div>
 {/template}
 
-/**
- */
-{template .ShowFees}
+
+{template ShowFees}
   <div>
     {msg desc="Fees"}Fees{/msg}
   </div>
 {/template}
 
-/**
-  *
-  */
-{template .OrderBookDragOrder}
+
+{template OrderBookDragOrder}
   <div class="order-book-drag-order">
-     {msg desc="Caption shown when user is drag & dropping an order in the order book"}Cancel/Replace Order{/msg}
+    {msg desc="Caption shown when user is drag & dropping an order in the order book"}Cancel/Replace Order{/msg}
   </div>
 {/template}
 
 
-/**
-  * @param qty
-  */
-{template .OrderBookOrderQtyEl}
+{template OrderBookOrderQtyEl}
+  {@param qty: string}
   <td class="order-book-qty">{$qty}</td>
 {/template}
 
 
-/**
-  * @param price
-  * @param side
-  */
-{template .OrderBookOrderPriceEl}
-  <td class="order-book-price {if $side=='0'}order-book-right{else}order-book-left{/if}">{$price}</td>
+{template OrderBookOrderPriceEl}
+  {@param price: string}
+  {@param side: string}
+  <td class="order-book-price {if $side == '0'}order-book-right{else}order-book-left{/if}">{$price}</td>
 {/template}
 
-/**
-  * @param username
-  * @param side
-  * @param? orderId
-  */
-{template .OrderBookOrderUsernameEl}
+
+{template OrderBookOrderUsernameEl}
+  {@param username: string}
+  {@param side: string}
+  {@param? orderId: string}
   {if $orderId}
-    <td class="order-book-username {if $side=='0'}order-book-left{else}order-book-right{/if}">
+    <td class="order-book-username {if $side == '0'}order-book-left{else}order-book-right{/if}">
       <a href="" class="btn-cancel-order text-error" data-order-id="{$orderId}">
-        {if $side=='0'}
+        {if $side == '0'}
           <i class="glyphicon glyphicon-remove" data-order-id="{$orderId}" style="line-height:2px;"></i>
           {sp}{$username}
         {else}
@@ -115,41 +105,40 @@
       </a>
     </td>
   {else}
-    <td class="order-book-username {if $side=='0'}order-book-left{else}order-book-right{/if}">{$username}</td>
+    <td class="order-book-username {if $side == '0'}order-book-left{else}order-book-right{/if}">{$username}</td>
   {/if}
 {/template}
 
-/**
-  * @param username
-  * @param qty
-  * @param price
-  * @param side
-  * @param? orderId
-  */
-{template .OrderBookOrderRow}
+
+{template OrderBookOrderRow}
+  {@param username: string}
+  {@param qty: string}
+  {@param price: string}
+  {@param side: string}
+  {@param? orderId: string}
   <tr class="order-book-row">
-    {if $side=='0'}
-      {call .OrderBookOrderUsernameEl}
+    {if $side == '0'}
+      {call OrderBookOrderUsernameEl}
         {param username: $username /}
         {param side: $side /}
         {param orderId: $orderId /}
       {/call}
-      {call .OrderBookOrderQtyEl}
+      {call OrderBookOrderQtyEl}
         {param qty: $qty /}
       {/call}
-      {call .OrderBookOrderPriceEl}
+      {call OrderBookOrderPriceEl}
         {param price: $price /}
         {param side: $side /}
       {/call}
     {else}
-      {call .OrderBookOrderPriceEl}
+      {call OrderBookOrderPriceEl}
         {param price: $price /}
         {param side: $side /}
       {/call}
-      {call .OrderBookOrderQtyEl}
+      {call OrderBookOrderQtyEl}
         {param qty: $qty /}
       {/call}
-      {call .OrderBookOrderUsernameEl}
+      {call OrderBookOrderUsernameEl}
         {param username: $username /}
         {param side: $side /}
         {param orderId: $orderId /}
@@ -157,4 +146,3 @@
     {/if}
   </tr>
 {/template}
-

@@ -1,12 +1,11 @@
 {namespace bitex.view.SideBarView.templates}
 
-/**
-  * @param pattern
-  * @param desc
-  * @param variables
-  * @param formula
-  */
-{template .YourAccountPortfolioValue}
+
+{template YourAccountPortfolioValue}
+  {@param pattern: string}
+  {@param desc: string}
+  {@param variables: string}
+  {@param formula: string}
   <td style="padding: 4px;">
     <small>
       <i>
@@ -34,12 +33,11 @@
   <td></td>
 {/template}
 
-/**
-  * @param id
-  * @param boxes
-  */
-{template .YourAccountSummary}
-  {foreach $box in $boxes}
+
+{template YourAccountSummary}
+  {@param id: string}
+  {@param boxes: ?}
+  {for $box in $boxes}
     <table class="account-summary-table" style="width:100%;border-bottom:1px solid #eee;margin-top:15px;">
       <tbody>
 
@@ -47,7 +45,7 @@
           <td colspan="3"><strong>{$box['title']}</strong></td>
         </tr>
 
-        {foreach $balance_info in $box['balances']}
+        {for $balance_info in $box['balances']}
           <tr style="height:30px">
             <td>
               <strong>{$balance_info['currency']}</strong>
@@ -98,12 +96,12 @@
 
             </td>
           </tr>
-        {/foreach}
+        {/for}
 
         <tr id="{$id}_portfolio_value">
         </tr>
 
       </tbody>
     </table>
-  {/foreach}
+  {/for}
 {/template}

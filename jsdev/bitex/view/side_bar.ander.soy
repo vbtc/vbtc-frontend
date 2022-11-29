@@ -1,12 +1,11 @@
 {namespace bitex.view.SideBarView.templates}
 
-/**
-  * @param pattern
-  * @param desc
-  * @param variables
-  * @param formula
-  */
-{template .YourAccountPortfolioValue}
+
+{template YourAccountPortfolioValue}
+  {@param pattern: string}
+  {@param desc: string}
+  {@param variables: string}
+  {@param formula: string}
   <td style="padding: 4px;">
     <span>
       <i>
@@ -34,27 +33,25 @@
 {/template}
 
 
-/**
-  * @param id
-  * @param boxes
-  */
-{template .YourAccountSummary}
-<div class="sidebar-box__body">
-  {foreach $box in $boxes}
-    <table class="sidebar-box__table" >
-      <tbody>
+{template YourAccountSummary}
+  {@param id: string}
+  {@param boxes: ?}
+  <div class="sidebar-box__body">
+    {for $box in $boxes}
+      <table class="sidebar-box__table" >
+        <tbody>
 
         <tr class='account-summary-broker'>
           <td colspan="3"><strong>{$box['title']}</strong></td>
         </tr>
 
-        {foreach $balance_info in $box['balances']}
+          {for $balance_info in $box['balances']}
           <tr>
             <td style="padding: 4px;">
               <strong>{$balance_info['currency']}</strong>
             </td>
 
-            <td style="padding: 4px;"{if not $balance_info['showDeposit'] and not $balance_info['showWithdraw']}colspan="2"{/if}>
+            <td style="padding: 4px;"{if not $balance_info['showDeposit'] and not $balance_info['showWithdraw']} colspan="2"{/if}>
               <span class="bitex-model"
                     data-model-key-list="Balance_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
                     data-model-formula="Balance_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']} / 100000000"
@@ -67,40 +64,40 @@
                         data-model-action="show_element"
                         data-model-key-list="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
                         data-model-formula="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}">
-                <em>
+              <em>
                   <span class="bitex-model"
                         data-model-key-list="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
                         data-model-formula="Position_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']} / 100000000"
                         data-model-formatter="currency"
                         data-model-formatter-pattern="{$balance_info['currencyPattern']}"
                         data-blink-class="balance-info-blink"></span>
-                </em>
-              </abbr>
-           </td>
-           {if $balance_info['showDeposit'] and  $balance_info['showWithdraw']}
-            <td style="padding: 4px;border-left:0;">
-              <div class="btn-group">
-                {if $balance_info['showDeposit'] }
-                  <button class="btn btn-mini" data-action="deposit" data-currency="{$balance_info['currency']}">
-                    <i data-action="deposit" data-currency="{$balance_info['currency']}" class="icon-download-alt"></i>
-                  </button>
-                {/if}
-                {if $balance_info['showWithdraw'] }
-                  <button class="btn btn-mini" data-action="withdraw" data-currency="{$balance_info['currency']}">
-                    <i data-action="withdraw" data-currency="{$balance_info['currency']}" class="icon-upload-alt"></i>
-                  </button>
-                {/if}
-              </div>
+              </em>
+            </abbr>
             </td>
+            {if $balance_info['showDeposit'] and $balance_info['showWithdraw']}
+              <td style="padding: 4px;border-left:0;">
+                <div class="btn-group">
+                  {if $balance_info['showDeposit'] }
+                    <button class="btn btn-mini" data-action="deposit" data-currency="{$balance_info['currency']}">
+                      <i data-action="deposit" data-currency="{$balance_info['currency']}" class="icon-download-alt"></i>
+                    </button>
+                  {/if}
+                  {if $balance_info['showWithdraw'] }
+                    <button class="btn btn-mini" data-action="withdraw" data-currency="{$balance_info['currency']}">
+                      <i data-action="withdraw" data-currency="{$balance_info['currency']}" class="icon-upload-alt"></i>
+                    </button>
+                  {/if}
+                </div>
+              </td>
             {/if}
           </tr>
 
           <tr id="{$id}_portfolio_value">
           </tr>
 
-        {/foreach}
-      </tbody>
-    </table>
-  {/foreach}
-</div>
+          {/for}
+        </tbody>
+      </table>
+    {/for}
+  </div>
 {/template}

@@ -1,12 +1,11 @@
 {namespace bitex.view.SideBarView.templates}
 
-/**
-  * @param pattern
-  * @param desc
-  * @param variables
-  * @param formula
-  */
-{template .YourAccountPortfolioValue}
+
+{template YourAccountPortfolioValue}
+  {@param pattern: string}
+  {@param desc: string}
+  {@param variables: string}
+  {@param formula: string}
   <td style="padding: 4px;">
     <span>
       <i>
@@ -33,12 +32,11 @@
   </td>
 {/template}
 
-/**
-  * @param id
-  * @param boxes
-  */
-{template .YourAccountSummary}
-  {foreach $box in $boxes}
+
+{template YourAccountSummary}
+  {@param id: string}
+  {@param boxes: ?}
+  {for $box in $boxes}
     <table class="table table-bordered account-summary-table" >
       <tbody>
 
@@ -46,13 +44,13 @@
           <td colspan="3"><strong>{$box['title']}</strong></td>
         </tr>
 
-        {foreach $balance_info in $box['balances']}
+        {for $balance_info in $box['balances']}
           <tr>
             <td style="padding: 4px;">
               <strong>{$balance_info['currency']}</strong>
             </td>
 
-            <td style="padding: 4px;"{if not $balance_info['showDeposit'] and not $balance_info['showWithdraw']}colspan="2"{/if}>
+            <td style="padding: 4px;"{if not $balance_info['showDeposit'] and not $balance_info['showWithdraw']} colspan="2"{/if}>
               <span class="bitex-model"
                     data-model-key-list="Balance_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']}"
                     data-model-formula="Balance_{$balance_info['brokerID']}_{$balance_info['accountID']}_{$balance_info['currency']} / 100000000"
@@ -93,10 +91,10 @@
             </td>
             {/if}
           </tr>
-        {/foreach}
+        {/for}
         <tr id="{$id}_portfolio_value">
         </tr>
       </tbody>
     </table>
-  {/foreach}
+  {/for}
 {/template}

@@ -1,45 +1,46 @@
 {namespace bitex.ui.withdraw_methods.templates}
 
 
-/**
-  * @param id
-  * @param methods
-  * @param currencies
-  */
-{template .WithdrawMethods}
+{template WithdrawMethods}
+  {@param id: string}
+  {@param methods: ?}
+  {@param currencies: ?}
   <table id="{$id}_table" class="profile-table table">
-      <thead>
-        <tr>
-            <th> {msg desc="Methods column header"}Currency{/msg}</th>
-            <th> {msg desc="Methods column header"}Name{/msg}</th>
-            <th> {msg desc="Methods column header"}Disclaimer{/msg} </th>
-            <th> {msg desc="Methods column header"}Fees{/msg}</th>
-            <th> {msg desc="Methods column header"}Actions{/msg} </th>
-        </tr>
-      </thead>
-      <tbody>
-        {foreach $method in $methods}
-          <tr data-withdraw-currency="{$method['currency']}"  data-withdraw-method="{$method['method']}">
-            <td>{$method['currency_description']}</td>
-            <td>{$method['description']}</td>
-            <td>{$method['disclaimer']}</td>
+    <thead>
+    <tr>
+      <th> {msg desc="Methods column header"}Currency{/msg}</th>
+      <th> {msg desc="Methods column header"}Name{/msg}</th>
+      <th> {msg desc="Methods column header"}Disclaimer{/msg} </th>
+      <th> {msg desc="Methods column header"}Fees{/msg}</th>
+      <th> {msg desc="Methods column header"}Actions{/msg} </th>
+    </tr>
+    </thead>
+    <tbody>
+      {for $method in $methods}
+      <tr data-withdraw-currency="{$method['currency']}" data-withdraw-method="{$method['method']}">
+        <td>{$method['currency_description']}</td>
+        <td>{$method['description']}</td>
+        <td>{$method['disclaimer']}</td>
 
-            {if $method['has_fixed_fee']}
-              <td>{$method['formatted_percent_fee']}% + {$method['formatted_fixed_fee']}</td>
-            {else}
-              <td>{$method['formatted_percent_fee']}%</td>
-            {/if}
+        {if $method['has_fixed_fee']}
+          <td>{$method['formatted_percent_fee']}% + {$method['formatted_fixed_fee']}</td>
+        {else}
+          <td>{$method['formatted_percent_fee']}%</td>
+        {/if}
 
-
-            <td>
-                <div class="btn-group">
-                    <button class="btn btn-mini btn-success withdraw-methods-action-edit withdraw-method-action">{msg desc="Method edit action"}edit{/msg}</button>
-                    <button class="btn btn-mini btn-danger withdraw-methods-action-delete withdraw-method-action">{msg desc="Method delete action"}delete{/msg}</button>
-                </div>
-            </td>
-          </tr>
-        {/foreach}
-      </tbody>
+        <td>
+          <div class="btn-group">
+            <button
+                class="btn btn-mini btn-success withdraw-methods-action-edit withdraw-method-action">{msg desc="Method edit action"}
+              edit{/msg}</button>
+            <button
+                class="btn btn-mini btn-danger withdraw-methods-action-delete withdraw-method-action">{msg desc="Method delete action"}
+              delete{/msg}</button>
+          </div>
+        </td>
+      </tr>
+      {/for}
+    </tbody>
   </table>
 
   <div class="btn-group withdraw-methods-show-when-dirty-state">
@@ -58,13 +59,14 @@
       <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-      {foreach $curr in $currencies}
+      {for $curr in $currencies}
         <li>
-          <a href="" data-withdraw-currency="{$curr['code']}" class="withdraw-methods-action-add withdraw-method-action" >
+          <a href="" data-withdraw-currency="{$curr['code']}"
+             class="withdraw-methods-action-add withdraw-method-action">
             {$curr['description']}
           </a>
         </li>
-      {/foreach}
+      {/for}
     </ul>
   </div>
 
