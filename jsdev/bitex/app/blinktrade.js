@@ -2733,15 +2733,15 @@ bitex.app.BlinkTrade.prototype.onBrokerProcessWithdraw_ = function(e){
       amount: withdraw_data['Amount'],
       methods: model.get('Profile')['WithdrawStructure'][withdraw_data['Currency'] ],
       methodID: method_element_id,
-      showFeeDataEntry:false,
+      showFeeDataEntry: false,
       amountID: withdraw_amount_element_id,
       fixedFeeID: fixed_fee_element_id,
       percentFeeID: percent_fee_element_id,
       totalFeesID: total_fees_element_id,
       netValueID: net_value_element_id,
-      hideNetAmount:false,
-      type:'confirm_withdrawal',
-      netAmountLabel:MSG_NET_AMOUNT_LABEL_NET_AMOUNT
+      hideNetAmount: false,
+      type: 'confirm_withdrawal',
+      netAmountLabel: MSG_NET_AMOUNT_LABEL_NET_AMOUNT
     });
 
     /**
@@ -3102,7 +3102,7 @@ bitex.app.BlinkTrade.prototype.onUserShowQr_ = function(e){
     dialog_title = MSG_SHOW_QR_CURRENCY_DEPOSIT_DIALOG_TITLE;
   }
 
-  var dlg =  this.showDialog(bitex.templates.CryptoCurrencyQRContentDialog({data:qrData }),
+  var dlg =  this.showDialog(bitex.templates.CryptoCurrencyQRContentDialog({data: qrData }),
                              dialog_title,
                              bitex.ui.Dialog.ButtonSet.createCancel());
 
@@ -3329,8 +3329,8 @@ bitex.app.BlinkTrade.prototype.onProcessDeposit_ = function(e){
     var MSG_DEPOSIT_CANCEL_DIALOG_TITLE = goog.getMsg('Cancel deposit');
 
     var cancel_reason_dialog_content = bitex.templates.CancelDepositDialogContent({
-      reason_id:'id_select_reason',
-      custom_reason_id:'id_custom_reason_text'
+      reason_id: 'id_select_reason',
+      custom_reason_id: 'id_custom_reason_text'
     });
 
     var cancelWithdrawDlg =  this.showDialog( cancel_reason_dialog_content,
@@ -3387,19 +3387,19 @@ bitex.app.BlinkTrade.prototype.onProcessDeposit_ = function(e){
     var total_fees_element_id = goog.string.getRandomString();
     var net_value_element_id = goog.string.getRandomString();
 
-    var control_number  = deposit_data['ControlNumber'];
+    var control_number = deposit_data['ControlNumber'];
     if (deposit_data['Type'] == 'CRY') {
-      control_number  = deposit_data['Data']['InputAddress'];
+      control_number = deposit_data['Data']['InputAddress'];
     }
 
     var confirm_deposit_dialog_content = bitex.templates.BrokerConfirmDepositContent({
-      id_value:paid_value_element_id,
+      id_value: paid_value_element_id,
       fixedFeeID: fixed_fee_element_id,
       percentFeeID: percent_fee_element_id,
       totalFeesID: total_fees_element_id,
       netValueID: net_value_element_id,
-      controlNumber:control_number ,
-      currencySign:this.getCurrencySign(deposit_data['Currency']),
+      controlNumber: control_number,
+      currencySign: this.getCurrencySign(deposit_data['Currency']),
       value: valueFormatter.format(deposit_data['Value']/1e8),
       percentFee: valueFormatter.format(deposit_data['PercentFee']),
       fixedFee: valueFormatter.format(deposit_data['FixedFee']/1e8)
@@ -3665,8 +3665,8 @@ bitex.app.BlinkTrade.prototype.showDepositDialog = function(currency,
           var input_address = msg['Data']['InputAddress'];
           goog.soy.renderElement(goog.dom.getFirstElementChild(dlgConfirm.getContentElement()),
                                  bitex.templates.DepositCryptoCurrencyContentDialog, {
-                                   deposit_message:msg,
-                                   hasInstantDepositsEnabled:enabled_instant_deposits,
+                                   deposit_message: msg,
+                                   hasInstantDepositsEnabled: enabled_instant_deposits,
                                    amount: opt_amount,
                                    formattedAmount: opt_formatted_amount
                                  });
@@ -3895,7 +3895,7 @@ bitex.app.BlinkTrade.prototype.showDepositDialog = function(currency,
               } else {
                   goog.soy.renderElement(dlg.getContentElement(),
                                          bitex.templates.DepositSlipContentDialog,
-                                         {deposit_id:msg['DepositID'], rest_url:this.rest_url_  });
+                                         {deposit_id: msg['DepositID'], rest_url: this.rest_url_  });
               }
               dlg.setButtonSet(bitex.ui.Dialog.ButtonSet.createPrintOk() );
 
@@ -4421,9 +4421,9 @@ bitex.app.BlinkTrade.prototype.onUserLoginError_ = function(e) {
     }
 
     var dlg_content = bitex.templates.SecondFactorTokenDialogContent({
-      id:dlg_second_factor_id,
-      description:dlg_second_factor_description,
-      askForTrust:dlg_ask_for_trust_device
+      id: dlg_second_factor_id,
+      description: dlg_second_factor_description,
+      askForTrust: dlg_ask_for_trust_device
     });
 
     var dlg_ = this.showDialog(dlg_content,

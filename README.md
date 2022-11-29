@@ -128,7 +128,7 @@ It stores most of the settings of the application.
 
 ### [index.html](https://github.com/blinktrade/frontend/tree/master/index.html)
 
-The static html page 
+The static html page
 
 ### [jsdev](https://github.com/blinktrade/frontend/tree/master/jsdev)
 

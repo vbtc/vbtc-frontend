@@ -335,7 +335,7 @@ bitex.view.SignupView.prototype.onChangeBroker_ = function(e){
 
       goog.soy.renderElement(goog.dom.getElement('signup_broker_details'), bitex.templates.BrokerView, {
         show_title: false,
-        msg_broker:broker,
+        msg_broker: broker,
         broker_list: broker_list
       });
     }

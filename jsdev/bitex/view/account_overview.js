@@ -680,10 +680,10 @@ bitex.view.AccountOverview.prototype.onBtnUserFeesClick_ = function(e) {
 
 
   var dlg_content = bitex.templates.UserFeesDialogContent({id: "id_user_fees",
-                                                            buy_fee:buy_fee,
-                                                            sell_fee:sell_fee,
-                                                            taker_buy_fee:taker_buy_fee,
-                                                            taker_sell_fee:taker_sell_fee
+                                                           buy_fee: buy_fee,
+                                                           sell_fee: sell_fee,
+                                                           taker_buy_fee: taker_buy_fee,
+                                                           taker_sell_fee: taker_sell_fee
                                                           });
 
   /**

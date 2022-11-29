@@ -17,7 +17,7 @@ fi
 
 echo "Deploying $LANG using theme $THEME..."
 git checkout gh-pages
-git pull 
+git pull
 git checkout master
 ln -s _config.bitcoinvietnam.yml  _config.yml
 
