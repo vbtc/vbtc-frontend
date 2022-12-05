@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/blinktrade/frontend"
+    "url": "git+https://github.com/blinktrade/frontend.git"
   },
   "keywords": [
     "Blinktrade",
@@ -29,7 +29,7 @@
     "js-yaml": "^3.4.5",
     "run-sequence": "^1.1.5"
   },
-  "dependencies": {
-    "npm": "^5.8.0"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
