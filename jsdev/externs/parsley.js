@@ -1,5 +1,5 @@
 /**
- * @param {=(string)} opt_method
+ * @param {string=} opt_method
  * @return {jQuery}
  */
 jQuery.prototype.parsley = function(opt_method) {};

@@ -55,7 +55,7 @@ var MSG_TRADE_HISTORY_COLUMN_SIDE_SELL = goog.getMsg('Sell');
 
 
 /**
- * @param {function} pseudoNameFunction
+ * @param {Function} pseudoNameFunction
  * @param {number=} opt_blinkDelay. Defaults to 700 milliseconds
  * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
  *
