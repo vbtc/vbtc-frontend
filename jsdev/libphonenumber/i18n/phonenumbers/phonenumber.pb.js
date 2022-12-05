@@ -26,6 +26,7 @@ goog.provide('i18n.phonenumbers.PhoneNumber');
 goog.provide('i18n.phonenumbers.PhoneNumber.CountryCodeSource');
 
 goog.require('goog.proto2.Message');
+goog.require('goog.proto2.Descriptor');
 
 
 
@@ -33,11 +34,19 @@ goog.require('goog.proto2.Message');
  * Message PhoneNumber.
  * @constructor
  * @extends {goog.proto2.Message}
+ * @final
  */
 i18n.phonenumbers.PhoneNumber = function() {
   goog.proto2.Message.call(this);
 };
 goog.inherits(i18n.phonenumbers.PhoneNumber, goog.proto2.Message);
+
+
+/**
+ * Descriptor for this message, deserialized lazily in getDescriptor().
+ * @private {?goog.proto2.Descriptor}
+ */
+i18n.phonenumbers.PhoneNumber.descriptor_ = null;
 
 
 /**
@@ -365,16 +374,16 @@ i18n.phonenumbers.PhoneNumber.prototype.getCountryCodeSource = function() {
 
 /**
  * Gets the value of the country_code_source field or the default value if not set.
- * @return {i18n.phonenumbers.PhoneNumber.CountryCodeSource} The value.
+ * @return {!i18n.phonenumbers.PhoneNumber.CountryCodeSource} The value.
  */
 i18n.phonenumbers.PhoneNumber.prototype.getCountryCodeSourceOrDefault = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumber.CountryCodeSource} */ (this.get$ValueOrDefault(6));
+  return /** @type {!i18n.phonenumbers.PhoneNumber.CountryCodeSource} */ (this.get$ValueOrDefault(6));
 };
 
 
 /**
  * Sets the value of the country_code_source field.
- * @param {i18n.phonenumbers.PhoneNumber.CountryCodeSource} value The value.
+ * @param {!i18n.phonenumbers.PhoneNumber.CountryCodeSource} value The value.
  */
 i18n.phonenumbers.PhoneNumber.prototype.setCountryCodeSource = function(value) {
   this.set$Value(6, value);
@@ -461,6 +470,7 @@ i18n.phonenumbers.PhoneNumber.prototype.clearPreferredDomesticCarrierCode = func
  * @enum {number}
  */
 i18n.phonenumbers.PhoneNumber.CountryCodeSource = {
+  UNSPECIFIED: 0,
   FROM_NUMBER_WITH_PLUS_SIGN: 1,
   FROM_NUMBER_WITH_IDD: 5,
   FROM_NUMBER_WITHOUT_PLUS_SIGN: 10,
@@ -470,7 +480,8 @@ i18n.phonenumbers.PhoneNumber.CountryCodeSource = {
 
 /** @override */
 i18n.phonenumbers.PhoneNumber.prototype.getDescriptor = function() {
-  if (!i18n.phonenumbers.PhoneNumber.descriptor_) {
+  var descriptor = i18n.phonenumbers.PhoneNumber.descriptor_;
+  if (!descriptor) {
     // The descriptor is created lazily when we instantiate a new instance.
     var descriptorObj = {
       0: {
@@ -513,7 +524,7 @@ i18n.phonenumbers.PhoneNumber.prototype.getDescriptor = function() {
       6: {
         name: 'country_code_source',
         fieldType: goog.proto2.Message.FieldType.ENUM,
-        defaultValue: i18n.phonenumbers.PhoneNumber.CountryCodeSource.FROM_NUMBER_WITH_PLUS_SIGN,
+        defaultValue: i18n.phonenumbers.PhoneNumber.CountryCodeSource.UNSPECIFIED,
         type: i18n.phonenumbers.PhoneNumber.CountryCodeSource
       },
       7: {
@@ -522,11 +533,11 @@ i18n.phonenumbers.PhoneNumber.prototype.getDescriptor = function() {
         type: String
       }
     };
-    i18n.phonenumbers.PhoneNumber.descriptor_ =
+    i18n.phonenumbers.PhoneNumber.descriptor_ = descriptor =
         goog.proto2.Message.createDescriptor(
              i18n.phonenumbers.PhoneNumber, descriptorObj);
   }
-  return i18n.phonenumbers.PhoneNumber.descriptor_;
+  return descriptor;
 };
 
 
