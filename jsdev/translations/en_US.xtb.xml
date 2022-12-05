@@ -821,4 +821,6 @@
 	<translation id="6003146052699857435" key="MSG_WITHDRAW_FIELD_BILL_TYPE" source="bitex/app/blinktrade.js" desc="Withdraw field on the withdrawal dialog">Bill type</translation>
 	<translation id="8097033270306845722" key="MSG_WITHDRAW_FIELD_DUE_DATE" source="bitex/app/blinktrade.js" desc="Withdraw field on the withdrawal dialog">Due date</translation>
 	<translation id="8383728378901772376" key="MSG_WITHDRAW_FIELD_MEMO" source="bitex/app/blinktrade.js" desc="Withdraw field Memo on the withdrawal dialog">Memo</translation>
+	<translation id="3700218083491628057" key="MSG_IR55HL1V48MR" source="bitex/ui/deposit_list.soy.js" desc="view">View</translation>
+	<translation id="3501335681219376815" key="MSG_MONTH_AND_YEAR" source="closure-library/closure/goog/date/date.js" desc="Month/year format given the month name and the numeric year."><ph name="monthName" /> <ph name="yearNum" /></translation>
 </translationbundle>

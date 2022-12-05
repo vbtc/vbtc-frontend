@@ -1,7 +1,19 @@
 #!/bin/bash
 
-echo "Building javascript"
 cd jsdev
+
+echo "Building translations"
+
+LANGUAGE=en_US sh generate_xtb.sh
+LANGUAGE=es    sh generate_xtb.sh
+LANGUAGE=pt_BR sh generate_xtb.sh
+LANGUAGE=ro    sh generate_xtb.sh
+LANGUAGE=zn_CN sh generate_xtb.sh
+LANGUAGE=vi    sh generate_xtb.sh
+exit
+
+
+echo "Building javascript"
 
 echo "default theme"
 THEME=default sh build_templates.sh
