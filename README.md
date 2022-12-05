@@ -73,7 +73,8 @@ To build the british english version with a custom theme:
 
 ```sh
 $ cd ./jsdev 
-$ LANG=en_GB THEME=custom sh build_release.sh
+$ THEME=custom sh build_templates.sh
+$ LANG=en_GB THEME=custom sh build_js.sh
 ```
 
 ## Browser Support
