@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # BitEx API
-python ./closure-library/closure/bin/build/closurebuilder.py  \
+python2 ./closure-library/closure/bin/build/closurebuilder.py  \
   --root=./closure-library/ \
   --root=./bitex \
   --root=./closure-bootstrap/javascript/ \

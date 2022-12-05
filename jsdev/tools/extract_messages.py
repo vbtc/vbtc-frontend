@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 import glob
 import subprocess
@@ -20,7 +20,7 @@ print '<?xml version="1.0" encoding="UTF-8"?>'
 print '<!DOCTYPE translationbundle SYSTEM "translationbundle.dtd">'
 print '<translationbundle lang="pt_BR">'
 
-for name in all_files: 
+for name in all_files:
   print '<!-- ' + name + ' -->'
   p = subprocess.Popen(['java', '-jar', './closure-extract-messages.jar', 'bitex', name ], stdout=subprocess.PIPE)
   out, err = p.communicate()

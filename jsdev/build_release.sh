@@ -49,7 +49,7 @@ SOY_TEMPLATES="
                view/withdraw
 "
 
-for template in $SOY_TEMPLATES ; do 
+for template in $SOY_TEMPLATES ; do
     echo -n "$template.$THEME.soy -> "
     java -jar ./tools/SoyToJsSrcCompiler.jar --bidiGlobalDir 1 --shouldGenerateGoogMsgDefs \
       --shouldProvideRequireSoyNamespaces --codeStyle concat --cssHandlingScheme GOOG  \
@@ -62,7 +62,7 @@ done
 echo "done with soy templates"
 
 # BlinkTrade Application - en_US
-python ./closure-library/closure/bin/build/closurebuilder.py  \
+python2 ./closure-library/closure/bin/build/closurebuilder.py  \
   --root=./closure-library/ \
   --root=./closure-bootstrap/javascript/ \
   --root=./scottlogic/ \

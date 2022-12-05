@@ -6,7 +6,7 @@ else
   LANG=$1
 fi
 
-python ./closure-library/closure/bin/build/closurebuilder.py  \
+python2 ./closure-library/closure/bin/build/closurebuilder.py  \
   --root=./bitex \
   --root=./closure-library/ \
   --root=./closure-bootstrap/javascript/ \
