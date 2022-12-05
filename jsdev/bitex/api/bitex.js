@@ -2273,68 +2273,68 @@ goog.inherits(bitex.api.BitExEvent, goog.events.Event);
 
 
 goog.exportSymbol('BitEx', bitex.api.BitEx);
-goog.exportProperty(BitEx.prototype, 'open', bitex.api.BitEx.prototype.open);
-goog.exportProperty(BitEx.prototype, 'close', bitex.api.BitEx.prototype.close);
-goog.exportProperty(BitEx.prototype, 'login', bitex.api.BitEx.prototype.login);
-goog.exportProperty(BitEx.prototype, 'isLogged', bitex.api.BitEx.prototype.isLogged);
-goog.exportProperty(BitEx.prototype, 'isConnected', bitex.api.BitEx.prototype.isConnected);
-goog.exportProperty(BitEx.prototype, 'setSTUNTIp', bitex.api.BitEx.prototype.setSTUNTIp);
+goog.exportProperty(bitex.api.BitEx.prototype, 'open', bitex.api.BitEx.prototype.open);
+goog.exportProperty(bitex.api.BitEx.prototype, 'close', bitex.api.BitEx.prototype.close);
+goog.exportProperty(bitex.api.BitEx.prototype, 'login', bitex.api.BitEx.prototype.login);
+goog.exportProperty(bitex.api.BitEx.prototype, 'isLogged', bitex.api.BitEx.prototype.isLogged);
+goog.exportProperty(bitex.api.BitEx.prototype, 'isConnected', bitex.api.BitEx.prototype.isConnected);
+goog.exportProperty(bitex.api.BitEx.prototype, 'setSTUNTIp', bitex.api.BitEx.prototype.setSTUNTIp);
 
-goog.exportProperty(BitEx.prototype, 'changePassword', bitex.api.BitEx.prototype.changePassword);
-goog.exportProperty(BitEx.prototype, 'enableTwoFactor', bitex.api.BitEx.prototype.enableTwoFactor);
-goog.exportProperty(BitEx.prototype, 'resetPassword', bitex.api.BitEx.prototype.resetPassword);
+goog.exportProperty(bitex.api.BitEx.prototype, 'changePassword', bitex.api.BitEx.prototype.changePassword);
+goog.exportProperty(bitex.api.BitEx.prototype, 'enableTwoFactor', bitex.api.BitEx.prototype.enableTwoFactor);
+goog.exportProperty(bitex.api.BitEx.prototype, 'resetPassword', bitex.api.BitEx.prototype.resetPassword);
 
-goog.exportProperty(BitEx.prototype, 'subscribeMarketData', bitex.api.BitEx.prototype.subscribeMarketData);
-goog.exportProperty(BitEx.prototype, 'unSubscribeMarketData', bitex.api.BitEx.prototype.unSubscribeMarketData);
-goog.exportProperty(BitEx.prototype, 'signUp', bitex.api.BitEx.prototype.signUp);
-goog.exportProperty(BitEx.prototype, 'forgotPassword', bitex.api.BitEx.prototype.forgotPassword);
-goog.exportProperty(BitEx.prototype, 'requestBalances', bitex.api.BitEx.prototype.requestBalances);
+goog.exportProperty(bitex.api.BitEx.prototype, 'subscribeMarketData', bitex.api.BitEx.prototype.subscribeMarketData);
+goog.exportProperty(bitex.api.BitEx.prototype, 'unSubscribeMarketData', bitex.api.BitEx.prototype.unSubscribeMarketData);
+goog.exportProperty(bitex.api.BitEx.prototype, 'signUp', bitex.api.BitEx.prototype.signUp);
+goog.exportProperty(bitex.api.BitEx.prototype, 'forgotPassword', bitex.api.BitEx.prototype.forgotPassword);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestBalances', bitex.api.BitEx.prototype.requestBalances);
 
-goog.exportProperty(BitEx.prototype, 'requestSecurityList', bitex.api.BitEx.prototype.requestSecurityList);
-goog.exportProperty(BitEx.prototype, 'requestDepositMethods', bitex.api.BitEx.prototype.requestDepositMethods);
-goog.exportProperty(BitEx.prototype, 'requestLedgerList', bitex.api.BitEx.prototype.requestLedgerList);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestSecurityList', bitex.api.BitEx.prototype.requestSecurityList);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestDepositMethods', bitex.api.BitEx.prototype.requestDepositMethods);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestLedgerList', bitex.api.BitEx.prototype.requestLedgerList);
 
-goog.exportProperty(BitEx.prototype, 'requestDeposit', bitex.api.BitEx.prototype.requestDeposit);
-goog.exportProperty(BitEx.prototype, 'processDeposit', bitex.api.BitEx.prototype.processDeposit);
-goog.exportProperty(BitEx.prototype, 'processInstantDepositFiat', bitex.api.BitEx.prototype.processInstantDepositFiat);
-goog.exportProperty(BitEx.prototype, 'requestDepositList', bitex.api.BitEx.prototype.requestDepositList);
-
-
-goog.exportProperty(BitEx.prototype, 'requestWithdraw', bitex.api.BitEx.prototype.requestWithdraw);
-goog.exportProperty(BitEx.prototype, 'processWithdraw', bitex.api.BitEx.prototype.processWithdraw);
-goog.exportProperty(BitEx.prototype, 'requestWithdrawList', bitex.api.BitEx.prototype.requestWithdrawList);
-goog.exportProperty(BitEx.prototype, 'confirmWithdraw', bitex.api.BitEx.prototype.confirmWithdraw);
-goog.exportProperty(BitEx.prototype, 'cancelWithdraw', bitex.api.BitEx.prototype.cancelWithdraw);
-
-goog.exportProperty(BitEx.prototype, 'requestCustomerList', bitex.api.BitEx.prototype.requestCustomerList);
-goog.exportProperty(BitEx.prototype, 'requestCustomerDetails', bitex.api.BitEx.prototype.requestCustomerDetails);
-goog.exportProperty(BitEx.prototype, 'verifyCustomer', bitex.api.BitEx.prototype.verifyCustomer);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestDeposit', bitex.api.BitEx.prototype.requestDeposit);
+goog.exportProperty(bitex.api.BitEx.prototype, 'processDeposit', bitex.api.BitEx.prototype.processDeposit);
+goog.exportProperty(bitex.api.BitEx.prototype, 'processInstantDepositFiat', bitex.api.BitEx.prototype.processInstantDepositFiat);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestDepositList', bitex.api.BitEx.prototype.requestDepositList);
 
 
-goog.exportProperty(BitEx.prototype, 'requestBrokerList', bitex.api.BitEx.prototype.requestBrokerList );
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestWithdraw', bitex.api.BitEx.prototype.requestWithdraw);
+goog.exportProperty(bitex.api.BitEx.prototype, 'processWithdraw', bitex.api.BitEx.prototype.processWithdraw);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestWithdrawList', bitex.api.BitEx.prototype.requestWithdrawList);
+goog.exportProperty(bitex.api.BitEx.prototype, 'confirmWithdraw', bitex.api.BitEx.prototype.confirmWithdraw);
+goog.exportProperty(bitex.api.BitEx.prototype, 'cancelWithdraw', bitex.api.BitEx.prototype.cancelWithdraw);
+
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestCustomerList', bitex.api.BitEx.prototype.requestCustomerList);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestCustomerDetails', bitex.api.BitEx.prototype.requestCustomerDetails);
+goog.exportProperty(bitex.api.BitEx.prototype, 'verifyCustomer', bitex.api.BitEx.prototype.verifyCustomer);
 
 
-goog.exportProperty(BitEx.prototype, 'requestTradeHistory', bitex.api.BitEx.prototype.requestTradeHistory);
-goog.exportProperty(BitEx.prototype, 'requestOrderList', bitex.api.BitEx.prototype.requestOrderList);
-goog.exportProperty(BitEx.prototype, 'cancelOrder', bitex.api.BitEx.prototype.cancelOrder);
-goog.exportProperty(BitEx.prototype, 'sendRawMessage', bitex.api.BitEx.prototype.sendRawMessage);
-goog.exportProperty(BitEx.prototype, 'sendBuyLimitedOrder', bitex.api.BitEx.prototype.sendBuyLimitedOrder);
-goog.exportProperty(BitEx.prototype, 'sendSellLimitedOrder', bitex.api.BitEx.prototype.sendSellLimitedOrder);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestBrokerList', bitex.api.BitEx.prototype.requestBrokerList );
 
-goog.exportProperty(BitEx.prototype, 'testRequest', bitex.api.BitEx.prototype.testRequest);
 
-goog.exportProperty(BitEx.prototype, 'requestAPIKeyList', bitex.api.BitEx.prototype.requestAPIKeyList);
-goog.exportProperty(BitEx.prototype, 'requestCreateAPIKey', bitex.api.BitEx.prototype.requestCreateAPIKey);
-goog.exportProperty(BitEx.prototype, 'revokeAPIKey', bitex.api.BitEx.prototype.revokeAPIKey);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestTradeHistory', bitex.api.BitEx.prototype.requestTradeHistory);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestOrderList', bitex.api.BitEx.prototype.requestOrderList);
+goog.exportProperty(bitex.api.BitEx.prototype, 'cancelOrder', bitex.api.BitEx.prototype.cancelOrder);
+goog.exportProperty(bitex.api.BitEx.prototype, 'sendRawMessage', bitex.api.BitEx.prototype.sendRawMessage);
+goog.exportProperty(bitex.api.BitEx.prototype, 'sendBuyLimitedOrder', bitex.api.BitEx.prototype.sendBuyLimitedOrder);
+goog.exportProperty(bitex.api.BitEx.prototype, 'sendSellLimitedOrder', bitex.api.BitEx.prototype.sendSellLimitedOrder);
 
-goog.exportProperty(BitEx.prototype, 'requestLineOfCreditList', bitex.api.BitEx.prototype.requestLineOfCreditList);
-goog.exportProperty(BitEx.prototype, 'getLineOfCredit', bitex.api.BitEx.prototype.getLineOfCredit);
-goog.exportProperty(BitEx.prototype, 'payLineOfCredit', bitex.api.BitEx.prototype.payLineOfCredit);
-goog.exportProperty(BitEx.prototype, 'enableLineOfCredit', bitex.api.BitEx.prototype.enableLineOfCredit);
+goog.exportProperty(bitex.api.BitEx.prototype, 'testRequest', bitex.api.BitEx.prototype.testRequest);
 
-goog.exportProperty(BitEx.prototype, 'requestCardList', bitex.api.BitEx.prototype.requestCardList);
-goog.exportProperty(BitEx.prototype, 'requestCreateCard', bitex.api.BitEx.prototype.requestCreateCard);
-goog.exportProperty(BitEx.prototype, 'cardDisable', bitex.api.BitEx.prototype.cardDisable);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestAPIKeyList', bitex.api.BitEx.prototype.requestAPIKeyList);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestCreateAPIKey', bitex.api.BitEx.prototype.requestCreateAPIKey);
+goog.exportProperty(bitex.api.BitEx.prototype, 'revokeAPIKey', bitex.api.BitEx.prototype.revokeAPIKey);
 
-goog.exportProperty(BitEx.prototype, 'addEventListener', bitex.api.BitEx.prototype.addEventListener);
-goog.exportProperty(BitEx.prototype, 'removeEventListener', bitex.api.BitEx.prototype.removeEventListener);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestLineOfCreditList', bitex.api.BitEx.prototype.requestLineOfCreditList);
+goog.exportProperty(bitex.api.BitEx.prototype, 'getLineOfCredit', bitex.api.BitEx.prototype.getLineOfCredit);
+goog.exportProperty(bitex.api.BitEx.prototype, 'payLineOfCredit', bitex.api.BitEx.prototype.payLineOfCredit);
+goog.exportProperty(bitex.api.BitEx.prototype, 'enableLineOfCredit', bitex.api.BitEx.prototype.enableLineOfCredit);
+
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestCardList', bitex.api.BitEx.prototype.requestCardList);
+goog.exportProperty(bitex.api.BitEx.prototype, 'requestCreateCard', bitex.api.BitEx.prototype.requestCreateCard);
+goog.exportProperty(bitex.api.BitEx.prototype, 'cardDisable', bitex.api.BitEx.prototype.cardDisable);
+
+goog.exportProperty(bitex.api.BitEx.prototype, 'addEventListener', bitex.api.BitEx.prototype.addEventListener);
+goog.exportProperty(bitex.api.BitEx.prototype, 'removeEventListener', bitex.api.BitEx.prototype.removeEventListener);
