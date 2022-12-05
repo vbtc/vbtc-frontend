@@ -594,7 +594,7 @@ bitex.util.getCountries = function() {
 };
 
 /**
- * @param {Array.<Object.<*>>} verification_data
+ * @param {Array<Object<*>>} verification_data
  * @return {string}
  */
 bitex.util.verificationData2HTML = function(verification_data){
@@ -694,11 +694,11 @@ bitex.util.calculateTotalFee = function( qty, price, order_depth, username, take
 /**
  * @param {number} user_input
  * @param {bitex.util.PriceAmountCalculatorVerb} verb
- * @param {.Array<.Array<Object>>} order_depth
+ * @param {Array<Array<Object>>} order_depth
  * @param {string} username
  * @param {number} fee
  * @param {number} side
- * @return {Array.<number>=}
+ * @return {Array<number>}
  */
 bitex.util.calculatePriceAmountAndFee = function(user_input, verb, order_depth, username, fee, side) {
   var amount = 0;

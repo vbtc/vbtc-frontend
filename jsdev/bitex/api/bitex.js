@@ -1086,9 +1086,9 @@ bitex.api.BitEx.prototype.commentWithdraw = function(opt_requestId, comment, wit
  * @param {number=} opt_requestId. Defaults to random generated number
  * @param {number=} opt_page. Defaults to 0
  * @param {number=} opt_limit. Defaults to 100
- * @param {Array.<string>=} opt_status. Defaults to ['1'], pending operations
+ * @param {Array<string>=} opt_status. Defaults to ['1'], pending operations
  * @param {number=} opt_clientID
- * @param {Array.<string>=} opt_filter
+ * @param {Array<string>=} opt_filter
  */
 bitex.api.BitEx.prototype.requestWithdrawList = function(opt_requestId, opt_page, opt_limit, opt_status, opt_clientID, opt_filter){
   var requestId = opt_requestId || parseInt( 1e7 * Math.random() , 10 );
@@ -1145,9 +1145,9 @@ bitex.api.BitEx.prototype.updateUserProfile = function(fields, opt_userId, opt_r
  * @param {number=} opt_requestId. Defaults to random generated number
  * @param {number=} opt_page. Defaults to 0
  * @param {number=} opt_limit. Defaults to 100
- * @param {Array.<string>=} opt_status. Defaults to ['1'] ( pending operations )
+ * @param {Array<string>=} opt_status. Defaults to ['1'] ( pending operations )
  * @param {number=} opt_clientID
- * @param {Array.<string>=} opt_filter
+ * @param {Array<string>=} opt_filter
  */
 bitex.api.BitEx.prototype.requestDepositList = function(opt_requestId, opt_page, opt_limit, opt_status, opt_clientID, opt_filter){
   var requestId = opt_requestId || parseInt( 1e7 * Math.random() , 10 );
@@ -1184,7 +1184,7 @@ bitex.api.BitEx.prototype.requestDepositList = function(opt_requestId, opt_page,
  * @param {number=} opt_limit. Defaults to 100
  * @param {number=} opt_clientID
  * @param {number=} opt_since
- * @param {Array.<string>=} opt_filter
+ * @param {Array<string>=} opt_filter
  */
 bitex.api.BitEx.prototype.requestTradeHistory = function(opt_requestId, opt_page, opt_limit, opt_clientID, opt_filter, opt_since){
   var requestId = opt_requestId || parseInt( 1e7 * Math.random() , 10 );
@@ -1221,7 +1221,7 @@ bitex.api.BitEx.prototype.requestTradeHistory = function(opt_requestId, opt_page
  * @param {number=} opt_page. Defaults to 0
  * @param {number=} opt_limit. Defaults to 100
  * @param {number=} opt_clientID
- * @param {Array.<string>=} opt_filter
+ * @param {Array<string>=} opt_filter
  */
 bitex.api.BitEx.prototype.requestTradersRank = function(opt_requestId, opt_page, opt_limit, opt_clientID, opt_filter){
   var requestId = opt_requestId || parseInt( 1e7 * Math.random() , 10 );
@@ -1257,7 +1257,7 @@ bitex.api.BitEx.prototype.requestTradersRank = function(opt_requestId, opt_page,
  * @param {number=} opt_brokerID
  * @param {number=} opt_clientID
  * @param {string=} opt_currency
- * @param {Array.<string>=} opt_filter
+ * @param {Array<string>=} opt_filter
  */
 bitex.api.BitEx.prototype.requestLedgerList = function(opt_requestId, opt_page, opt_limit, opt_brokerID, opt_clientID,opt_currency, opt_filter){
   var requestId = opt_requestId || parseInt( 1e7 * Math.random() , 10 );
@@ -1300,7 +1300,7 @@ bitex.api.BitEx.prototype.requestLedgerList = function(opt_requestId, opt_page, 
  * @param {string=} opt_country.
  * @param {number=} opt_page. Defaults to 0
  * @param {number=} opt_limit. Defaults to 100
- * @param {Array.<string>=} opt_status. Defaults to ['1'] ( active brokers )
+ * @param {Array<string>=} opt_status. Defaults to ['1'] ( active brokers )
  */
 bitex.api.BitEx.prototype.requestBrokerList = function(opt_requestId, opt_country, opt_page, opt_limit, opt_status){
   var requestId = opt_requestId || parseInt( 1e7 * Math.random() , 10 );
@@ -1334,7 +1334,7 @@ bitex.api.BitEx.prototype.requestBrokerList = function(opt_requestId, opt_countr
  * @param {number=} opt_limit. Defaults to 100
  * @param {string=} opt_sort_column
  * @param {string=} opt_sort_direction. Defaults to ASC
- * @param {Array.<string>=} opt_status. Defaults to ['1'] ( active brokers )
+ * @param {Array<string>=} opt_status. Defaults to ['1'] ( active brokers )
  */
 bitex.api.BitEx.prototype.requestCustomerList = function(opt_requestId, opt_filter_country, opt_filter_state, opt_filter_username_or_email, opt_page, opt_limit, opt_status, opt_sort_column, opt_sort_direction){
   var requestId = opt_requestId || parseInt( 1e7 * Math.random() , 10 );
@@ -1564,8 +1564,8 @@ bitex.api.BitEx.prototype.changePassword = function(brokerID, password, new_pass
 
 /**
  * @param {number} market_depth
- * @param {Array.<string>} symbols
- * @param {Array.<string>} entries
+ * @param {Array<string>} symbols
+ * @param {Array<string>} entries
  * @param {string} opt_requestId. Defaults to random generated number
  * @return {number}
  */
@@ -1600,7 +1600,7 @@ bitex.api.BitEx.prototype.unSubscribeMarketData = function(market_data_id){
 };
 
 /**
- * @param {Array.<string>} symbols
+ * @param {Array<string>} symbols
  * @param {string} opt_requestId. Defaults to random generated number
  * @return {number}
  */
@@ -1704,7 +1704,7 @@ bitex.api.BitEx.prototype.signUp = function(username, password, email, state, co
  * @param {number=} opt_requestId. Defaults to random generated number
  * @param {number=} opt_page. Defaults to 0
  * @param {number=} opt_limit. Defaults to 100
- * @param {Array.<string>=} opt_filter.
+ * @param {Array<string>=} opt_filter.
  */
 bitex.api.BitEx.prototype.requestOrderList = function(opt_requestId, opt_page, opt_limit, opt_filter){
   var requestId = opt_requestId || parseInt( 1e7 * Math.random() , 10 );
@@ -1733,7 +1733,7 @@ bitex.api.BitEx.prototype.requestOrderList = function(opt_requestId, opt_page, o
  * @param {number=} opt_depositID
  * @param {string=} opt_currency
  * @param {string=} opt_client_order_id
- * @param {Array.<Object> =} opt_instructions
+ * @param {Array<Object> =} opt_instructions
  */
 bitex.api.BitEx.prototype.requestDeposit = function( opt_requestId, opt_depositOptionId, opt_value, opt_depositID, opt_currency, opt_client_order_id, opt_instructions ) {
   var requestId = opt_requestId || parseInt( 1e7 * Math.random() , 10 );
@@ -2043,8 +2043,8 @@ bitex.api.BitEx.prototype.requestAPIKeyList = function(opt_page, opt_limit, opt_
 /**
  * Requests the creation of a new API Key
  * @param {string} label
- * @param {<Object.<string,Array.<string>>} permission_list
- * @param {Array.<string>} ip_white_list
+ * @param {Object<string, Array<string>>} permission_list
+ * @param {Array<string>} ip_white_list
  * @param {boolean=} opt_revocable  Defaults to true
  * @param {number=} opt_requestId
  * @returns {number}

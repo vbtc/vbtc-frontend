@@ -203,7 +203,7 @@ var MSG_WITHDRAW_FIELD_MEMO = goog.getMsg('Memo');
 
 /**
  * @param {number=} broker_id
- * @param {Array.<Array.<string> > remittance_box
+ * @param {Array<Array<string>>} remittance_box
  * @param {string=} opt_default_country
  * @param {string=} opt_default_state
  * @param {number=} opt_test_request_timer_in_ms. Defaults to 30 seconds
@@ -1772,10 +1772,10 @@ bitex.app.BlinkTrade.prototype.onBitexPositionResponse_ = function(e) {
           model_balances[brokerID][clientID] = {};
         }
 
-        var balance = new bitex.primitives.Price(balance, this.getCurrencyPip(currency)).floor();
+        var balance_ = new bitex.primitives.Price(balance, this.getCurrencyPip(currency)).floor();
 
-        model_balances[brokerID][clientID][currency] = balance;
-        if (balance != 0) {
+        model_balances[brokerID][clientID][currency] = balance_;
+        if (balance_ != 0) {
           has_any_position = true;
         }
 
@@ -1840,9 +1840,9 @@ bitex.app.BlinkTrade.prototype.onBitexBalanceResponse_ = function(e) {
           model_balances[brokerID][clientID] = {};
         }
 
-        var balance = new bitex.primitives.Price(balance, this.getCurrencyPip(currency)).floor();
+        var balance_ = new bitex.primitives.Price(balance, this.getCurrencyPip(currency)).floor();
 
-        model_balances[brokerID][clientID][currency] = balance;
+        model_balances[brokerID][clientID][currency] = balance_;
         changed_balance = true;
       }
     }, this);
@@ -1865,9 +1865,9 @@ bitex.app.BlinkTrade.prototype.onBitexBalanceResponse_ = function(e) {
           model_locked_balances[brokerID][clientID] = {};
         }
 
-        var locked_balance = new bitex.primitives.Price(locked_balance, this.getCurrencyPip(currency)).ceil();
+        var locked_balance_ = new bitex.primitives.Price(locked_balance, this.getCurrencyPip(currency)).ceil();
 
-        model_locked_balances[brokerID][clientID][currency] = locked_balance;
+        model_locked_balances[brokerID][clientID][currency] = locked_balance_;
         changed_locked_balance = true;
       }
     }, this);

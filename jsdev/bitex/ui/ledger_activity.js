@@ -57,7 +57,7 @@ var MSG_LEDGER_ACTIVITY_TABLE_COLUMN_PAYEE = goog.getMsg('Payee');
 
 /**
  * @param {*} button_filters
- * @param {function} pseudoNameFunction
+ * @param {Function} pseudoNameFunction
  * @param {boolean} opt_broker_mode
  * @param {goog.dom.DomHelper=} opt_domHelper
  * @constructor
