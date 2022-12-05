@@ -37,8 +37,9 @@ function resolve(from, to) {
 gulp.task('build', function(done){
     console.log('Building...');
     exec('jekyll build', function(err, stdout, stderr){
-        if(err)
+        if(err) {
             done(err);
+        }
         console.log(stdout);
         console.log(stderr);
         done();
@@ -47,10 +48,12 @@ gulp.task('build', function(done){
 
 gulp.task('config', function(done){
     const rev = git.short();
-    const config = yaml.load(fs.readFileSync('./_config.yml', ''));
+    const config = yaml.load(fs.readFileSync('./_config.yml'));
 
-    if(config.baseurl === undefined)
+    // noinspection JSUnresolvedVariable
+    if(config.baseurl === undefined) {
         return done(new Error('Baseurl not defined'));
+    }
 
     //const baseUrl = config.baseurl;
 
@@ -71,8 +74,8 @@ gulp.task('config', function(done){
         name: 'baseurl',
         message: BASEURL_MSG
     }, function(res){
-        newBaseUrl = res.baseurl.charAt(0) === '/' || res.baseurl === ""
-                   ? res.baseurl : '/' + res.baseurl;
+        // noinspection JSUnresolvedVariable
+        newBaseUrl = res.baseurl.charAt(0) === '/' || res.baseurl === "" ? res.baseurl : '/' + res.baseurl;
     }))
     .pipe(prompt.prompt({
         type: 'list',
@@ -92,17 +95,17 @@ gulp.task('config', function(done){
             {
                 match: /^deploy_version:.*$/m,
                 replacement: function(){
-                    return 'deploy_version: "'+rev+'"'
+                    return 'deploy_version: "'+rev+'"';
                 }
             }, {
                 match: /^url:.*$/m,
                 replacement: function(){
-                    return 'url: "'+newUrl+'"'
+                    return 'url: "'+newUrl+'"';
                 }
             }, {
                 match: /^baseurl:.*$/m,
                 replacement: function(){
-                    return 'baseurl: "'+newBaseUrl+'"'
+                    return 'baseurl: "'+newBaseUrl+'"';
                 }
             }
         ]
