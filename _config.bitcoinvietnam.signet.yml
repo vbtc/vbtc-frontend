@@ -22,8 +22,8 @@ required_level_to_be_a_pro_trader: 0
 #blinktrade_backend_api: "api.blinktrade.com"
 #blinktrade_backend_api: "api_testnet.blinktrade.com"
 blinktrade_backend_api: "localhost"
-google_analytics_id: "UA-51369348-1"
-zopim_key: "30yZGdJAGm7xnjR1MsGVUZsEdmEIsSio"
+google_analytics_id: ""
+zopim_key: ""
 
 embedded_chat_id : 4296  # embedded-chat.com
 
