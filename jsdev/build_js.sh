@@ -8,7 +8,7 @@
 #############################################
 # set defaults if they're not provided
 #############################################
-LANG=${LANG:=en_US}
+LANGUAGE=${LANGUAGE:=en_US}
 THEME=${THEME:=default}
 
 # BlinkTrade Application
@@ -25,7 +25,7 @@ python2 ./closure-library/closure/bin/build/closurebuilder.py  \
   --compiler_jar=./tools/compiler.jar \
   --compiler_flags="--compilation_level=ADVANCED_OPTIMIZATIONS" \
   --compiler_flags="--define=goog.DEBUG=0" \
-  --compiler_flags="--define=goog.LOCALE='$LANG'" \
+  --compiler_flags="--define=goog.LOCALE='$LANGUAGE'" \
   --compiler_flags="--externs=./externs/google.js" \
   --compiler_flags="--externs=./externs/plusone.js" \
   --compiler_flags="--externs=./externs/zopim.js" \
@@ -39,8 +39,8 @@ python2 ./closure-library/closure/bin/build/closurebuilder.py  \
   --compiler_flags="--externs=./externs/w3c_rtc.js" \
   --compiler_flags="--externs=./externs/facebook_javascript_sdk.js" \
   --compiler_flags="--externs=./externs/qrcode.js" \
-  --compiler_flags="--translations_file=./translations/$LANG.xtb.xml" \
-   > ../assets/js/bitex_app_blink_trade.compiled.$LANG.$THEME.js
+  --compiler_flags="--translations_file=./translations/$LANGUAGE.xtb.xml" \
+   > ../assets/js/bitex_app_blink_trade.compiled.$LANGUAGE.$THEME.js
 
 # enable those flags to debug the compiled code.
 #  --compiler_flags="--debug=TRUE" \
