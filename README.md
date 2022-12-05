@@ -37,7 +37,7 @@ $ ln -s _config.demo.yml _config.yml
 ```
 5 - And finally run:
 ```sh
-$ jekyll server --watch
+$ bundle exec jekyll server --watch
 ```
 
 You'll have access to the website at `localhost:4000`

@@ -20,10 +20,9 @@
   },
   "homepage": "https://github.com/blinktrade/frontend",
   "devDependencies": {
-    "@cybozu/duck": "^0.35.2",
-    "rimraf": "^3.0.2",
-    "git-rev-sync": "^3.0.1",
+    "git-rev-sync": "^3.0.2",
     "google-closure-compiler": "^20221102.0.1",
+    "google-closure-deps": "^20221102.0.0",
     "google-closure-library": "^20221102.0.0",
     "gulp": "^4.0.2",
     "gulp-gh-pages": "^0.5.4",
