@@ -60,8 +60,7 @@ phrases: [phrase1, phrase2, phrase4]
 exclude:     [ "jsdev", "LICENSE", "README.md", "config.rb", "deploy.sh", "build_javascript.sh", "node_modules", "gulpfile.js", "themes/ander" ]
 source:      .
 destination: ./_site
-plugins:
-  - jekyll-multiple-languages-plugin
+plugins:     ./_plugins
 paginate:    5
 paginate_path: "post/page:num"
 permalink:     /post/:title/
