@@ -10,57 +10,12 @@ exchanges:
     title: BlinkDemo - Exchange de Bitcoin Open Source
     description: Exchange de Bitcoin Open Source site demo
     keywords: bitcoin, bitcoin exchange, open source bitcoin exchange, bitcoin trading plataform, open source bitcoin trading plataforma
-    lead:  Urmăriți exchange-ul nostru open source în acțiune 
-  chilebit:
-    title: ChileBit.NET -  //Cumpărați și vindeți Bitcoin în Chile
-    description:  Cumpărați și vindeți Bitcoin în Chile
-    keywords: Buy and sell bitcoin in Chile, bitcoin exchange in Chile, sell bitcoins in Chile, buy bitcoins in Chile,cumpara si vinde Bitcoin in Chile, schimba Bitcoin Chile
-    lead: Cumpărați și vindeți Bitcoin în Chile
-  surbitcoin:
-    title: SurBitcoin - The first bitcoin exchange in Venezuela
-    description: The first bitcoin exchange in Venezuela
-    keywords: Buy and sell bitcoin in Venezuela, bitcoin exchange in Venezuela, sell bitcoins in Venezuela, buy bitcoins in Venezuela
-    lead: The first bitcoin exchange in Venezuela
-  urdubit:
-    title: UrduBit - The first bitcoin exchange in Pakistan
-    description: The first bitcoin exchange in Pakistan
-    keywords: Buy and sell bitcoin in Pakistan, bitcoin exchange in Pakistan, sell bitcoins in Pakistan, buy bitcoins in Pakistan
-    lead: The first bitcoin exchange in Pakistan
-  foxbit:
-    title: FoxBit - //Cumpărați și vindeți Bitcoin în Brazilia
-    description: Cumpărați și vindeți Bitcoin în Brazilia
-    keywords: Buy and sell bitcoin in Brazil, bitcoin exchange in Brazil, sell bitcoins in Brazil, buy bitcoins in Brazil, Bitcoin exchange in Brazil
-    lead: Cumpărați și vindeți Bitcoin în Brazilia
-  romaniabex:
-    title: RomaniaBitcoin.exchange -  //Cumpărați și vindeți Bitcoin în România
-    description:  Cumpărați și vindeți Bitcoin în România
-    keywords: Buy and sell bitcoin in Romania, bitcoin exchange in Romania, sell bitcoins in Romania, buy bitcoins in Romania,cumpara si vinde Bitcoin in Romania, schimba Bitcoin Romania
-    lead: Cumpărați și vindeți Bitcoin în România
+    lead:  Urmăriți exchange-ul nostru open source în acțiune
   bitcoinvietnam:
-    title: VBTC -  //Cumpărați și vindeți Bitcoin în Vietnam 
+    title: VBTC -  //Cumpărați și vindeți Bitcoin în Vietnam
     description:  Cumpărați și vindeți Bitcoin în Vietnam
-    keywords: Buy and sell bitcoin in China, bitcoin exchange in Vietnam, sell bitcoins in Vietnam, buy bitcoins in Vietnam,cumpara si vinde Bitcoin in Vietnam, schimba Bitcoin Vietnam 
+    keywords: Buy and sell bitcoin in China, bitcoin exchange in Vietnam, sell bitcoins in Vietnam, buy bitcoins in Vietnam,cumpara si vinde Bitcoin in Vietnam, schimba Bitcoin Vietnam
     lead: Cumpărați și vindeți Bitcoin în Vietnam
-  yuanbit:
-    title: YuanBit.com -  //Cumpărați și vindeți Bitcoin în China
-    description:  Cumpărați și vindeți Bitcoin în China
-    keywords: Buy and sell bitcoin in China, bitcoin exchange in China, sell bitcoins in China, buy bitcoins in China,cumpara si vinde Bitcoin in China, schimba Bitcoin China
-    lead: Cumpărați și vindeți Bitcoin în China
-  bitinvest:
-    title: Bitinvest - Bitcoin rápido, fácil e seguro - Comprar e Vender Bitcoin com as menores taxas do Brasil
-    description: Bitinvest - Bitcoin rápido, fácil e seguro - Comprar e Vender Bitcoin com as menores taxas do Brasil
-    keywords: Bitinvest - Bitcoin rápido, fácil e seguro - Comprar e Vender Bitcoin com as menores taxas do Brasil
-    lead: Bitcoin rápido, fácil e seguro - Comprar e Vender Bitcoin com as menores taxas do Brasil
-  unocoin:
-    title: Unocoin | India's Bitcoin Wallet
-    description: Unocoin is India's most popular bitcoin wallet. We make it super easy to securely buy, use and accept bitcoin, following KYC-AML guidelines.
-    keywords: bitcoin, buy bitcoin, sell bitcoin, buy bitcoin india, sell bitcoin india, bitcoin india, bitcoin inr, btc inr, bitcoin wallet india, store bitcoin india, buy bitcoin inr, sell bitcoin inr, send bitcoin, send bitcoin india, receive bitcoin, receive bitcoin india, bitcoin price, btc to inr, btc price in inr, bitcoin exchange
-    lead: Unocoin is india's most popular bitcoin wallet
-  bitcambio:
-    title: Bitcambio - Casa de Câmbio de Bitcoins
-    description: Casa de Câmbio de Bitcoin
-    keywords: bitcoin, comprar bitcoin, btc,bitcambio,cambio,vender bitcoin, bitcoin brasil
-    lead: Compra e Venda de Bitcoins Direta
 views:
   landing:
     about:
@@ -80,7 +35,7 @@ views:
       phrase4:
         title: Member of BLINKTRADE
         icon: ico-decentralized
-        description: We are a member of the global <a href="https://blinktrade.com" target="_BLANK">BlinkTrade network</a>, that includes <a href="https://foxbit.com.br" target="_BLANK">FoxBit</a> in Brazil, <a href="https://surbitcoin.com/themes/coinage/" target="_BLANK">SurBitcoin</a> in Venezuela, <a href="https://chilebit.net/" target="_BLANK">ChileBit.NET</a> in Chile, <a href="https://urdubit.com/" target="_BLANK">UrduBit</a> in Pakistan and <a href="https://vbtc.vn/" target="_BLANK">VBTC</a> in Vietnam among other companies, market makers, remittance agencies and payment processors. Through our platform you will have access to this global network of exchanges and will be able to navigate all of them in the language of your choice
+        description: We are a member of the global <a href="https://blinktrade.com" target="_BLANK">BlinkTrade network</a>, market makers, remittance agencies and payment processors. Through our platform you will have access to this global network of exchanges and will be able to navigate all of them in the language of your choice
     orderbook:
       title: Live Order Book
     signup:
@@ -117,7 +72,7 @@ views:
 
   faq:
     title: Întrebări frecvente
-    get_in_touch:  Contactati-ne în cazul în care nu ați găsit răspunsul la întrebările dumneavoastră 
+    get_in_touch:  Contactati-ne în cazul în care nu ați găsit răspunsul la întrebările dumneavoastră
 
   signup:
     title: Creează cont nou
@@ -127,18 +82,18 @@ views:
     email: Adresa Email
     email_placeholder: "ex.: joe@doe.ro"
     password: Parola
-    password_help:  Cel puțin 8 caractere 
+    password_help:  Cel puțin 8 caractere
     confirm_password:  Confirmați parola
     country: Țara
     state: Județul
     broker: Agent
     terms_of_service: Termeni și condiții
-    i_agree_with_terms_of_service:  Sunt de acord cu termenii și condițiile serviciului 
+    i_agree_with_terms_of_service:  Sunt de acord cu termenii și condițiile serviciului
     signup_button_label: Crează cont nou
 
   signin:
     title: Autentificare
-    dont_have_an_account:  Nu ai cont? 
+    dont_have_an_account:  Nu ai cont?
     signup: Crează cont nou
     username: Nume utilizator
     password: Parola
@@ -154,10 +109,10 @@ views:
     recover_password_button_label:  Recuperează parola
 
   set_new_password:
-    title: Setați parolă nouă 
-    security_code:  Cod de securitate 
+    title: Setați parolă nouă
+    security_code:  Cod de securitate
     security_code_help: Codul de securitate a fost trimis pe adresa dumneavoastră de email.
-    new_password:  Parolă nouă 
+    new_password:  Parolă nouă
     new_password_help: Cel puțin 8 caractere
     confirm_password: Confirmați parola
     set_new_password_button_label:  Resetați parola

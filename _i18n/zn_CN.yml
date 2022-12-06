@@ -12,56 +12,11 @@ exchanges:
     description: 开源的比特币交易平台
     keywords: 比特币，比特币交易所，开源的比特币交易平台，开源，交易平台
     lead: 请关注我们的开源的比特币交易平台
-  chilebit:
-    title: ChileBit.NET - 智利的第一家比特币交易平台
-    description: 智利的第一家比特币交易平台
-    keywords: 智利的第一家比特币交易平台，在智利买卖比特币，在智利如何购买比特币
-    lead: 智利的第一家比特币交易平台
-  surbitcoin:
-    title: SurBitcoin - 委内瑞拉的第一家比特币交易平台
-    description: 委内瑞拉的第一家比特币交易平台
-    keywords: 在委内瑞拉买卖比特币
-    lead: 委内瑞拉的第一家交易平台
-  urdubit:
-    title: UrduBit - 巴基斯坦的第一家比特币交易平台
-    description: -巴基斯坦的第一家比特币交易平台
-    keywords: 在巴基斯坦如何购买比特币
-    lead: 巴基斯坦的第一家比特币交易平台
-  foxbit:
-    title: FoxBit - 巴西的第一家比特币交易平台
-    description: -巴西的第一家比特币交易平台
-    keywords: 在巴西购买和卖出比特币
-    lead: 购买和出售比特币在巴西
-  romaniabex:
-    title: 罗马尼亚的第一家比特币交易平台
-    description: 在罗马尼亚买进和卖出比特币
-    keywords: 在罗马尼亚如何购买比特币
-    lead: 在罗马尼亚如果买进和卖出比特币
   bitcoinvietnam:
     title: VBTC - 比特币交易所在越南 - Bitcoin Exchange in Vietnam
     description: 如果购买比特币
     keywords: 比特币购买，买比特币，如果买比特币
     lead: 购买和出售越南比特币
-  yuanbit:
-    title: yuanbit-中国第一家blinktrade技术的交易平台
-    description: 如果购买比特币
-    keywords: 比特币购买，买比特币，如果买比特币
-    lead: 中国第一家blinktrade技术的交易平台
-  bitinvest:
-    title: Bitinvest - Bitcoin rápido, fácil e seguro - Comprar e Vender Bitcoin com as menores taxas do Brasil
-    description: Bitinvest - Bitcoin rápido, fácil e seguro - Comprar e Vender Bitcoin com as menores taxas do Brasil
-    keywords: Bitinvest - Bitcoin rápido, fácil e seguro - Comprar e Vender Bitcoin com as menores taxas do Brasil
-    lead: Bitcoin rápido, fácil e seguro - Comprar e Vender Bitcoin com as menores taxas do Brasil
-  unocoin:
-    title: Unocoin | India's Bitcoin Wallet
-    description: Unocoin is India's most popular bitcoin wallet. We make it super easy to securely buy, use and accept bitcoin, following KYC-AML guidelines.
-    keywords: bitcoin, buy bitcoin, sell bitcoin, buy bitcoin india, sell bitcoin india, bitcoin india, bitcoin inr, btc inr, bitcoin wallet india, store bitcoin india, buy bitcoin inr, sell bitcoin inr, send bitcoin, send bitcoin india, receive bitcoin, receive bitcoin india, bitcoin price, btc to inr, btc price in inr, bitcoin exchange
-    lead: Unocoin is india's most popular bitcoin wallet
-  bitcambio:
-    title: Bitcambio - Casa de Câmbio de Bitcoins
-    description: Casa de Câmbio de Bitcoin
-    keywords: bitcoin, comprar bitcoin, btc,bitcambio,cambio,vender bitcoin, bitcoin brasil
-    lead: Compra e Venda de Bitcoins Direta
 views:
   landing:
     about:
@@ -81,7 +36,7 @@ views:
       phrase4:
         title: Member of BLINKTRADE
         icon: ico-decentralized
-        description: We are a member of the global <a href="https://blinktrade.com" target="_BLANK">BlinkTrade network</a>, that includes <a href="https://foxbit.com.br" target="_BLANK">FoxBit</a> in Brazil, <a href="https://surbitcoin.com/themes/coinage/" target="_BLANK">SurBitcoin</a> in Venezuela, <a href="https://chilebit.net/" target="_BLANK">ChileBit.NET</a> in Chile, <a href="https://urdubit.com/" target="_BLANK">UrduBit</a> in Pakistan and <a href="https://vbtc.vn/" target="_BLANK">VBTC</a> in Vietnam among other companies, market makers, remittance agencies and payment processors. Through our platform you will have access to this global network of exchanges and will be able to navigate all of them in the language of your choice
+        description: We are a member of the global <a href="https://blinktrade.com" target="_BLANK">BlinkTrade network</a>, market makers, remittance agencies and payment processors. Through our platform you will have access to this global network of exchanges and will be able to navigate all of them in the language of your choice
     orderbook:
       title: Live Order Book
     signup:
@@ -103,9 +58,9 @@ views:
     signin: 登陆
     signup: 注册
     connect: 连接
-    high: 高 
-    last: 上次交易 
-    low: 低 
+    high: 高
+    last: 上次交易
+    low: 低
     volume: 交易量
 
   start:
