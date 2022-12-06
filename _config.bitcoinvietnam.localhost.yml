@@ -15,7 +15,7 @@ twitter_widget_theme: "dark"
 twitter_widget_link_color: "#88DA65"
 
 default_country_code: "VN"
-blinktrade_broker_id: 3  
+blinktrade_broker_id: 3
 required_level_to_be_a_pro_trader: 0
 
 blinktrade_backend_api: "localhost"
@@ -53,10 +53,29 @@ phrases: [phrase1, phrase2, phrase3]
 
 languages: ["vi", "en_US", "es", "pt_BR", "ro", "zn_CN"]
 
-exclude:     [ "jsdev", "LICENSE", "README.md", "config.rb", "deploy.sh", "build_javascript.sh", "node_modules", "gulpfile.js", "themes/ander" ]
+exclude: [
+  ".bundle",
+  "jsdev",
+  "node_modules",
+  "themes/ander",
+  "vendor",
+  ".ruby-version",
+  "build_javascript.sh",
+  "config.rb",
+  "deploy.sh",
+  "Gemfile",
+  "Gemfile.lock",
+  "gulpfile.js",
+  "LICENSE",
+  "minideploy.sh",
+  "package.json",
+  "package-lock.json",
+  "README.md"
+]
 source:      .
 destination: ./_site
-plugins:     ./_plugins
+plugins_dir: ./_plugins
+plugins:     [jekyll-paginate]
 paginate:    5
 paginate_path: "post/page:num"
 permalink:     /post/:title/
