@@ -45,7 +45,7 @@ bitex.view.AccountActivityView.prototype.destroyComponents_ = function( ) {
 
 
   if (goog.isDefAndNotNull(this.account_activity_table_)) {
-    
+
     handler.unlisten(this.account_activity_table_,
                      bitex.ui.DataGrid.EventType.REQUEST_DATA,
                      this.onAccountActivityTableRequestData_);

@@ -22,15 +22,15 @@ import 'goog.Disposable'
 import 'goog.graphics'
 
 /**
- * Represents a label object. 
+ * Represents a label object.
  *
  * @param {string} text The text to display.
  * @param {goog.math.Rect} rect the rectangle in which to display the label.
  * @param {scottlogic.chart.Chart.Orientation} axis The orientation of the axis.
  * @param {number} tickLength the length of the tick on the label.
  * @param {scottlogic.chart.rendering.Style} style The style of the label.
- * @param {scottlogic.chart.rendering.GraphicalAxis.Alignment} 
- *        alignment of the axis on which this label will be displayed. 
+ * @param {scottlogic.chart.rendering.GraphicalAxis.Alignment}
+ *        alignment of the axis on which this label will be displayed.
  * @extends {goog.Disposable}
  * @constructor
  */
@@ -38,7 +38,7 @@ scottlogic.chart.rendering.Label = function(
     text, rect, axis, tickLength, style, alignment) {
 
   goog.Disposable.call(this);
-  
+
   /**
    * @private
    * @type {goog.math.Rect}
@@ -59,10 +59,10 @@ scottlogic.chart.rendering.Label = function(
    * @type {scottlogic.chart.rendering.Style}
    */
   this.style_ = style;
-  
+
   /**
    * The alignment of the axis the label is displayed on.
-   * 
+   *
    * @private
    * @type {scottlogic.chart.rendering.GraphicalAxis.Alignment}
    */
@@ -136,7 +136,7 @@ scottlogic.chart.rendering.Label = function(
 	  this.center[0] = this.x_ + (this.width_);
 	  this.center[1] = this.y_ + (this.height_ / 2);
   }
- 
+
   /**
    * The length of the tick
    *
@@ -144,7 +144,7 @@ scottlogic.chart.rendering.Label = function(
    * @type {number}
    */
   this.tickLength_ = tickLength;
-  
+
 };
 goog.inherits(scottlogic.chart.rendering.Label, goog.Disposable);
 
@@ -157,8 +157,8 @@ goog.inherits(scottlogic.chart.rendering.Label, goog.Disposable);
  * @public
  */
 scottlogic.chart.rendering.Label.prototype.addGraphics = function(graphics) {
-	
-  /** 
+
+  /**
    * This label should be considered initialized if graphics have been added
    */
   this.initialized_ = true;
@@ -169,7 +169,7 @@ scottlogic.chart.rendering.Label.prototype.addGraphics = function(graphics) {
    * @type {goog.graphics.AbstractGraphics}
    */
   this.graphics_ = graphics;
-  
+
   /**
    * The fill of the text
    *
@@ -185,16 +185,16 @@ scottlogic.chart.rendering.Label.prototype.addGraphics = function(graphics) {
    * @type {goog.graphics.Stroke}
    */
   this.textStroke_ = new goog.graphics.Stroke(0, this.style_.getFontColour());
-  
+
   /** @type {string} */
   var labelAlignment = ((this.alignment_ === scottlogic.chart.rendering.GraphicalAxis.Alignment.BOTTOMOUTSIDE) ||
 		  				(this.alignment_ === scottlogic.chart.rendering.GraphicalAxis.Alignment.TOPINSIDE)
 		  ? "bottom" : "top");
- 
+
   if (this.axisOrientation_ === scottlogic.chart.Chart.Orientation.X) {
 	  if (labelAlignment === "bottom") {
 	  	this.labelText_ = graphics.drawText(this.text_, this.x_,
-	  			this.y_ + (this.tickLength_ * 1.1), this.width_, 
+	  			this.y_ + (this.tickLength_ * 1.1), this.width_,
 	  			this.height_ - this.tickLength_,
                 'center', labelAlignment, this.style_.getFont(), this.textStroke_,
                 this.textFill_);
@@ -246,7 +246,7 @@ scottlogic.chart.rendering.Label.prototype.disposeInternal = function() {
 };
 
 /**
- * Getter: return the label's area 
+ * Getter: return the label's area
  * @public
  * @return {goog.math.Rect}
  *    the graphical y Axis.

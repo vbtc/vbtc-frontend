@@ -313,12 +313,12 @@ scottlogic.chart.rendering.DateTimeAxis.prototype.compare =
 /**
  * @override
  */
-scottlogic.chart.rendering.DateTimeAxis.prototype.getDefaultBounds = 
+scottlogic.chart.rendering.DateTimeAxis.prototype.getDefaultBounds =
     function() {
   /** @type {goog.date.UtcDateTime} */
   var yester = new goog.date.UtcDateTime(new Date());
   yester.add(new goog.date.Interval(0, 0, -1));
-  
+
   // Returning this time yesterday and current time
-  return [yester, new goog.date.UtcDateTime(new Date())]; 
+  return [yester, new goog.date.UtcDateTime(new Date())];
 };

@@ -105,7 +105,7 @@ scottlogic.chart.rendering.Gridlines.prototype.setZeroLineStroke = function(
  */
 scottlogic.chart.rendering.Gridlines.prototype.redraw = function(
     rect, xAxis, yAxis) {
-  
+
   /**
    * The rectangle in which to draw the lines
    *

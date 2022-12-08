@@ -14,7 +14,7 @@ import 'bitex.util'
 var MSG_TRADE_HISTORY_COLUMN_MARKET = goog.getMsg('Market');
 
 /**
- * @desc Column Time 
+ * @desc Column Time
  */
 var MSG_TRADE_HISTORY_COLUMN_CREATED = goog.getMsg('Date/Hour');
 
@@ -91,13 +91,13 @@ bitex.ui.TradeHistory = function( pseudoNameFunction, opt_blinkDelay,opt_domHelp
       'property': 'Price',
       'label': MSG_TRADE_HISTORY_COLUMN_PRICE,
       'sortable': false,
-      'formatter': function(value){return (value/1e8).toFixed(8);},      
+      'formatter': function(value){return (value/1e8).toFixed(8);},
       'classes': function() { return goog.getCssName(bitex.ui.TradeHistory.CSS_CLASS, 'price'); }
     },{
       'property': 'Size',
       'label': MSG_TRADE_HISTORY_COLUMN_SIZE,
       'sortable': false,
-      'formatter': function(value){return (value/1e8).toFixed(8);},      
+      'formatter': function(value){return (value/1e8).toFixed(8);},
       'classes': function() { return goog.getCssName(bitex.ui.TradeHistory.CSS_CLASS, 'size'); }
     },{
       'property':'Buyer',

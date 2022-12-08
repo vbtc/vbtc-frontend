@@ -90,7 +90,7 @@ bootstrap3.TabBarRenderer.prototype.createDom = function(tabBar) {
 */
 bootstrap3.TabBarRenderer.prototype.canDecorate = function(element) {
 	return element.tagName == 'UL';
-}; 
+};
 
 bootstrap3.TabBarRenderer.prototype.getDecoratorForChild = function(element) {
 	if( element.tagName == 'LI' ) {

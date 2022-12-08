@@ -81,48 +81,48 @@ var MSG_WITHDRAW_TABLE_COLUMN_DETAIL = goog.getMsg('Details');
 var MSG_WITHDRAW_TABLE_COLUMN_USERNAME = goog.getMsg('Username');
 
 
-/** 
- * @desc reason for cancelling withdraw 
+/**
+ * @desc reason for cancelling withdraw
  */
 var MSG_WITHDRAW_REASON_INSUFFICIENT_FUNDS = goog.getMsg('Insufficient funds');
 
-/** 
- * @desc reason for cancelling withdraw 
+/**
+ * @desc reason for cancelling withdraw
  */
   var MSG_WITHDRAW_REASON_ACCOUNT_NOT_VERIFIED = goog.getMsg('Account not verified');
 
-/** 
- * @desc reason for cancelling withdraw 
+/**
+ * @desc reason for cancelling withdraw
  */
 var MSG_WITHDRAW_REASON_SUSPICION_OF_FRAUD = goog.getMsg('Suspicion of fraud');
 
-/** 
- * @desc reason for cancelling withdraw 
+/**
+ * @desc reason for cancelling withdraw
  */
 var MSG_WITHDRAW_REASON_DIFFERENT_ACCOUNT = goog.getMsg('Withdrawing to a different account than yours');
 
-/** 
- * @desc reason for cancelling withdraw 
+/**
+ * @desc reason for cancelling withdraw
  */
 var MSG_WITHDRAW_REASON_INVALID_WALLET = goog.getMsg('Invalid wallet');
 
-/** 
- * @desc reason for cancelling withdraw 
+/**
+ * @desc reason for cancelling withdraw
  */
 var MSG_WITHDRAW_REASON_INVALID_BANK_ACCOUNT = goog.getMsg('Invalid bank account');
 
-/** 
- * @desc reason for cancelling withdraw 
+/**
+ * @desc reason for cancelling withdraw
  */
 var MSG_WITHDRAW_REASON_OVER_LIMIT = goog.getMsg('Amount exceeded your daily withdraw limit');
 
-/** 
- * @desc reason for cancelling withdraw 
+/**
+ * @desc reason for cancelling withdraw
  */
 var MSG_WITHDRAW_REASON_UNCONFIRMED_DEPOSITS = goog.getMsg('User has deposits that are not yet confirmed');
 
-/** 
- * @desc reason for cancelling withdraw 
+/**
+ * @desc reason for cancelling withdraw
  */
 var MSG_WITHDRAW_REASON_ACCOUNT_HAS_WITHDRAWAL_BLOCK = goog.getMsg('The withdraw function is temporarily blocked for your account');
 

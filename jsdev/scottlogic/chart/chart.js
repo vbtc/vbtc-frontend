@@ -76,7 +76,7 @@ scottlogic.chart.Chart = function(id, size, opt_xAxis, opt_yAxis, opt_renderXAxi
    * @type {goog.graphics.AbstractGraphics}
    */
   this.graphics_ = goog.graphics.createGraphics(size[0], size[1]);
-  // ensure that we draw in the middle of pixels and not on boundaries 
+  // ensure that we draw in the middle of pixels and not on boundaries
   this.graphics_.getCanvasElement().setTransformation(0.5, 0.5, 0, 0, 0);
 
   /**
@@ -87,14 +87,14 @@ scottlogic.chart.Chart = function(id, size, opt_xAxis, opt_yAxis, opt_renderXAxi
    * @type {scottlogic.chart.rendering.Style}
    */
   this.style_ = new scottlogic.chart.rendering.Style(null, null, null, null);
-  
+
   /**
    * The Data Axis of the Chart (X)
    *
    * @public
-   * @type {scottlogic.chart.rendering.AbstractAxis} 
+   * @type {scottlogic.chart.rendering.AbstractAxis}
    */
-  this.xAxisData = opt_xAxis ? opt_xAxis : 
+  this.xAxisData = opt_xAxis ? opt_xAxis :
       new scottlogic.chart.rendering.DiscontinuousDateTimeAxis();
 
   /**
@@ -190,19 +190,19 @@ scottlogic.chart.Chart.prototype.getGridlines = function() {
  * @private
  */
 scottlogic.chart.Chart.prototype.generateGraphicalAxis_ = function(opt_renderXAxis, opt_renderYAxis) {
-	
-	// render axis unless told not to. 
-	
+
+	// render axis unless told not to.
+
 	opt_renderXAxis = opt_renderXAxis === undefined ? true : opt_renderXAxis;
 	opt_renderYAxis = opt_renderYAxis === undefined ? true : opt_renderYAxis;
-	
+
   /**
    * The X Axis of the Chart
    *
    * @private
    * @type {scottlogic.chart.rendering.GraphicalAxis}
    */
-	
+
   this.xAxis = new scottlogic.chart.rendering.GraphicalAxis(this.xAxisData, this.style_,
   		scottlogic.chart.rendering.GraphicalAxis.Alignment.BOTTOMOUTSIDE, opt_renderXAxis);
 
@@ -212,7 +212,7 @@ scottlogic.chart.Chart.prototype.generateGraphicalAxis_ = function(opt_renderXAx
    * @private
    * @type {scottlogic.chart.rendering.GraphicalAxis}
    */
-  
+
   this.yAxis = new scottlogic.chart.rendering.GraphicalAxis(this.yAxisData, this.style_,
   		scottlogic.chart.rendering.GraphicalAxis.Alignment.LEFTOUTSIDE, opt_renderYAxis);
 };
@@ -245,14 +245,14 @@ scottlogic.chart.Chart.prototype.getSeriesCount = function() {
 scottlogic.chart.Chart.prototype.redraw = function() {
   /* Only skip the boundary computation if the user has defined both a min
    * AND a max, and they do not equal one another */
-  
+
   this.graphics_.suspend();
   /** @type {boolean} */
   var invalidX = this.xAxisData.equals(this.xAxisData.max, this.xAxisData.min);
-  
+
   /** @type {boolean} */
   var invalidY = this.yAxisData.equals(this.yAxisData.min, this.yAxisData.max);
-  
+
   if (!(this.xAxisData.userHasDefinedMin && this.xAxisData.userHasDefinedMax) ||
       invalidX) {
 
@@ -289,17 +289,17 @@ scottlogic.chart.Chart.prototype.redraw = function() {
 
   this.yAxisData.initialize();
   this.xAxisData.initialize();
- 
+
   if (!this.initialized_) {
     // initialize_
     this.initialize_();
     this.initialized_ = true;
   }
- 
-  // Redraw 
+
+  // Redraw
   this.calculateBoundingBoxes_();
   this.context_.plotArea = this.plottingArea;
-  
+
   this.yAxis.redraw(this.boundingboxY);
   this.xAxis.redraw(this.boundingboxX);
   this.gridlines.redraw(this.plottingArea, this.xAxis, this.yAxis);
@@ -308,7 +308,7 @@ scottlogic.chart.Chart.prototype.redraw = function() {
   for (var i = 0; i < this.series_.length; i++) {
     this.series_[i].redraw(this.graphics_, this.xAxis, this.yAxis,
         this.context_);
-  } 
+  }
   this.graphics_.resume();
 };
 
@@ -332,51 +332,51 @@ scottlogic.chart.Chart.prototype.applyStyle = function(inputStyle) {
  * @private
  */
 scottlogic.chart.Chart.prototype.calculateBoundingBoxes_ = function() {
- 
+
   // Force an estimation (To avoid previous data of the chart influencing
   // padding values)
   this.xAxisData.intervalStep = null;
   this.yAxisData.intervalStep = null;
 
   /** @type {number}   */
-  var xAxisHeight = Math.floor( 
+  var xAxisHeight = Math.floor(
       (this.xAxis.getLabelHeight() + this.xAxis.tickLength) * 1.05);
 
   /** @type {number}   */
-  var yAxisWidth = Math.floor( 
+  var yAxisWidth = Math.floor(
       (this.yAxis.getLabelWidth() + this.yAxis.tickLength) * 1.1);
 
   /** @type {number}   */
-  var yAxisVerticalMargin = Math.floor( 
+  var yAxisVerticalMargin = Math.floor(
       (this.yAxis.getLabelHeight() * 1.05) / 2);
 
   /** @type {number}   */
-  var xAxisHorizontalMargin = Math.floor( 
+  var xAxisHorizontalMargin = Math.floor(
       (this.xAxis.getLabelWidth() * 1.05) / 2);
 
  /** @type {goog.math.Coordinate} */
   var plottingOffset = new goog.math.Coordinate();
-  
+
   /** @type {goog.math.Coordinate} */
   var boundingboxXoffset = new goog.math.Coordinate();
-  
+
   /** @type {goog.math.Coordinate} */
   var boundingboxYoffset = new goog.math.Coordinate();
- 
+
   /** @type {number} */
   var plottingAreaWidth = this.graphics_.getPixelSize().width - (2 * xAxisHorizontalMargin);
   if (this.yAxis.getAlignment() === scottlogic.chart.rendering.GraphicalAxis.Alignment.RIGHTOUTSIDE
       || this.yAxis.getAlignment() === scottlogic.chart.rendering.GraphicalAxis.Alignment.LEFTOUTSIDE) {
     plottingAreaWidth -= yAxisWidth;
   }
-  
+
   /** @type {number} */
   var plottingAreaHeight = this.graphics_.getPixelSize().height - (2 * yAxisVerticalMargin);
   if (this.xAxis.getAlignment() === scottlogic.chart.rendering.GraphicalAxis.Alignment.TOPOUTSIDE
       || this.xAxis.getAlignment() === scottlogic.chart.rendering.GraphicalAxis.Alignment.BOTTOMOUTSIDE) {
     plottingAreaHeight -= xAxisHeight;
   }
-  
+
   switch (this.yAxis.getAlignment()) {
   	case scottlogic.chart.rendering.GraphicalAxis.Alignment.RIGHTOUTSIDE:
   		plottingOffset.x = xAxisHorizontalMargin;
@@ -403,7 +403,7 @@ scottlogic.chart.Chart.prototype.calculateBoundingBoxes_ = function() {
 		  boundingboxXoffset.x = xAxisHorizontalMargin;
 		  break;
   }
-  
+
   switch (this.xAxis.getAlignment()) {
   	case scottlogic.chart.rendering.GraphicalAxis.Alignment.BOTTOMOUTSIDE:
 	  	boundingboxXoffset.y = plottingAreaHeight + yAxisVerticalMargin;
@@ -426,14 +426,14 @@ scottlogic.chart.Chart.prototype.calculateBoundingBoxes_ = function() {
   	  plottingOffset.y = yAxisVerticalMargin;
   	  break;
   }
-  	
+
   /**
    * Store the plotting area in a Rectangle (Used for gridlines and context)
    *
    * @private
    * @type {goog.math.Rect}
    */
- 
+
   this.plottingArea = new goog.math.Rect(plottingOffset.x, plottingOffset.y,
 	      plottingAreaWidth,
 	      plottingAreaHeight);
@@ -445,13 +445,13 @@ scottlogic.chart.Chart.prototype.calculateBoundingBoxes_ = function() {
    * @private
    * @type {goog.math.Rect}
    */
-  this.boundingboxY = new goog.math.Rect(boundingboxYoffset.x, boundingboxYoffset.y, 
+  this.boundingboxY = new goog.math.Rect(boundingboxYoffset.x, boundingboxYoffset.y,
 		  yAxisWidth,
 	      plottingAreaHeight);
   /**
   * @private
   * @type {goog.math.Rect}
-  */ 
+  */
   this.boundingboxX = new goog.math.Rect(boundingboxXoffset.x,
 		  boundingboxXoffset.y,
 		  plottingAreaWidth,
@@ -469,14 +469,14 @@ scottlogic.chart.Chart.prototype.initialize_ = function() {
   var that = this;
 
   // Render the graphics onto the canvas
- 
+
   this.graphics_.render(this.canvas_);
 
-  // Add graphics for to gridlines and axes. 
+  // Add graphics for to gridlines and axes.
   this.gridlines.addGraphics(this.graphics_);
   this.xAxis.addGraphics(this.graphics_);
   this.yAxis.addGraphics(this.graphics_);
-  
+
   /**
    * Defines the context in which lines can be drawn
    *
@@ -485,7 +485,7 @@ scottlogic.chart.Chart.prototype.initialize_ = function() {
    */
   this.context_ = new scottlogic.chart.rendering.Context(this.plottingArea);
 
-  goog.events.listen(this.canvas_, 
+  goog.events.listen(this.canvas_,
         [goog.events.EventType.TOUCHMOVE, goog.events.EventType.MOUSEMOVE],
         function(e) {
           e.preventDefault();
@@ -518,7 +518,7 @@ scottlogic.chart.Chart.prototype.updateTrackballs = function(dataPoint) {
   for (var i = 0; i < this.series_.length; i++) {
     this.series_[i].updateTrackball(dataPoint);
   }
-  
+
   this.graphics_.resume();
 };
 
@@ -560,7 +560,7 @@ scottlogic.chart.Chart.prototype.getYBounds_ = function() {
   }
 
   // TODO(shall): Get the default values from the Data axis.
-  return min === undefined || max === undefined || 
+  return min === undefined || max === undefined ||
     this.yAxisData.equals(min, max) ? this.yAxisData.getDefaultBounds() :
       [this.yAxisData.padRight(min, min, max),
        this.yAxisData.padLeft(max, min, max)];
@@ -602,7 +602,7 @@ scottlogic.chart.Chart.prototype.getXBounds_ = function() {
   }
 
   // TODO(shall) : Get the default values from the Data axis.
-  if (min === undefined || max === undefined || 
+  if (min === undefined || max === undefined ||
         this.xAxisData.equals(min, max)) {
     return this.xAxisData.getDefaultBounds();
   } else {
@@ -737,7 +737,7 @@ scottlogic.chart.Chart.EventType = {
  * An event that represents a change to the trackballs.
  * This is generated through either a mousemove or a touchmove.
  * @constructor
- * @param {Event|goog.events.Event} e 
+ * @param {Event|goog.events.Event} e
  *                  the Event that caused the trackball change
  * @extends {goog.events.Event}
  */

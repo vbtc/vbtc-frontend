@@ -30,7 +30,7 @@ uniform.util.interpretToken = function(token) {
      result = " || ";
   }
 
-  return result; 
+  return result;
 };
 
 
@@ -107,7 +107,7 @@ uniform.util.compileMetaTags = function(metaInfo, metaMap) {
  * @param {string} extraInfo
  */
 uniform.util.executeElementMetaTags = function(el,
-                                                             metaTag, 
+                                                             metaTag,
                                                              metaMap,
                                                              extraInfo) {
   var metaInfo = el.getAttribute(metaTag);
@@ -135,14 +135,14 @@ uniform.util.executeElementMetaTags = function(el,
  * @param {string} extraInfo
  */
 uniform.util.executeFormMetaTags = function(formElement,
-                                                          metaTag, 
+                                                          metaTag,
                                                           metaMap,
                                                           extraInfo) {
   var els = formElement.getElementsByTagName('*');
   for (var el, i = 0; el = els[i]; i++) {
     uniform.util.executeElementMetaTags(el,
-                                                      metaTag, 
-                                                      metaMap, 
+                                                      metaTag,
+                                                      metaMap,
                                                       extraInfo);
   }
 };

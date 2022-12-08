@@ -411,7 +411,7 @@ bitex.view.ServicesView.prototype.onWithdrawListTableRequestData_ = function(e) 
     return false;
   }
 
-  
+
   conn.requestWithdrawList(this.request_id_,
                            page,
                            limit,

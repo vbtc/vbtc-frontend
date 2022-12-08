@@ -50,9 +50,9 @@ bitex.ui.DepositWithdrawButtonGroup.prototype.decorateInternal = function(elemen
 
 /**
  * @param {string} mode
- * @param {string} currency 
- * @param {string} currencyDescription 
- * @param {string} currencySign 
+ * @param {string} currency
+ * @param {string} currencyDescription
+ * @param {string} currencySign
  */
 bitex.ui.DepositWithdrawButtonGroup.prototype.addButton = function(mode, currency, currencyDescription, currencySign) {
   var button_info = {"mode":mode, "currency":currency, "currencyDescription":currencyDescription, "currencySign":currencySign};

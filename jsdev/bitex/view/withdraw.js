@@ -106,9 +106,9 @@ bitex.view.WithdrawView.prototype.qr_data_;
 bitex.view.WithdrawView.prototype.qr_data_verb_;
 
 /**
- * @type {bitex.ui.DepositWithdrawButtonGroup} 
+ * @type {bitex.ui.DepositWithdrawButtonGroup}
  */
-bitex.view.WithdrawView.prototype.withdraw_button_group_; 
+bitex.view.WithdrawView.prototype.withdraw_button_group_;
 
 
 /**
@@ -431,7 +431,7 @@ bitex.view.WithdrawView.prototype.onWithdrawListTableRequestData_ = function(e) 
     return false;
   }
 
-  
+
   conn.requestWithdrawList(this.request_id_,
                            page,
                            limit,

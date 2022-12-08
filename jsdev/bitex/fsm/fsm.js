@@ -36,7 +36,7 @@ bitex.fsm.Fsm = function(setState) {
 };
 
 /**
- * A logger to help debugging 
+ * A logger to help debugging
  * @type {goog.debug.Logger}
  * @private
  */
@@ -65,7 +65,7 @@ bitex.fsm.Fsm.Error = {
   STATE_INVALID: 'Invalid FSM state',
 
   /**
-   * Error when a invalid transition happen 
+   * Error when a invalid transition happen
    */
   TRANSITION_INVALID: 'Invalid FSM transition'
 };
@@ -161,12 +161,12 @@ bitex.fsm.Fsm.prototype.setState_ = function( new_state, opt_obj ) {
 };
 
 /**
- * @param {bitex.fsm.Fsm.StateRecordType} record 
+ * @param {bitex.fsm.Fsm.StateRecordType} record
  * @param {bitex.fsm.Fsm.InputType} input
  * @param {Object=} opt_obj The object to be used as the value of 'this'
  * @return {boolean}
  * @private
- */ 
+ */
 bitex.fsm.Fsm.prototype.doTransition_ = function( record, input, opt_obj ) {
   if (goog.isDefAndNotNull( record.action ) ) {
     if (! goog.isDefAndNotNull( record.guard) ) {
@@ -236,7 +236,7 @@ bitex.fsm.Fsm.prototype.execute = function(input, opt_obj) {
         }
       }
     } else {
-      throw Error(bitex.fsm.Fsm.Error.TRANSITION_INVALID + 
+      throw Error(bitex.fsm.Fsm.Error.TRANSITION_INVALID +
           " - state:"  + this.state_  + ", input:" + input );
     }
   }

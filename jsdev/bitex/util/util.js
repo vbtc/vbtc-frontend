@@ -168,14 +168,14 @@ bitex.util.playSound = function(soundFile) {
 	}
 	catch (ex){
 		isHTML5 = false;
-	}	
+	}
 
-	var bodyElem = document.getElementsByTagName("body")[0];	
+	var bodyElem = document.getElementsByTagName("body")[0];
 	if (!bodyElem) {
     bodyElem = document.getElementsByTagName("html")[0];
   }
-	
-	var soundElem = document.getElementById("jBeep");		
+
+	var soundElem = document.getElementById("jBeep");
 	if (soundElem) {
     bodyElem.removeChild(soundElem);
   }
@@ -185,7 +185,7 @@ bitex.util.playSound = function(soundFile) {
 		soundElem.setAttribute("id", "jBeep");
 		soundElem.setAttribute("src", soundFile);
 		soundElem.play();
-	} else if(navigator.userAgent.toLowerCase().indexOf("msie")>-1){		
+	} else if(navigator.userAgent.toLowerCase().indexOf("msie")>-1){
 		soundElem = document.createElement("bgsound");
 		soundElem.setAttribute("id", "jBeep");
 		soundElem.setAttribute("loop", 1);
@@ -197,11 +197,11 @@ bitex.util.playSound = function(soundFile) {
 		soundElem.setAttribute("type", "audio/wav");
 		soundElem.setAttribute("style", "display:none;");
 		soundElem.setAttribute("data", soundFile);
-		
+
 		var paramElem = document.createElement("param");
 		paramElem.setAttribute("name", "autostart");
 		paramElem.setAttribute("value", "false");
-		
+
 		soundElem.appendChild(paramElem);
 		bodyElem.appendChild(soundElem);
 		try {
@@ -209,7 +209,7 @@ bitex.util.playSound = function(soundFile) {
 		}
 		catch (ex) {
 			soundElem.object.Play();
-		}	
+		}
 	}
 };
 
@@ -657,7 +657,7 @@ bitex.util.PriceAmountCalculatorVerb = {
  * @param {number} taker_fee
  * @param {number} maker_fee
  * @param {number} side
- */ 
+ */
 bitex.util.calculateTotalFee = function( qty, price, order_depth, username, taker_fee, maker_fee, side) {
   /**
    * @enum {number}
@@ -979,4 +979,3 @@ bitex.util.simpleOrderStatusFormatter = function(value, rowSet) {
       return MSG_ORDER_MANAGER_SIMPLE_STATUS_REJECTED;
   }
 };
-

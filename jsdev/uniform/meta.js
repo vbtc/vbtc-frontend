@@ -37,7 +37,7 @@ uniform.Meta.prototype.registerMetaFn = function(className,
 
 /**
  * @type {Element}
- */ 
+ */
 uniform.Meta.prototype.runMeta = function(formElement) {
   uniform.util.executeFormMetaTags(formElement,
       'data-uniform-meta', this.metaMap_);
@@ -75,7 +75,7 @@ uniform.Meta.prototype.enable_ = function(el, condition) {
 uniform.Meta.prototype.display_ = function(el, condition) {
   if (eval(condition)) {
     goog.style.showElement(el, true);
-  } else { 
+  } else {
     goog.style.showElement(el, false);
   }
 };
@@ -83,11 +83,11 @@ uniform.Meta.prototype.display_ = function(el, condition) {
 /**
  * @param {Element} el
  * @param {string} condition
- */ 
+ */
 uniform.Meta.prototype.hide_ = function(el, condition) {
   if (eval(condition)) {
     goog.style.showElement(el, false);
-  } else { 
+  } else {
     goog.style.showElement(el, true);
   }
 };

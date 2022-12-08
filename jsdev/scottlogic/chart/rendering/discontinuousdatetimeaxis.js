@@ -394,7 +394,7 @@ scottlogic.chart.rendering.DiscontinuousDateTimeAxis.prototype.setIntervalStep =
    *
    * @type {number}
    */
-  var effectiveInterval = (this.normalize(this.max) - 
+  var effectiveInterval = (this.normalize(this.max) -
       this.normalize(this.min)) / input;
 
   /** @type {number} */
@@ -1129,7 +1129,7 @@ scottlogic.chart.rendering.DiscontinuousDateTimeAxis.prototype.getDefaultBounds 
   /** @type {goog.date.UtcDateTime} */
   var yester = new goog.date.UtcDateTime(new Date());
   yester.add(new goog.date.Interval(0, 0, -1));
-  
+
   // Returning this time yesterday and current time
-  return [yester, new goog.date.UtcDateTime(new Date())];  
+  return [yester, new goog.date.UtcDateTime(new Date())];
 }

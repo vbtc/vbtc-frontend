@@ -196,7 +196,7 @@ scottlogic.chart.rendering.NumericalAxis.prototype.compare = function(
 /**
  * @override
  */
-scottlogic.chart.rendering.NumericalAxis.prototype.getDefaultBounds = 
+scottlogic.chart.rendering.NumericalAxis.prototype.getDefaultBounds =
     function() {
   return [0, 1];
 }

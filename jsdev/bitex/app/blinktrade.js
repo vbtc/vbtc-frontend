@@ -2087,7 +2087,7 @@ bitex.app.BlinkTrade.prototype.showWithdrawalDialog = function(currency, opt_pre
                                          "label": MSG_WITHDRAW_FIELD_MEMO,
                                          "placeholder":""});
     }
-  
+
     goog.array.forEach(withdrawal_method['fields'], function(field) {
       if (goog.object.containsKey(preData_data, field["name"])) {
         field["value"] = preData_data[field["name"]];
@@ -2153,7 +2153,7 @@ bitex.app.BlinkTrade.prototype.showWithdrawalDialog = function(currency, opt_pre
         case 'Memo':
           field["label"] = MSG_WITHDRAW_FIELD_MEMO;
           break;
-          
+
       }
     }, this);
 
@@ -4490,10 +4490,10 @@ bitex.app.BlinkTrade.prototype.onUserLoginError_ = function(e) {
             username = this.loginView_.getUsername();
             password = this.loginView_.getPassword();
           };
-          var requestId = this.conn_.login( broker_id, 
-                                            username, 
-                                            password, 
-                                            second_factor, 
+          var requestId = this.conn_.login( broker_id,
+                                            username,
+                                            password,
+                                            second_factor,
                                             this.getModel().get('Token'),
                                             trust_device,
                                             this.getModel().get('Referrer'),
@@ -4531,8 +4531,8 @@ bitex.app.BlinkTrade.prototype.onUserLoginError_ = function(e) {
     var MSG_LOGIN_ERROR_USERNAME_ALREADY_TAKEN = goog.getMsg('Username or email already taken');
 
     /**
-     * @desc OTP code already used error 
-     */ 
+     * @desc OTP code already used error
+     */
     var MSG_LOGIN_ERROR_ALREADY_USED_SECOND_STEP = goog.getMsg('Authentication code already used.');
 
     var user_status_text = msg['UserStatusText'];
@@ -5123,9 +5123,9 @@ bitex.app.BlinkTrade.prototype.onConnectionOpen_ = function(e){
     if (!goog.string.isEmpty(username) && !goog.string.isEmpty(password) ) {
       if (password.length >= 8 ) {
         var requestId = this.conn_.login(broker_id,
-                                         username, 
-                                         password, 
-                                         undefined, 
+                                         username,
+                                         password,
+                                         undefined,
                                          this.getModel().get('TrustDevice'),
                                          this.getModel().get('Referrer'),
                                          this.getModel().get('UriPath'));

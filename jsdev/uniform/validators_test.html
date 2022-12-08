@@ -81,7 +81,7 @@ See the COPYING file for details.
                  data-uniform-filters="number"
                  class="textInput"/>
 
-          <input type="text" id="id_price_highseason_week" name="price_highseason_week" 
+          <input type="text" id="id_price_highseason_week" name="price_highseason_week"
               value="" size="35"
               data-uniform-meta="assign If id_price_highseason_week == '' or id_price_highseason_week == '0' then id_price_highseason_day * 7 "
               data-uniform-filters="integer" class="textInput"/>
@@ -129,7 +129,7 @@ function testMetaAssignIf1() {
 
   uniform.Meta.getInstance().runMeta(goog.dom.getElement('metaform1'));
   
-  assertEquals( '0' , goog.dom.forms.getValue(el)); 
+  assertEquals( '0' , goog.dom.forms.getValue(el));
 };
 
 function testMetaAssignIf2() {
@@ -139,7 +139,7 @@ function testMetaAssignIf2() {
   uniform.Meta.getInstance().runMeta(goog.dom.getElement('metaform1'));
   
   var elweek = goog.dom.getElement("id_price_highseason_week");
-  assertEquals( '700' , goog.dom.forms.getValue(elweek)); 
+  assertEquals( '700' , goog.dom.forms.getValue(elweek));
 };
 
 

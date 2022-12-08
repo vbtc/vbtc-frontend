@@ -100,14 +100,14 @@ jsqrcode.PerspectiveTransform.utils.squareToQuadrilateral = function (x0, y0, x1
 
 	if (dy2 == 0.0 && dy3 == 0.0) {
 		return new jsqrcode.PerspectiveTransform(
-        x1 - x0, 
-        x2 - x1, 
-        x0, 
-        y1 - y0, 
-        y2 - y1, 
-        y0, 
-        0.0, 
-        0.0, 
+        x1 - x0,
+        x2 - x1,
+        x0,
+        y1 - y0,
+        y2 - y1,
+        y0,
+        0.0,
+        0.0,
         1.0);
 	} else {
 		var dx1 = x1 - x2;
@@ -118,14 +118,14 @@ jsqrcode.PerspectiveTransform.utils.squareToQuadrilateral = function (x0, y0, x1
 		var a13 = (dx3 * dy2 - dx2 * dy3) / denominator;
 		var a23 = (dx1 * dy3 - dx3 * dy1) / denominator;
 		return jsqrcode.PerspectiveTransform(
-        x1 - x0 + a13 * x1, 
-        x3 - x0 + a23 * x3, 
-        x0, 
-        y1 - y0 + a13 * y1, 
-        y3 - y0 + a23 * y3, 
-        y0, 
-        a13, 
-        a23, 
+        x1 - x0 + a13 * x1,
+        x3 - x0 + a23 * x3,
+        x0,
+        y1 - y0 + a13 * y1,
+        y3 - y0 + a23 * y3,
+        y0,
+        a13,
+        a23,
         1.0);
 	}
 };

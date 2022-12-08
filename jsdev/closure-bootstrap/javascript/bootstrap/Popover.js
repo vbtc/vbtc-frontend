@@ -16,7 +16,7 @@ import 'goog.events.Event'
  */
 bootstrap.Popover = function(opt_title, opt_content, opt_placement, opt_domHelper) {
   goog.ui.Component.call(this, opt_domHelper);
-  
+
   this.title_ = opt_title;
   this.content_ = opt_content ;
   this.placement_ = opt_placement || 'right';

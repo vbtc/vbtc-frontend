@@ -38,8 +38,8 @@ bitex.ui.DataGrid = function (options, opt_domHelper) {
     searchPlaceholder: options['searchPlaceholder'],
     buttonFilters: options['buttonFilters']
   };
-  
-  
+
+
   this.setModel(model);
 
   this.sort_column_ = "";

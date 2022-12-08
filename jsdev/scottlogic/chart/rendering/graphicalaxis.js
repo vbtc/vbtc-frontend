@@ -33,17 +33,17 @@ import 'goog.Disposable'
  * 		the underlying axis data.
  * @param {scottlogic.chart.rendering.Style} style
  * 		the parent style of this style.
- * @param {!scottlogic.chart.rendering.GraphicalAxis.Alignment} alignment 
- * 		the alignment of the axis. 
+ * @param {!scottlogic.chart.rendering.GraphicalAxis.Alignment} alignment
+ * 		the alignment of the axis.
  * @param {boolean} render
- * 		whether to render this axis. 
+ * 		whether to render this axis.
  * @constructor
  */
 scottlogic.chart.rendering.GraphicalAxis = function(axis,
     style, alignment, render) {
-	
+
 	goog.Disposable.call(this);
-	
+
 	 /**
    * The alignment of the axis
    *
@@ -67,7 +67,7 @@ scottlogic.chart.rendering.GraphicalAxis = function(axis,
    * @type {Array.<scottlogic.chart.rendering.Label>}
    */
   this.labels = [];
-	
+
   //scottlogic.chart.rendering.AbstractGraphicalAxis.call(this,
   //    axis, style, alignment);
   /**
@@ -77,7 +77,7 @@ scottlogic.chart.rendering.GraphicalAxis = function(axis,
    * @type {scottlogic.chart.rendering.Style}
    */
   this.style_ = new scottlogic.chart.rendering.Style(style, null, null, null);
-  
+
   /**
    * The style of the label
    *
@@ -98,7 +98,7 @@ scottlogic.chart.rendering.GraphicalAxis = function(axis,
   } else {
   	this.tickLength = 0;
   }
-  
+
   /**
    * Determines whether or not to render the Axis
    * @private
@@ -138,7 +138,7 @@ scottlogic.chart.rendering.GraphicalAxis = function(axis,
    * @type {number}
    */
   this.labelSize_ = 0;
-  
+
   /**
    * The labels tick path
    *
@@ -270,7 +270,7 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.addGraphics = function (graph
 	   * @type {number}
 	   */
 	this.height = this.graphics.getPixelSize().height;
-	
+
 	 /**
 	   * The drawn path for the label ticks
 	   *
@@ -279,7 +279,7 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.addGraphics = function (graph
 	   */
 	this.drawnLabelTicks_ = this.graphics.drawPath(this.labelTicks_,
 	      this.style_.getStroke(), null);
-	  
+
 	/**
      * The path that represents the axis
      *
@@ -287,7 +287,7 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.addGraphics = function (graph
      * @type {goog.graphics.Path}
      */
 	this.path_ = new goog.graphics.Path();
-	
+
 	 /**
      * Create the drawn path to match the underlying path
      *
@@ -321,7 +321,7 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.redraw = function(
  */
 scottlogic.chart.rendering.GraphicalAxis.prototype.rebuild = function(
     boundingBox) {
- 
+
   /**
    * The bounding box of the axis.
    *
@@ -395,7 +395,7 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.rebuildInternal =
   for (var j = 0; j < labelValues.length; j++) {
     if (this.isXAxis()) {
       // Create the label area. Rectangle in which to draw the label
-      
+
     	labelArea = new goog.math.Rect(
           this.convertNormalized(labelValues[j]) - (this.labelSize_ / 2),
           this.boundingBox.top,
@@ -416,28 +416,28 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.rebuildInternal =
       }
     } else if (this.isYAxis()) {
       // Create the label area. Rectangle in which to draw the label.
-    	
+
 	      if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.RIGHTOUTSIDE) {
 		      labelArea = new goog.math.Rect(
 		   		  	  this.boundingBox.left ,
 		   	          this.convertNormalized(labelValues[j]) - (this.labelSize_ / 2),
 		   	          this.boundingBox.width, this.labelSize_);
-	      } 
-	      
+	      }
+
 	      if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.LEFTOUTSIDE) {
 		      labelArea = new goog.math.Rect(
 		          0,
 		          this.convertNormalized(labelValues[j]) - (this.labelSize_ / 2),
 		          this.boundingBox.width, this.labelSize_);
 	      }
-	      
+
 	      if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.RIGHTINSIDE) {
 		      labelArea = new goog.math.Rect(
 		          this.boundingBox.left,
 		          this.convertNormalized(labelValues[j]) - (this.labelSize_ / 2),
 		          this.boundingBox.width, this.labelSize_);
 	      }
-	      
+
 	      if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.LEFTINSIDE) {
 	    	  labelArea = new goog.math.Rect(
 		   		  	  this.boundingBox.left,
@@ -449,7 +449,7 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.rebuildInternal =
 	          .getLabel(labelValues[j]), labelArea,
 	          scottlogic.chart.Chart.Orientation.Y, this.tickLength,
 	          this.labelStyle_, this.alignment);
-	
+
 	      // Try to assign the zero line
 	      if (goog.math.nearlyEquals(Math.abs(labelValues[j]), Number(0),
 	          0.0000000000001)) {
@@ -480,19 +480,19 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.assignBeginAndEnd =
   this.axisLength = 0;
 
   // Assign the beginning and ending co-ordinates of the axis
- 
+
   if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.BOTTOMOUTSIDE) {
 	  this.begin_ = [this.boundingBox.left, this.boundingBox.top];
 	  this.ending_ = [(this.boundingBox.left + this.boundingBox.width),
 	                  this.boundingBox.top];
 	  this.axisLength = this.ending_[0] - this.begin_[0];
-  } 
+  }
   if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.TOPINSIDE) {
 	  this.begin_ = [this.boundingBox.left, this.boundingBox.top];
 	  this.ending_ = [(this.boundingBox.left + this.boundingBox.width),
 	                  this.boundingBox.top];
 	  this.axisLength = this.ending_[0] - this.begin_[0];
-  } 
+  }
   if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.TOPOUTSIDE) {
 	  this.begin_ = [this.boundingBox.left, this.boundingBox.top + this.boundingBox.height];
 	  this.ending_ = [(this.boundingBox.left + this.boundingBox.width),
@@ -512,7 +512,7 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.assignBeginAndEnd =
 		       	      this.boundingBox.top + this.boundingBox.height];
     this.axisLength = this.ending_[1] - this.begin_[1];
   }
-  
+
   if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.LEFTOUTSIDE) {
 	  this.begin_ = [this.boundingBox.left + this.boundingBox.width,
 	       	      this.boundingBox.top];
@@ -520,7 +520,7 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.assignBeginAndEnd =
 	       	      this.boundingBox.top + this.boundingBox.height];
 	  this.axisLength = this.ending_[1] - this.begin_[1];
   }
-  
+
   if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.RIGHTINSIDE) {
 	  this.begin_ = [this.boundingBox.left + this.boundingBox.width,
 		       	      this.boundingBox.top];
@@ -528,7 +528,7 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.assignBeginAndEnd =
 		       	      this.boundingBox.top + this.boundingBox.height];
 		  this.axisLength = this.ending_[1] - this.begin_[1];
   }
-  
+
   if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.LEFTINSIDE) {
 	  this.begin_ = [this.boundingBox.left,
 		       	      this.boundingBox.top];
@@ -540,11 +540,11 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.assignBeginAndEnd =
 };
 
 /**
- * Performs just a redraw of the axis and of the labels. 
- * 
+ * Performs just a redraw of the axis and of the labels.
+ *
  */
 
-scottlogic.chart.rendering.GraphicalAxis.prototype.redrawInternal = 
+scottlogic.chart.rendering.GraphicalAxis.prototype.redrawInternal =
 	function() {
 		this.path_.clear();
 		this.labelTicks_.clear();
@@ -552,14 +552,14 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.redrawInternal =
 		// Draw just one line to the end of the path
 		this.path_.lineTo(this.ending_[0], this.ending_[1]);
 		this.drawnPath_.setPath(this.path_);
-		
+
 		// now draw the labels and ticks
 		for (var k = 0; k < this.labels.length; k++) {
 		    // Draw the label
 		    this.labels[k].addGraphics(this.graphics);
 		    var labelArea = this.labels[k].getLabelArea();
 		    //draw tick for label
-		   
+
 	    	if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.BOTTOMOUTSIDE) {
 	    		this.labelTicks_.moveTo(labelArea.left + (labelArea.width / 2),
 	    				labelArea.top);
@@ -591,7 +591,7 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.redrawInternal =
 		      this.labelTicks_.lineTo(
 		        labelArea.left  + (this.tickLength),
 		        labelArea.top + (labelArea.height / 2));
-	    	} 
+	    	}
 	    	if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.LEFTINSIDE) {
 			      this.labelTicks_.moveTo(labelArea.left,
 			        labelArea.top + (labelArea.height / 2));
@@ -599,28 +599,28 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.redrawInternal =
 			      this.labelTicks_.lineTo(
 			        labelArea.left  + (this.tickLength),
 			        labelArea.top + (labelArea.height / 2));
-		    	} 
+		    	}
 	    	if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.LEFTOUTSIDE) {
 	    	  this.labelTicks_.moveTo(labelArea.left + (labelArea.width),
 	    	    labelArea.top + (labelArea.height / 2));
-		
+
 			  this.labelTicks_.lineTo(
 			    (labelArea.left + labelArea.width) - (this.tickLength),
-				 labelArea.top + (labelArea.height / 2));   
-	    	}  
+				 labelArea.top + (labelArea.height / 2));
+	    	}
 	    	if (this.alignment === scottlogic.chart.rendering.GraphicalAxis.Alignment.RIGHTINSIDE) {
 		    	  this.labelTicks_.moveTo(labelArea.left + (labelArea.width),
 		    	    labelArea.top + (labelArea.height / 2));
-			
+
 				  this.labelTicks_.lineTo(
 				    (labelArea.left + labelArea.width) - (this.tickLength),
-					 labelArea.top + (labelArea.height / 2));   
+					 labelArea.top + (labelArea.height / 2));
 		    }
-	    	
+
 		}
-		
+
 		this.drawnLabelTicks_.setPath(this.labelTicks_);
-		
+
 };
 
 /**
@@ -664,12 +664,12 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.
  */
 scottlogic.chart.rendering.GraphicalAxis.prototype.getLabelWidth =
     function() {
-			
+
 			if (!this.renderAxis_) return 0;
-			
+
 		  /** @type {Array.<number>} */
 		  var labelValues = [];
-		
+
 		  // Use the actual labels if initialized, otherwise, use the Axis to "guess"
 		  // what the widest String may be
 		  if (this.axis.intervalStep) {
@@ -677,21 +677,21 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.getLabelWidth =
 		  } else {
 		    labelValues = [this.axis.estimateWidestLabel()];
 		  }
-		
+
 		  /** @type {number} */
 		  var maximum = this.graphics.getTextWidth(
 		      this.axis.getLabel(labelValues[0]), this.labelStyle_.getFont());
-		
+
 		  for (var i = 1; i < labelValues.length; i++) {
 		    /** @type {number} */
 		    var current = this.graphics.getTextWidth(
 		        this.axis.getLabel(labelValues[i]), this.labelStyle_.getFont());
-		
+
 		    if (current > maximum) {
 		      maximum = current;
 		    }
 		  }
-		
+
 		  return maximum;
 };
 
@@ -799,7 +799,7 @@ scottlogic.chart.rendering.GraphicalAxis.prototype.convertCanvasToData =
   } else if (relative > 1) {
     relative = 1;
   }
-  
+
   return this.axis.denormalize(this.normalizedMin_ + (relative * tempMax));
 };
 

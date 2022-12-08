@@ -308,7 +308,7 @@ uniform.Uniform.prototype.createDom = function() {
   goog.object.set(formAttributes, 'data-uniform-control-holder-class', this.getControlHolderClass() );
 
 
-  
+
   var topEl = dom.createDom('form', formAttributes, this.getContent());
   goog.dom.classes.add(topEl, this.getCssClass());
   this.setElementInternal(topEl);
@@ -567,7 +567,7 @@ uniform.Uniform.prototype.handleKeyEvent_ = function(e) {
   }
 
   uniform.InputFilters.getInstance().filter(e);
-  
+
 };
 
 
@@ -582,7 +582,7 @@ uniform.Uniform.prototype.onFormElementFocus_ = function(e){
 
 /**
  * Validate a form field on the click event
- * 
+ *
  * @param {goog.events.Event} e
  */
 uniform.Uniform.prototype.onFormElementClick_ = function(e) {
@@ -612,7 +612,7 @@ uniform.Uniform.prototype.onFormElementSelect_ = function(e) {
 
 /**
  * Validate a form field on the blur event
- * 
+ *
  * @param {goog.events.Event} e
  */
 uniform.Uniform.prototype.onFormElementBlur_ = function(e) {
@@ -665,7 +665,7 @@ uniform.Uniform.prototype.onWindowBeforeUnload_ = function(e) {
 
 /**
  * Focus the first form input element inside the form
- */  
+ */
 uniform.Uniform.prototype.focus = function() {
   var els = this.getElement().elements;
   for (var el, i = 0; el = els[i]; i++) {
@@ -692,7 +692,7 @@ uniform.Uniform.prototype.focus = function() {
  */
 uniform.Uniform.prototype.showFormError = function(title,messages,opt_scroll) {
   var scroll = true;
-  if (goog.isDefAndNotNull(opt_scroll)) { 
+  if (goog.isDefAndNotNull(opt_scroll)) {
     scroll = opt_scroll;
   }
 
@@ -702,7 +702,7 @@ uniform.Uniform.prototype.showFormError = function(title,messages,opt_scroll) {
   if (currentErrorMsgEl) {
     goog.dom.removeNode(currentErrorMsgEl);
   }
-  
+
   var errorMessagesList = dom.createDom('ol');
   goog.array.forEach(messages, function(message){
     errorMessagesList.appendChild(dom.createDom('li', undefined, message));
@@ -732,7 +732,7 @@ uniform.Uniform.prototype.showFormError = function(title,messages,opt_scroll) {
  */
 uniform.Uniform.prototype.showFormSuccess = function(title,opt_scroll){
   var scroll = true;
-  if (goog.isDefAndNotNull(opt_scroll)) { 
+  if (goog.isDefAndNotNull(opt_scroll)) {
     scroll = opt_scroll;
   }
 
@@ -742,8 +742,8 @@ uniform.Uniform.prototype.showFormSuccess = function(title,opt_scroll){
   if (el) {
     goog.dom.removeNode(el);
   }
-  
-  var el = dom.createDom('div', {id:'okMsg' },
+
+  el = dom.createDom('div', {id:'okMsg' },
       dom.createDom('h3', undefined, title ));
 
   dom.insertSiblingBefore(el,
@@ -759,7 +759,7 @@ uniform.Uniform.prototype.showFormSuccess = function(title,opt_scroll){
  * @param {Element} el
  * @param {string=} opt_control_holder_class. Defaults to CTRLHOLDER_CLASS
  * @return {string}
- */ 
+ */
 uniform.Uniform.prototype.getCaptionForElement = function(el, opt_control_holder_class) {
   if (goog.isDefAndNotNull(el.getAttribute('data-uniform-label'))) {
     return el.getAttribute('data-uniform-label');
@@ -799,7 +799,7 @@ uniform.Uniform.prototype.getCaptionForElement = function(el, opt_control_holder
 /**
  * @param {string=} opt_control_holder_class. Defaults to CTRLHOLDER_CLASS
  * @return {Array.<string>}
- */ 
+ */
 uniform.Uniform.prototype.validate = function(opt_control_holder_class) {
   var errors = [];
 
@@ -827,7 +827,7 @@ uniform.Uniform.prototype.validate = function(opt_control_holder_class) {
     }
   }
 
-  return errors;  
+  return errors;
 };
 
 /**
@@ -848,7 +848,7 @@ uniform.Uniform.prototype.onFormSubmit_ = function(e) {
     this.showFormError(MSG_FORM_ERROR_MSG, errors);
 
     goog.dom.classes.add(this.getElement(), goog.getCssName('failedSubmit') );
-  
+
     e.preventDefault();
 
     //  prevent the form submission

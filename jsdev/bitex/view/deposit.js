@@ -101,9 +101,9 @@ bitex.view.DepositView.prototype.qr_data_verb_;
 bitex.view.DepositView.prototype.receipt_data_;
 
 /**
- * @type {bitex.ui.DepositWithdrawButtonGroup} 
+ * @type {bitex.ui.DepositWithdrawButtonGroup}
  */
-bitex.view.DepositView.prototype.deposit_button_group_; 
+bitex.view.DepositView.prototype.deposit_button_group_;
 
 /**
  * @return {number}
@@ -225,7 +225,7 @@ bitex.view.DepositView.prototype.recreateComponents_ = function() {
   this.destroyComponents_();
 
   this.request_id_ = parseInt( 1e7 * Math.random() , 10 );
- 
+
   var deposit_button_group_el = goog.dom.getElement('id_deposit_button_group');
   if (goog.isDefAndNotNull(deposit_button_group_el)) {
     this.deposit_button_group_ = new bitex.ui.DepositWithdrawButtonGroup();
@@ -361,7 +361,7 @@ bitex.view.DepositView.prototype.onDepositListTableRequestData_ = function(e) {
   var page = e.options['Page'];
   var limit = e.options['Limit'];
   var filter = e.options['Filter'];
-  
+
   var conn = this.getApplication().getBitexConnection();
 
   var model = this.getApplication().getModel();
