@@ -22,6 +22,8 @@
   "devDependencies": {
     "git-rev-sync": "^3.0.2",
     "google-closure-compiler": "^20221102.0.1",
+    "google-closure-library": "^20221102.0.0",
+    "closure-templates": "^20180314.0.0",
     "gulp": "^4.0.2",
     "gulp-exec": "^5.0.0",
     "gulp-gh-pages": "^0.5.4",
