@@ -16,10 +16,10 @@
 //  You should have received a copy of the GNU General Public License
 //  along with Closure Charts.  If not, see <http://www.gnu.org/licenses/>.
 
-goog.provide('scottlogic.chart.rendering.Label');
+// goog.provide('scottlogic.chart.rendering.Label');
 
-goog.require('goog.Disposable');
-goog.require('goog.graphics');
+import 'goog.Disposable'
+import 'goog.graphics'
 
 /**
  * Represents a label object. 

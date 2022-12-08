@@ -1,8 +1,8 @@
-goog.provide('bootstrap.ButtonRenderer');
+// goog.provide('bootstrap.ButtonRenderer');
 
-goog.require('goog.ui.NativeButtonRenderer');
-goog.require('goog.ui.registry');
-goog.require('goog.ui.Component.State');
+import 'goog.ui.NativeButtonRenderer'
+import 'goog.ui.registry'
+import 'goog.ui.Component.State'
 
 
 /**

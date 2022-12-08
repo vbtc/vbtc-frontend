@@ -1,6 +1,6 @@
-goog.provide('bitex.primitives.Price');
+// goog.provide('bitex.primitives.Price');
 
-goog.require('goog.i18n.NumberFormat');
+import 'goog.i18n.NumberFormat'
 
 /**
  * @param {number} value

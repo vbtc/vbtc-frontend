@@ -1,11 +1,11 @@
-goog.provide('uniform.InputFilters');
-goog.provide('uniform.InputFilterFunction');
+// goog.provide('uniform.InputFilters');
+// goog.provide('uniform.InputFilterFunction');
 
-goog.require('goog.structs.Map');
-goog.require('goog.array');
-goog.require('goog.dom.forms');
+import 'goog.structs.Map'
+import 'goog.array'
+import 'goog.dom.forms'
 
-goog.require('goog.i18n.NumberFormatSymbols');
+import 'goog.i18n.NumberFormatSymbols'
 
 /**
  * @type {function(goog.events.KeyEvent, Array.<string>)}

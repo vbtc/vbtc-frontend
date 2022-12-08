@@ -1,14 +1,14 @@
-goog.provide('bitex.view.DepositView');
-goog.provide('bitex.view.DepositView.EventType');
+// goog.provide('bitex.view.DepositView');
+// goog.provide('bitex.view.DepositView.EventType');
 
-goog.require('bitex.view.View');
+import 'bitex.view.View'
 
-goog.require('bitex.ui.DepositWithdrawButtonGroup');
-goog.require('bitex.ui.DepositList');
-goog.require('bitex.templates');
-goog.require('bitex.util');
-goog.require('goog.soy');
-goog.require('goog.string');
+import 'bitex.ui.DepositWithdrawButtonGroup'
+import 'bitex.ui.DepositList'
+import 'bitex.templates'
+import 'bitex.util'
+import 'goog.soy'
+import 'goog.string'
 
 
 

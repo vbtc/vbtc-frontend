@@ -1,8 +1,9 @@
-goog.provide('bitex.view.StartView');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.StartView');
 
-goog.require('bitex.view.OfferBookView');
-goog.require('bitex.templates');
+import 'bitex.view.View'
+
+import 'bitex.view.OfferBookView'
+import 'bitex.templates'
 
 /**
  * @param {*} app

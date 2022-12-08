@@ -16,10 +16,10 @@
 //  You should have received a copy of the GNU General Public License
 //  along with Closure Charts.  If not, see <http://www.gnu.org/licenses/>.
 
-goog.provide('scottlogic.chart.rendering.Style');
+// goog.provide('scottlogic.chart.rendering.Style');
 
-goog.require('goog.graphics.Font');
-goog.require('goog.graphics.Stroke');
+import 'goog.graphics.Font'
+import 'goog.graphics.Stroke'
 
 /**
  * The style object represents a style that can be passed to a graphical

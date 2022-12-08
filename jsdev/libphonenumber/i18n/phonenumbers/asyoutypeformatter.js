@@ -30,12 +30,12 @@
  * @author Nikolaos Trogkanis
  */
 
-goog.provide('i18n.phonenumbers.AsYouTypeFormatter');
+// goog.provide('i18n.phonenumbers.AsYouTypeFormatter');
 
-goog.require('goog.string.StringBuffer');
-goog.require('i18n.phonenumbers.NumberFormat');
-goog.require('i18n.phonenumbers.PhoneMetadata');
-goog.require('i18n.phonenumbers.PhoneNumberUtil');
+import 'goog.string.StringBuffer'
+import 'i18n.phonenumbers.NumberFormat'
+import 'i18n.phonenumbers.PhoneMetadata'
+import 'i18n.phonenumbers.PhoneNumberUtil'
 
 
 

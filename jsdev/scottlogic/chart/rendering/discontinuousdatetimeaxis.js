@@ -16,12 +16,12 @@
 //  You should have received a copy of the GNU General Public License
 //  along with Closure Charts.  If not, see <http://www.gnu.org/licenses/>.
 
-goog.provide('scottlogic.chart.rendering.DiscontinuousDateTimeAxis');
+// goog.provide('scottlogic.chart.rendering.DiscontinuousDateTimeAxis');
 
-goog.require('goog.date.Interval');
-goog.require('goog.date.UtcDateTime');
-goog.require('scottlogic.chart.rendering.AbstractAxis');
-goog.require('scottlogic.chart.rendering.DiscontinuousDateTimeCache');
+import 'goog.date.Interval'
+import 'goog.date.UtcDateTime'
+import 'scottlogic.chart.rendering.AbstractAxis'
+import 'scottlogic.chart.rendering.DiscontinuousDateTimeCache'
 
 /**
  * A Discontinuous Time Axis is similar to the Date Time axis, with the

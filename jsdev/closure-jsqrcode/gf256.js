@@ -1,8 +1,8 @@
-goog.provide('jsqrcode.GF256');
-goog.provide('jsqrcode.GF256.QR_CODE_FIELD');
-goog.provide('jsqrcode.GF256.DATA_MATRIX_FIELD');
+// goog.provide('jsqrcode.GF256');
+// goog.provide('jsqrcode.GF256.QR_CODE_FIELD');
+// goog.provide('jsqrcode.GF256.DATA_MATRIX_FIELD');
 
-goog.require('jsqrcode.GF256Poly');
+import 'jsqrcode.GF256Poly'
 
 
 /**

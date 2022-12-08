@@ -1,12 +1,12 @@
-goog.provide('bitex.ui.TwoFactor');
+// goog.provide('bitex.ui.TwoFactor');
 
-goog.require('bitex.ui.TwoFactor.templates');
-goog.require('goog.ui.Component');
+import 'bitex.ui.TwoFactor.templates'
+import 'goog.ui.Component'
 
-goog.require('goog.string');
-goog.require('goog.dom.forms');
+import 'goog.string'
+import 'goog.dom.forms'
 
-goog.require('bitex.util');
+import 'bitex.util'
 
 /**
  * @param {Object} opt_model

@@ -1,10 +1,11 @@
-goog.provide('bitex.ui.Dialog');
-goog.provide('bitex.ui.Dialog.ButtonSet');
-goog.require('bitex.ui.Dialog.templates');
+// goog.provide('bitex.ui.Dialog');
+// goog.provide('bitex.ui.Dialog.ButtonSet');
 
-goog.require('goog.a11y.aria');
-goog.require('goog.ui.Dialog');
-goog.require('goog.style');
+import 'bitex.ui.Dialog.templates'
+
+import 'goog.a11y.aria'
+import 'goog.ui.Dialog'
+import 'goog.style'
 
 /**
  * It's not a great solution for overriding createDom like this

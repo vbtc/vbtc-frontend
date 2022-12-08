@@ -1,8 +1,8 @@
-goog.provide('bitex.view.AccountActivityView');
+// goog.provide('bitex.view.AccountActivityView');
 
-goog.require('bitex.view.View');
+import 'bitex.view.View'
 
-goog.require('bitex.ui.AccountActivity');
+import 'bitex.ui.AccountActivity'
 
 /**
  * @param {*} app

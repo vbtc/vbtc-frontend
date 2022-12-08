@@ -1,9 +1,10 @@
-goog.provide('jsqrcode.FormatInformation');
-goog.provide('jsqrcode.FormatInformation.BITS_SET_IN_HALF_BYTE');
-goog.provide('jsqrcode.FormatInformation.FORMAT_INFO_MASK_QR');
-goog.provide('jsqrcode.FormatInformation.FORMAT_INFO_DECODE_LOOKUP');
-goog.require('jsqrcode.ErrorCorrectionLevel');
-goog.require('jsqrcode.utils');
+// goog.provide('jsqrcode.FormatInformation');
+// goog.provide('jsqrcode.FormatInformation.BITS_SET_IN_HALF_BYTE');
+// goog.provide('jsqrcode.FormatInformation.FORMAT_INFO_MASK_QR');
+// goog.provide('jsqrcode.FormatInformation.FORMAT_INFO_DECODE_LOOKUP');
+
+import 'jsqrcode.ErrorCorrectionLevel'
+import 'jsqrcode.utils'
 
 /**
  * @param {number} formatInfo

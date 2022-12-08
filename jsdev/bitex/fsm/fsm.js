@@ -1,9 +1,9 @@
-goog.provide('bitex.fsm.Fsm');
-goog.provide('bitex.fsm.Fsm.Error');
+// goog.provide('bitex.fsm.Fsm');
+// goog.provide('bitex.fsm.Fsm.Error');
 
-goog.require('goog.array');
-goog.require('goog.object');
-goog.require('goog.debug.Logger');
+import 'goog.array'
+import 'goog.object'
+import 'goog.debug.Logger'
 
 
 /** @typedef  {*} */

@@ -1,11 +1,11 @@
-goog.provide('bitex.view.LedgerView');
+// goog.provide('bitex.view.LedgerView');
 
-goog.require('bitex.view.View');
+import 'bitex.view.View'
 
-goog.require('bitex.ui.LedgerActivity');
+import 'bitex.ui.LedgerActivity'
 
-goog.require('bitex.util');
-goog.require('goog.json');
+import 'bitex.util'
+import 'goog.json'
 
 /**
  * @param {*} app

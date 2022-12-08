@@ -1,15 +1,15 @@
-goog.provide('bitex.util');
-goog.provide('bitex.util.PriceAmountCalculatorVerb');
+// goog.provide('bitex.util');
+// goog.provide('bitex.util.PriceAmountCalculatorVerb');
 
-goog.require('goog.math.Long');
-goog.require('goog.crypt');
-goog.require('goog.crypt.Sha256');
-goog.require('goog.crypt.hash32');
+import 'goog.math.Long'
+import 'goog.crypt'
+import 'goog.crypt.Sha256'
+import 'goog.crypt.hash32'
 
-goog.require('goog.userAgent');
-goog.require('goog.userAgent.jscript');
-goog.require('goog.storage.mechanism.HTML5SessionStorage');
-goog.require('goog.storage.mechanism.HTML5LocalStorage');
+import 'goog.userAgent'
+import 'goog.userAgent.jscript'
+import 'goog.storage.mechanism.HTML5SessionStorage'
+import 'goog.storage.mechanism.HTML5LocalStorage'
 
 bitex.util.generateGUID = function() {
   function s4() {

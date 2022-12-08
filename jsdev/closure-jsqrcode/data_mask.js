@@ -1,6 +1,7 @@
-goog.provide('jsqrcode.DataMask');
-goog.require('jsqrcode.utils');
-goog.require('jsqrcode.BitMatrix');
+// goog.provide('jsqrcode.DataMask');
+
+import 'jsqrcode.utils'
+import 'jsqrcode.BitMatrix
 
 /**
  * @constructor

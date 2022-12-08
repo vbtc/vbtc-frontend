@@ -1,12 +1,13 @@
-goog.provide('bitex.ui.WithdrawMethodEditor');
-goog.require('goog.ui.Component');
+// goog.provide('bitex.ui.WithdrawMethodEditor');
 
-goog.require('bitex.model.Model');
-goog.require('bitex.ui.withdraw_method_editor.templates');
-goog.require('goog.style');
+import 'goog.ui.Component'
 
-goog.require('goog.dom.classes');
-goog.require('uniform.Uniform');
+import 'bitex.model.Model'
+import 'bitex.ui.withdraw_method_editor.templates'
+import 'goog.style'
+
+import 'goog.dom.classes'
+import 'uniform.Uniform'
 
 /**
  * @param {goog.dom.DomHelper=} opt_domHelper

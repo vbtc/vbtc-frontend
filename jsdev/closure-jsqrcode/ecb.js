@@ -1,4 +1,4 @@
-goog.provide('jsqrcode.ECB');
+// goog.provide('jsqrcode.ECB');
 
 /**
  * @param {number} count

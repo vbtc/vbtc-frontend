@@ -1,5 +1,5 @@
-goog.provide('jsqrcode.PerspectiveTransform');
-goog.provide('jsqrcode.PerspectiveTransform.utils');
+// goog.provide('jsqrcode.PerspectiveTransform');
+// goog.provide('jsqrcode.PerspectiveTransform.utils');
 
 /**
  * @param a11

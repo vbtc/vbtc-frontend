@@ -1,9 +1,9 @@
-goog.provide('bitex.ui.DepositWithdrawButtonGroup');
+// goog.provide('bitex.ui.DepositWithdrawButtonGroup');
 
-goog.require('bitex.ui.DepositWithdrawButtonGroup.templates');
-goog.require('goog.dom');
-goog.require('goog.ui.Component');
-goog.require('goog.events.Event');
+import 'bitex.ui.DepositWithdrawButtonGroup.templates'
+import 'goog.dom'
+import 'goog.ui.Component'
+import 'goog.events.Event'
 
 /**
  * @param {goog.dom.DomHelper=} opt_domHelper

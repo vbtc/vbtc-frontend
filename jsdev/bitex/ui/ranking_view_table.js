@@ -1,11 +1,11 @@
-goog.provide('bitex.ui.RankingViewTable');
+// goog.provide('bitex.ui.RankingViewTable');
 
-goog.require('goog.dom.classes');
-goog.require('goog.object');
+import 'goog.dom.classes'
+import 'goog.object'
 
-goog.require('goog.Timer');
+import 'goog.Timer'
 
-goog.require('bitex.ui.DataGrid');
+import 'bitex.ui.DataGrid'
 
 /**
  * @desc Column Rank

@@ -1,9 +1,9 @@
-goog.provide('bitex.view.SetNewPasswordView');
-goog.provide('bitex.view.SetNewPasswordView.EventType');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.SetNewPasswordView');
+// goog.provide('bitex.view.SetNewPasswordView.EventType');
+import 'bitex.view.View'
 
-goog.require('bitex.model.Model');
-goog.require('goog.style');
+import 'bitex.model.Model'
+import 'goog.style'
 
 /**
  * @param {*} app

@@ -1,6 +1,7 @@
-goog.provide('jsqrcode.FinderPatternInfo');
-goog.provide('jsqrcode.FinderPatternFinder');
-goog.require('jsqrcode.QRCode');
+// goog.provide('jsqrcode.FinderPatternInfo');
+// goog.provide('jsqrcode.FinderPatternFinder');
+
+import 'jsqrcode.QRCode'
 
 
 /**

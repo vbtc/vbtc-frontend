@@ -1,7 +1,7 @@
-goog.provide('bootstrap.PillsRenderer');
+// goog.provide('bootstrap.PillsRenderer');
 
-goog.require('bootstrap.TabBarRenderer');
-goog.require('goog.ui.registry');
+import 'bootstrap.TabBarRenderer'
+import 'goog.ui.registry'
 
 /**
  * @constructor

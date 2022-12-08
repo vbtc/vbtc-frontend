@@ -1,20 +1,20 @@
-goog.provide('bitex.model.Model');
-goog.provide('bitex.model.Model.EventType');
-goog.provide('bitex.model.ModelEvent');
-goog.provide('bitex.model.OrderBookInstrumentModel');
+// goog.provide('bitex.model.Model');
+// goog.provide('bitex.model.Model.EventType');
+// goog.provide('bitex.model.ModelEvent');
+// goog.provide('bitex.model.OrderBookInstrumentModel');
 
 
-goog.require('goog.structs.Map');
-goog.require('goog.events.EventTarget');
-goog.require('goog.array');
-goog.require('goog.dom');
+import 'goog.structs.Map'
+import 'goog.events.EventTarget'
+import 'goog.array'
+import 'goog.dom'
 
-goog.require('goog.Timer');
-goog.require('goog.dom.classes');
+import 'goog.Timer'
+import 'goog.dom.classes'
 
-goog.require('goog.i18n.NumberFormat');
-goog.require('expression_evaluator.Parser');
-goog.require('bitex.primitives.Price');
+import 'goog.i18n.NumberFormat'
+import 'expression_evaluator.Parser'
+import 'bitex.primitives.Price'
 
 /**
  * @typedef {{ symbol:String, currency:String, description:String }}

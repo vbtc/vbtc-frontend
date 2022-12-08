@@ -1,6 +1,6 @@
-goog.provide('bitex.view.NullView');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.NullView');
 
+import 'bitex.view.View'
 
 
 /**

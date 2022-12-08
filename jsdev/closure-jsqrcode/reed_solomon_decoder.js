@@ -1,6 +1,7 @@
-goog.provide('jsqrcode.ReedSolomonDecoder');
-goog.require('jsqrcode.GF256Poly');
-goog.require('jsqrcode.GF256');
+// goog.provide('jsqrcode.ReedSolomonDecoder');
+
+import 'jsqrcode.GF256Poly'
+import 'jsqrcode.GF256'
 
 /**
  * @param {jsqrcode.GF256} field

@@ -1,4 +1,4 @@
-goog.provide('jsqrcode.utils');
+// goog.provide('jsqrcode.utils');
 
 
 

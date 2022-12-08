@@ -1,23 +1,23 @@
-goog.provide('bitex.ui.OrderBook');
-goog.provide('bitex.ui.OrderBookDrag');
-goog.provide('bitex.ui.OrderBook.Side');
-goog.provide('bitex.ui.OrderBook.EventType');
-goog.provide('bitex.ui.OrderBookEvent');
+// goog.provide('bitex.ui.OrderBook');
+// goog.provide('bitex.ui.OrderBookDrag');
+// goog.provide('bitex.ui.OrderBook.Side');
+// goog.provide('bitex.ui.OrderBook.EventType');
+// goog.provide('bitex.ui.OrderBookEvent');
+// goog.provide('bitex.ui.OrderBookCurrencyModel');
 
-goog.require('bitex.ui.OrderBook.templates');
-goog.require('goog.i18n.NumberFormat');
-goog.require('goog.ui.Component');
-goog.require('goog.dom.classes');
-goog.require('goog.object');
+import 'bitex.ui.OrderBook.templates'
+import 'goog.i18n.NumberFormat'
+import 'goog.ui.Component'
+import 'goog.dom.classes'
+import 'goog.object'
 
-goog.require('goog.Timer');
-goog.provide('bitex.ui.OrderBookCurrencyModel');
+import 'goog.Timer'
 
-goog.require('bitex.primitives.Price');
+import 'bitex.primitives.Price'
 
-goog.require('goog.style');
-goog.require('goog.fx.DragDrop');
-goog.require('goog.fx.DragDropGroup');
+import 'goog.style'
+import 'goog.fx.DragDrop'
+import 'goog.fx.DragDropGroup'
 
 /**
  * @constructor

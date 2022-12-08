@@ -1,15 +1,16 @@
-goog.provide('bitex.view.SignupView');
-goog.provide('bitex.view.SignupView.EventType');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.SignupView');
+// goog.provide('bitex.view.SignupView.EventType');
 
-goog.require('bitex.util');
+import 'bitex.view.View'
 
-goog.require('goog.dom.forms');
-goog.require('goog.style');
-goog.require('goog.Uri.QueryData');
-goog.require('bitex.model.Model');
-goog.require('bitex.templates');
-goog.require('uniform.Uniform');
+import 'bitex.util'
+
+import 'goog.dom.forms'
+import 'goog.style'
+import 'goog.Uri.QueryData'
+import 'bitex.model.Model'
+import 'bitex.templates'
+import 'uniform.Uniform'
 
 /**
  * @param {*} app

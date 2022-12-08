@@ -16,16 +16,16 @@
 //  You should have received a copy of the GNU General Public License
 //  along with Closure Charts.  If not, see <http://www.gnu.org/licenses/>.
 
-goog.provide('scottlogic.chart.rendering.LineSeries');
-goog.provide('scottlogic.chart.rendering.Trackball');
+// goog.provide('scottlogic.chart.rendering.LineSeries');
+// goog.provide('scottlogic.chart.rendering.Trackball');
 
-goog.require('goog.Disposable');
-goog.require('goog.array');
-goog.require('goog.color');
-goog.require('goog.events');
-goog.require('goog.graphics');
-goog.require('scottlogic.chart.rendering.Style');
-goog.require('scottlogic.chart.rendering.lineoptimization');
+import 'goog.Disposable'
+import 'goog.array'
+import 'goog.color'
+import 'goog.events'
+import 'goog.graphics'
+import 'scottlogic.chart.rendering.Style'
+import 'scottlogic.chart.rendering.lineoptimization'
 
 /**
  * Represents a line series on the graph. A line series is responsible for

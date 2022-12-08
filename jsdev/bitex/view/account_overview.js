@@ -1,15 +1,15 @@
-goog.provide('bitex.view.AccountOverview');
+// goog.provide('bitex.view.AccountOverview');
 
-goog.require('bitex.view.View');
-goog.require('bitex.ui.Dialog');
-goog.require('bitex.ui.WithdrawList');
-goog.require('bitex.ui.DepositList');
-goog.require('bitex.templates');
-goog.require('goog.style');
-goog.require('goog.string');
-goog.require('goog.array');
-goog.require('goog.soy');
-goog.require('bitex.util');
+import 'bitex.view.View'
+import 'bitex.ui.Dialog'
+import 'bitex.ui.WithdrawList'
+import 'bitex.ui.DepositList'
+import 'bitex.templates'
+import 'goog.style'
+import 'goog.string'
+import 'goog.array'
+import 'goog.soy'
+import 'bitex.util'
 
 /**
  * @param {*} app

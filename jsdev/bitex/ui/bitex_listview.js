@@ -1,18 +1,18 @@
-goog.provide('bitex.ui.ListView');
-goog.provide('bitex.ui.ListView.EventType');
-goog.provide('bitex.ui.ListViewEvent');
+// goog.provide('bitex.ui.ListView');
+// goog.provide('bitex.ui.ListView.EventType');
+// goog.provide('bitex.ui.ListViewEvent');
 
-goog.require('bitex.ui.ListView.templates');
-goog.require('goog.ui.Component');
+import 'bitex.ui.ListView.templates'
+import 'goog.ui.Component'
 
-goog.require('goog.object');
-goog.require('goog.array');
-goog.require('goog.style');
-goog.require('goog.string');
-goog.require('goog.dom.forms');
-goog.require('goog.events.InputHandler');
-goog.require('goog.dom.classes');
-goog.require('goog.Timer');
+import 'goog.object'
+import 'goog.array'
+import 'goog.style'
+import 'goog.string'
+import 'goog.dom.forms'
+import 'goog.events.InputHandler'
+import 'goog.dom.classes'
+import 'goog.Timer'
 
 
 /**

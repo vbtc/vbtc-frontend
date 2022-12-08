@@ -1,7 +1,7 @@
-goog.provide('bitex.ui.WebCamQR');
+// goog.provide('bitex.ui.WebCamQR');
 
-goog.require('bitex.ui.WebCamQR.templates');
-goog.require('goog.ui.Component');
+import 'bitex.ui.WebCamQR.templates'
+import 'goog.ui.Component'
 
 /**
  * @param {Object} opt_model

@@ -1,20 +1,20 @@
-goog.provide('bitex.ui.WithdrawRequestDataEntry');
-goog.provide('bitex.ui.WithdrawRequestDataEntry.EventType');
+// goog.provide('bitex.ui.WithdrawRequestDataEntry');
+// goog.provide('bitex.ui.WithdrawRequestDataEntry.EventType');
 
-goog.require('bitex.ui.WithdrawRequestDataEntry.templates');
-goog.require('goog.ui.Component');
+import 'bitex.ui.WithdrawRequestDataEntry.templates'
+import 'goog.ui.Component'
 
-goog.require('goog.i18n.NumberFormat');
+import 'goog.i18n.NumberFormat'
 
-goog.require('goog.string');
-goog.require('goog.dom.forms');
+import 'goog.string'
+import 'goog.dom.forms'
 
-goog.require('bitex.util');
-goog.require('bitex.util.PriceAmountCalculatorVerb');
+import 'bitex.util'
+import 'bitex.util.PriceAmountCalculatorVerb'
 
-goog.require('bitex.primitives.Price');
+import 'bitex.primitives.Price'
 
-goog.require('uniform.Uniform');
+import 'uniform.Uniform'
 
 
 /**

@@ -1,5 +1,6 @@
-goog.provide('jsqrcode.ECBlocks');
-goog.require('jsqrcode.ECB');
+// goog.provide('jsqrcode.ECBlocks');
+
+import 'jsqrcode.ECB'
 
 /**
  * @param {number} ecCodewordsPerBlock

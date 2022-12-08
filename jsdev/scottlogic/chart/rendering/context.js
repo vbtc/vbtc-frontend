@@ -16,9 +16,9 @@
 //  You should have received a copy of the GNU General Public License
 //  along with Closure Charts.  If not, see <http://www.gnu.org/licenses/>.
 
-goog.provide('scottlogic.chart.rendering.Context');
+// goog.provide('scottlogic.chart.rendering.Context');
 
-goog.require('goog.math');
+import 'goog.math'
 
 /**
  * Represents a Context. The context will allow a Line Series to plot a path in

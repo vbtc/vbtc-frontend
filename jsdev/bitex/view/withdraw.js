@@ -1,14 +1,14 @@
-goog.provide('bitex.view.WithdrawView');
+// goog.provide('bitex.view.WithdrawView');
 
-goog.require('bitex.view.View');
+import 'bitex.view.View'
 
-goog.require('bitex.view.WithdrawView.templates');
+import 'bitex.view.WithdrawView.templates'
 
-goog.require('bitex.ui.DepositWithdrawButtonGroup');
-goog.require('bitex.ui.WithdrawList');
-goog.require('bitex.util');
-goog.require('goog.soy');
-goog.require('goog.string');
+import 'bitex.ui.DepositWithdrawButtonGroup'
+import 'bitex.ui.WithdrawList'
+import 'bitex.util'
+import 'goog.soy'
+import 'goog.string'
 
 /**
  * @param {*} app

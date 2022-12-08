@@ -1,12 +1,13 @@
-goog.provide('bitex.ui.ChangePassword');
-goog.provide('bitex.ui.ChangePassword.EventType');
-goog.require('goog.ui.Component');
+// goog.provide('bitex.ui.ChangePassword');
+// goog.provide('bitex.ui.ChangePassword.EventType');
 
-goog.require('bitex.model.Model');
-goog.require('bitex.ui.ChangePassword.templates');
-goog.require('goog.style');
+import 'goog.ui.Component'
 
-goog.require('goog.dom.classes');
+import 'bitex.model.Model'
+import 'bitex.ui.ChangePassword.templates'
+import 'goog.style'
+
+import 'goog.dom.classes'
 
 /**
  * @param {goog.dom.DomHelper=} opt_domHelper

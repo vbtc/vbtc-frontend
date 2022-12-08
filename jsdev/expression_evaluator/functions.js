@@ -7,7 +7,7 @@
  but don't feel like you have to let me know or ask permission.
 */
 
-goog.provide('expression_evaluator.functions');
+// goog.provide('expression_evaluator.functions');
 
 expression_evaluator.functions.add = function(a, b) {
   return Number(a) + Number(b);

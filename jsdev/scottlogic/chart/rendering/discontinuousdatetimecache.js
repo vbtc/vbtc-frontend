@@ -16,9 +16,9 @@
 //  You should have received a copy of the GNU General Public License
 //  along with Closure Charts.  If not, see <http://www.gnu.org/licenses/>.
 
-goog.provide('scottlogic.chart.rendering.DiscontinuousDateTimeCache');
+// goog.provide('scottlogic.chart.rendering.DiscontinuousDateTimeCache');
 
-goog.require('goog.date.UtcDateTime');
+import 'goog.date.UtcDateTime'
 
 /**
  * Provides a cache object to store DateTime's and their discontinuous ms

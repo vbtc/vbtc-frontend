@@ -1,15 +1,15 @@
-goog.provide('bitex.view.View');
-goog.provide('bitex.view.View.EventType');
+// goog.provide('bitex.view.View');
+// goog.provide('bitex.view.View.EventType');
 
-goog.require('bitex.model.Model');
+import 'bitex.model.Model'
 
-goog.require('goog.dom');
-goog.require('goog.object');
-goog.require('goog.ui.Component');
-goog.require('goog.ui.registry');
-goog.require('goog.ui.INLINE_BLOCK_CLASSNAME');
-goog.require('goog.debug.Logger');
-goog.require('goog.events.Event');
+import 'goog.dom'
+import 'goog.object'
+import 'goog.ui.Component'
+import 'goog.ui.registry'
+import 'goog.ui.INLINE_BLOCK_CLASSNAME'
+import 'goog.debug.Logger'
+import 'goog.events.Event'
 
 
 /**

@@ -16,9 +16,9 @@
 //  You should have received a copy of the GNU General Public License
 //  along with Closure Charts.  If not, see <http://www.gnu.org/licenses/>.
 
-goog.provide('scottlogic.chart.rendering.lineoptimization');
+// goog.provide('scottlogic.chart.rendering.lineoptimization');
 
-goog.require('goog.math.Coordinate');
+import 'goog.math.Coordinate'
 
 /**
  * Simplifies a line by reducing the number of points on the line

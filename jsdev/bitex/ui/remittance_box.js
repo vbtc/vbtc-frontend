@@ -1,14 +1,14 @@
-goog.provide('bitex.ui.RemittanceBox');
+// goog.provide('bitex.ui.RemittanceBox');
 
-goog.require('bitex.ui.RemittancesBox.templates');
-goog.require('goog.dom');
-goog.require('goog.object');
-goog.require('goog.ui.Component');
-goog.require('goog.ui.registry');
-goog.require('goog.debug.Logger');
-goog.require('goog.events.Event');
-goog.require('goog.i18n.NumberFormat');
-goog.require('goog.dom.classes');
+import 'bitex.ui.RemittancesBox.templates'
+import 'goog.dom'
+import 'goog.object'
+import 'goog.ui.Component'
+import 'goog.ui.registry'
+import 'goog.debug.Logger'
+import 'goog.events.Event'
+import 'goog.i18n.NumberFormat'
+import 'goog.dom.classes'
 
 /**
  * @param {goog.dom.DomHelper=} opt_domHelper

@@ -1,7 +1,7 @@
-goog.provide('bootstrap.Tab');
+// goog.provide('bootstrap.Tab');
 
-goog.require('goog.ui.Tab');
-goog.require('bootstrap.TabRenderer');
+import 'goog.ui.Tab'
+import 'bootstrap.TabRenderer'
 
 /**
  * Tab control, designed to be hosted in a {@link goog.ui.TabBar}.

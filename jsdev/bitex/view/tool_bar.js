@@ -1,8 +1,9 @@
-goog.provide('bitex.view.ToolBarView');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.ToolBarView');
 
-goog.require('bitex.model.Model');
-goog.require('goog.style');
+import 'bitex.view.View'
+
+import 'bitex.model.Model'
+import 'goog.style'
 
 /**
  * @param {*} app

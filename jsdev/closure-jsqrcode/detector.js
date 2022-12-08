@@ -1,10 +1,10 @@
-goog.provide('jsqrcode.Detector');
-goog.provide('jsqrcode.DetectorResult');
+// goog.provide('jsqrcode.Detector');
+// goog.provide('jsqrcode.DetectorResult');
 
-goog.require('jsqrcode.grid_sampler');
-goog.require('jsqrcode.Version');
-goog.require('jsqrcode.QRCode');
-goog.require('jsqrcode.AlignmentPatternFinder');
+import 'jsqrcode.grid_sampler'
+import 'jsqrcode.Version'
+import 'jsqrcode.QRCode'
+import 'jsqrcode.AlignmentPatternFinder'
 
 /**
  * @param {number} bits

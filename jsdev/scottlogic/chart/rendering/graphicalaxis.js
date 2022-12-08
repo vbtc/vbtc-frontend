@@ -16,14 +16,14 @@
 //  You should have received a copy of the GNU General Public License
 //  along with Closure Charts.  If not, see <http://www.gnu.org/licenses/>.
 
-goog.provide('scottlogic.chart.rendering.GraphicalAxis');
+// goog.provide('scottlogic.chart.rendering.GraphicalAxis');
 
-goog.require('goog.dom');
-goog.require('goog.graphics');
-goog.require('goog.math');
-goog.require('scottlogic.chart.rendering.Label');
+import 'goog.dom'
+import 'goog.graphics'
+import 'goog.math'
+import 'scottlogic.chart.rendering.Label'
 
-goog.require('goog.Disposable');
+import 'goog.Disposable'
 
 /**
  * A Graphical Axis that will render itself on the Chart

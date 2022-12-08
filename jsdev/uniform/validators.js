@@ -1,14 +1,15 @@
-goog.provide('uniform.Validators');
-goog.require('uniform.MetaFunction');
-goog.require('uniform.util');
+// goog.provide('uniform.Validators');
+import 'uniform.MetaFunction'
 
-goog.require('goog.structs.Map');
-goog.require('goog.array');
-goog.require('goog.dom.forms');
-goog.require('goog.i18n.NumberFormat');
+import 'uniform.util'
 
-goog.require('i18n.phonenumbers.PhoneNumberUtil');
-goog.require('i18n.phonenumbers.PhoneNumberUtil.ValidationResult');
+import 'goog.structs.Map'
+import 'goog.array'
+import 'goog.dom.forms'
+import 'goog.i18n.NumberFormat'
+
+import 'i18n.phonenumbers.PhoneNumberUtil'
+import 'i18n.phonenumbers.PhoneNumberUtil.ValidationResult'
 
 /**
  * Handle all uniform validations

@@ -1,9 +1,9 @@
-goog.provide('uniform.Meta');
+// goog.provide('uniform.Meta');
 
-goog.require('uniform.util');
-goog.require('goog.structs.Map');
-goog.require('goog.array');
-goog.require('goog.dom.forms');
+import 'uniform.util'
+import 'goog.structs.Map'
+import 'goog.array'
+import 'goog.dom.forms'
 
 /**
  * @constructor

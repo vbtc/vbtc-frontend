@@ -1,9 +1,10 @@
-goog.provide('bitex.view.APIView');
-goog.require('bitex.view.View');
-goog.require('bitex.ui.ApiList');
-goog.require('bitex.ui.APIKeyDataEntry');
+// goog.provide('bitex.view.APIView');
 
-goog.require('bitex.templates');
+import 'bitex.view.View'
+import 'bitex.ui.ApiList'
+import 'bitex.ui.APIKeyDataEntry'
+
+import 'bitex.templates'
 
 /**
  * @param {*} app
@@ -88,7 +89,7 @@ bitex.view.APIView.prototype.onNewApiKeyButtonClick_ = function(){
       'currency': deposit_method.currency,
       'description':deposit_method.description });
   }, this);
-  
+
   goog.object.forEach(model.get('Broker')['WithdrawStructure'], function (withdrawal_methods, currency){
     goog.array.forEach(withdrawal_methods, function(withdrawal_method){
       api_model['withdrawal_methods'].push({

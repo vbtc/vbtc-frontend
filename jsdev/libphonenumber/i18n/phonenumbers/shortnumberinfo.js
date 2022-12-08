@@ -28,15 +28,15 @@
  * @author James Wright
  */
 
-goog.provide('i18n.phonenumbers.ShortNumberInfo');
+// goog.provide('i18n.phonenumbers.ShortNumberInfo');
 
-goog.require('goog.proto2.PbLiteSerializer');
-goog.require('i18n.phonenumbers.PhoneMetadata');
-goog.require('i18n.phonenumbers.PhoneNumber');
-goog.require('i18n.phonenumbers.PhoneNumberDesc');
-goog.require('i18n.phonenumbers.PhoneNumberUtil');
-goog.require('i18n.phonenumbers.metadata');
-goog.require('i18n.phonenumbers.shortnumbermetadata');
+import 'goog.proto2.PbLiteSerializer'
+import 'i18n.phonenumbers.PhoneMetadata'
+import 'i18n.phonenumbers.PhoneNumber'
+import 'i18n.phonenumbers.PhoneNumberDesc'
+import 'i18n.phonenumbers.PhoneNumberUtil'
+import 'i18n.phonenumbers.metadata'
+import 'i18n.phonenumbers.shortnumbermetadata'
 
 
 

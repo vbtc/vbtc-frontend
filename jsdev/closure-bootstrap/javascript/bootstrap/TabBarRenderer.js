@@ -1,6 +1,6 @@
-goog.provide('bootstrap.TabBarRenderer');
+// goog.provide('bootstrap.TabBarRenderer');
 
-goog.require('goog.ui.TabBarRenderer');
+import 'goog.ui.TabBarRenderer'
 
 /**
  * @constructor

@@ -1,14 +1,15 @@
-goog.provide('bitex.ui.WithdrawMethods');
-goog.require('goog.ui.Component');
+// goog.provide('bitex.ui.WithdrawMethods');
 
-goog.require('bitex.model.Model');
-goog.require('bitex.ui.withdraw_methods.templates');
-goog.require('goog.style');
+import 'goog.ui.Component'
 
-goog.require('goog.dom.classes');
+import 'bitex.model.Model'
+import 'bitex.ui.withdraw_methods.templates'
+import 'goog.style'
 
-goog.require('bitex.ui.Dialog');
-goog.require('goog.i18n.NumberFormat');
+import 'goog.dom.classes'
+
+import 'bitex.ui.Dialog'
+import 'goog.i18n.NumberFormat'
 
 /**
  * @param {function} currencyFormatterFn

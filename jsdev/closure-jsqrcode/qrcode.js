@@ -1,7 +1,7 @@
-goog.provide('jsqrcode.QRCode');
-goog.provide('jsqrcode.QRCode.sizeOfDataLengthInfo');
+// goog.provide('jsqrcode.QRCode');
+// goog.provide('jsqrcode.QRCode.sizeOfDataLengthInfo');
 
-goog.require('jsqrcode.Detector');
+import 'jsqrcode.Detector'
 
 /**
  * @constructor

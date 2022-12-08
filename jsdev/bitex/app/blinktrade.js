@@ -1,109 +1,109 @@
-goog.provide('bitex.app.BlinkTrade');
-goog.provide('bitex.app.blink_trade');
+// goog.provide('bitex.app.BlinkTrade');
+// goog.provide('bitex.app.blink_trade');
 
-goog.require('goog.structs.Map');
-goog.require('goog.structs.Set');
+import 'goog.structs.Map'
+import 'goog.structs.Set'
 
-goog.require('bitex.util');
-goog.require('bitex.api.BitEx');
+import 'bitex.util'
+import 'bitex.api.BitEx'
 
-goog.require('goog.soy');
-goog.require('bitex.templates');
-goog.require('bitex.ui.WithdrawRequestDataEntry.templates');
+import 'goog.soy'
+import 'bitex.templates'
+import 'bitex.ui.WithdrawRequestDataEntry.templates'
 
-goog.require('bitex.ui.OrderBook');
-goog.require('bitex.ui.OrderBook.Side');
+import 'bitex.ui.OrderBook'
+import 'bitex.ui.OrderBook.Side'
 
-goog.require('bitex.ui.SimpleOrderBook');
-goog.require('bitex.ui.SimpleOrderBook.Side');
+import 'bitex.ui.SimpleOrderBook'
+import 'bitex.ui.SimpleOrderBook.Side'
 
-goog.require('bitex.ui.SimpleOrderEntry.EventType');
-goog.require('bitex.ui.AdvancedOrderEntry.EventType');
+import 'bitex.ui.SimpleOrderEntry.EventType'
+import 'bitex.ui.AdvancedOrderEntry.EventType'
 
-goog.require('bitex.ui.OrderBook.EventType');
-goog.require('bitex.ui.OrderBookEvent');
+import 'bitex.ui.OrderBook.EventType'
+import 'bitex.ui.OrderBookEvent'
 
-goog.require('bitex.ui.OrderManager');
-goog.require('bitex.ui.AccountActivity');
-goog.require('bitex.ui.WithdrawList');
+import 'bitex.ui.OrderManager'
+import 'bitex.ui.AccountActivity'
+import 'bitex.ui.WithdrawList'
 
-goog.require('bitex.ui.Customers');
+import 'bitex.ui.Customers'
 
-goog.require('bitex.ui.TwoFactor');
+import 'bitex.ui.TwoFactor'
 
-goog.require('bitex.ui.WebCamQR');
+import 'bitex.ui.WebCamQR'
 
-goog.require('goog.Uri');
+import 'goog.Uri'
 
-goog.require('goog.fx');
-goog.require('goog.fx.dom');
+import 'goog.fx'
+import 'goog.fx.dom'
 
-goog.require('goog.events.InputHandler');
+import 'goog.events.InputHandler'
 
-goog.require('goog.events');
-goog.require('goog.dom.forms');
-goog.require('goog.dom.classes');
-goog.require('goog.dom.TagName');
+import 'goog.events'
+import 'goog.dom.forms'
+import 'goog.dom.classes'
+import 'goog.dom.TagName'
 
-goog.require('goog.ui.Button');
+import 'goog.ui.Button'
 
-goog.require('goog.array');
-goog.require('goog.string');
-goog.require('goog.object');
-goog.require('goog.json');
+import 'goog.array'
+import 'goog.string'
+import 'goog.object'
+import 'goog.json'
 
-goog.require('bitex.app.UrlRouter');
-goog.require('bitex.model.Model');
-goog.require('bitex.model.Model.EventType');
+import 'bitex.app.UrlRouter'
+import 'bitex.model.Model'
+import 'bitex.model.Model.EventType'
 
-goog.require('bitex.ui.Dialog');
-goog.require('bitex.ui.Dialog.ButtonSet');
-goog.require('bootstrap.Alert');
-goog.require('bootstrap.Dropdown');
-goog.require('bootstrap.Accordion');
+import 'bitex.ui.Dialog'
+import 'bitex.ui.Dialog.ButtonSet'
+import 'bootstrap.Alert'
+import 'bootstrap.Dropdown'
+import 'bootstrap.Accordion'
 
-goog.require('bitex.primitives.Price');
+import 'bitex.primitives.Price'
 
-goog.require('goog.debug');
+import 'goog.debug'
 
-goog.require('bitex.view.NullView');
-goog.require('bitex.view.AdminView');
-goog.require('bitex.view.SignupView');
-goog.require('bitex.view.LoginView');
-goog.require('bitex.view.StartView');
-goog.require('bitex.view.ForgotPasswordView');
-goog.require('bitex.view.SetNewPasswordView');
-goog.require('bitex.view.VerificationView');
-goog.require('bitex.view.DepositView');
-goog.require('bitex.view.OfferBookView');
-goog.require('bitex.view.HistoryView');
-goog.require('bitex.view.SideBarView');
-goog.require('bitex.view.WithdrawView');
-goog.require('bitex.view.ServicesView');
+import 'bitex.view.NullView'
+import 'bitex.view.AdminView'
+import 'bitex.view.SignupView'
+import 'bitex.view.LoginView'
+import 'bitex.view.StartView'
+import 'bitex.view.ForgotPasswordView'
+import 'bitex.view.SetNewPasswordView'
+import 'bitex.view.VerificationView'
+import 'bitex.view.DepositView'
+import 'bitex.view.OfferBookView'
+import 'bitex.view.HistoryView'
+import 'bitex.view.SideBarView'
+import 'bitex.view.WithdrawView'
+import 'bitex.view.ServicesView'
 
-goog.require('bitex.view.CardView');
-goog.require('bitex.view.CustomersView');
-goog.require('bitex.view.AccountOverview');
-goog.require('bitex.view.BrokerView');
-goog.require('bitex.view.TradingView');
-goog.require('bitex.view.AlgorithmTradingView');
-goog.require('bitex.view.ToolBarView');
-goog.require('bitex.view.MarketView');
-goog.require('bitex.view.LedgerView');
-goog.require('bitex.view.ProfileView');
-goog.require('bitex.view.RankingView');
-goog.require('bitex.view.APIView');
-goog.require('bitex.view.LineOfCreditView');
-goog.require('bitex.view.TwoFactor');
+import 'bitex.view.CardView'
+import 'bitex.view.CustomersView'
+import 'bitex.view.AccountOverview'
+import 'bitex.view.BrokerView'
+import 'bitex.view.TradingView'
+import 'bitex.view.AlgorithmTradingView'
+import 'bitex.view.ToolBarView'
+import 'bitex.view.MarketView'
+import 'bitex.view.LedgerView'
+import 'bitex.view.ProfileView'
+import 'bitex.view.RankingView'
+import 'bitex.view.APIView'
+import 'bitex.view.LineOfCreditView'
+import 'bitex.view.TwoFactor'
 
-goog.require('uniform.Uniform');
-goog.require('uniform.Meta');               // Switch according to the test($MODULE_NAME$)
-goog.require('uniform.Validators');         // Switch according to the test($MODULE_NAME$)
+import 'uniform.Uniform'
+import 'uniform.Meta'               // Switch according to the test($MODULE_NAME$)
+import 'uniform.Validators'         // Switch according to the test($MODULE_NAME$)
 
-goog.require('goog.dom.iframe');
-goog.require('goog.html.SafeHtml');
+import 'goog.dom.iframe'
+import 'goog.html.SafeHtml'
 
-goog.require('goog.net.cookies');
+import 'goog.net.cookies'
 
 
 /**

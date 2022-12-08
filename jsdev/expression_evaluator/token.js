@@ -9,8 +9,8 @@
  but don't feel like you have to let me know or ask permission.
 */
 
-goog.provide('expression_evaluator.Token');
-goog.provide('expression_evaluator.Token.TokenType');
+// goog.provide('expression_evaluator.Token');
+// goog.provide('expression_evaluator.Token.TokenType');
 
 /**
  * @constructor

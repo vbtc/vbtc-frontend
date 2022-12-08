@@ -1,13 +1,14 @@
-goog.provide('bitex.view.MarketView');
-goog.require('bitex.view.View');
-goog.require('bitex.ui.TradeHistory');
-goog.require('bitex.ui.MarketViewTable');
-goog.require('bitex.ui.MarketViewTable.EventType');
-goog.require('bitex.util');
+// goog.provide('bitex.view.MarketView');
 
-goog.require('bitex.templates');
-goog.require('bitex.util')
-goog.require('bitex.ui.SimpleChart');
+import 'bitex.view.View'
+import 'bitex.ui.TradeHistory'
+import 'bitex.ui.MarketViewTable'
+import 'bitex.ui.MarketViewTable.EventType'
+import 'bitex.util'
+
+import 'bitex.templates'
+import 'bitex.util'
+import 'bitex.ui.SimpleChart'
 
 /**
  * @param {*} app

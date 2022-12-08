@@ -1,4 +1,4 @@
-goog.provide('jsqrcode.AlignmentPattern');
+// goog.provide('jsqrcode.AlignmentPattern');
 
 
 jsqrcode.AlignmentPattern = function (posX, posY, estimatedModuleSize) {

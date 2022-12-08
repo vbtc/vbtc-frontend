@@ -1,8 +1,9 @@
-goog.provide('bitex.view.TwoFactor');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.TwoFactor');
 
-goog.require('bitex.templates');
-goog.require('bitex.ui.TwoFactor.templates');
+import 'bitex.view.View'
+
+import 'bitex.templates'
+import 'bitex.ui.TwoFactor.templates'
 
 /**
  * @param {*} app

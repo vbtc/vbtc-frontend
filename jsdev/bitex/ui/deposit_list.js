@@ -1,13 +1,13 @@
-goog.provide('bitex.ui.DepositList');
+// goog.provide('bitex.ui.DepositList');
 
-goog.require('goog.dom');
-goog.require('goog.object');
-goog.require('bitex.ui.DataGrid');
-goog.require('goog.ui.registry');
+import 'goog.dom'
+import 'goog.object'
+import 'bitex.ui.DataGrid'
+import 'goog.ui.registry'
 
-goog.require('bitex.ui.DepositList.templates');
-goog.require('goog.dom.TagName');
-goog.require('bitex.util');
+import 'bitex.ui.DepositList.templates'
+import 'goog.dom.TagName'
+import 'bitex.util'
 
 /**
  * @desc Column ID of the Deposit List

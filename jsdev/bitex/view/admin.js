@@ -1,25 +1,25 @@
-goog.provide('bitex.view.AdminView');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.AdminView');
 
-goog.require('bitex.ui.Customers');
-goog.require('bitex.ui.DepositList');
+import 'bitex.view.View'
 
-goog.require('bitex.ui.WithdrawList');
-goog.require('bitex.ui.WithdrawMethods');
-goog.require('bitex.ui.WithdrawMethodEditor');
+import 'bitex.ui.Customers'
+import 'bitex.ui.DepositList'
 
+import 'bitex.ui.WithdrawList'
+import 'bitex.ui.WithdrawMethods'
+import 'bitex.ui.WithdrawMethodEditor'
 
-goog.require('goog.dom');
-goog.require('goog.events');
-goog.require('goog.events.EventType');
-goog.require('goog.object');
-goog.require('goog.string');
-goog.require('goog.ui.Component.EventType');
-goog.require('goog.ui.Tab');
-goog.require('goog.ui.TabBar');
-goog.require('bootstrap3.Tabs');
+import 'goog.dom'
+import 'goog.events'
+import 'goog.events.EventType'
+import 'goog.object'
+import 'goog.string'
+import 'goog.ui.Component.EventType'
+import 'goog.ui.Tab'
+import 'goog.ui.TabBar'
+import 'bootstrap3.Tabs'
 
-goog.require('bitex.templates');
+import 'bitex.templates'
 
 
 /**

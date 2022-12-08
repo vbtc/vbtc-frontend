@@ -26,23 +26,23 @@
  * http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html
  */
 
-goog.provide('i18n.phonenumbers.Error');
-goog.provide('i18n.phonenumbers.PhoneNumberFormat');
-goog.provide('i18n.phonenumbers.PhoneNumberType');
-goog.provide('i18n.phonenumbers.PhoneNumberUtil');
-goog.provide('i18n.phonenumbers.PhoneNumberUtil.MatchType');
-goog.provide('i18n.phonenumbers.PhoneNumberUtil.ValidationResult');
+// goog.provide('i18n.phonenumbers.Error');
+// goog.provide('i18n.phonenumbers.PhoneNumberFormat');
+// goog.provide('i18n.phonenumbers.PhoneNumberType');
+// goog.provide('i18n.phonenumbers.PhoneNumberUtil');
+// goog.provide('i18n.phonenumbers.PhoneNumberUtil.MatchType');
+// goog.provide('i18n.phonenumbers.PhoneNumberUtil.ValidationResult');
 
-goog.require('goog.object');
-goog.require('goog.proto2.PbLiteSerializer');
-goog.require('goog.string');
-goog.require('goog.string.StringBuffer');
-goog.require('i18n.phonenumbers.NumberFormat');
-goog.require('i18n.phonenumbers.PhoneMetadata');
-goog.require('i18n.phonenumbers.PhoneNumber');
-goog.require('i18n.phonenumbers.PhoneNumber.CountryCodeSource');
-goog.require('i18n.phonenumbers.PhoneNumberDesc');
-goog.require('i18n.phonenumbers.metadata');
+import 'goog.object'
+import 'goog.proto2.PbLiteSerializer'
+import 'goog.string'
+import 'goog.string.StringBuffer'
+import 'i18n.phonenumbers.NumberFormat'
+import 'i18n.phonenumbers.PhoneMetadata'
+import 'i18n.phonenumbers.PhoneNumber'
+import 'i18n.phonenumbers.PhoneNumber.CountryCodeSource'
+import 'i18n.phonenumbers.PhoneNumberDesc'
+import 'i18n.phonenumbers.metadata'
 
 
 

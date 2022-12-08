@@ -1,11 +1,12 @@
-goog.provide('bitex.view.AlgorithmTradingView');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.AlgorithmTradingView');
 
-goog.require('bitex.ui.OrderManager');
+import 'bitex.view.View'
 
-goog.require('bitex.util');
-goog.require('bitex.ui.AlgorithmSelector');
-goog.require('bitex.ui.AlgorithmRunner');
+import 'bitex.ui.OrderManager'
+
+import 'bitex.util'
+import 'bitex.ui.AlgorithmSelector'
+import 'bitex.ui.AlgorithmRunner'
 
 /**
  * @param {*} app

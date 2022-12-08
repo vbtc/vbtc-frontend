@@ -1,12 +1,13 @@
-goog.provide('bitex.ui.MarketViewTable');
-goog.provide('bitex.ui.MarketViewTable.EventType');
-goog.require('goog.ui.Component');
+// goog.provide('bitex.ui.MarketViewTable');
+// goog.provide('bitex.ui.MarketViewTable.EventType');
 
-goog.require('bitex.model.Model');
-goog.require('bitex.ui.market_view_table.templates');
-goog.require('goog.style');
+import 'goog.ui.Component'
 
-goog.require('goog.dom.classes');
+import 'bitex.model.Model'
+import 'bitex.ui.market_view_table.templates'
+import 'goog.style'
+
+import 'goog.dom.classes'
 
 /**
  * @param {goog.dom.DomHelper=} opt_domHelper

@@ -1,4 +1,4 @@
-goog.provide('bootstrap3.utils');
+// goog.provide('bootstrap3.utils');
 
 /**
  * @param {goog.events.BrowserEvent} event

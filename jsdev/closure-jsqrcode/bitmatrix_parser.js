@@ -1,6 +1,7 @@
-goog.provide('jsqrcode.BitMatrixParser');
-goog.require('jsqrcode.BitMatrix');
-goog.require('jsqrcode.Version');
+// goog.provide('jsqrcode.BitMatrixParser');
+
+import 'jsqrcode.BitMatrix'
+import 'jsqrcode.Version'
 
 /**
  * @param {jsqrcode.BitMatrix} bitMatrix

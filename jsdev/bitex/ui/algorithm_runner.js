@@ -1,13 +1,13 @@
-goog.provide('bitex.ui.AlgorithmRunner');
-goog.provide('bitex.ui.AlgorithmRunner.EventType');
+// goog.provide('bitex.ui.AlgorithmRunner');
+// goog.provide('bitex.ui.AlgorithmRunner.EventType');
 
-goog.require('bitex.ui.AlgorithmRunner.templates');
-goog.require('goog.ui.Component');
+import 'bitex.ui.AlgorithmRunner.templates'
+import 'goog.ui.Component'
 
-goog.require('goog.dom.forms');
-goog.require('goog.style');
+import 'goog.dom.forms'
+import 'goog.style'
 
-goog.require('uniform.Uniform');
+import 'uniform.Uniform'
 
 /**
  * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.

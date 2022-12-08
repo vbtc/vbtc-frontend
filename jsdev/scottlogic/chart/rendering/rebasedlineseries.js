@@ -16,9 +16,9 @@
 //  You should have received a copy of the GNU General Public License
 //  along with Closure Charts.  If not, see <http://www.gnu.org/licenses/>.
 
-goog.provide('scottlogic.chart.rendering.RebasedLineSeries');
+// goog.provide('scottlogic.chart.rendering.RebasedLineSeries');
 
-goog.require('scottlogic.chart.rendering.LineSeries');
+import 'scottlogic.chart.rendering.LineSeries'
 
 /**
  * @inheritDoc

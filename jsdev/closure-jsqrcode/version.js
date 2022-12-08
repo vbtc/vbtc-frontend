@@ -1,11 +1,11 @@
-goog.provide('jsqrcode.Version');
-goog.provide('jsqrcode.Version.VERSION_DECODE_INFO');
-goog.provide('jsqrcode.Version.VERSIONS');
+// goog.provide('jsqrcode.Version');
+// goog.provide('jsqrcode.Version.VERSION_DECODE_INFO');
+// goog.provide('jsqrcode.Version.VERSIONS');
 
-goog.require('jsqrcode.ECB');
-goog.require('jsqrcode.ECBlocks');
-goog.require('jsqrcode.BitMatrix');
-goog.require('jsqrcode.FormatInformation');
+import 'jsqrcode.ECB'
+import 'jsqrcode.ECBlocks'
+import 'jsqrcode.BitMatrix'
+import 'jsqrcode.FormatInformation'
 
 /**
  *

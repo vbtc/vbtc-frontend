@@ -1,5 +1,6 @@
-goog.provide('jsqrcode.AlignmentPatternFinder');
-goog.require('jsqrcode.AlignmentPattern');
+// goog.provide('jsqrcode.AlignmentPatternFinder');
+
+import 'jsqrcode.AlignmentPattern'
 
 /**
  * @param image

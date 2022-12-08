@@ -1,16 +1,16 @@
-goog.provide('bitex.ui.OrderManager');
-goog.provide('bitex.ui.OrderManager.Status');
-goog.provide('bitex.ui.OrderManagerEvent');
+// goog.provide('bitex.ui.OrderManager');
+// goog.provide('bitex.ui.OrderManager.Status');
+// goog.provide('bitex.ui.OrderManagerEvent');
 
-goog.require('bitex.ui.OrderManager.templates');
+import 'bitex.ui.OrderManager.templates'
 
-goog.require('goog.dom');
-goog.require('goog.object');
-goog.require('bitex.ui.DataGrid');
-goog.require('goog.ui.registry');
+import 'goog.dom'
+import 'goog.object'
+import 'bitex.ui.DataGrid'
+import 'goog.ui.registry'
 
-goog.require('bitex.util');
-goog.require('goog.dom.TagName');
+import 'bitex.util'
+import 'goog.dom.TagName'
 
 
 /**

@@ -1,14 +1,14 @@
-goog.provide('bitex.ui.LineOfCreditTable');
-goog.provide('bitex.ui.LineOfCreditTable.EventType');
+// goog.provide('bitex.ui.LineOfCreditTable');
+// goog.provide('bitex.ui.LineOfCreditTable.EventType');
 
-goog.require('goog.dom');
-goog.require('goog.object');
-goog.require('bitex.ui.DataGrid');
-goog.require('bitex.ui.LineOfCreditTable.templates');
-goog.require('goog.ui.registry');
+import 'goog.dom'
+import 'goog.object'
+import 'bitex.ui.DataGrid'
+import 'bitex.ui.LineOfCreditTable.templates'
+import 'goog.ui.registry'
 
-goog.require('goog.dom.TagName');
-goog.require('bitex.util');
+import 'goog.dom.TagName'
+import 'bitex.util'
 
 /**
  * @desc Column ID of the Line Of Credit Table

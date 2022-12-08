@@ -1,16 +1,17 @@
-goog.provide('bitex.view.SideBarView');
-goog.provide('bitex.view.SideBarView.EventType');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.SideBarView');
+// goog.provide('bitex.view.SideBarView.EventType');
 
-goog.require('bitex.model.Model');
-goog.require('goog.style');
-goog.require('goog.string');
-goog.require('goog.object');
+import 'bitex.view.View'
 
-goog.require('bitex.ui.RemittanceBox');
+import 'bitex.model.Model'
+import 'goog.style'
+import 'goog.string'
+import 'goog.object'
 
-goog.require('expression_evaluator.Parser');
-goog.require('bitex.view.SideBarView.templates')
+import 'bitex.ui.RemittanceBox'
+
+import 'expression_evaluator.Parser'
+import 'bitex.view.SideBarView.templates
 
 /**
  * @param {*} app

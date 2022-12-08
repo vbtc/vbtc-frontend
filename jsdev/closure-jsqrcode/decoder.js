@@ -1,10 +1,10 @@
-goog.provide('jsqrcode.Decoder');
-goog.provide('jsqrcode.Decoder.rsDecoder');
+// goog.provide('jsqrcode.Decoder');
+// goog.provide('jsqrcode.Decoder.rsDecoder');
 
-goog.require('jsqrcode.ReedSolomonDecoder');
-goog.require('jsqrcode.BitMatrixParser');
-goog.require('jsqrcode.DataBlock');
-goog.require('jsqrcode.QRCodeDataBlockReader');
+import 'jsqrcode.ReedSolomonDecoder'
+import 'jsqrcode.BitMatrixParser'
+import 'jsqrcode.DataBlock'
+import 'jsqrcode.QRCodeDataBlockReader'
 
 /**
  * @constructor

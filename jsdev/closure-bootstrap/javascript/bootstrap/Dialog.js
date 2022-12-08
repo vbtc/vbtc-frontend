@@ -1,8 +1,8 @@
-goog.provide('bootstrap.Dialog');
-goog.provide('bootstrap.Dialog.ButtonSet');
+// goog.provide('bootstrap.Dialog');
+// goog.provide('bootstrap.Dialog.ButtonSet');
 
-goog.require('goog.a11y.aria');
-goog.require('goog.ui.Dialog');
+import 'goog.a11y.aria'
+import 'goog.ui.Dialog'
 
 
 /**

@@ -1,13 +1,13 @@
-goog.provide('bitex.ui.Customers');
+// goog.provide('bitex.ui.Customers');
 
-goog.require('goog.dom');
-goog.require('goog.object');
-goog.require('bitex.ui.DataGrid');
-goog.require('goog.ui.registry');
+import 'goog.dom'
+import 'goog.object'
+import 'bitex.ui.DataGrid'
+import 'goog.ui.registry'
 
-goog.require('goog.json');
+import 'goog.json'
 
-goog.require('goog.dom.TagName');
+import 'goog.dom.TagName'
 
 
 /**

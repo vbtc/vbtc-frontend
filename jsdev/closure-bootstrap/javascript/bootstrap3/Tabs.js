@@ -1,17 +1,17 @@
-goog.provide('bootstrap3.Tabs');
+// goog.provide('bootstrap3.Tabs');
 
-goog.require('bootstrap3.TabBarRenderer');
-goog.require('bootstrap3.TabRenderer');
-goog.require('bootstrap3.utils');
+import 'bootstrap3.TabBarRenderer'
+import 'bootstrap3.TabRenderer'
+import 'bootstrap3.utils'
 
-goog.require('goog.dom');
-goog.require('goog.events.EventTarget');
-goog.require('goog.ui.TabBar');
-goog.require('goog.net.XhrIo');
-goog.require('goog.Uri');
-goog.require('goog.History');
-goog.require('goog.net.cookies');
-goog.require('goog.debug.Logger');
+import 'goog.dom'
+import 'goog.events.EventTarget'
+import 'goog.ui.TabBar'
+import 'goog.net.XhrIo'
+import 'goog.Uri'
+import 'goog.History'
+import 'goog.net.cookies'
+import 'goog.debug.Logger'
 
 /**
  * @fileoverview Based on JQueryTabs, but uses styles from http://twitter.github.com/bootstrap/components.html#navs:

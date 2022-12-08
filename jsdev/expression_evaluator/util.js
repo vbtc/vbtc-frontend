@@ -9,7 +9,7 @@
  but don't feel like you have to let me know or ask permission.
 */
 
-goog.provide('expression_evaluator.util');
+// goog.provide('expression_evaluator.util');
 
 expression_evaluator.util.object = function(o) {
   function F() {}

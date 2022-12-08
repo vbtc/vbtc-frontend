@@ -16,11 +16,11 @@
 //  You should have received a copy of the GNU General Public License
 //  along with Closure Charts.  If not, see <http://www.gnu.org/licenses/>.
 
-goog.provide('scottlogic.chart.rendering.DateTimeAxis');
+// goog.provide('scottlogic.chart.rendering.DateTimeAxis');
 
-goog.require('goog.date.Interval');
-goog.require('goog.date.UtcDateTime');
-goog.require('scottlogic.chart.rendering.AbstractAxis');
+import 'goog.date.Interval'
+import 'goog.date.UtcDateTime'
+import 'scottlogic.chart.rendering.AbstractAxis'
 
 /**
  * A Date Time axis should be used on the X Axis to plot dates and times. To

@@ -7,12 +7,12 @@
  but don't feel like you have to let me know or ask permission.
 */
 
-goog.provide('expression_evaluator.Expression');
+// goog.provide('expression_evaluator.Expression');
 
 
-goog.require('expression_evaluator.util');
-goog.require('expression_evaluator.Token');
-goog.require('expression_evaluator.Token.TokenType');
+import 'expression_evaluator.util'
+import 'expression_evaluator.Token'
+import 'expression_evaluator.Token.TokenType'
 
 /**
  * @param tokens

@@ -1,6 +1,6 @@
-goog.provide('jsqrcode.ErrorCorrectionLevel');
-goog.provide('jsqrcode.ErrorCorrectionLevel.Bits');
-goog.provide('jsqrcode.ErrorCorrectionLevel.FOR_BITS');
+// goog.provide('jsqrcode.ErrorCorrectionLevel');
+// goog.provide('jsqrcode.ErrorCorrectionLevel.Bits');
+// goog.provide('jsqrcode.ErrorCorrectionLevel.FOR_BITS');
 
 /**
  * @param {number} ordinal

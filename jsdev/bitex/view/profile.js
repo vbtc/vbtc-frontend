@@ -1,13 +1,14 @@
-goog.provide('bitex.view.ProfileView');
-goog.provide('bitex.view.ProfileView.EventType');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.ProfileView');
+// goog.provide('bitex.view.ProfileView.EventType');
 
-goog.require('bitex.ui.ChangePassword');
+import 'bitex.view.View'
 
-goog.require('goog.date.UtcDateTime');
-goog.require('goog.graphics.Stroke');
-goog.require('goog.i18n.DateTimeFormat');
-goog.require('bitex.view.ProfileView.templates');
+import 'bitex.ui.ChangePassword'
+
+import 'goog.date.UtcDateTime'
+import 'goog.graphics.Stroke'
+import 'goog.i18n.DateTimeFormat'
+import 'bitex.view.ProfileView.templates'
 
 
 /**

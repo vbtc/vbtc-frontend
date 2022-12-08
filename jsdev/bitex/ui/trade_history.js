@@ -1,12 +1,12 @@
-goog.provide('bitex.ui.TradeHistory');
+// goog.provide('bitex.ui.TradeHistory');
 
-goog.require('goog.dom.classes');
-goog.require('goog.object');
+import 'goog.dom.classes'
+import 'goog.object'
 
-goog.require('goog.Timer');
+import 'goog.Timer'
 
-goog.require('bitex.ui.DataGrid');
-goog.require('bitex.util');
+import 'bitex.ui.DataGrid'
+import 'bitex.util'
 
 /**
  * @desc Column Market Pair

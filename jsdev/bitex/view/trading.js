@@ -1,10 +1,11 @@
-goog.provide('bitex.view.TradingView');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.TradingView');
 
-goog.require('bitex.ui.SimpleOrderEntry');
-goog.require('bitex.ui.OrderManager');
+import 'bitex.view.View'
 
-goog.require('bitex.templates');
+import 'bitex.ui.SimpleOrderEntry'
+import 'bitex.ui.OrderManager'
+
+import 'bitex.templates'
 
 /**
  * @param {*} app

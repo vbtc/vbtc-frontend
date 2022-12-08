@@ -1,15 +1,15 @@
-goog.provide('bitex.view.LineOfCreditView');
+// goog.provide('bitex.view.LineOfCreditView');
 
-goog.require('bitex.view.LineOfCreditView.templates');
+import 'bitex.view.LineOfCreditView.templates'
 
-goog.require('bitex.view.View');
+import 'bitex.view.View'
 
-goog.require('bitex.ui.LineOfCreditTable');
-goog.require('bitex.ui.LineOfCreditTable.EventType');
+import 'bitex.ui.LineOfCreditTable'
+import 'bitex.ui.LineOfCreditTable.EventType'
 
-goog.require('bitex.util');
-goog.require('goog.json');
-goog.require('goog.structs.Set');
+import 'bitex.util'
+import 'goog.json'
+import 'goog.structs.Set'
 
 /**
  * @param {*} app

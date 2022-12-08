@@ -1,7 +1,8 @@
-goog.provide('jsqrcode.grid_sampler');
-goog.require('jsqrcode.PerspectiveTransform');
-goog.require('jsqrcode.PerspectiveTransform.utils');
-goog.require('jsqrcode.BitMatrix');
+// goog.provide('jsqrcode.grid_sampler');
+
+import 'jsqrcode.PerspectiveTransform'
+import 'jsqrcode.PerspectiveTransform.utils'
+import 'jsqrcode.BitMatrix'
 
 /**
  * @param image

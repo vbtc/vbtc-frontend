@@ -16,9 +16,9 @@
 //  You should have received a copy of the GNU General Public License
 //  along with Closure Charts.  If not, see <http://www.gnu.org/licenses/>.
 
-goog.provide('scottlogic.chart.rendering.Gridlines');
+// goog.provide('scottlogic.chart.rendering.Gridlines');
 
-goog.require('goog.graphics');
+import 'goog.graphics'
 
 /**
  * Represents the grid lines on the chart. This object is responsible for both

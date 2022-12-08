@@ -1,7 +1,7 @@
-goog.provide('bootstrap.Button');
+// goog.provide('bootstrap.Button');
 
-goog.require('goog.ui.Button');
-goog.require('bootstrap.ButtonRenderer');
+import 'goog.ui.Button'
+import 'bootstrap.ButtonRenderer'
 
 /**
  * A button control, rendered as a native browser button styled with Twitter Bootstrap.

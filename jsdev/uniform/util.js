@@ -1,7 +1,7 @@
-goog.provide('uniform.util');
-goog.provide('uniform.MetaFunction');
+// goog.provide('uniform.util');
+// goog.provide('uniform.MetaFunction');
 
-goog.require('goog.string');
+import 'goog.string'
 /**
  * @type {function(Element, string, string)}
  * Validator function. It expects the element to be validate,

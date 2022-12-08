@@ -1,9 +1,10 @@
-goog.provide('bitex.view.CardView');
-goog.require('bitex.view.View');
-goog.require('bitex.ui.CardList');
-goog.require('bitex.ui.CardDataEntry');
+// goog.provide('bitex.view.CardView');
 
-goog.require('bitex.templates');
+import 'bitex.view.View'
+import 'bitex.ui.CardList'
+import 'bitex.ui.CardDataEntry'
+
+import 'bitex.templates'
 
 /**
  * @param {*} app

@@ -1,7 +1,8 @@
-goog.provide('bitex.view.BrokerView');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.BrokerView');
 
-goog.require('bitex.templates');
+import 'bitex.view.View'
+
+import 'bitex.templates'
 
 /**
  * @param {*} app

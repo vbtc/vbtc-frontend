@@ -1,11 +1,11 @@
-goog.provide('bitex.ui.AccountActivity');
+// goog.provide('bitex.ui.AccountActivity');
 
-goog.require('goog.dom');
-goog.require('goog.object');
-goog.require('bitex.ui.DataGrid');
-goog.require('goog.ui.registry');
+import 'goog.dom'
+import 'goog.object'
+import 'bitex.ui.DataGrid'
+import 'goog.ui.registry'
 
-goog.require('goog.dom.TagName');
+import 'goog.dom.TagName'
 
 
 /**

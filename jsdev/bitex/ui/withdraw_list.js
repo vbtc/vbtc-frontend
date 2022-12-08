@@ -1,14 +1,14 @@
-goog.provide('bitex.ui.WithdrawList');
+// goog.provide('bitex.ui.WithdrawList');
 
-goog.require('goog.dom');
-goog.require('goog.object');
-goog.require('bitex.ui.DataGrid');
-goog.require('goog.ui.registry');
-goog.require('bitex.ui.WithdrawList.templates');
+import 'goog.dom'
+import 'goog.object'
+import 'bitex.ui.DataGrid'
+import 'goog.ui.registry'
+import 'bitex.ui.WithdrawList.templates'
 
-goog.require('goog.dom.TagName');
+import 'goog.dom.TagName'
 
-goog.require('bitex.util');
+import 'bitex.util'
 
 /**
  * @desc Column ID of the Withdraw List

@@ -1,5 +1,6 @@
-goog.provide('bitex.view.VerificationView');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.VerificationView');
+
+import 'bitex.view.View'
 
 
 

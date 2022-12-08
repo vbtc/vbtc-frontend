@@ -1,6 +1,7 @@
-goog.provide('bitex.view.RankingView');
-goog.require('bitex.view.View');
-goog.require('bitex.ui.RankingViewTable');
+// goog.provide('bitex.view.RankingView');
+
+import 'bitex.view.View'
+import 'bitex.ui.RankingViewTable'
 
 /**
  * @param {*} app

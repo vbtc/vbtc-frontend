@@ -1,4 +1,4 @@
-goog.provide('jsqrcode.BitMatrix');
+// goog.provide('jsqrcode.BitMatrix');
 
 /**
  * @param {number} width

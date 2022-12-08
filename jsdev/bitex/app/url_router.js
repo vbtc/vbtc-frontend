@@ -1,10 +1,10 @@
-goog.provide('bitex.app.UrlRouter');
-goog.provide('bitex.app.UrlRouter.EventType');
-goog.provide('bitex.app.UrlRouterEvent');
+// goog.provide('bitex.app.UrlRouter');
+// goog.provide('bitex.app.UrlRouter.EventType');
+// goog.provide('bitex.app.UrlRouterEvent');
 
-goog.require('goog.events');
-goog.require('goog.history.Html5History');
-goog.require('goog.string');
+import 'goog.events'
+import 'goog.history.Html5History'
+import 'goog.string'
 
 
 /**

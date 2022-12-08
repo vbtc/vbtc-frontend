@@ -1,20 +1,22 @@
-goog.provide('bitex.ui.SimpleOrderBook');
-goog.provide('bitex.ui.SimpleOrderBook.Side');
-// goog.provide('bitex.ui.OrderBook.EventType');
-// goog.provide('bitex.ui.OrderBookEvent');
+// goog.provide('bitex.ui.SimpleOrderBook');
+// goog.provide('bitex.ui.SimpleOrderBook.Side');
+// Ignored since before!
+//// goog.provide('bitex.ui.OrderBook.EventType');
+//// goog.provide('bitex.ui.OrderBookEvent');
 
-goog.require('bitex.ui.OrderBook.templates');
-goog.require('goog.i18n.NumberFormat');
-goog.require('goog.ui.Component');
-goog.require('goog.dom.classes');
-goog.require('goog.object');
+import 'bitex.ui.OrderBook.templates'
+import 'goog.i18n.NumberFormat'
+import 'goog.ui.Component'
+import 'goog.dom.classes'
+import 'goog.object'
 
-goog.require('goog.Timer');
-goog.require('bitex.ui.OrderBookCurrencyModel');
+import 'goog.Timer'
+import 'bitex.ui.OrderBookCurrencyModel'
 
-goog.require('bitex.primitives.Price');
+import 'bitex.primitives.Price'
 
-// goog.require('goog.style');
+// Was ignored since before
+// import 'goog.style'
 
 /**
  * @typedef {{ code:String, format:String, description:String, sign:String, pip:number, is_crypto:Boolean  }}

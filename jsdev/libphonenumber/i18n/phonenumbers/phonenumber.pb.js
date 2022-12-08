@@ -22,11 +22,11 @@
  * phonenumber.proto.
  */
 
-goog.provide('i18n.phonenumbers.PhoneNumber');
-goog.provide('i18n.phonenumbers.PhoneNumber.CountryCodeSource');
+// goog.provide('i18n.phonenumbers.PhoneNumber');
+// goog.provide('i18n.phonenumbers.PhoneNumber.CountryCodeSource');
 
-goog.require('goog.proto2.Message');
-goog.require('goog.proto2.Descriptor');
+import 'goog.proto2.Message'
+import 'goog.proto2.Descriptor'
 
 
 

@@ -1,19 +1,19 @@
-goog.provide('bitex.ui.SimpleOrderEntry');
-goog.provide('bitex.ui.SimpleOrderEntry.EventType');
-goog.provide('bitex.ui.SimpleOrderEntry.Side');
+// goog.provide('bitex.ui.SimpleOrderEntry');
+// goog.provide('bitex.ui.SimpleOrderEntry.EventType');
+// goog.provide('bitex.ui.SimpleOrderEntry.Side');
 
-goog.require('bitex.ui.SimpleOrderEntry.templates');
-goog.require('goog.ui.Component');
+import 'bitex.ui.SimpleOrderEntry.templates'
+import 'goog.ui.Component'
 
-goog.require('goog.i18n.NumberFormat');
+import 'goog.i18n.NumberFormat'
 
-goog.require('goog.string');
-goog.require('goog.dom.forms');
+import 'goog.string'
+import 'goog.dom.forms'
 
-goog.require('bitex.util');
-goog.require('bitex.util.PriceAmountCalculatorVerb');
+import 'bitex.util'
+import 'bitex.util.PriceAmountCalculatorVerb'
 
-goog.require('uniform.Uniform');
+import 'uniform.Uniform'
 
 
 /**

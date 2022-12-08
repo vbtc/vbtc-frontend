@@ -1,12 +1,13 @@
-goog.provide('bitex.view.LoginView');
-goog.provide('bitex.view.LoginView.EventType');
-goog.require('bitex.view.View');
+// goog.provide('bitex.view.LoginView');
+// goog.provide('bitex.view.LoginView.EventType');
 
-goog.require('bitex.util');
+import 'bitex.view.View'
 
-goog.require('goog.dom.forms');
-goog.require('goog.style');
-goog.require('bitex.model.Model');
+import 'bitex.util'
+
+import 'goog.dom.forms'
+import 'goog.style'
+import 'bitex.model.Model'
 
 /**
  * @param {*} app

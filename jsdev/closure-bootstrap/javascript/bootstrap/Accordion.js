@@ -1,6 +1,6 @@
-goog.provide('bootstrap.Accordion');
+// goog.provide('bootstrap.Accordion');
 
-goog.require('goog.events');
+import 'goog.events'
 
 bootstrap.Accordion.closeAll = function(){
   var accordion_toggle_elements = goog.dom.getElementsByClass('accordion-toggle', document.body) ;

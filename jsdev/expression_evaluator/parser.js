@@ -7,11 +7,11 @@
  but don't feel like you have to let me know or ask permission.
 */
 
-goog.provide('expression_evaluator.Parser');
+// goog.provide('expression_evaluator.Parser');
 
-goog.require('expression_evaluator.util');
-goog.require('expression_evaluator.functions');
-goog.require('expression_evaluator.Expression');
+import 'expression_evaluator.util'
+import 'expression_evaluator.functions'
+import 'expression_evaluator.Expression'
 
 /**
  * @constructor

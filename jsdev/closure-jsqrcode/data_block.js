@@ -1,5 +1,6 @@
-goog.provide('jsqrcode.DataBlock');
-goog.require('jsqrcode.Version');
+// goog.provide('jsqrcode.DataBlock');
+
+import 'jsqrcode.Version'
 
 /**
  * @param numDataCodewords

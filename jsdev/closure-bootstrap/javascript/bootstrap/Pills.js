@@ -1,7 +1,7 @@
-goog.provide('bootstrap.Pills');
+// goog.provide('bootstrap.Pills');
 
-goog.require('goog.ui.TabBar');
-goog.require('bootstrap.PillsRenderer');
+import 'goog.ui.TabBar'
+import 'bootstrap.PillsRenderer'
 
 /**
  * Tab bar UI component styled with Twitter Bootstrap

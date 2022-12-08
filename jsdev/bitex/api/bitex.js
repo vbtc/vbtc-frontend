@@ -4,21 +4,21 @@
 // @use_closure_library true
 // ==/ClosureCompiler==
 
-goog.provide('bitex.api.BitEx');
-goog.provide('bitex.api.BitEx.EventType');
-goog.provide('bitex.api.BitExEvent');
+// goog.provide('bitex.api.BitEx');
+// goog.provide('bitex.api.BitEx.EventType');
+// goog.provide('bitex.api.BitExEvent');
 
-goog.require('goog.net.WebSocket');
-goog.require('goog.i18n.NumberFormat');
-goog.require('goog.json');
-goog.require('goog.events');
-goog.require('goog.events.Event');
-goog.require('goog.events.EventTarget');
+import 'goog.net.WebSocket';
+import 'goog.i18n.NumberFormat';
+import 'goog.json';
+import 'goog.events';
+import 'goog.events.Event';
+import 'goog.events.EventTarget';
 
-goog.require('goog.userAgent');
-goog.require('goog.Uri.QueryData');
-goog.require('goog.string');
-goog.require('goog.net.cookies');
+import 'goog.userAgent';
+import 'goog.Uri.QueryData';
+import 'goog.string';
+import 'goog.net.cookies';
 
 /**
  * @constructor

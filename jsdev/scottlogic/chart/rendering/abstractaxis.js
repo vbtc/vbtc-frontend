@@ -16,7 +16,7 @@
 //  You should have received a copy of the GNU General Public License
 //  along with Closure Charts.  If not, see <http://www.gnu.org/licenses/>.
 
-goog.provide('scottlogic.chart.rendering.AbstractAxis');
+// goog.provide('scottlogic.chart.rendering.AbstractAxis');
 
 /**
  * This AbstractAxis object will contain the data underlying the graphical

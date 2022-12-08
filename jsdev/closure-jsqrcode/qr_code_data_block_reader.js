@@ -1,4 +1,4 @@
-goog.provide('jsqrcode.QRCodeDataBlockReader');
+// goog.provide('jsqrcode.QRCodeDataBlockReader');
 
 /**
  *

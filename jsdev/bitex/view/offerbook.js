@@ -1,16 +1,16 @@
-goog.provide('bitex.view.OfferBookView');
-goog.provide('bitex.view.OfferBookView.EventType');
+// goog.provide('bitex.view.OfferBookView');
+// goog.provide('bitex.view.OfferBookView.EventType');
 
-goog.require('bitex.view.View');
-goog.require('bitex.view.View.EventType');
+import 'bitex.view.View'
+import 'bitex.view.View.EventType'
 
-goog.require('bitex.ui.AdvancedOrderEntry');
+import 'bitex.ui.AdvancedOrderEntry'
 
-goog.require('bootstrap.Button');
-goog.require('bootstrap.ButtonRenderer');
-goog.require('goog.ui.ToggleButton');
+import 'bootstrap.Button'
+import 'bootstrap.ButtonRenderer'
+import 'goog.ui.ToggleButton'
 
-goog.require('bitex.ui.LockedBalanceDisplay');
+import 'bitex.ui.LockedBalanceDisplay'
 
 /**
  * @param {*} app

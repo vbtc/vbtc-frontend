@@ -1,6 +1,6 @@
-goog.provide('bootstrap.Dropdown');
+// goog.provide('bootstrap.Dropdown');
 
-goog.require('goog.events');
+import 'goog.events'
 
 bootstrap.Dropdown.closeAll = function(){
   // closes all dropdown buttons that are open

@@ -1,9 +1,9 @@
-goog.provide('bootstrap.Popover');
+// goog.provide('bootstrap.Popover');
 
-goog.require('goog.dom');
-goog.require('goog.ui.Component');
-goog.require('goog.debug.Logger');
-goog.require('goog.events.Event');
+import 'goog.dom'
+import 'goog.ui.Component'
+import 'goog.debug.Logger'
+import 'goog.events.Event'
 
 
 /**

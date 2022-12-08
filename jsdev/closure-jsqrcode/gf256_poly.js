@@ -1,5 +1,5 @@
-goog.provide('jsqrcode.GF256Poly');
-goog.require('jsqrcode.GF256');
+// goog.provide('jsqrcode.GF256Poly');
+import 'jsqrcode.GF256'
 
 /**
  * @param {jsqrcode.GF256} field

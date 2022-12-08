@@ -1,12 +1,12 @@
-goog.provide('bitex.ui.LockedBalanceDisplay');
+// goog.provide('bitex.ui.LockedBalanceDisplay');
 
-goog.require('bitex.ui.LockedBalanceDisplay.templates');
-goog.require('goog.ui.Component');
+import 'bitex.ui.LockedBalanceDisplay.templates'
+import 'goog.ui.Component'
 
-goog.require('goog.dom.forms');
-goog.require('goog.style');
+import 'goog.dom.forms'
+import 'goog.style'
 
-goog.require('uniform.Uniform');
+import 'uniform.Uniform'
 
 /**
  * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.

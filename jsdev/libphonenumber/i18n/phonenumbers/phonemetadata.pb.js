@@ -21,13 +21,13 @@
  * @fileoverview Generated Protocol Buffer code for file
  * phonemetadata.proto.
  */
-goog.provide('i18n.phonenumbers.NumberFormat');
-goog.provide('i18n.phonenumbers.PhoneNumberDesc');
-goog.provide('i18n.phonenumbers.PhoneMetadata');
-goog.provide('i18n.phonenumbers.PhoneMetadataCollection');
+// goog.provide('i18n.phonenumbers.NumberFormat');
+// goog.provide('i18n.phonenumbers.PhoneNumberDesc');
+// goog.provide('i18n.phonenumbers.PhoneMetadata');
+// goog.provide('i18n.phonenumbers.PhoneMetadataCollection');
 
-goog.require('goog.proto2.Message');
-goog.require('goog.proto2.Descriptor');
+import 'goog.proto2.Message'
+import 'goog.proto2.Descriptor'
 
 
 

@@ -21,7 +21,7 @@
  * @author Nikolaos Trogkanis
  */
 
-goog.provide('i18n.phonenumbers.shortnumbermetadata');
+// goog.provide('i18n.phonenumbers.shortnumbermetadata');
 
 /**
  * A mapping from a country calling code to the region codes which denote the

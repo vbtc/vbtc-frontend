@@ -1,10 +1,10 @@
-goog.provide('bootstrap.Alert');
+// goog.provide('bootstrap.Alert');
 
-goog.require('goog.dom');
-goog.require('goog.ui.Component');
-goog.require('goog.ui.INLINE_BLOCK_CLASSNAME');
-goog.require('goog.debug.Logger');
-goog.require('goog.events.Event');
+import 'goog.dom'
+import 'goog.ui.Component'
+import 'goog.ui.INLINE_BLOCK_CLASSNAME'
+import 'goog.debug.Logger'
+import 'goog.events.Event'
 
 
 /**

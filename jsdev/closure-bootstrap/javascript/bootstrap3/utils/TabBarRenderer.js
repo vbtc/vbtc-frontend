@@ -1,8 +1,8 @@
-goog.provide('bootstrap3.TabBarRenderer');
+// goog.provide('bootstrap3.TabBarRenderer');
 
-goog.require('goog.ui.TabBarRenderer');
-goog.require('bootstrap3.TabRenderer');
-goog.require('bootstrap3.Tab');
+import 'goog.ui.TabBarRenderer'
+import 'bootstrap3.TabRenderer'
+import 'bootstrap3.Tab'
 
 /**
  * Renderer for {@link goog.ui.TabBar}s, based on the {@code goog.ui.TabBarRenderer} code.

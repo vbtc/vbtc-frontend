@@ -16,25 +16,25 @@
 //  You should have received a copy of the GNU General Public License
 //  along with Closure Charts.  If not, see <http://www.gnu.org/licenses/>.
 
-goog.provide('scottlogic.chart.Chart');
-goog.provide('scottlogic.chart.Chart.ChartClicked');
-goog.provide('scottlogic.chart.Chart.Orientation');
+// goog.provide('scottlogic.chart.Chart');
+// goog.provide('scottlogic.chart.Chart.ChartClicked');
+// goog.provide('scottlogic.chart.Chart.Orientation');
 
-goog.require('goog.array');
-goog.require('goog.color');
-goog.require('goog.dom');
-goog.require('goog.events');
-goog.require('goog.graphics');
-goog.require('goog.debug.ErrorHandler');
-goog.require('goog.math.Rect');
-goog.require('goog.math.Coordinate');
-goog.require('scottlogic.chart.rendering.Context');
-goog.require('scottlogic.chart.rendering.DiscontinuousDateTimeAxis');
-goog.require('scottlogic.chart.rendering.Gridlines');
-goog.require('scottlogic.chart.rendering.LineSeries');
-goog.require('scottlogic.chart.rendering.NumericalAxis');
-goog.require('scottlogic.chart.rendering.GraphicalAxis');
-goog.require('scottlogic.chart.rendering.Style');
+import 'goog.array'
+import 'goog.color'
+import 'goog.dom'
+import 'goog.events'
+import 'goog.graphics'
+import 'goog.debug.ErrorHandler'
+import 'goog.math.Rect'
+import 'goog.math.Coordinate'
+import 'scottlogic.chart.rendering.Context'
+import 'scottlogic.chart.rendering.DiscontinuousDateTimeAxis'
+import 'scottlogic.chart.rendering.Gridlines'
+import 'scottlogic.chart.rendering.LineSeries'
+import 'scottlogic.chart.rendering.NumericalAxis'
+import 'scottlogic.chart.rendering.GraphicalAxis'
+import 'scottlogic.chart.rendering.Style'
 
 /**
  * The Chart object is the manager of the Chart, instantiating all components

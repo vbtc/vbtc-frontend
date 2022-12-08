@@ -1,11 +1,11 @@
-goog.provide('bitex.view.CustomersView');
+// goog.provide('bitex.view.CustomersView');
 
-goog.require('bitex.view.View');
+import 'bitex.view.View'
 
-goog.require('bitex.ui.Customers');
-goog.require('bitex.templates');
+import 'bitex.ui.Customers'
+import 'bitex.templates'
 
-goog.require('goog.soy');
+import 'goog.soy'
 
 /**
  * @param {*} app

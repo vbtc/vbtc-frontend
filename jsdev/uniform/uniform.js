@@ -1,23 +1,21 @@
-goog.provide('uniform.Uniform');
-goog.provide('uniform.Uniform.Events');
+// goog.provide('uniform.Uniform');
+// goog.provide('uniform.Uniform.Events');
 
+import 'uniform.Validators'
+import 'uniform.InputFilters'
+import 'uniform.Meta'
+import 'goog.ui.Component'
+import 'goog.ui.LabelInput'
 
-
-goog.require('uniform.Validators');
-goog.require('uniform.InputFilters');
-goog.require('uniform.Meta');
-goog.require('goog.ui.Component');
-goog.require('goog.ui.LabelInput');
-
-goog.require('goog.debug.Logger');
-goog.require('goog.events.Event');
-goog.require('goog.events.KeyHandler');
-goog.require('goog.events.InputHandler');
-goog.require('goog.dom');
-goog.require('goog.dom.forms');
-goog.require('goog.dom.TagName');
-goog.require('goog.Timer');
-goog.require('goog.ui.registry');
+import 'goog.debug.Logger'
+import 'goog.events.Event'
+import 'goog.events.KeyHandler'
+import 'goog.events.InputHandler'
+import 'goog.dom'
+import 'goog.dom.forms'
+import 'goog.dom.TagName'
+import 'goog.Timer'
+import 'goog.ui.registry'
 
 
 

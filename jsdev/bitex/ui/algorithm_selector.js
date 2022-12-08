@@ -1,14 +1,14 @@
-goog.provide('bitex.ui.AlgorithmSelector');
-goog.provide('bitex.ui.AlgorithmSelector.EventType');
+// goog.provide('bitex.ui.AlgorithmSelector');
+// goog.provide('bitex.ui.AlgorithmSelector.EventType');
 
-goog.require('bitex.ui.AlgorithmSelector.templates');
-goog.require('goog.ui.Component');
+import 'bitex.ui.AlgorithmSelector.templates'
+import 'goog.ui.Component'
 
-goog.require('goog.dom.forms');
-goog.require('goog.style');
-goog.require('goog.string');
+import 'goog.dom.forms'
+import 'goog.style'
+import 'goog.string'
 
-goog.require('goog.fs.FileReader');
+import 'goog.fs.FileReader'
 
 /**
  * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.

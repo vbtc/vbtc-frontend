@@ -1,11 +1,12 @@
-goog.provide('bitex.ui.SimpleChart');
-goog.require('goog.ui.Component');
+// goog.provide('bitex.ui.SimpleChart');
 
-goog.require('bitex.model.Model');
-goog.require('bitex.ui.SimpleChart.templates');
-goog.require('goog.style');
+import 'goog.ui.Component'
 
-goog.require('goog.dom.classes');
+import 'bitex.model.Model'
+import 'bitex.ui.SimpleChart.templates'
+import 'goog.style'
+
+import 'goog.dom.classes'
 
 
 
