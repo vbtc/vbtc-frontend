@@ -305,12 +305,12 @@ bitex.ui.SimpleOrderEntry.prototype.onChangeAmountAdvanced_ = function(e) {
                                                     this.getModel().side);
   var formmatter;
   if (this.getModel().side == bitex.ui.SimpleOrderEntry.Side.BUY) {
-    formatter = new goog.i18n.NumberFormat( this.getModel().crypto_currency_format,
+    var formatter = new goog.i18n.NumberFormat( this.getModel().crypto_currency_format,
                                             this.getModel().crypto_currency_code );
     formatter.setMaximumFractionDigits(8);
     formatter.setMinimumFractionDigits(2);
   } else {
-    formatter = new goog.i18n.NumberFormat( this.getModel().currency_format,
+    var formatter = new goog.i18n.NumberFormat( this.getModel().currency_format,
                                             this.getModel().currency_code );
     formatter.setMaximumFractionDigits(2);
     formatter.setMinimumFractionDigits(2);
@@ -347,12 +347,12 @@ bitex.ui.SimpleOrderEntry.prototype.onChangePriceAdvanced_ = function(e) {
                                                     this.getModel().side);
   var formmatter;
   if (this.getModel().side == bitex.ui.SimpleOrderEntry.Side.BUY) {
-    formatter = new goog.i18n.NumberFormat( this.getModel().crypto_currency_format,
+    var formatter = new goog.i18n.NumberFormat( this.getModel().crypto_currency_format,
                                             this.getModel().crypto_currency_code );
     formatter.setMaximumFractionDigits(8);
     formatter.setMinimumFractionDigits(2);
   } else {
-    formatter = new goog.i18n.NumberFormat( this.getModel().currency_format,
+    var formatter = new goog.i18n.NumberFormat( this.getModel().currency_format,
                                             this.getModel().currency_code );
     formatter.setMaximumFractionDigits(2);
     formatter.setMinimumFractionDigits(2);
@@ -544,12 +544,12 @@ bitex.ui.SimpleOrderEntry.prototype.onChangeTotalAdvanced_ = function(e) {
                                                     this.getModel().side);
   var formmatter;
   if (this.getModel().side == bitex.ui.SimpleOrderEntry.Side.BUY) {
-    formatter = new goog.i18n.NumberFormat( this.getModel().crypto_currency_format,
+    var formatter = new goog.i18n.NumberFormat( this.getModel().crypto_currency_format,
                                             this.getModel().crypto_currency_code );
     formatter.setMaximumFractionDigits(8);
     formatter.setMinimumFractionDigits(2);
   } else {
-    formatter = new goog.i18n.NumberFormat( this.getModel().currency_format,
+    var formatter = new goog.i18n.NumberFormat( this.getModel().currency_format,
                                             this.getModel().currency_code );
     formatter.setMaximumFractionDigits(2);
     formatter.setMinimumFractionDigits(2);

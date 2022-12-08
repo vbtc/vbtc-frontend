@@ -233,7 +233,7 @@ bitex.ui.SimpleOrderBook.prototype.updateOrder = function(index, qty) {
   var dom = this.getDomHelper();
 
   var formatter = new goog.i18n.NumberFormat(this.qtyCurrencyDef_.format, this.qtyCurrencyDef_.code);
-  formatted_qty = formatter.format(qty/1e8);
+  var formatted_qty = formatter.format(qty/1e8);
 
   var row_elements = dom.getChildren(this.bodyEl_);
 
@@ -282,13 +282,13 @@ bitex.ui.SimpleOrderBook.prototype.insertOrder = function(index, id, price, qty,
   var dom = this.getDomHelper();
 
   var qty_formatter = new goog.i18n.NumberFormat(this.qtyCurrencyDef_.format, this.qtyCurrencyDef_.code);
-  formatted_qty = qty_formatter.format(qty/1e8);
+  var formatted_qty = qty_formatter.format(qty/1e8);
 
   var price_formatter = new goog.i18n.NumberFormat(this.priceCurrencyDef_.format, this.priceCurrencyDef_.code);
   if (this.show_fees_) {
     price = price + price * this.fee_;
   }
-  formatted_price = price_formatter.format(price/1e8);
+  const formatted_price = price_formatter.format(price/1e8);
 
   var orderId = null;
   if (username === this.username_ || broker === this.username_){

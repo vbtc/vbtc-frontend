@@ -189,7 +189,7 @@ bitex.view.SideBarView.prototype.enterDocument = function() {
 
           var broker_currencies = model.get('BrokerCurrencies');
           goog.object.forEach(model.get(balance_model_key), function(balance, currency) {
-            currency_code = currency;
+            var currency_code = currency;
             var show_deposit = goog.array.contains(broker_currencies, currency);
             var currency_pattern = this.getApplication().getCurrencyHumanFormat(currency_code);
 

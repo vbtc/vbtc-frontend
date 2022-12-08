@@ -161,7 +161,7 @@ bitex.model.Model.prototype.setElementValue_ = function(el, value, opt_blinkOnCh
   var should_add_blink_class = false;
 
   if (model_action == 'value') {
-    current_value = goog.dom.forms.getValue(el);
+    var current_value = goog.dom.forms.getValue(el);
 
     if (goog.isDefAndNotNull(fmt)) {
       pos = [0];
@@ -180,7 +180,7 @@ bitex.model.Model.prototype.setElementValue_ = function(el, value, opt_blinkOnCh
     }
   } else if (model_action == 'text_content') {
     // TODO: make sure this also works with value attribute
-    current_text_content = goog.dom.getTextContent(el);
+    var current_text_content = goog.dom.getTextContent(el);
 
     if (goog.isDefAndNotNull(fmt)) {
       pos = [0];

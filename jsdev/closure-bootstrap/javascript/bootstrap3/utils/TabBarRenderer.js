@@ -59,7 +59,7 @@ bootstrap3.TabBarRenderer.prototype.getCssClass = function() {
 //};
 
 /**
- * @param {goog.ui.TabBar}
+ * @param {goog.ui.TabBar} tabBar
  */
 bootstrap3.TabBarRenderer.prototype.getClassNames = function(tabBar) {
 	var classNames = ['nav', 'nav-tabs'];

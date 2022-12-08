@@ -177,7 +177,7 @@ jsqrcode.GF256Poly.prototype.divide = function (other) {
   var denominatorLeadingTerm = other.getCoefficient(other.getDegree());
   var inverseDenominatorLeadingTerm = this.field.inverse(denominatorLeadingTerm);
 
-  while (remainder.getDegree() >= other..getDegree() && !remainder.getZero()) {
+  while (remainder.getDegree() >= other.getDegree() && !remainder.getZero()) {
     var degreeDifference = remainder.getDegree() - other.getDegree();
     var scale = this.field.multiply(remainder.getCoefficient(remainder.getDegree()), inverseDenominatorLeadingTerm);
     var term = other.multiplyByMonomial(degreeDifference, scale);

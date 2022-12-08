@@ -230,7 +230,7 @@ bitex.ui.OrderBook.prototype.showFees = function(show) {
   var formatter = new goog.i18n.NumberFormat( this.priceCurrencyDef_.format, this.priceCurrencyDef_.code );
   var row_elements = dom.getChildren(this.bodyEl_ );
 
-  for (index = 0; index<row_elements.length; ++index) {
+  for (var index = 0; index<row_elements.length; ++index) {
     var row_element = row_elements[index];
     var price = parseInt(row_element.getAttribute('data-price-value'),10 );
 
@@ -251,11 +251,11 @@ bitex.ui.OrderBook.prototype.showCumulativeQty = function() {
   var formatter = new goog.i18n.NumberFormat( this.qtyCurrencyDef_.format, this.qtyCurrencyDef_.code );
 
   var row_elements = dom.getChildren(this.bodyEl_ );
-  for (index = 0; index<row_elements.length; ++index) {
+  for (let index = 0; index<row_elements.length; ++index) {
     var row_element = row_elements[index];
     var qty = parseInt(row_element.getAttribute('data-cum-qty-value'),10 );
 
-    formatted_qty = formatter.format(qty/1e8);
+    var formatted_qty = formatter.format(qty/1e8);
 
     var tdQtyEl = dom.getChildren( row_element )[1];
     dom.setTextContent(tdQtyEl, formatted_qty);
@@ -269,11 +269,11 @@ bitex.ui.OrderBook.prototype.showQty = function() {
   var formatter = new goog.i18n.NumberFormat( this.qtyCurrencyDef_.format, this.qtyCurrencyDef_.code );
 
   var row_elements = dom.getChildren(this.bodyEl_ );
-  for (index = 0; index<row_elements.length; ++index) {
+  for (let index = 0; index<row_elements.length; ++index) {
     var row_element = row_elements[index];
     var qty = parseInt(row_element.getAttribute('data-qty-value'),10 );
 
-    formatted_qty = formatter.format(qty/1e8);
+    var formatted_qty = formatter.format(qty/1e8);
 
     var tdQtyEl = dom.getChildren( row_element )[1];
     dom.setTextContent(tdQtyEl, formatted_qty);
@@ -560,7 +560,7 @@ bitex.ui.OrderBook.prototype.updateOrder = function( index, qty) {
   var dom = this.getDomHelper();
 
   var formatter = new goog.i18n.NumberFormat( this.qtyCurrencyDef_.format, this.qtyCurrencyDef_.code );
-  formatted_qty = formatter.format(qty/1e8);
+  var formatted_qty = formatter.format(qty/1e8);
 
   var row_elements = dom.getChildren(this.bodyEl_ );
 
@@ -615,13 +615,13 @@ bitex.ui.OrderBook.prototype.insertOrder = function( index, id, price, qty, user
   var MSG_ORDER_BOOK_YOUR_ORDER = goog.getMsg('Your Order');
 
   var qty_formatter = new goog.i18n.NumberFormat( this.qtyCurrencyDef_.format, this.qtyCurrencyDef_.code );
-  formatted_qty = qty_formatter.format(qty/1e8);
+  var formatted_qty = qty_formatter.format(qty/1e8);
 
   var price_formatter = new goog.i18n.NumberFormat( this.priceCurrencyDef_.format, this.priceCurrencyDef_.code );
   if (this.show_fees_) {
     price = price + price * this.fee_;
   }
-  formatted_price = price_formatter.format(price/1e8);
+  var formatted_price = price_formatter.format(price/1e8);
 
   var orderId = null;
   var isMyOrder = false;
@@ -639,7 +639,7 @@ bitex.ui.OrderBook.prototype.insertOrder = function( index, id, price, qty, user
     qty: formatted_qty,
     price: formatted_price,
     side: this.side_,
-    orderId: orderId 
+    orderId: orderId
   });
 
   var rowEl = tmpWrapper.firstChild.firstChild;

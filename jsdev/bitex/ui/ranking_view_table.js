@@ -56,7 +56,7 @@ bitex.ui.RankingViewTable = function (opt_domHelper) {
       'property': 'Amount',
       'label': MSG_RANKING_COLUMN_AMOUT,
       'sortable': false,
-      'formatter': function(value){ return app.formatCurrency(value/1e8, 'BTC', true); },
+      'formatter': function(value){ return this.getApplication().formatCurrency(value/1e8, 'BTC', true); },
       'classes': function() { return goog.getCssName(bitex.ui.RankingViewTable.CSS_CLASS, 'amount'); }
     }
   ];

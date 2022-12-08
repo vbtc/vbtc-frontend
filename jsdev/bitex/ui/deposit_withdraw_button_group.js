@@ -12,6 +12,7 @@ import 'goog.events.Event'
  */
 bitex.ui.DepositWithdrawButtonGroup = function(opt_domHelper) {
   goog.ui.Component.call(this, opt_domHelper);
+  var opt_mode = null;  // TODO: Fix this, added to make it build
   var mode = opt_mode || 'deposit';
   this.setModel([]);
 };

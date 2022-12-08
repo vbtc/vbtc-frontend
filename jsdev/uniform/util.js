@@ -4,7 +4,7 @@
 import 'goog.string'
 /**
  * @type {function(Element, string, string)}
- * Validator function. It expects the element to be validate,
+ * Validator function. It expects the element to be validated,
  * the caption label, and the necessary arguments to validate
  */
 uniform.MetaFunction;
@@ -37,8 +37,8 @@ uniform.util.interpretToken = function(token) {
 /**
  * Parses and interpret a token
  * @param {string} metaInfo
- * @param {goog.structs.Map}
- * @return {Array.<Array.<string>>}
+ * @param {goog.structs.Map} metaMap
+ * @return {Array<Array<string>>}
  */
 uniform.util.compileMetaTags = function(metaInfo, metaMap) {
   var result = [];
@@ -101,9 +101,9 @@ uniform.util.compileMetaTags = function(metaInfo, metaMap) {
 };
 
 /**
- * @param {Element} formElement
+ * @param {Element} el
  * @param {string} metaTag
- * @param {goog.structs.Map}
+ * @param {goog.structs.Map} metaMap
  * @param {string} extraInfo
  */
 uniform.util.executeElementMetaTags = function(el,
@@ -131,7 +131,7 @@ uniform.util.executeElementMetaTags = function(el,
 /**
  * @param {Element} formElement
  * @param {string} metaTag
- * @param {goog.structs.Map}
+ * @param {goog.structs.Map} metaMap
  * @param {string} extraInfo
  */
 uniform.util.executeFormMetaTags = function(formElement,

@@ -70,8 +70,8 @@ bitex.ui.TradeHistory = function( pseudoNameFunction, opt_blinkDelay,opt_domHelp
       'label': MSG_TRADE_HISTORY_COLUMN_MARKET,
       'sortable': false,
       'formatter': function(s){
-          size_currency = s.substring(0,3);
-          price_currency = s.substring(3);
+          var size_currency = s.substring(0,3);
+          var price_currency = s.substring(3);
           return size_currency + " / " + price_currency;
       },
       'classes': function() { return goog.getCssName(bitex.ui.TradeHistory.CSS_CLASS, 'market'); }

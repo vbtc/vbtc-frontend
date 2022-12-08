@@ -6,7 +6,7 @@ import 'bootstrap3.TabRenderer'
 /**
  * Tab control, designed to be hosted in a {@link goog.ui.TabBar}.
  * @param {goog.ui.ControlContent} content Text caption or DOM structure to display as the tab's caption (if any).
- * @param {string|function|undefined} opt_content used when href is not an AJAX URL
+ * @param {(string|Function|undefined)} opt_content used when href is not an AJAX URL
  * @param {goog.ui.TabRenderer=} opt_renderer Optional renderer used to render or decorate the tab.
  * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM hepler, used for document interaction.
  * @constructor

@@ -45,7 +45,7 @@ bitex.view.StartView.prototype.recreateComponents_ = function() {
 
   handler.listen(model, bitex.model.Model.EventType.SET + 'SecurityList', function(e){
     model = this.getApplication().getModel();
-    msg   = model.get('SecurityList');
+    var msg   = model.get('SecurityList');
 
     var app = this.getApplication();
     var qtyCurrency = app.getQtyCurrencyFromSymbol(defaultSymbol);

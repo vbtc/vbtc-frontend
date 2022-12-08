@@ -112,7 +112,7 @@ bitex.ui.AlgorithmSelector.prototype.onChangeFile_ = function(e) {
 };
 
 /**
- * @return {string=}
+ * @return {string}
  */
 bitex.ui.AlgorithmSelector.prototype.getLastError = function(){
   return this.last_error_;

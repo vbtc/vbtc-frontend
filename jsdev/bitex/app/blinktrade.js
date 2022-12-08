@@ -1851,8 +1851,8 @@ bitex.app.BlinkTrade.prototype.onBitexBalanceResponse_ = function(e) {
     this.getModel().set('Balance', model_balances, true);
   }
 
-  changed_locked_balance = false;
-  model_locked_balances = this.getModel().get('LockedBalance');
+  let changed_locked_balance = false;
+  let model_locked_balances = this.getModel().get('LockedBalance');
   goog.object.forEach(msg, function( locked_balances, brokerID ) {
     goog.object.forEach(locked_balances, function( locked_balance, currency ) {
       if ( goog.string.endsWith(currency, '_locked') ) {
@@ -2421,7 +2421,7 @@ bitex.app.BlinkTrade.prototype.onBrokerChangeEmail_ = function(e){
 
   handler.listen(change_email_dialog, goog.ui.Dialog.EventType.SELECT, function(e) {
     if (e.key == 'ok') {
-      error_list = email_uniform.validate();
+      var error_list = email_uniform.validate();
       if(error_list.length > 0) {
         goog.array.forEach(error_list, function(error_msg) {
           this.showNotification('error', error_msg);
@@ -4472,7 +4472,7 @@ bitex.app.BlinkTrade.prototype.onUserLoginError_ = function(e) {
           var password;
 
           if (goog.isDefAndNotNull(current_request)) {
-            request_method = current_request[0]
+            var request_method = current_request[0]
             switch (request_method) {
               case 'login':
                 broker_id = current_request[1];
@@ -5607,18 +5607,18 @@ bitex.app.blink_trade = function( url ) {
 
 
 goog.exportSymbol('BlinkTradeApp', bitex.app.BlinkTrade);
-goog.exportProperty(BlinkTradeApp.prototype, 'sendAccessToken', bitex.app.BlinkTrade.prototype.sendAccessToken);
-goog.exportProperty(BlinkTradeApp.prototype, 'showNotification', bitex.app.BlinkTrade.prototype.showNotification);
-goog.exportProperty(BlinkTradeApp.prototype, 'showDialog', bitex.app.BlinkTrade.prototype.showDialog);
-goog.exportProperty(BlinkTradeApp.prototype, 'getHandler', bitex.app.BlinkTrade.prototype.getHandler);
-goog.exportProperty(BlinkTradeApp.prototype, 'getCurrencyDescription', bitex.app.BlinkTrade.prototype.getCurrencyDescription);
-goog.exportProperty(BlinkTradeApp.prototype, 'getCurrencySign', bitex.app.BlinkTrade.prototype.getCurrencySign);
-goog.exportProperty(BlinkTradeApp.prototype, 'isCryptoCurrency', bitex.app.BlinkTrade.prototype.isCryptoCurrency);
-goog.exportProperty(BlinkTradeApp.prototype, 'formatCurrency', bitex.app.BlinkTrade.prototype.formatCurrency);
-goog.exportProperty(BlinkTradeApp.prototype, 'getBrokersByCountry', bitex.app.BlinkTrade.prototype.getBrokersByCountry);
-goog.exportProperty(BlinkTradeApp.prototype, 'getBalance', bitex.app.BlinkTrade.prototype.getBalance);
-goog.exportProperty(BlinkTradeApp.prototype, 'getModel', bitex.app.BlinkTrade.prototype.getModel);
-goog.exportProperty(BlinkTradeApp.prototype, 'getQtyCurrencyFromSymbol', bitex.app.BlinkTrade.prototype.getQtyCurrencyFromSymbol);
-goog.exportProperty(BlinkTradeApp.prototype, 'getPriceCurrencyFromSymbol', bitex.app.BlinkTrade.prototype.getPriceCurrencyFromSymbol);
-goog.exportProperty(BlinkTradeApp.prototype, 'setView', bitex.app.BlinkTrade.prototype.setView);
-goog.exportProperty(BlinkTradeApp.prototype, 'run', bitex.app.BlinkTrade.prototype.run);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'sendAccessToken', bitex.app.BlinkTrade.prototype.sendAccessToken);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'showNotification', bitex.app.BlinkTrade.prototype.showNotification);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'showDialog', bitex.app.BlinkTrade.prototype.showDialog);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'getHandler', bitex.app.BlinkTrade.prototype.getHandler);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'getCurrencyDescription', bitex.app.BlinkTrade.prototype.getCurrencyDescription);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'getCurrencySign', bitex.app.BlinkTrade.prototype.getCurrencySign);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'isCryptoCurrency', bitex.app.BlinkTrade.prototype.isCryptoCurrency);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'formatCurrency', bitex.app.BlinkTrade.prototype.formatCurrency);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'getBrokersByCountry', bitex.app.BlinkTrade.prototype.getBrokersByCountry);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'getBalance', bitex.app.BlinkTrade.prototype.getBalance);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'getModel', bitex.app.BlinkTrade.prototype.getModel);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'getQtyCurrencyFromSymbol', bitex.app.BlinkTrade.prototype.getQtyCurrencyFromSymbol);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'getPriceCurrencyFromSymbol', bitex.app.BlinkTrade.prototype.getPriceCurrencyFromSymbol);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'setView', bitex.app.BlinkTrade.prototype.setView);
+goog.exportProperty(bitex.app.BlinkTradeApp.prototype, 'run', bitex.app.BlinkTrade.prototype.run);

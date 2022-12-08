@@ -72,7 +72,7 @@ expression_evaluator.functions.neg = function(a) {
 
 expression_evaluator.functions.trunc = function(a) {
   if(Math.trunc) return Math.trunc(a);
-  else return x < 0 ? Math.ceil(x) : Math.floor(x);
+  else return a < 0 ? Math.ceil(a) : Math.floor(a);
 };
 
 expression_evaluator.functions.random = function(a) {

@@ -12,8 +12,8 @@ import 'bitex.ui.Dialog'
 import 'goog.i18n.NumberFormat'
 
 /**
- * @param {function} currencyFormatterFn
- * @param {function} currencyDescriptionFn
+ * @param {Function} currencyFormatterFn
+ * @param {Function} currencyDescriptionFn
  * @param {goog.dom.DomHelper=} opt_domHelper
  * @constructor
  * @extends {goog.ui.Component}

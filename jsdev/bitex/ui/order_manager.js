@@ -459,8 +459,8 @@ bitex.ui.OrderManager.prototype.enterDocument = function() {
 /**
  *
  * @param {string} type
- * @param {=string} opt_order_id
- * @param {=string} opt_client_order_id
+ * @param {string=} opt_order_id
+ * @param {string=} opt_client_order_id
  * @extends {goog.events.Event}
  * @constructor
  */

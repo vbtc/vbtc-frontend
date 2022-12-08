@@ -16,7 +16,7 @@ import 'goog.Timer'
 
 
 /**
- * @param {<Object>} options
+ * @param {Object} options
  * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
  *
  * @extends {goog.ui.Component}
@@ -509,7 +509,7 @@ bitex.ui.DataGrid.prototype.reload = function() {
  * @param {Element} row_element
  * @param {string} column
  * @param {*} value
- * @param {=Array.<Array.<*> >} opt_row_set_obj
+ * @param {Array.<Array.<*> >=} opt_row_set_obj
  * @return {Element}
  */
 bitex.ui.DataGrid.prototype.setColumnValue = function(row_element, column, value, opt_row_set_obj) {
@@ -542,7 +542,7 @@ bitex.ui.DataGrid.prototype.setColumnValue = function(row_element, column, value
 /**
  *
  * @param {string} column
- * @param {!Function()} formatter
+ * @param {Function} formatter
  * @param {Object=} opt_handler Object in whose scope to call the listener.
 
  */

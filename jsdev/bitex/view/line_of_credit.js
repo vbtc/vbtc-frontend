@@ -212,7 +212,7 @@ bitex.view.LineOfCreditView.prototype.formatLineOfCredit_ = function(line_of_cre
       if ("premium" in line_of_credit["ContractInfo"][delivery_currency]["payback_ticker"]) {
         line_of_credit["ContractInfo"][delivery_currency]["payback_ticker"]["premium_human_format"] = [];
         goog.array.forEach(line_of_credit["ContractInfo"][delivery_currency]["payback_ticker"]["premium"],function(p){
-          p_human_format = [
+          var p_human_format = [
               this.getApplication().formatCurrency(p[0]/1e8, line_of_credit['Currency']),
               this.getApplication().formatCurrency(p[1]/1e8, line_of_credit['Currency']),
               percent_fmt.format(p[2])
@@ -238,7 +238,7 @@ bitex.view.LineOfCreditView.prototype.formatLineOfCredit_ = function(line_of_cre
         var max_get = line_of_credit["ContractInfo"][delivery_currency]["get_ticker"]["premium"][0][1];
 
         goog.array.forEach(line_of_credit["ContractInfo"][delivery_currency]["get_ticker"]["premium"],function(p){
-          p_human_format = [
+          var p_human_format = [
               this.getApplication().formatCurrency(p[0]/1e8, line_of_credit['Currency']),
               this.getApplication().formatCurrency(p[1]/1e8, line_of_credit['Currency']),
               percent_fmt.format(p[2])
@@ -274,7 +274,7 @@ bitex.view.LineOfCreditView.prototype.formatLineOfCredit_ = function(line_of_cre
  * @param {goog.events.Event} e
  */
 bitex.view.LineOfCreditView.prototype.onLineOfCreditEnable_ = function(e) {
-  line_of_credit = this.formatLineOfCredit_(e.target.getLineOfCredit());
+  var line_of_credit = this.formatLineOfCredit_(e.target.getLineOfCredit());
 
 };
 
@@ -282,7 +282,7 @@ bitex.view.LineOfCreditView.prototype.onLineOfCreditEnable_ = function(e) {
  * @param {goog.events.Event} e
  */
 bitex.view.LineOfCreditView.prototype.onLineOfCreditDisable_ = function(e) {
-  line_of_credit = this.formatLineOfCredit_(e.target.getLineOfCredit());
+  var line_of_credit = this.formatLineOfCredit_(e.target.getLineOfCredit());
 };
 
 /**
@@ -290,7 +290,7 @@ bitex.view.LineOfCreditView.prototype.onLineOfCreditDisable_ = function(e) {
  */
 bitex.view.LineOfCreditView.prototype.onLineOfCreditGet_ = function(e) {
   var handler = this.getHandler();
-  line_of_credit = this.formatLineOfCredit_(e.target.getLineOfCredit());
+  var line_of_credit = this.formatLineOfCredit_(e.target.getLineOfCredit());
   var model = this.getApplication().getModel();
 
   goog.array.forEach(line_of_credit['DeliveryCurrencies'], function(delivery_currency) {
@@ -385,7 +385,7 @@ bitex.view.LineOfCreditView.prototype.onLineOfCreditGet_ = function(e) {
       if ("get_ticker" in line_of_credit["ContractInfo"][delivery_currency] &&
           "premium" in line_of_credit["ContractInfo"][delivery_currency]["get_ticker"]) {
 
-        var premium = goog.array.find(line_of_credit["ContractInfo"][delivery_currency]["get_ticker"]["premium"], function(premium_info){
+        premium = goog.array.find(line_of_credit["ContractInfo"][delivery_currency]["get_ticker"]["premium"], function(premium_info){
           if (amount_value > premium_info[0] && amount_value <  premium_info[1] ){
             return true;
           }
@@ -413,7 +413,7 @@ bitex.view.LineOfCreditView.prototype.onLineOfCreditGet_ = function(e) {
  */
 bitex.view.LineOfCreditView.prototype.onLineOfCreditPayback_ = function(e) {
   var handler = this.getHandler();
-  line_of_credit = this.formatLineOfCredit_(e.target.getLineOfCredit());
+  var line_of_credit = this.formatLineOfCredit_(e.target.getLineOfCredit());
   var model = this.getApplication().getModel();
 
   goog.array.forEach(line_of_credit['DeliveryCurrencies'], function(delivery_currency) {
@@ -443,6 +443,7 @@ bitex.view.LineOfCreditView.prototype.onLineOfCreditPayback_ = function(e) {
   fmt_currency.setMinimumFractionDigits(this.getApplication().getCurrencyNumberOfDecimals(line_of_credit['Currency']))
 
   handler.listen(dlg, goog.ui.Dialog.EventType.SELECT, function(e) {
+    var delivery_currency = goog.dom.forms.getValue(goog.dom.getElement(this.makeId('loc_form_delivery_currency')));
     if (e.key == 'ok') {
       // Calculate the total
       var error_list = loc_uniform.validate();
@@ -533,7 +534,7 @@ bitex.view.LineOfCreditView.prototype.onLineOfCreditPayback_ = function(e) {
         var ticker_value = model.get(line_of_credit["ContractInfo"][delivery_currency]["payback_ticker"]["ticker"]);
         var amount_in_currency_value =  parseInt( amount_value * ticker_value / 1e8);
 
-        var premium = goog.array.find(line_of_credit["ContractInfo"][delivery_currency]["payback_ticker"]["premium"], function(premium_info){
+        premium = goog.array.find(line_of_credit["ContractInfo"][delivery_currency]["payback_ticker"]["premium"], function(premium_info){
           if (amount_in_currency_value > premium_info[0] && amount_in_currency_value <  premium_info[1] ){
             return true;
           }
@@ -561,7 +562,7 @@ bitex.view.LineOfCreditView.prototype.onLineOfCreditPayback_ = function(e) {
  * @param {goog.events.Event} e
  */
 bitex.view.LineOfCreditView.prototype.onLineOfCreditInfo_ = function(e) {
-  line_of_credit = this.formatLineOfCredit_(e.target.getLineOfCredit());
+  var line_of_credit = this.formatLineOfCredit_(e.target.getLineOfCredit());
   var dialogContent =  bitex.view.LineOfCreditView.templates.InfoLineOfCredit({data: line_of_credit});
   this.getApplication().showDialog(dialogContent, line_of_credit['Description']);
   this.getApplication().getModel().updateDom();

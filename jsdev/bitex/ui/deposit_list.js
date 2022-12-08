@@ -277,7 +277,7 @@ bitex.ui.DepositList = function( crypto_currencies_def, opt_broker_mode, opt_sho
           });
         }
 
-        btn_qr = goog.soy.renderAsElement(bitex.ui.DepositList.templates.btnShowQRCode, {
+        var btn_qr = goog.soy.renderAsElement(bitex.ui.DepositList.templates.btnShowQRCode, {
           dataRow: data_row
         });
 

@@ -615,8 +615,8 @@ expression_evaluator.Parser.prototype.isComment = function () {
 };
 
 goog.exportSymbol('Parser', expression_evaluator.Parser )
-goog.exportProperty(Parser.prototype, 'evaluate', expression_evaluator.Parser.prototype.evaluate );
-goog.exportProperty(Parser.prototype, 'variables', expression_evaluator.Parser.prototype.variables );
-goog.exportProperty(Parser.prototype, 'simplify', expression_evaluator.Parser.prototype.simplify );
-goog.exportProperty(Parser.prototype, 'substitute', expression_evaluator.Parser.prototype.substitute );
-goog.exportProperty(Parser.prototype, 'toString', expression_evaluator.Parser.prototype.toString );
+goog.exportProperty(expression_evaluator.Parser.prototype, 'evaluate', expression_evaluator.Parser.prototype.evaluate );
+goog.exportProperty(expression_evaluator.Parser.prototype, 'variables', expression_evaluator.Parser.prototype.variables );
+goog.exportProperty(expression_evaluator.Parser.prototype, 'simplify', expression_evaluator.Parser.prototype.simplify );
+goog.exportProperty(expression_evaluator.Parser.prototype, 'substitute', expression_evaluator.Parser.prototype.substitute );
+goog.exportProperty(expression_evaluator.Parser.prototype, 'toString', expression_evaluator.Parser.prototype.toString );

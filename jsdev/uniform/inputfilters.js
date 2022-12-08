@@ -9,7 +9,7 @@ import 'goog.i18n.NumberFormatSymbols'
 
 /**
  * @type {function(goog.events.KeyEvent, Array.<string>)}
- * InputFilter function. It expects the goog.events.KeyEvent to be vaidated,
+ * InputFilter function. It expects the goog.events.KeyEvent to be validated,
  * and the necessary arguments to validate
  */
 uniform.InputFilterFunction;
@@ -62,8 +62,8 @@ uniform.InputFilters.prototype.filter = function(e) {
   var element = e.target;
 
   var InputFilterAttribute = element.getAttribute('data-uniform-filters');
-  var elClassesArray = InputFilterAttribute && 
-    typeof InputFilterAttribute.split == 'function' ? 
+  var elClassesArray = InputFilterAttribute &&
+    typeof InputFilterAttribute.split == 'function' ?
       InputFilterAttribute.split(/\s+/) : [];
 
   for (var i =0; i<elClassesArray.length; ++i) {
@@ -117,6 +117,8 @@ uniform.InputFilters.prototype.filter = function(e) {
 uniform.InputFilters.prototype.filterNumber_ = function(e) {
   var inputEl = e.target;
 
+  var selectionStart = inputEl.selectionStart;
+  var selectionEnd = inputEl.selectionEnd;
   var inputValue = goog.dom.forms.getValue(inputEl);
 
   if ( e.ctrlKey ) {

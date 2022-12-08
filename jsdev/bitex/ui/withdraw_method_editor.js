@@ -160,7 +160,7 @@ bitex.ui.WithdrawMethodEditor.prototype.getWithdrawMethodJSON = function() {
 
 
   pos = [0];
-  var tmp = result['percent_cost'];
+  tmp = result['percent_cost'];
   result['percent_cost'] = fmt.parse(tmp , pos );
   if (pos[0] != tmp.length || isNaN(result['percent_cost']) || result['percent_cost'] <= 0 ) {
     result['percent_cost'] = 0;

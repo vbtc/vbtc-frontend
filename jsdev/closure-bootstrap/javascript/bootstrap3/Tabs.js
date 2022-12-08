@@ -241,7 +241,7 @@ bootstrap3.Tabs.prototype.render = function( containerElement ) {
  */
 bootstrap3.Tabs.prototype.calculateSelectedTabIndex = function(tabBarEl) {
 	var selectedTabIndex = 0,
-		historyCtrl = /** @type {HTMLInputElement=} */(goog.dom.getElement('history_state')),
+		historyCtrl = /** @type {HTMLInputElement} */(goog.dom.getElement('history_state')),
 		selectedTabId;
 	if( historyCtrl == null ) {
 		if( this.cookieName_ ) {
@@ -403,7 +403,7 @@ bootstrap3.Tabs.decorateContentPane = function( contentPane, fade ) {
 /**
  * @param {string} title
  * @param {string} href - the URL (#id of element within page, or URL to load by AJAX)
- * @param {string|function|undefined} opt_content used when href is not an AJAX URL
+ * @param {string|Function|undefined} opt_content used when href is not an AJAX URL
  */
 bootstrap3.Tabs.prototype.addChild = function( title, href, opt_content ) {
 	var tab = new bootstrap3.Tab(title, opt_content );

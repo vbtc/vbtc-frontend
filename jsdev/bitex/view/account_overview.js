@@ -899,7 +899,7 @@ bitex.view.AccountOverview.prototype.onUpdateSelectedCustomer_ = function(e) {
   var new_data_parent_el;
 
   if (previous_data['TwoFactorEnabled']  !== new_data['TwoFactorEnabled']) {
-    new_data_el = soy.renderAsElement( bitex.templates.AccountOverviewHeaderTwoFactors,
+    new_data_el = goog.soy.renderAsElement( bitex.templates.AccountOverviewHeaderTwoFactors,
         { msg_customer_detail: {'TwoFactorEnabled' : new_data['TwoFactorEnabled'] } } );
 
     new_data_parent_el = goog.dom.getElementByClass('account-overview-two-factors',
@@ -910,7 +910,7 @@ bitex.view.AccountOverview.prototype.onUpdateSelectedCustomer_ = function(e) {
   }
 
   if (previous_data['EmailTwoFactorEnabled']  !== new_data['EmailTwoFactorEnabled']) {
-    new_data_el = soy.renderAsElement( bitex.templates.AccountOverviewHeaderEmailTwoFactors,
+    new_data_el = goog.soy.renderAsElement( bitex.templates.AccountOverviewHeaderEmailTwoFactors,
         { msg_customer_detail: {'EmailTwoFactorEnabled' : new_data['EmailTwoFactorEnabled'] } } );
 
     new_data_parent_el = goog.dom.getElementByClass('account-overview-two-factors-email',
@@ -926,7 +926,7 @@ bitex.view.AccountOverview.prototype.onUpdateSelectedCustomer_ = function(e) {
 
   if (previous_data['NeedWithdrawEmail']  !== new_data['NeedWithdrawEmail']) {
 
-    new_data_el = soy.renderAsElement( bitex.templates.AccountOverviewHeaderWithDrawEmailData,
+    new_data_el = goog.soy.renderAsElement( bitex.templates.AccountOverviewHeaderWithDrawEmailData,
         {msg_customer_detail: {'NeedWithdrawEmail' : new_data['NeedWithdrawEmail'] } } );
 
     new_data_parent_el = goog.dom.getElementByClass('account-overview-withdraw-email',

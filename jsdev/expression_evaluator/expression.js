@@ -271,8 +271,8 @@ expression_evaluator.Expression.prototype.variables = function () {
 };
 
 goog.exportSymbol('Expression', expression_evaluator.Expression )
-goog.exportProperty(Expression.prototype, 'evaluate',   expression_evaluator.Expression.prototype.evaluate );
-goog.exportProperty(Expression.prototype, 'variables',  expression_evaluator.Expression.prototype.variables );
-goog.exportProperty(Expression.prototype, 'simplify',   expression_evaluator.Expression.prototype.simplify );
-goog.exportProperty(Expression.prototype, 'substitute', expression_evaluator.Expression.prototype.substitute );
-goog.exportProperty(Expression.prototype, 'toString',   expression_evaluator.Expression.prototype.toString );
+goog.exportProperty(expression_evaluator.Expression.prototype, 'evaluate',   expression_evaluator.Expression.prototype.evaluate );
+goog.exportProperty(expression_evaluator.Expression.prototype, 'variables',  expression_evaluator.Expression.prototype.variables );
+goog.exportProperty(expression_evaluator.Expression.prototype, 'simplify',   expression_evaluator.Expression.prototype.simplify );
+goog.exportProperty(expression_evaluator.Expression.prototype, 'substitute', expression_evaluator.Expression.prototype.substitute );
+goog.exportProperty(expression_evaluator.Expression.prototype, 'toString',   expression_evaluator.Expression.prototype.toString );
