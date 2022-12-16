@@ -24,11 +24,11 @@ eval "$(rbenv init - bash)"
 
 Install specific ruby versions:
 
-`rbenv install 3.1.3`
+`rbenv install 2.7.4`
 
 Set that version as the local version of ruby
 
-`rbenv local 3.1.3`
+`rbenv local 2.7.4`
 
 
 

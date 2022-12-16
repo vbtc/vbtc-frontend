@@ -10,7 +10,7 @@
 ## Install the pre-requesites 
 1 - Install [Git](http://git-scm.com/downloads), [Ruby](https://www.ruby-lang.org/pt/downloads/) anda [Java](https://java.com/download/index.jsp), in case you don't have them yet.
 
-2 - Once installed these dependecies, open up the terminal and install [Jekyll](http://jekyllrb.com) with the following commands.
+2 - Once installed these dependencies, open up the terminal and install [Jekyll](http://jekyllrb.com) with the following commands.
 
 ```sh
 $ gem install jekyll:2.5.3
