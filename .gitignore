@@ -72,3 +72,4 @@ node_modules/
 .idea/
 .c9/
 /.jekyll-cache/
+/vendor/
