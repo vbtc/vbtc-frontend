@@ -1,7 +1,7 @@
 {
-  "name": "blinktrade-frontend",
+  "name": "vbtc-frontend",
   "version": "1.0.0",
-  "description": "Blinktrade Frontend exchange",
+  "description": "VBTC Frontend exchange",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
