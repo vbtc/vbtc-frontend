@@ -67,21 +67,6 @@ goog.date.month = {
 };
 
 
-/**
- * Formats a month/year string.
- * Example: "January 2008"
- *
- * @param {string} monthName The month name to use in the result.
- * @param {number} yearNum The numeric year to use in the result.
- * @return {string} A formatted month/year string.
- */
-goog.date.formatMonthAndYear = function(monthName, yearNum) {
-  /** @desc Month/year format given the month name and the numeric year. */
-  var MSG_MONTH_AND_YEAR = goog.getMsg(
-      '{$monthName} {$yearNum}',
-      { 'monthName' : monthName, 'yearNum' : yearNum });
-  return MSG_MONTH_AND_YEAR;
-};
 
 
 /**
