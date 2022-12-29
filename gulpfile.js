@@ -36,7 +36,7 @@ function resolve(from, to) {
 
 gulp.task('build', function(done){
     console.log('Building...');
-    exec('jekyll build', function(err, stdout, stderr){
+    exec('bundle exec jekyll build', function(err, stdout, stderr){
         if(err) {
             done(err);
         }
