@@ -1,8 +1,8 @@
 # Site settings
-url: "https://vbtc.exchange"
+url: "https://frontend.vbtc.exchange"
 author: "BlinkTrade"
 baseurl: ""
-deploy_version: "HEAD"
+deploy_version: "62a1246"
 
 exchange: "bitcoinvietnam"
 exchange_logo: "bitcoinvietnam"
