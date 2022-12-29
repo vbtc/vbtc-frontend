@@ -10,7 +10,6 @@ LANGUAGE=pt_BR sh generate_xtb.sh
 LANGUAGE=ro    sh generate_xtb.sh
 LANGUAGE=zn_CN sh generate_xtb.sh
 LANGUAGE=vi    sh generate_xtb.sh
-exit
 
 
 echo "Building javascript"
