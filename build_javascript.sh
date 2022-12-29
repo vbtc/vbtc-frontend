@@ -50,5 +50,8 @@ LANGUAGE=ro    THEME=whitedev sh build_js.sh
 LANGUAGE=zn_CN THEME=whitedev sh build_js.sh
 LANGUAGE=vi    THEME=whitedev sh build_js.sh
 
+echo "Build jsapi"
+sh build_jsapi_release.sh
+
 echo "done"
 cd ../
