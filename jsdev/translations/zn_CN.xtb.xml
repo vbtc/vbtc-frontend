@@ -757,4 +757,27 @@
 	<translation id="6003146052699857435" key="MSG_WITHDRAW_FIELD_BILL_TYPE" source="bitex/app/blinktrade.js" desc="Withdraw field on the withdrawal dialog">Bill type</translation>
 	<translation id="8097033270306845722" key="MSG_WITHDRAW_FIELD_DUE_DATE" source="bitex/app/blinktrade.js" desc="Withdraw field on the withdrawal dialog">Due date</translation>
 	<translation id="8383728378901772376" key="MSG_WITHDRAW_FIELD_MEMO" source="bitex/app/blinktrade.js" desc="Withdraw field Memo on the withdrawal dialog">Memo</translation>
+	<translation id="7742187465925316636" key="MSG_DVF5QLQXST72" source="bitex/templates/templates.soy.js" desc="Warning label on the Broker change email dialog content">Warning</translation>
+	<translation id="632244688609429521" key="MSG_GIJF8CUP8WTA" source="bitex/templates/templates.soy.js" desc="Change email warning message on the broker change email dialog content">Authorizing the change of a user's email address is always dangerous. Hackers will try to social engineer you into changing a user's email address to one they have control over. Additionally a bad intentioned user can pretend to be the victim of a hacker and claim that he did not request the change in order to ask for reimbursement.</translation>
+	<translation id="8379301001978627854" key="MSG_1TN1QH0D83X6L" source="bitex/templates/templates.soy.js" desc="change email label">New Email</translation>
+	<translation id="8246894273087322270" key="MSG_J0NE3VLX0KYB" source="bitex/templates/templates.soy.js" desc="First label warning on broker change email">I verified the identity of the user who requested the change with a video conference.</translation>
+	<translation id="8522630753608175575" key="MSG_ACP4WGD330D4" source="bitex/templates/templates.soy.js" desc="Second label warning on broker change email">I am certain that the user is not able to receive the emails sent by our service.</translation>
+	<translation id="663109918726286537" key="MSG_O9F1SI2QEOSN" source="bitex/templates/templates.soy.js" desc="Third label warning on broker change email">I take 100% responsibility of possible losses should this user turn out to be an impostor.</translation>
+	<translation id="7288603532716544264" key="MSG_1335DEKX0ELF9" source="bitex/templates/templates.soy.js" desc="Price per bitcoin confirmation message">Price per bitcoin</translation>
+	<translation id="5018970992131069770" key="MSG_1OX1Z2T1K5DJA" source="bitex/templates/templates.soy.js" desc="Confirm Email">Email: </translation>
+	<translation id="8692341416909523109" key="MSG_CE9732S5B5V2" source="bitex/templates/templates.soy.js" desc="label on overview header">Has two step authentication on email</translation>
+	<translation id="2099077651079628685" key="MSG_CONFIRM_EMAIL_TITLE_DIALOG" source="bitex/view/singup.js" desc="Signup email confirmation alert title">Confirm Your Email</translation>
+	<translation id="8839495979972429871" key="MSG_EMAIL_ERROR_MACHT" source="bitex/view/singup.js" desc="Alert error on email confirmation signup">Emails doesn't match</translation>
+	<translation id="3700218083491628057" key="MSG_IR55HL1V48MR" source="bitex/ui/deposit_list.soy.js" desc="view">View</translation>
+	<translation id="1974812630721973725" key="MSG_DEPOSIT_TABLE_COLUMN_STATUS_PROGRESS_PRE_APPROVED" source="bitex/ui/deposit_list.js" desc="Column Status of the Deposit List">Pre-approved</translation>
+	<translation id="1302177307047941591" key="MSG_FE0MKOG5ZADX" source="bitex/view/profile.soy.js" desc="Confirmation Order">Confirmation Order</translation>
+	<translation id="1450417705843573620" key="MSG_IAFRJS5I7P2J" source="bitex/ui/api_key_data_entry.soy.js" desc="Notifications on the API Key Data Entry form permissions section">Notifications</translation>
+	<translation id="280073174771277683" key="MSG_NGHMIQHL3H77" source="bitex/ui/api_key_data_entry.soy.js" desc="Receive Deposit refresh notificaiton api permission label on API Key data entry">Deposits updates</translation>
+	<translation id="6756406440408637584" key="MSG_1GLIPI3GVFG9D" source="bitex/ui/api_key_data_entry.soy.js" desc="Receive Witdrawal refresh notificaiton api permission label on API Key data entry">Withdrawals updates</translation>
+	<translation id="1433916752608356863" key="MSG_1DQP4NLQU5YGH" source="bitex/ui/api_key_data_entry.soy.js" desc="Receive Balance notificaiton api permission label on API Key data entry">Balance updates</translation>
+	<translation id="6035977598747921497" key="MSG_1WAOGFLPA1NPZ" source="bitex/ui/api_key_data_entry.soy.js" desc="Receive Profile update refresh notificaiton api permission label on API Key data entry">Profile updates</translation>
+	<translation id="6124493082110591342" key="MSG_1JFEFOKGVNRUG" source="bitex/ui/api_key_data_entry.soy.js" desc="Receive execution reports api permission label on API Key data entry">Order updates / Execution reports</translation>
+	<translation id="3285759541768202127" key="MSG_CJ8F4M30704Y" source="bitex/ui/api_key_data_entry.soy.js" desc="Receive verify customer update refresh notificaiton api permission label on API Key data entry">Customer verification updates</translation>
+	<translation id="3492696964564134185" key="MSG_CHANGE_EMAIL_DIALOG_TITLE" source="bitex/app/blinktrade.js" desc="Change Email Dialog Title">Change Email</translation>
+	<translation id="4436525954447567804" key="MSG_CHANGE_EMAIL_TERMS_ERROR" source="bitex/app/blinktrade.js" desc="Change Email assign terms">You must assign the terms</translation>
 </translationbundle>
