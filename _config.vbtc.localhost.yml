@@ -1,5 +1,5 @@
 # Site settings
-url: "//localhost"   # activate this to test on your localhost
+url: "//localhost:4000"   # activate this to test on your localhost
 author: "BlinkTrade"
 baseurl: ""
 deploy_version: "HEAD"
@@ -75,7 +75,9 @@ exclude: [
 source:      .
 destination: ./_site
 plugins_dir: ./_plugins
-plugins:     [jekyll-paginate]
+plugins:
+  - jekyll-multiple-languages-plugin
+  - jekyll-paginate
 paginate:    5
 paginate_path: "post/page:num"
 permalink:     /post/:title/
