@@ -1,11 +1,6 @@
 #!/bin/bash
 
 #############################################
-# remove compiled js
-#############################################
-#rm -rf ./bitex/templates/*.soy.js
-
-#############################################
 # set defaults if they're not provided
 #############################################
 LANGUAGE=${LANGUAGE:=en_US}
