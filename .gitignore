@@ -5,7 +5,7 @@ __pycache__/
 # C extensions
 *.so
 
-# soy.js compiled files 
+# soy.js compiled files
 *.soy.js
 
 
@@ -44,8 +44,9 @@ htmlcov/
 nosetests.xml
 coverage.xml
 
-# Jekyll 
+# Jekyll
 _config.yml
+/.jekyll-cache/
 
 # Translations
 *.mo
@@ -71,5 +72,6 @@ node_modules/
 .publish/
 .idea/
 .c9/
-/.jekyll-cache/
-/vendor/
+
+# Ruby
+vendor

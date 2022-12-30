@@ -6,15 +6,13 @@
 	background: #EEE;
 }
 ::-webkit-scrollbar-thumb {
-    background: #333 url(../images/dots.png);
-	background-repeat:no-repeat;
-	background-position:center;
-	background-size:5px;
+    background: #333 url(../images/dots.png) no-repeat center;
+    background-size:5px;
 }
 
 /* top */
 .youraccount h5{
-	font-family: 'Axis', Arial;
+    font-family: 'Axis', Arial, serif;
 }
 .ls-menu a{
 	font-weight: 300;
@@ -38,7 +36,7 @@
 .brand-menu {
     max-height: 55px;
 }
-/* FONTES*/
+/* FONTS */
 @font-face{
 	font-family: "Axis";
 	src:url(../fonts/axis.otf);
@@ -55,7 +53,7 @@
 
 #account_balance {
     margin-bottom: -2px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     /* display: inline-block; */
     width: 100%;
     /* overflow-y: auto; */
@@ -68,7 +66,7 @@
 #id_remittance_box table {
     margin:0;
 }
-.youraccount strong,.b{ 
+.youraccount strong,.b{
 	color: #E8683E;
 }
 a:hover:not(.ls-btn),a:focus,a{
@@ -76,7 +74,7 @@ a:hover:not(.ls-btn),a:focus,a{
 	/*border-bottom-width:0 !important;*/
 }
 *,*:hover,*:focus{
-	outline: 0 !important; 
+	outline: 0 !important;
 }
 .youraccount [class^="flaticon-"]:before{
 	margin-left: 0 !important;
@@ -90,8 +88,7 @@ a:hover:not(.ls-btn),a:focus,a{
 }
 
 .api-key-data-entry-form-block {
-    padding: 10px;
-    padding-left: 0;
+    padding: 10px 10px 10px 0;
 }
 .api-key-data-entry-form-block .lsbox {
     padding: 15px;
@@ -110,7 +107,7 @@ a:hover:not(.ls-btn),a:focus,a{
     margin-right: 10px;
 }
 
-/* mudar os botoes */
+/* change the button */
 
 .ls-btn, .fuelux .btn{
 	border: 2px #E8683E solid !important;
@@ -144,14 +141,14 @@ a:hover:not(.ls-btn),a:focus,a{
 
 @media(min-width: 768px){
     .ls-title-intro{
-        margin-bottom:0px!important;
+        margin-bottom:0!important;
     }
     .ls-footer-item{
         height:25px!important;
     }
 }
 
-/* ajuste para telas móveis */
+/* fit for mobile screens */
 @media (max-width: 768px){
 
     .modal{
@@ -197,14 +194,14 @@ a:hover:not(.ls-btn),a:focus,a{
 }
 
 
-/* ajuste de tela média */
+/* average screen adjustment */
 @media(max-width:992px){
 
     .row-padding-mobile{
         padding: 10px;
     }
 }
-/* ajuste de tela média */
+/* average screen adjustment */
 @media screen and (max-width: 1200px) and (min-width: 768px){
     .ls-sidebar{
         width:60px;
@@ -254,7 +251,7 @@ body{
 
 .ls-main{
     height:auto;
-    padding-top:0px;
+    padding-top:0;
 }
 
 
@@ -282,7 +279,7 @@ body{
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 4px;
-    box-shadow: 0px 0px 4px #ddd;
+    box-shadow: 0 0 4px #ddd;
 }
 
 .thumb-theme img{
@@ -349,7 +346,7 @@ ul.ls-footer-list li{
     vertical-align:initial;
 }
 .ls-footer-item a{
-    padding:0px!important;
+    padding:0!important;
 }
 .ls-footer-list{
     width:100%!important;
@@ -368,7 +365,7 @@ ul.ls-footer-list li{
 
 .ls-language .ls-dropdown-nav{
     border:none;
-    border-radius:0px;
+    border-radius:0;
     margin-top:24px;
     margin-left:-30px;
     min-width: 82px;
@@ -563,14 +560,14 @@ label.control-label.withdraw-method-label {
 .notifications{
     position:absolute;
     top:5%;
-    right:0px;
+    right:0;
     z-index:9000;
 }
 
 .alert{
     margin-left:10px;
     margin-top:10px;
-    margin-bottom:0px;
+    margin-bottom:0;
     width: auto;
     border-radius:50px;
     padding: 10px;
@@ -600,7 +597,7 @@ label.control-label.withdraw-method-label {
     padding: 5px;
     font-size: 20px;
     float: none;
-    font-family: 'Helvetica';
+    font-family: 'Helvetica', serif;
     font-weight: bold;
     cursor: pointer;
     opacity: 0.6;

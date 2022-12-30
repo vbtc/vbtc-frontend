@@ -11,56 +11,11 @@ exchanges:
     description: Sitio web de demostración de la plataforma de negociación de Bitcoins de blinktrade
     keywords: bitcoin, exchange de bitcoins, mercado de bitcoins, bolsa de bitcoins, open source
     lead: Véase nuestra exchange open source en acción
-  chilebit:
-    title: ChileBit.net - El primer mercado de Bitcoins en Chile
-    description: Compre y venda bitcoins de manera segura a través de ChileBit.NET. Con ChileBit.NET puedes comenzar a comprar y vender bitcoins hoy mismo. El proceso de registro tarda menos de un minuto.
-    keywords: Compra y venta de bitcoins en Chile, mercado de bitcoins en Chile, venta de bitcoins en Chile, comprar bitcoins en Chile
-    lead: El primer mercado de Bitcoins de Chile
-  surbitcoin:
-    title: Surbitcoin - El primer mercado de Bitcoin en Venezuela
-    description: Compre y venda bitcoins de manera segura a través de SurBitcoin. Con SurBitcoin puede empezar a comprar y vender bitcoins desde hoy mismo. El proceso de registro tarda menos de un minuto.
-    keywords: Compra y venta de bitcoins en Venezuela, mercado de bitcoins en Venezuela, venta de bitcoins en Venezuela, comprar bitcoins en Venezuela
-    lead: El primer Mercado de Bitcoin de Venezuela
-  urdubit:
-    title: UrduBit - El primer mercado de Bitcoin en Pakistán
-    description: Compre y venda bitcoins de manera segura a través de UrduBit. Con UrduBit puede empezar a comprar y vender bitcoins desde hoy mismo. El proceso de registro tarda menos de un minuto.
-    keywords: Compra y venta de bitcoins en Pakistán, mercado de bitcoins en Pakistán, venta de bitcoins en Pakistán, comprar bitcoins en Pakistán
-    lead: El primer Mercado de Bitcoin de Pakistán
-  foxbit:
-    title: FoxBit - Compra y venta de bitcoins en Brasil
-    description: Compre e venda bitcoins no Brasil de maneira segura através da FoxBit. Com o FoxBit você pode começar a comprar e vender bitcoins hoje. O processo de registro dura menos de um minuto.
-    keywords: Compra e venda de bitcoins no Brasil, bolsa de bitcoins no Brasil, venda bitcoins no Brasil, compre bitcoins no Brasil
-    lead: Compra y venta de bitcoins en Brasil
-  romaniabex:
-    title: RomaniaBitcoin.exchange - Compra y venta de bitcoins en Romênia
-    description:  Compra y venta de bitcoins en Romênia
-    keywords: Compra y venta de bitcoins en Romênia, mercado de bitcoins en Romênia, venta de bitcoins en Romênia, comprar bitcoins en Romênia
-    lead: Compra y venta de bitcoins en Romênia
   bitcoinvietnam:
     title: VBTC - Compra y venta de bitcoins en Vietnam
     description:  Compra y venta de bitcoins en Vietnam
     keywords: Compra y venta de bitcoins en Vietnam, mercado de bitcoins en Vietnam, venta de bitcoins en Vietnam, comprar bitcoins en Vietnam
-    lead: Compra y venta de bitcoins en Vietnam 
-  yuanbit:
-    title: YuanBit.com - Compra y venta de bitcoins en China
-    description:  Compra y venta de bitcoins en China
-    keywords: Compra y venta de bitcoins en China, mercado de bitcoins en China, venta de bitcoins en China, comprar bitcoins en China
-    lead: Compra y venta de bitcoins en China
-  bitinvest:
-    title: Bitinvest - Bitcoin rápido, fácil e seguro - Comprar e Vender Bitcoin com as menores taxas do Brasil
-    description: Bitinvest - Bitcoin rápido, fácil e seguro - Comprar e Vender Bitcoin com as menores taxas do Brasil
-    keywords: Bitinvest - Bitcoin rápido, fácil e seguro - Comprar e Vender Bitcoin com as menores taxas do Brasil
-    lead: Bitcoin rápido, fácil e seguro - Comprar e Vender Bitcoin com as menores taxas do Brasil
-  unocoin:
-    title: Unocoin | India's Bitcoin Wallet
-    description: Unocoin is India's most popular bitcoin wallet. We make it super easy to securely buy, use and accept bitcoin, following KYC-AML guidelines.
-    keywords: bitcoin, buy bitcoin, sell bitcoin, buy bitcoin india, sell bitcoin india, bitcoin india, bitcoin inr, btc inr, bitcoin wallet india, store bitcoin india, buy bitcoin inr, sell bitcoin inr, send bitcoin, send bitcoin india, receive bitcoin, receive bitcoin india, bitcoin price, btc to inr, btc price in inr, bitcoin exchange
-    lead: Unocoin is india's most popular bitcoin wallet
-  bitcambio:
-    title: Bitcambio - Compra y venta de bitcoins en Brasil
-    description: Compre y venda bitcoins de manera segura a través de Bitcambio
-    keywords: bitcoin, comprar bitcoin, btc,bitcambio,cambio,vender bitcoin, bitcoin brasil
-    lead: Compra y venta de bitcoins en Brasil
+    lead: Compra y venta de bitcoins en Vietnam
 views:
   landing:
     about:
@@ -80,7 +35,7 @@ views:
       phrase4:
         title: Miembro de BLINKTRADE
         icon: ico-decentralized
-        description: Somos miembros de la red global BLINKTRADE. Red que incluye <a href="https://foxbit.com.br" target="_BLANK">FOXBIT</a> en Brasil, <a href="https://surbitcoin.com" target="_BLANK">SurBitcoin</a> en Venezuela, <a href="https://chilebit.net/" target="_BLANK">ChileBit.NET</a> en Chile, <a href="https://urdubit.com/" target="_BLANK">UrduBit</a> en Pakistán y <a href="https://vbtc.vn/" target="_BLANK">VBTC</a> en Vietnam junto con otras empresas, los creadores de mercado, las empresas de remesas de valores y  procesamiento de pagos. Operando con nosotros, usted tendrá acceso a toda la red mundial de exchanges con un apoyo local.
+        description: Somos miembros de la red global BLINKTRADE. Los creadores de mercado, las empresas de remesas de valores y  procesamiento de pagos. Operando con nosotros, usted tendrá acceso a toda la red mundial de exchanges con un apoyo local.
     orderbook:
       title: Libro de órdenes
     signup:

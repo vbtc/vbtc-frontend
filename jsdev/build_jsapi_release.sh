@@ -1,8 +1,11 @@
 #!/bin/bash
 
 # BitEx API
-python ./closure-library/closure/bin/build/closurebuilder.py  \
+python2 ./closure-library/closure/bin/build/closurebuilder.py  \
   --root=./closure-library/ \
+  --root=./uniform/ \
+  --root=./libphonenumber/i18n/phonenumbers/ \
+  --root=./expression_evaluator/ \
   --root=./bitex \
   --root=./closure-bootstrap/javascript/ \
   --namespace=bitex.api.BitEx \
@@ -20,4 +23,3 @@ python ./closure-library/closure/bin/build/closurebuilder.py  \
   --compiler_flags="--externs=./externs/facebook_javascript_sdk.js" \
   --compiler_flags="--translations_project='bitex'" \
    > ../assets/js/bitex.compiled.en_US.js
-

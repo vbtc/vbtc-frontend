@@ -169,7 +169,7 @@ ul.parsley-error-list li {
     border: 1px solid #CCC;
     border-top: 0;
     width: 265px;
-    box-shadow: 0 0px 5px #CCC;
+    box-shadow: 0 0 5px #CCC;
     border-radius: 0 0 5px 5px;
 }
 .social-shares .tw-wrap,

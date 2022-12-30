@@ -248,7 +248,7 @@ ul.parsley-error-list li {
     border: 1px solid #CCC;
     border-top: 0;
     width: 265px;
-    box-shadow: 0 0px 5px #CCC;
+    box-shadow: 0 0 5px #CCC;
     border-radius: 0 0 5px 5px;
 }
 .social-shares .tw-wrap,
@@ -266,7 +266,7 @@ ul.parsley-error-list li {
 }
 
 @media screen and (min-width: 640px) and (max-width: 1024px) {
-  #login { display: block; } 
+  #login { display: block; }
 }
 
 .btn-cancel-order {
@@ -352,7 +352,7 @@ ul.parsley-error-list li {
 .notifications > div {
   position: relative;
   z-index: 9999;
-  margin: 5px 0px;
+  margin: 5px 0;
 }
 
 
@@ -391,7 +391,7 @@ ul.parsley-error-list li {
   -webkit-text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
   -moz-text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
   -o-text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
   -webkit-font-smoothing: antialiased;
 }
 

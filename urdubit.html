@@ -12,18 +12,7 @@ load_application:       True
     <header class="jumbotron">
       <img src="{{ site.baseurl }}/assets/exchange_logos/{{ site.exchange_logo }}_landing_page_logo.png" style="">
       <p class="lead bitex-view-title bitex-view-title">
-        {% case site.exchange %}
-          {% when 'chilebit' %}
-            {% t exchanges.chilebit.lead  %}
-          {% when 'surbitcoin' %}
-            {% t exchanges.surbitcoin.lead  %}
-          {% when 'urdubit' %}
-            {% t exchanges.urdubit.lead  %}
-          {% when 'foxbit' %}
-            {% t exchanges.foxbit.lead  %}
-          {% else %}
-            {% t exchanges.demo.lead  %}
-          {% endcase %}
+        {% t exchanges.demo.lead  %}
       </p>
     </header>
 
