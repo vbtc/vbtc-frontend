@@ -1,27 +1,50 @@
-## Blinktrade Bitcoin Exchange
+# Blinktrade Bitcoin Exchange
 
 ## Technologies we are using
 - [jekyll](http://jekyllrb.com/), a static generator in Ruby, to create the static html pages
 - [google closure library](https://developers.google.com/closure/library/) for the javascript application 
 - [google closure templates](https://developers.google.com/closure/templates/) for some of the javascript ui views
-- [nodejs](https://nodejs.org), for deployment 
-- [npm](https://www.npmjs.com/), for deployment
 
-## Install the pre-requesites 
-1 - Install [Git](http://git-scm.com/downloads), [Ruby](https://www.ruby-lang.org/pt/downloads/) anda [Java](https://java.com/download/index.jsp), in case you don't have them yet.
+## A. Install pre-requesites 
+1. Install [Git](http://git-scm.com/downloads), [Ruby](https://www.ruby-lang.org/pt/downloads/) anda [Java](https://java.com/download/index.jsp), in case you don't have them yet.
 
-2 - Once installed these dependencies, open up the terminal and install [Jekyll](http://jekyllrb.com) with the following commands.
+
+2. Once installed these dependencies, open up the terminal and install [Jekyll](http://jekyllrb.com) with the following commands.
 
 ```sh
 $ gem install jekyll:2.5.3
 ```
 
-2 - Install jekyll multiple languages plugin
+3. Install jekyll multiple languages plugin
 ```sh
 $ gem install jekyll-multiple-languages-plugin:1.2.9
 ```
 
-## How to run the exchange locally 
+
+## B. Build the JavaScript application
+
+_Only needed in case you changed the `./jsdev` application._
+
+#### Compile all Javascript
+
+It will compile for all themes and languages.
+
+```sh
+./build_javascript.sh
+```
+
+#### Compile a specific theme or language
+The defaults are US english (en_US) and the default theme ('default'), but can be overriden.
+To build the british english version with a custom theme:
+
+```sh
+$ cd ./jsdev 
+$ THEME=custom sh build_templates.sh
+$ LANG=en_US THEME=custom sh build_js.sh
+```
+
+
+## C1 Run the exchange locally 
 1 - Fork the repo
 
 2 - Rename it to `exchange` or any name you wish.  Let's use exchange for this example
@@ -42,47 +65,19 @@ $ bundle exec jekyll server --watch
 
 You'll have access to the website at `localhost:4000`
 
-## How to run the exchange on [github pages](https://pages.github.com/)
+## C2 Deploy the exchange to [GitHub Pages](https://pages.github.com/)
 
-1 - Make sure that you have `node` and `npm` installed.
-
-2 - Install the node dependencies to deploy.
-```sh
-npm install
-```
-3 - Deploy with gulp `$ gulp deploy` and follows the prompt instructions.
-
-4 - Open your browser and point it to [http://yourgithubusername.github.io/exchange/](http://yourgithubusername.github.io/exchange)
-
-
-## How build the javascript application
-
-Only needed in case you changed the `./jsdev` application.
-
-#### Compile all Javascript
-
-It will compile for all themes and languages.
+Build the static site with Jekyll
 
 ```sh
-./build_javascript.sh
+bundle exec jekyll build
 ```
 
-#### Compile a specific theme or language
-The defaults are US english (en_US) and the default theme ('default'), but can be overriden.
-To build the british english version with a custom theme:
+Run the `push_ghpages.sh` script
 
 ```sh
-$ cd ./jsdev 
-$ THEME=custom sh build_templates.sh
-$ LANG=en_US THEME=custom sh build_js.sh
+./push_ghpages.sh
 ```
-
-## Browser Support
-
-![IE](https://cloud.githubusercontent.com/assets/398893/3528325/20373e76-078e-11e4-8e3a-1cb86cf506f0.png "Internet Explorer") | ![Chrome](https://cloud.githubusercontent.com/assets/398893/3528328/23bc7bc4-078e-11e4-8752-ba2809bf5cce.png "Google Chrome") | ![Firefox](https://cloud.githubusercontent.com/assets/398893/3528329/26283ab0-078e-11e4-84d4-db2cf1009953.png "Firefox") | ![Opera](https://cloud.githubusercontent.com/assets/398893/3528330/27ec9fa8-078e-11e4-95cb-709fd11dac16.png "Opera") | ![Safari](https://cloud.githubusercontent.com/assets/398893/3528331/29df8618-078e-11e4-8e3e-ed8ac738693f.png "Safari")
---- | --- | --- | --- | --- |
-IE 11+ ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
-
 
 ## File Structure
 
