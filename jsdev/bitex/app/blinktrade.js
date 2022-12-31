@@ -500,8 +500,6 @@ bitex.app.BlinkTrade.prototype.run = function(host_api, opt_required_level_to_be
   var twoFactorView       = new bitex.view.TwoFactor(this);
   var faqView             = new bitex.view.NullView(this);
   var themesView          = new bitex.view.NullView(this);
-  var partnersView        = new bitex.view.NullView(this);
-  var purseioView         = new bitex.view.NullView(this);
   var setNewPasswordView  = new bitex.view.SetNewPasswordView(this);
   var loginView           = new bitex.view.LoginView(this);
   var signUpView          = new bitex.view.SignupView(this);
@@ -536,8 +534,6 @@ bitex.app.BlinkTrade.prototype.run = function(host_api, opt_required_level_to_be
   this.views_.addChild( twoFactorView       );
   this.views_.addChild( faqView             );
   this.views_.addChild( themesView          );
-  this.views_.addChild( partnersView        );
-  this.views_.addChild( purseioView         );
   this.views_.addChild( setNewPasswordView  );
   this.views_.addChild( loginView           );
   this.views_.addChild( signUpView          );
@@ -579,8 +575,6 @@ bitex.app.BlinkTrade.prototype.run = function(host_api, opt_required_level_to_be
   this.router_.addView( '(twofactor)'                   , twoFactorView       );
   this.router_.addView( '(faq)'                         , faqView             );
   this.router_.addView( '(themes)'                      , themesView          );
-  this.router_.addView( '(partners)'                    , partnersView        );
-  this.router_.addView( '(purseio)'                     , purseioView         );
   this.router_.addView( '(admin)'                       , startView           );
   this.router_.addView( '(set_new_password)'            , setNewPasswordView  );
   this.router_.addView( '(signin)'                      , loginView           );
@@ -2087,7 +2081,7 @@ bitex.app.BlinkTrade.prototype.showWithdrawalDialog = function(currency, opt_pre
                                          "label": MSG_WITHDRAW_FIELD_MEMO,
                                          "placeholder":""});
     }
-  
+
     goog.array.forEach(withdrawal_method['fields'], function(field) {
       if (goog.object.containsKey(preData_data, field["name"])) {
         field["value"] = preData_data[field["name"]];
@@ -2153,7 +2147,7 @@ bitex.app.BlinkTrade.prototype.showWithdrawalDialog = function(currency, opt_pre
         case 'Memo':
           field["label"] = MSG_WITHDRAW_FIELD_MEMO;
           break;
-          
+
       }
     }, this);
 
@@ -4490,10 +4484,10 @@ bitex.app.BlinkTrade.prototype.onUserLoginError_ = function(e) {
             username = this.loginView_.getUsername();
             password = this.loginView_.getPassword();
           };
-          var requestId = this.conn_.login( broker_id, 
-                                            username, 
-                                            password, 
-                                            second_factor, 
+          var requestId = this.conn_.login( broker_id,
+                                            username,
+                                            password,
+                                            second_factor,
                                             this.getModel().get('Token'),
                                             trust_device,
                                             this.getModel().get('Referrer'),
@@ -4531,8 +4525,8 @@ bitex.app.BlinkTrade.prototype.onUserLoginError_ = function(e) {
     var MSG_LOGIN_ERROR_USERNAME_ALREADY_TAKEN = goog.getMsg('Username or email already taken');
 
     /**
-     * @desc OTP code already used error 
-     */ 
+     * @desc OTP code already used error
+     */
     var MSG_LOGIN_ERROR_ALREADY_USED_SECOND_STEP = goog.getMsg('Authentication code already used.');
 
     var user_status_text = msg['UserStatusText'];
@@ -5123,9 +5117,9 @@ bitex.app.BlinkTrade.prototype.onConnectionOpen_ = function(e){
     if (!goog.string.isEmpty(username) && !goog.string.isEmpty(password) ) {
       if (password.length >= 8 ) {
         var requestId = this.conn_.login(broker_id,
-                                         username, 
-                                         password, 
-                                         undefined, 
+                                         username,
+                                         password,
+                                         undefined,
                                          this.getModel().get('TrustDevice'),
                                          this.getModel().get('Referrer'),
                                          this.getModel().get('UriPath'));
