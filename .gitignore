@@ -26,3 +26,5 @@ docs/_build/
 
 # Ruby
 vendor
+/.sass-cache/
+/_site/

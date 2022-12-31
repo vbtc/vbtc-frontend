@@ -57,14 +57,29 @@ languages: ["en_US", "es", "pt_BR", "ro", "zn_CN", "vi"]
 navbar: 'navbar-inverse'
 phrases: [phrase1, phrase2, phrase4]
 
-exclude:     [ "jsdev", "LICENSE", "README.md", "config.rb", "deploy.sh", "build_javascript.sh", "node_modules", "gulpfile.js", "themes/ander" ]
-source:      .
+exclude: [
+  ".bundle",
+  ".sass-cache",
+  ".idea",
+  "jsdev",
+  "themes/ander",
+  "vendor",
+  ".ruby-version",
+  "build_javascript.sh",
+  "config.rb",
+  "Gemfile",
+  "Gemfile.lock",
+  "LICENSE",
+  "push_ghpages.sh",
+  "README.md"
+]
+source: .
 destination: ./_site
 plugins:
   - jekyll-multiple-languages-plugin
-paginate:    5
+paginate: 5
 paginate_path: "post/page:num"
-permalink:     /post/:title/
+permalink: /post/:title/
 blog: http://www.foxbit.com.br/blog/
 chart: http://www.foxbit.com.br/grafico/
 facebook: https://www.facebook.com/foxbitcoin

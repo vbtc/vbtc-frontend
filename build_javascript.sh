@@ -25,7 +25,7 @@ echo "Building javascript"
 
 echo "coinage theme"
 THEME=coinage sh build_templates.sh
-LANGUAGE=en_US THEME=coinage sh build_release.sh
+LANGUAGE=en_US THEME=coinage sh build_js.sh
 LANGUAGE=es    THEME=coinage sh build_js.sh
 LANGUAGE=pt_BR THEME=coinage sh build_js.sh
 LANGUAGE=ro    THEME=coinage sh build_js.sh
