@@ -83,4 +83,4 @@ setMessageCommit
 pushBranchGhpages
 changeDirectoryBack
 
-echo "Done pushing to gh-pages. Rememver to checkout/pull gh-pages in the original repo."
+echo "Done pushing to gh-pages. Remember to checkout/pull gh-pages in the original repo."

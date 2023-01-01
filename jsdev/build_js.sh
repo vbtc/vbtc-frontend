@@ -34,6 +34,9 @@ python2 ./closure-library/closure/bin/build/closurebuilder.py  \
   --compiler_flags="--externs=./externs/w3c_rtc.js" \
   --compiler_flags="--externs=./externs/facebook_javascript_sdk.js" \
   --compiler_flags="--externs=./externs/qrcode.js" \
+  --compiler_flags="--debug=TRUE" \
+  --compiler_flags="--formatting=PRETTY_PRINT" \
+  --compiler_flags="--formatting=PRINT_INPUT_DELIMITER" \
   --compiler_flags="--translations_file=./translations/$LANGUAGE.xtb.xml" \
    > ../assets/js/bitex_app_blink_trade.compiled.$LANGUAGE.$THEME.js
 
