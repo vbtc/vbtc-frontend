@@ -2,7 +2,6 @@
 url: ""
 author: "BlinkTrade"
 baseurl: ""
-deploy_version: "HEAD"
 
 exchange: "demo"
 exchange_logo: "demo"

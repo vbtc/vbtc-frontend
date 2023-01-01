@@ -2,7 +2,6 @@
 url: "//localhost:4000"   # activate this to test on your localhost
 author: "BlinkTrade"
 baseurl: ""
-deploy_version: "HEAD"
 
 exchange: "bitcoinvietnam"
 exchange_logo: "bitcoinvietnam"

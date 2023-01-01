@@ -38,17 +38,17 @@
   <script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
 
   {% if page.load_application %}
-  <link href="{{ site.url }}{{ site.baseurl }}/assets/themes/default/css/style-new.css?v={{ site.deploy_version }}" rel="stylesheet">
+  <link href="{{ site.url }}{{ site.baseurl }}/assets/themes/default/css/style-new.css" rel="stylesheet">
   <link href="{{ site.url }}{{ site.baseurl }}/assets/css/flag-icon.css" rel="stylesheet">
 
   {% if site.custom_css %}
-    <link href="{{ site.url }}{{ site.baseurl }}/assets/themes/coinage/sass/main.{{ site.custom_css }}.css?v={{ site.deploy_version }}" rel="stylesheet">
+    <link href="{{ site.url }}{{ site.baseurl }}/assets/themes/coinage/sass/main.{{ site.custom_css }}.css" rel="stylesheet">
   {% else %}
-    <link href="{{ site.url }}{{ site.baseurl }}/assets/themes/coinage/sass/main.demo.css?v={{ site.deploy_version }}" rel="stylesheet">
+    <link href="{{ site.url }}{{ site.baseurl }}/assets/themes/coinage/sass/main.demo.css" rel="stylesheet">
   {% endif %}
 
   <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/themes/coinage/css/font-awesome.min.css">
-  <script data-cfasync="false" src="{{ site.url }}{{ site.baseurl }}/assets/js/bitex_app_blink_trade.compiled.{{site.lang}}.coinage.js?v={{ site.deploy_version }}" type="text/javascript"></script>
+  <script data-cfasync="false" src="{{ site.url }}{{ site.baseurl }}/assets/js/bitex_app_blink_trade.compiled.{{site.lang}}.coinage.js" type="text/javascript"></script>
   <script src="{{ site.url }}{{ site.baseurl }}/assets/themes/coinage/javascript/jquery-1.12.0.min.js"></script>
   <script src="{{ site.url }}{{ site.baseurl }}/assets/themes/coinage/javascript/bootstrap.min.js"></script>
   <script src="{{ site.url }}{{ site.baseurl }}/assets/js/externs/qrcode.min.js"></script>
@@ -181,7 +181,7 @@
 
           {% if page.load_application %}
           <a class="navbar-brand" href="#" data-switch-view="trading">
-              <img data-switch-view="trading" class="logo__img" 
+              <img data-switch-view="trading" class="logo__img"
               src="{{ site.url }}{{ site.baseurl }}/assets/exchange_logos/{% if site.exchange_toolbar_logo %}{{ site.exchange_toolbar_logo }}{% else %}{{ site.exchange_logo }}{% endif %}_toolbar_logo.png"
               style=" height: 30px; margin-top: -5px; ">
           </a>
