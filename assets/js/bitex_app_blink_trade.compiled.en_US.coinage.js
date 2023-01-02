@@ -19657,7 +19657,7 @@ $JSCompiler_prototypeAlias$$.$onUserLoginOk_$ = function $$JSCompiler_prototypeA
   $broker_info$$7_profile$$4_value_fmt$$15$$, $e$$492_msg$$144$$.IsBroker || this.$model_$.set("UserBrokers", $required_level_to_be_a_pro_trader_user_brokers$$));
   $broker_info$$7_profile$$4_value_fmt$$15$$ = $e$$492_msg$$144$$.Profile;
   $e$$492_msg$$144$$.IsBroker ? ($goog$dom$classes$add$$(document.body, "bitex-broker"), $broker_info$$7_profile$$4_value_fmt$$15$$ = $JSCompiler_StaticMethods_adjustBrokerData_$$(this, $broker_info$$7_profile$$4_value_fmt$$15$$), $required_level_to_be_a_pro_trader_user_brokers$$[$broker_info$$7_profile$$4_value_fmt$$15$$.BrokerID] = $broker_info$$7_profile$$4_value_fmt$$15$$, this.$model_$.set("UserBrokers", $required_level_to_be_a_pro_trader_user_brokers$$), $goog$object$extend$$($allowed_markets$$2_is_pro_trader_tags$$1_verification_data$$5$$, 
-  $broker_info$$7_profile$$4_value_fmt$$15$$.AllowedMarkets), $broker_currencies$$4$$.$addAll$($broker_info$$7_profile$$4_value_fmt$$15$$.BrokerCurrencies)) : ($goog$dom$classes$add$$(document.body, "bitex-non-broker"), 1 <= $broker_info$$7_profile$$4_value_fmt$$15$$.Verified && $goog$style$showElement$$($goog$dom$getElement$$("verification_menu_id"), !1));
+  $broker_info$$7_profile$$4_value_fmt$$15$$.AllowedMarkets), $broker_currencies$$4$$.$addAll$($broker_info$$7_profile$$4_value_fmt$$15$$.BrokerCurrencies)) : $goog$dom$classes$add$$(document.body, "bitex-non-broker");
   this.$model_$.set("Profile", $broker_info$$7_profile$$4_value_fmt$$15$$);
   this.$model_$.set("ShowMMP", this.$model_$.get("IsBroker") || this.$model_$.get("Profile").IsMarketMaker);
   null != $e$$492_msg$$144$$.Broker && this.$model_$.set("SelectedBrokerID", this.$model_$.get("Broker").BrokerID);
