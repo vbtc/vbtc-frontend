@@ -4147,9 +4147,11 @@ bitex.app.BlinkTrade.prototype.onUserLoginOk_ = function(e) {
   } else {
     goog.dom.classes.add( document.body, 'bitex-non-broker');
 
+    /*
     if (profile['Verified'] >= 1) {
         goog.style.showElement(goog.dom.$("verification_menu_id"), false);
     }
+    */
   }
   this.getModel().set('Profile',  profile);
   this.getModel().set('ShowMMP', (this.getModel().get('IsBroker') || this.getModel().get('Profile')['IsMarketMaker'] ));
