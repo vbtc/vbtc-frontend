@@ -20,4 +20,4 @@ git add .
 git commit -m "$COMMIT_MESSAGE"
 git push
 
-echo "Done pushing to gh-pages. Remember to checkout/pull gh-pages in the original repo."
+echo "Done pushing to GitHub Pages. If using 1 repo, remember to checkout/pull the gh-pages branch in the original repo."

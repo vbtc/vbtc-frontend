@@ -1,4 +1,4 @@
 # Site setting overrides for mainnet
-url: "https://vbtc.exchange"
-blinktrade_backend_api: "ws.blinktrade.com"
+url: "https://vbtc.github.io"
+blinktrade_backend_api: "api.vbtc.exchange"
 destination: ./_site_mainnet
