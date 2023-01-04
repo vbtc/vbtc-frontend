@@ -1,9 +1,6 @@
 # soy.js compiled files
 *.soy.js
 
-# Distribution / packaging
-/_site_ghpages/
-
 # Unit test / coverage reports
 htmlcov/
 .tox/
@@ -14,8 +11,11 @@ coverage.xml
 
 # Jekyll
 /.jekyll-cache/
+/_site_mainnet/
+/_site_beta/
+/_site_signet/
+/_site_localhost/
 /.jekyll-metadata
-/_config.yml
 
 # Translations
 *.mo
@@ -27,4 +27,3 @@ docs/_build/
 # Ruby
 vendor
 /.sass-cache/
-/_site/

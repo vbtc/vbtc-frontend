@@ -65,7 +65,6 @@ exclude: [
   "Gemfile",
   "Gemfile.lock",
   "LICENSE",
-  "push_ghpages.sh",
   "README.md"
 ]
 source: .

@@ -1,0 +1,4 @@
+# Site setting overrides for beta
+url: "https://beta.vbtc.exchange"
+blinktrade_backend_api: "api.vbtc.exchange"
+destination: ./_site_beta
