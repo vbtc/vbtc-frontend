@@ -26,4 +26,5 @@ if [[ -n "$CONFIG_FILE" ]]; then
     CONFIG_FILE=",$CONFIG_FILE"
 fi
 
+echo bundle exec jekyll serve --config "_config.yml$CONFIG_FILE"
 bundle exec jekyll serve --config "_config.yml$CONFIG_FILE"

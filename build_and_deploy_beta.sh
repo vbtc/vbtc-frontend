@@ -7,9 +7,17 @@
 
 CONFIG_FILE="_config.vbtc.mainnet.yml"
 BUILD_FOLDER="_site_beta"
-REPO="git@github.com:vbtc/vbtc-beta.github.io.git"    # TODO: Set correct repo
-BRANCH="master"
+PUSH_REPO="git@github.com:vbtc/vbtc-frontend-beta.git"    # TODO: Set correct repo
+PUSH_BRANCH="master"
+SOURCE_BRANCH="beta"
 # COMMIT_MESSAGE=$(date +"Build %Y-%m-%d %H.%M.%S UTC" -u)
+
+# Make sure we are pushing from the correct branch
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [ "$SOURCE_BRANCH" != "$CURRENT_BRANCH" ]; then
+    echo "You are in the wrong branch for building $SOURCE_BRANCH"
+    exit
+fi
 
 # Source the build script
 . ./build_site.sh

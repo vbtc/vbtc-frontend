@@ -7,9 +7,17 @@
 
 CONFIG_FILE="_config.vbtc.signet.yml"
 BUILD_FOLDER="_site_signet"
-REPO="git@github.com:vbtc/vbtc-signet.github.io.git"    # TODO: Set correct repo
-BRANCH="master"
+PUSH_REPO="git@github.com:vbtc/vbtc-frontend-beta.git"
+PUSH_BRANCH="master"
+SOURCE_BRANCH="signet"
 # COMMIT_MESSAGE=$(date +"Build %Y-%m-%d %H.%M.%S UTC" -u)
+
+# Make sure we are pushing from the correct branch
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [ "$SOURCE_BRANCH" != "$CURRENT_BRANCH" ]; then
+    echo "You are in the wrong branch for building $SOURCE_BRANCH"
+    exit
+fi
 
 # Source the build script
 . ./build_site.sh

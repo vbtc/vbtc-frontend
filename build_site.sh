@@ -21,13 +21,15 @@ if [[ -d ./$BUILD_FOLDER ]]
 then
   (
     cd $BUILD_FOLDER || exit
+    echo git fetch
     git fetch
   )
 else
     # Create the folder $BUILD_FOLDER if it doesn't exist
     mkdir "$BUILD_FOLDER"
     # Shallow clone of only $BRANCH to the folder $BUILD_FOLDER
-    git clone --depth 1 --single-branch --branch "$BRANCH" "$REPO" "$BUILD_FOLDER"
+    echo git clone --depth 1 --single-branch --branch "$PUSH_BRANCH" "$PUSH_REPO" "$BUILD_FOLDER"
+    git clone --depth 1 --single-branch --branch "$PUSH_BRANCH" "$PUSH_REPO" "$BUILD_FOLDER"
 fi
 
 # Set config file parameter
@@ -35,4 +37,5 @@ if [[ -n "$CONFIG_FILE" ]]; then
     CONFIG_FILE=",$CONFIG_FILE"
 fi
 
+echo bundle exec jekyll build --config "_config.yml$CONFIG_FILE"
 bundle exec jekyll build --config "_config.yml$CONFIG_FILE"
