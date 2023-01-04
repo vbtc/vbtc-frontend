@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 import getopt, sys
 import os.path
 import filecmp
@@ -30,11 +31,11 @@ def main(argv):
         sys.exit(-1)
 
     if not os.path.isfile(from_file) :
-        print 'could not found ', from_file 
+        print 'could not found ', from_file
         sys.exit(-2)
 
     if not os.path.isfile(to_file):
-        print 'could not found ', to_file 
+        print 'could not found ', to_file
         sys.exit(-3)
 
     if from_file.strip() == to_file.strip():
@@ -62,7 +63,7 @@ def main(argv):
 
             print line
 
-    
+
 
 
 if __name__ == "__main__":
