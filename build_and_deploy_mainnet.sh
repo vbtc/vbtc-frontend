@@ -8,8 +8,8 @@
 CONFIG_FILE="_config.vbtc.mainnet.yml"
 BUILD_FOLDER="_site_mainnet"
 PUSH_REPO="git@github.com:vbtc/vbtc.github.io.git"
-PUSH_BRANCH="master"
-SOURCE_BRANCH="master"
+PUSH_BRANCH="mainnet"
+SOURCE_BRANCH="mainnet"
 # COMMIT_MESSAGE=$(date +"Build %Y-%m-%d %H.%M.%S UTC" -u)
 
 # Make sure we are pushing from the correct branch

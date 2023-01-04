@@ -8,7 +8,7 @@
 CONFIG_FILE="_config.vbtc.mainnet.yml"
 BUILD_FOLDER="_site_beta"
 PUSH_REPO="git@github.com:vbtc/vbtc-frontend-beta.git"    # TODO: Set correct repo
-PUSH_BRANCH="master"
+PUSH_BRANCH="beta"
 SOURCE_BRANCH="beta"
 # COMMIT_MESSAGE=$(date +"Build %Y-%m-%d %H.%M.%S UTC" -u)
 
