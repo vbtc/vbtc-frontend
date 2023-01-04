@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # BitEx API
 python2 ./closure-library/closure/bin/build/closurebuilder.py  \
