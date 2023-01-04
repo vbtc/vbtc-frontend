@@ -5,7 +5,7 @@
 # shellcheck disable=SC2034
 # The variables set in this file are used in the sourced files
 
-CONFIG_FILE="_config.vbtc.mainnet.yml"
+CONFIG_FILE="_config.vbtc.beta.yml"
 BUILD_FOLDER="_site_beta"
 PUSH_REPO="git@github.com:vbtc/vbtc-frontend-beta.git"    # TODO: Set correct repo
 PUSH_BRANCH="beta"
