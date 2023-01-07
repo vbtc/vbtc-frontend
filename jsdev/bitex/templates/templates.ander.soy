@@ -82,7 +82,7 @@
           <td>{{$data['value']}}</td>
         </tr>
       {/foreach}
-      {if $depositReceiptList} 
+      {if $depositReceiptList}
         <tr>
           <td>Recibo:</td>
           <td>
@@ -363,9 +363,9 @@
                   {if $crypto_currencies['CurrencyCode'] == 'BTC' }
                     {switch $wallets['address'][0]}
                       {case 'm','n','2','9','c'}
-                        <a href="https://live.blockcypher.com/btc-testnet/address/{$wallets['address']}/" target="_blank">{$wallets['address'] }</a>
+                        <a href="https://mempool.space/testnet/address/{$wallets['address']}/" target="_blank">{$wallets['address'] }</a>
                       {default}
-                        <a href="https://blockchain.info/address/{$wallets['address']}/" target="_blank">{$wallets['address'] }</a>
+                        <a href="https://mempool.space/address/{$wallets['address']}/" target="_blank">{$wallets['address'] }</a>
                     {/switch}
                   {else}
                     {$wallets['address'] }

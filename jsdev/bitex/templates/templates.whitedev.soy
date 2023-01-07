@@ -88,7 +88,7 @@
           <td>{{$data['value']}}</td>
         </tr>
       {/foreach}
-      {if $depositReceiptList} 
+      {if $depositReceiptList}
         <tr>
           <td>Recibo:</td>
           <td>
@@ -345,7 +345,7 @@
         {/if}
       {/if}
 
-      <div class="ls-clearfix"></div> 
+      <div class="ls-clearfix"></div>
       {if not $msg_broker['IsBrokerHub'] }
       <div class="col-md-12">
         <hr>
@@ -375,9 +375,9 @@
                     {if $crypto_currencies['CurrencyCode'] == 'BTC' }
                       {switch $wallets['address'][0]}
                         {case 'm','n','2','9','c'}
-                        <a href="https://live.blockcypher.com/btc-testnet/address/{$wallets['address']}/" target="_blank">{$wallets['address'] }</a>
+                        <a href="https://mempool.space/testnet/address/{$wallets['address']}/" target="_blank">{$wallets['address'] }</a>
                       {default}
-                        <a href="https://blockchain.info/address/{$wallets['address']}" target="_blank">{$wallets['address'] }</a>
+                        <a href="https://mempool.space/address/{$wallets['address']}" target="_blank">{$wallets['address'] }</a>
                       {/switch}
                     {else}
                       {$wallets['address'] }
@@ -1062,7 +1062,7 @@
       {/if}
     {/if}
 
-    
+
     <div class="withdraw-methods">
      {if length($methods) == 0 }
         {if $verificationLevel <= 2}
