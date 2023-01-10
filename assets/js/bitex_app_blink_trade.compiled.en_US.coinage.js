@@ -8073,10 +8073,10 @@ function $bitex$templates$BrokerView$$($opt_data$$17$$) {
               case "9":
               ;
               case "c":
-                $output$$12$$ += '<a href="https://live.blockcypher.com/btc-testnet/address/' + $soy$$0$0escapeHtml$$($walletsData373$$.address) + '/" target="_blank">' + $soy$$0$0escapeHtml$$($walletsData373$$.address) + "</a>";
+                $output$$12$$ += '<a href="https://mempool.space/testnet/address/' + $soy$$0$0escapeHtml$$($walletsData373$$.address) + '/" target="_blank">' + $soy$$0$0escapeHtml$$($walletsData373$$.address) + "</a>";
                 break;
               default:
-                $output$$12$$ += '<a href="https://blockchain.info/address/' + $soy$$0$0escapeHtml$$($walletsData373$$.address) + '" target="_blank">' + $soy$$0$0escapeHtml$$($walletsData373$$.address) + "</a>";
+                $output$$12$$ += '<a href="https://mempool.space/address/' + $soy$$0$0escapeHtml$$($walletsData373$$.address) + '" target="_blank">' + $soy$$0$0escapeHtml$$($walletsData373$$.address) + "</a>";
             }
           } else {
             $output$$12$$ += $soy$$0$0escapeHtml$$($walletsData373$$.address);
@@ -10667,7 +10667,7 @@ function $bitex$ui$DepositList$$($crypto_currencies_def$$, $opt_broker_mode$$1_s
     switch($rowSet$$17$$.Type) {
       case "CRY":
         if ("BTC" == $rowSet$$17$$.Currency) {
-          var $blockchain_address$$ = "https://blockchain.info/address/" + $rowSet$$17$$.Data.InputAddress;
+          var $blockchain_address$$ = "https://mempool.space/address/" + $rowSet$$17$$.Data.InputAddress;
           if (null != $rowSet$$17$$.Data.InputAddress) {
             switch($rowSet$$17$$.Data.InputAddress[0]) {
               case "m":
@@ -10679,7 +10679,7 @@ function $bitex$ui$DepositList$$($crypto_currencies_def$$, $opt_broker_mode$$1_s
               case "9":
               ;
               case "c":
-                $blockchain_address$$ = "https://live.blockcypher.com/btc-testnet/address/" + $rowSet$$17$$.Data.InputAddress;
+                $blockchain_address$$ = "https://mempool.space/testnet/address/" + $rowSet$$17$$.Data.InputAddress;
             }
           }
           return $goog$soy$renderAsElement$$($bitex$ui$DepositList$templates$InputAddress$$, {$address$:$rowSet$$17$$.Data.InputAddress, $blockchainAddress$:$blockchain_address$$});
