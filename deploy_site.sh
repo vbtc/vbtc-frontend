@@ -8,8 +8,8 @@
 # Use defaults:
 #   ./deploy_site.sh
 
-# Default settings if not provided deploys mainnet to the gh-pages branch of the current repo
-BUILD_FOLDER=${BUILD_FOLDER:="_site_mainnet"}
+# Default settings if not provided deploys beta to the gh-pages branch of the current repo
+BUILD_FOLDER=${BUILD_FOLDER:="_site_beta"}
 
 # Set commit message to 'Build <DATE> <TIME> UTC' unless provided
 COMMIT_MESSAGE=${COMMIT_MESSAGE:=$(date +"Build %Y-%m-%d %H.%M.%S UTC" -u)}
