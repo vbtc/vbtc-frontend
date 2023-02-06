@@ -7,7 +7,7 @@
 
 CONFIG_FILE="_config.vbtc.signet.yml"
 BUILD_FOLDER="_site_signet"
-PUSH_REPO="git@github.com:vbtc/vbtc-frontend-beta.git"
+PUSH_REPO="git@github.com:vbtc/vbtc-frontend-signet.git"
 PUSH_BRANCH="signet"
 SOURCE_BRANCH="signet"
 # COMMIT_MESSAGE=$(date +"Build %Y-%m-%d %H.%M.%S UTC" -u)
