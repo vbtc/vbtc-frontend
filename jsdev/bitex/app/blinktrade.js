@@ -619,7 +619,7 @@ bitex.app.BlinkTrade.prototype.run = function(host_api, opt_required_level_to_be
   handler.listen( this.conn_ , bitex.api.BitEx.EventType.HEARTBEAT, this.onHearbeat_);
   handler.listen( this.conn_ , bitex.api.BitEx.EventType.TEST_REQUEST, this.onTestRequest_);
 
-  handler.listen(this.views_, bitex.view.View.EventType.CHANGE_PASSWORD, this.onUserChangePassword_ );
+  handler.listen( this.views_, bitex.view.View.EventType.CHANGE_PASSWORD, this.onUserChangePassword_ );
   handler.listen( this.conn_ , bitex.api.BitEx.EventType.CHANGE_PASSWORD_RESPONSE, this.onChangePasswordResponse_);
 
   handler.listen( this.conn_ , bitex.api.BitEx.EventType.TWO_FACTOR_SECRET, this.onBitexTwoFactorSecretResponse_);
@@ -1250,6 +1250,7 @@ bitex.app.BlinkTrade.prototype.onUserChangePassword_ = function(e) {
 
 
   this.getBitexConnection().changePassword(this.getModel().get('SelectedBrokerID'),
+                                           this.getMode().get('Username'),
                                            password,
                                            new_password);
 };
@@ -1294,6 +1295,7 @@ bitex.app.BlinkTrade.prototype.onChangePasswordResponse_ = function(e) {
           var new_password = this.profileView_.getNewPassword();
 
           this.getBitexConnection().changePassword(this.getModel().get('SelectedBrokerID'),
+                                                   this.getMode().get('Username'),
                                                    password,
                                                    new_password,
                                                    second_factor );
@@ -1412,7 +1414,7 @@ bitex.app.BlinkTrade.prototype.onBitexPasswordChangedError_ = function(e) {
      */
     var MSG_CHANGE_PASSWORD_INVALID_SECURITY_CODE = goog.getMsg('Invalid security code.');
 
-    this.showDialog( MSG_CHANGE_PASSWORD_INVALID_SECURITY_CODE , MSG_BITEX_PASSWORD_CHANGED_ERROR_TITLE );
+    this.showDialog( MSG_CHANGE_PASSWORD_INVALID_SECURITY_CODE, MSG_BITEX_PASSWORD_CHANGED_ERROR_TITLE );
   } else {
 
     this.showDialog( MSG_BITEX_PASSWORD_CHANGED_ERROR_CONTENT, MSG_BITEX_PASSWORD_CHANGED_ERROR_TITLE );

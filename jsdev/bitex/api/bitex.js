@@ -1536,16 +1536,18 @@ bitex.api.BitEx.prototype.resetPassword = function(token, new_password, opt_requ
 
 /**
  * @param {number} brokerID
+ * @param {string} username
  * @param {string} password
  * @param {string} new_password
  * @param {string} opt_second_factor
  * @param {number=} opt_requestId. Defaults to random generated number
  */
-bitex.api.BitEx.prototype.changePassword = function(brokerID, password, new_password, opt_second_factor, opt_requestId ){
+bitex.api.BitEx.prototype.changePassword = function(brokerID, username, password, new_password, opt_second_factor, opt_requestId ){
   var requestId = opt_requestId || parseInt( 1e7 * Math.random() , 10 );
 
   var msg = {
     'MsgType': 'BE',
+    'Username': username,
     'UserReqID': requestId,
     'UserReqTyp': '3',
     'BrokerID': brokerID,
