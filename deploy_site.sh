@@ -9,7 +9,7 @@
 #   ./deploy_site.sh
 
 # Default settings if not provided deploys mainnet to the gh-pages branch of the current repo
-BUILD_FOLDER=${BUILD_FOLDER:="_site_signet"}
+BUILD_FOLDER=${BUILD_FOLDER:="_site_mainnet"}
 
 # Set commit message to 'Build <DATE> <TIME> UTC' unless provided
 COMMIT_MESSAGE=${COMMIT_MESSAGE:=$(date +"Build %Y-%m-%d %H.%M.%S UTC" -u)}
