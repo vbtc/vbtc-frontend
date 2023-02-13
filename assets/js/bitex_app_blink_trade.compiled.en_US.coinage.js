@@ -15339,30 +15339,30 @@ $goog$inherits$$($bitex$view$ProfileView$$, $bitex$view$View$$);
 $JSCompiler_prototypeAlias$$ = $bitex$view$ProfileView$$.prototype;
 $JSCompiler_prototypeAlias$$.$enterView$ = function $$JSCompiler_prototypeAlias$$$$enterView$$() {
   $bitex$view$ProfileView$$.$superClass_$.$enterView$.call(this);
-  var $change_password_place_holder_compoenent_enabled$$12_model$$39$$ = this.$app_$.$model_$, $handler$$108$$ = this.$getHandler$(), $btnDisableEl_customer$$3$$ = {};
-  $btnDisableEl_customer$$3$$.ID = $change_password_place_holder_compoenent_enabled$$12_model$$39$$.get("Profile").UserID;
-  $btnDisableEl_customer$$3$$.Username = $change_password_place_holder_compoenent_enabled$$12_model$$39$$.get("Profile").Username;
-  $btnDisableEl_customer$$3$$.Email = $change_password_place_holder_compoenent_enabled$$12_model$$39$$.get("Profile").Email;
-  var $state$$26$$ = $change_password_place_holder_compoenent_enabled$$12_model$$39$$.get("Profile").State;
-  null != $state$$26$$ || ($state$$26$$ = $change_password_place_holder_compoenent_enabled$$12_model$$39$$.get("Broker").State);
+  var $change_password_place_holder_component_enabled$$12_model$$39$$ = this.$app_$.$model_$, $handler$$108$$ = this.$getHandler$(), $btnDisableEl_customer$$3$$ = {};
+  $btnDisableEl_customer$$3$$.ID = $change_password_place_holder_component_enabled$$12_model$$39$$.get("Profile").UserID;
+  $btnDisableEl_customer$$3$$.Username = $change_password_place_holder_component_enabled$$12_model$$39$$.get("Profile").Username;
+  $btnDisableEl_customer$$3$$.Email = $change_password_place_holder_component_enabled$$12_model$$39$$.get("Profile").Email;
+  var $state$$26$$ = $change_password_place_holder_component_enabled$$12_model$$39$$.get("Profile").State;
+  null != $state$$26$$ || ($state$$26$$ = $change_password_place_holder_component_enabled$$12_model$$39$$.get("Broker").State);
   $btnDisableEl_customer$$3$$.State = $state$$26$$;
-  $btnDisableEl_customer$$3$$.CountryCode = $change_password_place_holder_compoenent_enabled$$12_model$$39$$.get("Profile").Country;
-  $btnDisableEl_customer$$3$$.Verified = $change_password_place_holder_compoenent_enabled$$12_model$$39$$.get("Profile").Verified;
-  $btnDisableEl_customer$$3$$.EmailLang = $change_password_place_holder_compoenent_enabled$$12_model$$39$$.get("Profile").EmailLang;
+  $btnDisableEl_customer$$3$$.CountryCode = $change_password_place_holder_component_enabled$$12_model$$39$$.get("Profile").Country;
+  $btnDisableEl_customer$$3$$.Verified = $change_password_place_holder_component_enabled$$12_model$$39$$.get("Profile").Verified;
+  $btnDisableEl_customer$$3$$.EmailLang = $change_password_place_holder_component_enabled$$12_model$$39$$.get("Profile").EmailLang;
   $btnDisableEl_customer$$3$$.ConfirmationOrder = !1;
-  $goog$isDefAndNotNull$$($change_password_place_holder_compoenent_enabled$$12_model$$39$$.get("Profile").ConfirmationOrder) && ($btnDisableEl_customer$$3$$.ConfirmationOrder = $change_password_place_holder_compoenent_enabled$$12_model$$39$$.get("Profile").ConfirmationOrder);
+  $goog$isDefAndNotNull$$($change_password_place_holder_component_enabled$$12_model$$39$$.get("Profile").ConfirmationOrder) && ($btnDisableEl_customer$$3$$.ConfirmationOrder = $change_password_place_holder_component_enabled$$12_model$$39$$.get("Profile").ConfirmationOrder);
   $goog$soy$renderElement$$($goog$dom$getElement$$("account_overview_user_id"), $bitex$view$ProfileView$templates$AccountOverviewUser$$, {$msg_customer_detail$:$btnDisableEl_customer$$3$$});
-  $change_password_place_holder_compoenent_enabled$$12_model$$39$$ = this.$app_$.$model_$.get("TwoFactorEnabled");
+  $change_password_place_holder_component_enabled$$12_model$$39$$ = this.$app_$.$model_$.get("TwoFactorEnabled");
   $btnDisableEl_customer$$3$$ = $goog$dom$getElement$$("id_btn_disable_two_factor");
-  $goog$style$setElementShown$$($goog$dom$getElement$$("id_btn_enable_two_factor"), !$change_password_place_holder_compoenent_enabled$$12_model$$39$$);
-  $goog$style$setElementShown$$($btnDisableEl_customer$$3$$, $change_password_place_holder_compoenent_enabled$$12_model$$39$$);
-  $change_password_place_holder_compoenent_enabled$$12_model$$39$$ = new $goog$ui$Component$$;
-  $change_password_place_holder_compoenent_enabled$$12_model$$39$$.$createDom$ = function $$change_password_place_holder_compoenent_enabled$$12_model$$39$$$$createDom$$() {
+  $goog$style$setElementShown$$($goog$dom$getElement$$("id_btn_enable_two_factor"), !$change_password_place_holder_component_enabled$$12_model$$39$$);
+  $goog$style$setElementShown$$($btnDisableEl_customer$$3$$, $change_password_place_holder_component_enabled$$12_model$$39$$);
+  $change_password_place_holder_component_enabled$$12_model$$39$$ = new $goog$ui$Component$$;
+  $change_password_place_holder_component_enabled$$12_model$$39$$.$createDom$ = function $$change_password_place_holder_component_enabled$$12_model$$39$$$$createDom$$() {
     this.$element_$ = $goog$soy$renderAsElement$$($bitex$view$ProfileView$templates$ProfileViewChangePasswordPlaceHolder$$);
   };
-  this.$addChild$($change_password_place_holder_compoenent_enabled$$12_model$$39$$, !0);
+  this.$addChild$($change_password_place_holder_component_enabled$$12_model$$39$$, !0);
   this.$change_password_$ = new $bitex$ui$ChangePassword$$;
-  $change_password_place_holder_compoenent_enabled$$12_model$$39$$.$addChild$(this.$change_password_$, !0);
+  $change_password_place_holder_component_enabled$$12_model$$39$$.$addChild$(this.$change_password_$, !0);
   this.$change_password_$.$enterDocument$();
   $handler$$108$$.$listen$(this, "control_change_password", this.$onChangePassword_$);
 };
@@ -17008,9 +17008,9 @@ $JSCompiler_prototypeAlias$$.$resetPassword$ = function $$JSCompiler_prototypeAl
   $JSCompiler_StaticMethods_sendMessage$$(this, {MsgType:"U12", ResetPasswordReqID:$opt_requestId$$16_requestId$$19$$, Token:$token$$20$$, NewPassword:$new_password$$});
   return $opt_requestId$$16_requestId$$19$$;
 };
-$JSCompiler_prototypeAlias$$.$changePassword$ = function $$JSCompiler_prototypeAlias$$$$changePassword$$($brokerID$$2_msg$$88$$, $password$$4$$, $new_password$$1$$, $opt_second_factor$$1$$, $opt_requestId$$17_requestId$$20$$) {
+$JSCompiler_prototypeAlias$$.$changePassword$ = function $$JSCompiler_prototypeAlias$$$$changePassword$$($brokerID$$2_msg$$88$$, $username$$12$$, $password$$4$$, $new_password$$1$$, $opt_second_factor$$1$$, $opt_requestId$$17_requestId$$20$$) {
   $opt_requestId$$17_requestId$$20$$ = $opt_requestId$$17_requestId$$20$$ || parseInt(1E7 * Math.random(), 10);
-  $brokerID$$2_msg$$88$$ = {MsgType:"BE", UserReqID:$opt_requestId$$17_requestId$$20$$, UserReqTyp:"3", BrokerID:$brokerID$$2_msg$$88$$, Password:$password$$4$$, NewPassword:$new_password$$1$$};
+  $brokerID$$2_msg$$88$$ = {MsgType:"BE", Username:$username$$12$$, UserReqID:$opt_requestId$$17_requestId$$20$$, UserReqTyp:"3", BrokerID:$brokerID$$2_msg$$88$$, Password:$password$$4$$, NewPassword:$new_password$$1$$};
   null != $opt_second_factor$$1$$ && ($brokerID$$2_msg$$88$$.SecondFactor = $opt_second_factor$$1$$);
   $JSCompiler_StaticMethods_sendMessage$$(this, $brokerID$$2_msg$$88$$);
   return $opt_requestId$$17_requestId$$20$$;
@@ -17032,13 +17032,13 @@ $JSCompiler_prototypeAlias$$.$requestSecurityList$ = function $$JSCompiler_proto
   $JSCompiler_StaticMethods_sendMessage$$(this, {MsgType:"x", SecurityReqID:$requestId$$23$$, SecurityListRequestType:0, Market:$opt_market$$ || "BLINK", SecurityRequestResult:0});
   return $requestId$$23$$;
 };
-$JSCompiler_prototypeAlias$$.$signUp$ = function $$JSCompiler_prototypeAlias$$$$signUp$$($msg$$94_username$$12$$, $password$$5$$, $email$$4$$, $state$$27$$, $country_code$$2$$, $broker$$13$$, $opt_token$$1$$, $opt_referrer$$1$$, $opt_path$$5$$, $opt_requestId$$21_requestId$$24$$) {
+$JSCompiler_prototypeAlias$$.$signUp$ = function $$JSCompiler_prototypeAlias$$$$signUp$$($msg$$94_username$$13$$, $password$$5$$, $email$$4$$, $state$$27$$, $country_code$$2$$, $broker$$13$$, $opt_token$$1$$, $opt_referrer$$1$$, $opt_path$$5$$, $opt_requestId$$21_requestId$$24$$) {
   $opt_requestId$$21_requestId$$24$$ = $opt_requestId$$21_requestId$$24$$ || parseInt(1E7 * Math.random(), 10);
-  $msg$$94_username$$12$$ = {MsgType:"U0", UserReqID:$opt_requestId$$21_requestId$$24$$, Username:$msg$$94_username$$12$$.toLowerCase(), Password:$password$$5$$, Email:$email$$4$$.toLowerCase(), State:$state$$27$$, CountryCode:$country_code$$2$$, BrokerID:$broker$$13$$, UserAgent:$goog$labs$userAgent$util$userAgent_$$, UserAgentLanguage:$goog$global$$.navigator.language, UserAgentTimezoneOffset:(new Date).getTimezoneOffset(), UserAgentPlatform:$goog$global$$.navigator.platform};
-  null != $opt_token$$1$$ && ($msg$$94_username$$12$$.Token = $opt_token$$1$$);
-  null != $opt_path$$5$$ && ($msg$$94_username$$12$$.UriPath = $opt_path$$5$$);
-  null != $opt_referrer$$1$$ && ($msg$$94_username$$12$$.Referrer = $opt_referrer$$1$$);
-  $JSCompiler_StaticMethods_sendMessage$$(this, $msg$$94_username$$12$$);
+  $msg$$94_username$$13$$ = {MsgType:"U0", UserReqID:$opt_requestId$$21_requestId$$24$$, Username:$msg$$94_username$$13$$.toLowerCase(), Password:$password$$5$$, Email:$email$$4$$.toLowerCase(), State:$state$$27$$, CountryCode:$country_code$$2$$, BrokerID:$broker$$13$$, UserAgent:$goog$labs$userAgent$util$userAgent_$$, UserAgentLanguage:$goog$global$$.navigator.language, UserAgentTimezoneOffset:(new Date).getTimezoneOffset(), UserAgentPlatform:$goog$global$$.navigator.platform};
+  null != $opt_token$$1$$ && ($msg$$94_username$$13$$.Token = $opt_token$$1$$);
+  null != $opt_path$$5$$ && ($msg$$94_username$$13$$.UriPath = $opt_path$$5$$);
+  null != $opt_referrer$$1$$ && ($msg$$94_username$$13$$.Referrer = $opt_referrer$$1$$);
+  $JSCompiler_StaticMethods_sendMessage$$(this, $msg$$94_username$$13$$);
   return $opt_requestId$$21_requestId$$24$$;
 };
 $JSCompiler_prototypeAlias$$.$requestOrderList$ = function $$JSCompiler_prototypeAlias$$$$requestOrderList$$($opt_requestId$$22_requestId$$25$$, $msg$$95_opt_page$$7$$, $opt_limit$$8$$, $opt_filter$$5$$) {
@@ -18743,7 +18743,7 @@ $JSCompiler_prototypeAlias$$.$getQtyCurrencyFromSymbol$ = function $$JSCompiler_
 $JSCompiler_prototypeAlias$$.$onUserChangePassword_$ = function $$JSCompiler_prototypeAlias$$$$onUserChangePassword_$$($e$$423_new_password$$2$$) {
   var $password$$6$$ = $e$$423_new_password$$2$$.target.$getCurrentPassword$();
   $e$$423_new_password$$2$$ = $e$$423_new_password$$2$$.target.$getNewPassword$();
-  this.$conn_$.$changePassword$(this.$model_$.get("SelectedBrokerID"), $password$$6$$, $e$$423_new_password$$2$$);
+  this.$conn_$.$changePassword$(this.$model_$.get("SelectedBrokerID"), this.$model_$.get("Username"), $password$$6$$, $e$$423_new_password$$2$$);
 };
 $JSCompiler_prototypeAlias$$.$onChangePasswordResponse_$ = function $$JSCompiler_prototypeAlias$$$$onChangePasswordResponse_$$($e$$424_msg$$128$$) {
   $e$$424_msg$$128$$ = $e$$424_msg$$128$$.data;
@@ -18760,7 +18760,7 @@ $JSCompiler_prototypeAlias$$.$onChangePasswordResponse_$ = function $$JSCompiler
         } else {
           $e$$425_second_factor$$ = $JSCompiler_StaticMethods_getAsJSON$$($gauth_uniform$$).token;
           var $error_list$$15_password$$7$$ = this.$profileView_$.$getCurrentPassword$(), $new_password$$3$$ = this.$profileView_$.$getNewPassword$();
-          this.$conn_$.$changePassword$(this.$model_$.get("SelectedBrokerID"), $error_list$$15_password$$7$$, $new_password$$3$$, $e$$425_second_factor$$);
+          this.$conn_$.$changePassword$(this.$model_$.get("SelectedBrokerID"), this.$model_$.get("Username"), $error_list$$15_password$$7$$, $new_password$$3$$, $e$$425_second_factor$$);
           $dlg_$$1$$.$dispose$();
         }
       }
@@ -19623,11 +19623,11 @@ $JSCompiler_prototypeAlias$$.$onBodyChange_$ = function $$JSCompiler_prototypeAl
   }
 };
 $JSCompiler_prototypeAlias$$.$onUserLoginButtonClick_$ = function $$JSCompiler_prototypeAlias$$$$onUserLoginButtonClick_$$($e$$491_requestId$$42$$) {
-  var $username$$14$$ = $e$$491_requestId$$42$$.target.$getUsername$(), $password$$8$$ = $e$$491_requestId$$42$$.target.$getPassword$(), $second_factor$$1$$ = $JSCompiler_StaticMethods_getSecondFactor$$($e$$491_requestId$$42$$.target) || void 0, $trusted_device$$ = $JSCompiler_StaticMethods_getTrustedDevice$$($e$$491_requestId$$42$$.target) || !1;
+  var $username$$15$$ = $e$$491_requestId$$42$$.target.$getUsername$(), $password$$8$$ = $e$$491_requestId$$42$$.target.$getPassword$(), $second_factor$$1$$ = $JSCompiler_StaticMethods_getSecondFactor$$($e$$491_requestId$$42$$.target) || void 0, $trusted_device$$ = $JSCompiler_StaticMethods_getTrustedDevice$$($e$$491_requestId$$42$$.target) || !1;
   this.$model_$.set("TrustDevice", $trusted_device$$);
   this.$model_$.set("Password", $e$$491_requestId$$42$$.target.$getPassword$());
-  $e$$491_requestId$$42$$ = this.$conn_$.login(this.$model_$.get("SelectedBrokerID"), $username$$14$$, $password$$8$$, $second_factor$$1$$, this.$model_$.get("Token"), $trusted_device$$, this.$model_$.get("Referrer"), this.$model_$.get("UriPath"));
-  this.$current_login_request_$[$e$$491_requestId$$42$$] = ["login", this.$model_$.get("SelectedBrokerID"), $username$$14$$, $password$$8$$];
+  $e$$491_requestId$$42$$ = this.$conn_$.login(this.$model_$.get("SelectedBrokerID"), $username$$15$$, $password$$8$$, $second_factor$$1$$, this.$model_$.get("Token"), $trusted_device$$, this.$model_$.get("Referrer"), this.$model_$.get("UriPath"));
+  this.$current_login_request_$[$e$$491_requestId$$42$$] = ["login", this.$model_$.get("SelectedBrokerID"), $username$$15$$, $password$$8$$];
   $goog$array$forEach$$($goog$dom$getElementsByClass$$("btn-login"), function($button$$20$$) {
     $button$$20$$.disabled = !0;
   });
@@ -19787,22 +19787,22 @@ $JSCompiler_prototypeAlias$$.$onUserLoginError_$ = function $$JSCompiler_prototy
                 $is_asking_to_confirm_email_after_signup$$ ? (this.$model_$.set("Token", $current_request_error_list$$18_json_form_data$$.token), this.$model_$.set("TrustDevice", !0)) : $requestId$$43_second_factor$$2$$ = $current_request_error_list$$18_json_form_data$$.token;
                 $e$$496_trust_device$$1$$ = this.$model_$.get("TrustDevice");
                 $dlg_ask_for_trust_device$$ && ($e$$496_trust_device$$1$$ = "checked" == $current_request_error_list$$18_json_form_data$$.TrustedDevice || "on" == $current_request_error_list$$18_json_form_data$$.TrustedDevice ? !0 : !1);
-                var $current_request_error_list$$18_json_form_data$$ = this.$current_login_request_$[$msg$$145$$.UserReqID], $broker_id$$16$$, $username$$15$$, $password$$9$$;
+                var $current_request_error_list$$18_json_form_data$$ = this.$current_login_request_$[$msg$$145$$.UserReqID], $broker_id$$16$$, $username$$16$$, $password$$9$$;
                 if (null != $current_request_error_list$$18_json_form_data$$) {
                   switch(request_method = $current_request_error_list$$18_json_form_data$$[0], request_method) {
                     case "login":
                       $broker_id$$16$$ = $current_request_error_list$$18_json_form_data$$[1];
-                      $username$$15$$ = $current_request_error_list$$18_json_form_data$$[2];
+                      $username$$16$$ = $current_request_error_list$$18_json_form_data$$[2];
                       $password$$9$$ = $current_request_error_list$$18_json_form_data$$[3];
                       break;
                     case "signUp":
-                      $broker_id$$16$$ = $current_request_error_list$$18_json_form_data$$[6], $username$$15$$ = $current_request_error_list$$18_json_form_data$$[1], $password$$9$$ = $current_request_error_list$$18_json_form_data$$[2];
+                      $broker_id$$16$$ = $current_request_error_list$$18_json_form_data$$[6], $username$$16$$ = $current_request_error_list$$18_json_form_data$$[1], $password$$9$$ = $current_request_error_list$$18_json_form_data$$[2];
                   }
                 } else {
-                  $broker_id$$16$$ = this.$model_$.get("SelectedBrokerID"), $username$$15$$ = this.$loginView_$.$getUsername$(), $password$$9$$ = this.$loginView_$.$getPassword$();
+                  $broker_id$$16$$ = this.$model_$.get("SelectedBrokerID"), $username$$16$$ = this.$loginView_$.$getUsername$(), $password$$9$$ = this.$loginView_$.$getPassword$();
                 }
-                $requestId$$43_second_factor$$2$$ = this.$conn_$.login($broker_id$$16$$, $username$$15$$, $password$$9$$, $requestId$$43_second_factor$$2$$, this.$model_$.get("Token"), $e$$496_trust_device$$1$$, this.$model_$.get("Referrer"), this.$model_$.get("UriPath"));
-                this.$current_login_request_$[$requestId$$43_second_factor$$2$$] = ["login", $broker_id$$16$$, $username$$15$$, $password$$9$$];
+                $requestId$$43_second_factor$$2$$ = this.$conn_$.login($broker_id$$16$$, $username$$16$$, $password$$9$$, $requestId$$43_second_factor$$2$$, this.$model_$.get("Token"), $e$$496_trust_device$$1$$, this.$model_$.get("Referrer"), this.$model_$.get("UriPath"));
+                this.$current_login_request_$[$requestId$$43_second_factor$$2$$] = ["login", $broker_id$$16$$, $username$$16$$, $password$$9$$];
                 $dlg_$$2$$.$dispose$();
               }
             }
@@ -20045,7 +20045,7 @@ $JSCompiler_prototypeAlias$$.$onConnectionOpen_$ = function $$JSCompiler_prototy
   this.$conn_$.$testRequest$();
   this.$conn_$.$requestSecurityList$("ALL");
   this.$conn_$.$requestBrokerList$();
-  var $username$$16$$ = this.$model_$.get("Username"), $password$$10$$ = this.$model_$.get("Password"), $broker_id$$17$$ = this.$model_$.get("SelectedBrokerID"), $requestId$$45_required_level_pro_trader$$ = this.$model_$.get("RequiredLevelProTrader"), $token$$22$$ = this.$model_$.get("Token"), $referrer$$1$$ = this.$model_$.get("Referrer"), $js_version$$ = this.$model_$.get("JSVersion"), $uri_path$$ = this.$model_$.get("UriPath"), $trust_device$$2$$ = this.$model_$.get("TrustDevice"), $has_token$$ = 
+  var $username$$17$$ = this.$model_$.get("Username"), $password$$10$$ = this.$model_$.get("Password"), $broker_id$$17$$ = this.$model_$.get("SelectedBrokerID"), $requestId$$45_required_level_pro_trader$$ = this.$model_$.get("RequiredLevelProTrader"), $token$$22$$ = this.$model_$.get("Token"), $referrer$$1$$ = this.$model_$.get("Referrer"), $js_version$$ = this.$model_$.get("JSVersion"), $uri_path$$ = this.$model_$.get("UriPath"), $trust_device$$2$$ = this.$model_$.get("TrustDevice"), $has_token$$ = 
   this.$model_$.get("HasToken"), $default_country$$ = this.$model_$.get("DefaultCountry"), $default_state$$ = this.$model_$.get("DefaultState"), $default_symbol$$ = this.$model_$.get("DefaultSymbol");
   this.$model_$.clear();
   this.$model_$.set("DefaultCountry", $default_country$$);
@@ -20061,8 +20061,8 @@ $JSCompiler_prototypeAlias$$.$onConnectionOpen_$ = function $$JSCompiler_prototy
   this.$model_$.set("TrustDevice", $trust_device$$2$$);
   this.$model_$.set("UriPath", $uri_path$$);
   this.$model_$.set("HasToken", $has_token$$);
-  null != $username$$16$$ && null != $password$$10$$ && !$goog$string$isEmptyOrWhitespace$$($username$$16$$) && !$goog$string$isEmptyOrWhitespace$$($password$$10$$) && 8 <= $password$$10$$.length && ($requestId$$45_required_level_pro_trader$$ = this.$conn_$.login($broker_id$$17$$, $username$$16$$, $password$$10$$, void 0, this.$model_$.get("TrustDevice"), this.$model_$.get("Referrer"), this.$model_$.get("UriPath")), this.$current_login_request_$[$requestId$$45_required_level_pro_trader$$] = ["login", 
-  $broker_id$$17$$, $username$$16$$, $password$$10$$]);
+  null != $username$$17$$ && null != $password$$10$$ && !$goog$string$isEmptyOrWhitespace$$($username$$17$$) && !$goog$string$isEmptyOrWhitespace$$($password$$10$$) && 8 <= $password$$10$$.length && ($requestId$$45_required_level_pro_trader$$ = this.$conn_$.login($broker_id$$17$$, $username$$17$$, $password$$10$$, void 0, this.$model_$.get("TrustDevice"), this.$model_$.get("Referrer"), this.$model_$.get("UriPath")), this.$current_login_request_$[$requestId$$45_required_level_pro_trader$$] = ["login", 
+  $broker_id$$17$$, $username$$17$$, $password$$10$$]);
 };
 $JSCompiler_prototypeAlias$$.$onTestRequestTimer_$ = function $$JSCompiler_prototypeAlias$$$$onTestRequestTimer_$$() {
   null != this.$conn_$ && this.$conn_$.$connected_$ && this.$conn_$.$testRequest$();
