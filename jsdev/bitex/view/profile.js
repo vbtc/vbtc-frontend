@@ -107,7 +107,7 @@ bitex.view.ProfileView.prototype.onChangePassword_ = function(e) {
     return;
   }
 
-  if ( goog.string.isEmpty(password)  || password.length < 8) {
+  if ( goog.string.isEmpty(password) || password.length < 8) {
     /**
      * @desc Validation error on SignUp view
      */
