@@ -12,7 +12,7 @@
 
 # Default settings if not provided uses mainnet and the gh-pages branch of the current repo
 CONFIG_FILE=${CONFIG_FILE:="_config.vbtc.mainnet.yml"}
-BUILD_FOLDER=${BUILD_FOLDER:="_site_mainnet"}
+BUILD_FOLDER=${BUILD_FOLDER:="_site_signet"}
 PUSH_REPO=${PUSH_REPO:=$(git config remote.origin.url)}
 PUSH_BRANCH=${PUSH_BRANCH:="gp-pages"}
 
