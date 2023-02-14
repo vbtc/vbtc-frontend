@@ -6,7 +6,7 @@ goog.require('bitex.ui.MarketViewTable.EventType');
 goog.require('bitex.util');
 
 goog.require('bitex.templates');
-goog.require('bitex.util')
+goog.require('bitex.util');
 goog.require('bitex.ui.SimpleChart');
 
 /**
@@ -177,7 +177,7 @@ bitex.view.MarketView.prototype.onTradeHistoryTableRequestData_ = function(e) {
   var page = e.options['Page'];
   var limit = e.options['Limit'];
   var filter = e.options['Filter'];
-  
+
   var conn = this.getApplication().getBitexConnection();
   conn.requestTradeHistory(this.market_data_subscription_id_, page, limit, undefined, filter );
 };
