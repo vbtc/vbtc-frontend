@@ -221,7 +221,7 @@ bitex.ui.DepositList = function( crypto_currencies_def, opt_broker_mode, opt_sho
 
             if (rowSet['Currency'] == 'BTC') {
 
-              var blockchain_address = 'https://blockchain.info/address/'  + rowSet['Data']['InputAddress'];
+              var blockchain_address = 'https://mempool.space/address/'  + rowSet['Data']['InputAddress'];
               if (goog.isDefAndNotNull(rowSet['Data']['InputAddress'])){
                 switch (rowSet['Data']['InputAddress'][0]) {
                   case 'm':
@@ -229,7 +229,7 @@ bitex.ui.DepositList = function( crypto_currencies_def, opt_broker_mode, opt_sho
                   case '2':
                   case '9':
                   case 'c':
-                    blockchain_address = 'https://live.blockcypher.com/btc-testnet/address/' + rowSet['Data']['InputAddress'];
+                    blockchain_address = 'https://mempool.space/testnet/address/' + rowSet['Data']['InputAddress'];
                 }
               }
 

@@ -111,7 +111,7 @@
           <td>{{$data['value']}}</td>
         </tr>
       {/foreach}
-      {if $depositReceiptList} 
+      {if $depositReceiptList}
         <tr>
           <td>Recibo:</td>
           <td>
@@ -383,9 +383,9 @@
                   {if $crypto_currencies['CurrencyCode'] == 'BTC' }
                     {switch $wallets['address'][0]}
                       {case 'm','n','2','9','c'}
-                        <a href="https://live.blockcypher.com/btc-testnet/address/{$wallets['address']}/" target="_blank">{$wallets['address'] }</a>
+                        <a href="https://mempool.space/testnet/address/{$wallets['address']}/" target="_blank">{$wallets['address'] }</a>
                       {default}
-                        <a href="https://blockchain.info/address/{$wallets['address']}" target="_blank">{$wallets['address'] }</a>
+                        <a href="https://mempool.space/address/{$wallets['address']}" target="_blank">{$wallets['address'] }</a>
                     {/switch}
                   {else}
                     {$wallets['address'] }
@@ -454,8 +454,8 @@
               {msg desc="Google Authenticator code dialog label"}Google Authenticator code:{/msg}
         </label>
         <input name="token"
-               autocapitalize="off" 
-               autocorrect="off" 
+               autocapitalize="off"
+               autocorrect="off"
                autocomplete="off"
                autofocus
                id="id_input_google_authenticator"
@@ -502,7 +502,7 @@
       <br/>
        {msg desc="Authorization link dialog block warning during login"}
          IMPORTANT: The authorization link we sent to your email is only and
-only valid if accessed from this computer. Your account will be automatically 
+only valid if accessed from this computer. Your account will be automatically
 blocked if you try to access the authorization link from another computer.
        {/msg}
     </p>
@@ -542,8 +542,8 @@ blocked if you try to access the authorization link from another computer.
         </label>
         <input name="token"
                id="{$id}_token"
-               autocapitalize="off" 
-               autocorrect="off" 
+               autocapitalize="off"
+               autocorrect="off"
                autocomplete="off"
                autofocus
                data-uniform-validators="required"
@@ -643,8 +643,8 @@ blocked if you try to access the authorization link from another computer.
               {msg desc="Google Authenticator code dialog label"}Google Authenticator code:{/msg}
         </label>
         <input name="token"
-               autocapitalize="off" 
-               autocorrect="off" 
+               autocapitalize="off"
+               autocorrect="off"
                autocomplete="off"
                id="id_input_google_authenticator"
                data-uniform-validators="required"

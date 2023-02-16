@@ -31,3 +31,6 @@ vendor
 # Python
 */__pycache__
 *.pyc
+
+# Built javascript files:
+/assets/js/bitex*.js
