@@ -57,7 +57,7 @@
 	<translation id="6871276581374949223" key="MSG_ACCOUNT_ACTIVITY_TABLE_COLUMN_QTY" source="bitex/ui/account_activity.js" desc="Column Qty of the Account Activity">Qty</translation>
 	<translation id="1216715082058092678" key="MSG_ACCOUNT_ACTIVITY_TABLE_COLUMN_AVG_PX" source="bitex/ui/account_activity.js" desc="Column Average Price of the Account Activity">Average Price</translation>
 	<translation id="4798155901587681769" key="MSG_ACCOUNT_ACTIVITY_TABLE_COLUMN_VOLUME" source="bitex/ui/account_activity.js" desc="Column Volume of the Account Activity">Total</translation>
-	<translation id="5496301359111680367" key="MSG_1X2TPBHY1EURU" source="bitex/templates/templates.soy.js" desc="Algorithm trading request permmissions dialog content">This algorithm is requesting your permission to:</translation>
+	<translation id="5496301359111680367" key="MSG_1X2TPBHY1EURU" source="bitex/templates/templates.soy.js" desc="Algorithm trading request permissions dialog content">This algorithm is requesting your permission to:</translation>
 	<translation id="6530343992702578628" key="MSG_1ARB1GYVJ1DLV" source="bitex/templates/templates.soy.js" desc="Permission in Algo Permissions Dialog"> Show notifications</translation>
 	<translation id="7733437359068728634" key="MSG_1KVAZDW3C356W" source="bitex/templates/templates.soy.js" desc="Permission in Algo Permissions Dialog"> See your balances</translation>
 	<translation id="5509998647382524703" key="MSG_1T51E45MBUKQB" source="bitex/templates/templates.soy.js" desc="Permission in Algo Permissions Dialog"> Listen to the execution reports from your orders</translation>

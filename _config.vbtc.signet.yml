@@ -1,0 +1,4 @@
+# Site setting overrides for signet
+url: "https://signet.vbtc.exchange"
+blinktrade_backend_api: "api-signet.vbtc.exchange"
+destination: ./_site_signet

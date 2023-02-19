@@ -74,15 +74,15 @@ bitex.view.ProfileView.prototype.enterView = function() {
   goog.style.showElement(btnEnableEl, !enabled);
   goog.style.showElement(btnDisableEl, enabled);
 
-  var change_password_place_holder_compoenent = new goog.ui.Component();
-  change_password_place_holder_compoenent.createDom = function(e){
+  var change_password_place_holder_component = new goog.ui.Component();
+  change_password_place_holder_component.createDom = function(e){
     this.setElementInternal(
         goog.soy.renderAsElement( bitex.view.ProfileView.templates.ProfileViewChangePasswordPlaceHolder ) );
   };
-  this.addChild(change_password_place_holder_compoenent, true);
+  this.addChild(change_password_place_holder_component, true);
 
   this.change_password_ = new bitex.ui.ChangePassword();
-  change_password_place_holder_compoenent.addChild(this.change_password_, true);
+  change_password_place_holder_component.addChild(this.change_password_, true);
   this.change_password_.enterDocument();
 
   handler.listen(this, bitex.ui.ChangePassword.EventType.CHANGE_PASSWORD, this.onChangePassword_);
@@ -107,7 +107,7 @@ bitex.view.ProfileView.prototype.onChangePassword_ = function(e) {
     return;
   }
 
-  if ( goog.string.isEmpty(password)  || password.length < 8) {
+  if ( goog.string.isEmpty(password) || password.length < 8) {
     /**
      * @desc Validation error on SignUp view
      */

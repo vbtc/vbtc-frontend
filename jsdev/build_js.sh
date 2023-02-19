@@ -4,7 +4,7 @@
 # set defaults if they're not provided
 #############################################
 LANGUAGE=${LANGUAGE:=en_US}
-THEME=${THEME:=default}
+THEME=${THEME:=coinage}
 
 # BlinkTrade Application
 python2 ./closure-library/closure/bin/build/closurebuilder.py  \

@@ -5,7 +5,7 @@
 # Usage examples:
 #
 # Specify parameters:
-#   BUILD_FOLDER=_site_mainnet PUSH_REPO=git@github.com:vbtc/vbtc.github.io.git PUSH_REPO=master ./build_site.sh
+#   CONFIG_FILE=_config.vbtc.mainnet.yml BUILD_FOLDER=_site_mainnet PUSH_REPO=git@github.com:vbtc/vbtc.github.io.git PUSH_BRANCH=master ./build_site.sh
 #
 # Use defaults:
 #   ./build_site.sh
