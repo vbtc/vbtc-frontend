@@ -1250,6 +1250,7 @@ bitex.app.BlinkTrade.prototype.onUserChangePassword_ = function(e) {
 
 
   this.getBitexConnection().changePassword(this.getModel().get('SelectedBrokerID'),
+                                           this.getModel().get('Username'),
                                            password,
                                            new_password);
 };
@@ -1294,6 +1295,7 @@ bitex.app.BlinkTrade.prototype.onChangePasswordResponse_ = function(e) {
           var new_password = this.profileView_.getNewPassword();
 
           this.getBitexConnection().changePassword(this.getModel().get('SelectedBrokerID'),
+                                                   this.getModel().get('Username'),
                                                    password,
                                                    new_password,
                                                    second_factor );
