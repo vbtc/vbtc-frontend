@@ -2213,7 +2213,7 @@ bitex.api.BitEx.prototype.requestCreateCard = function(label, data, instructions
 
 /**
  * Disable a card
- * @param {string} cardId 
+ * @param {string} cardId
  * @param {number=} opt_requestId
  * @returns {number}
  */
