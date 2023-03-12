@@ -3,21 +3,29 @@
 # Usage examples:
 #
 # Specify parameters:
-#   BUILD_FOLDER=_site_mainnet COMMIT_MESSAGE="My commit" ./deploy_site.sh
+#   BUILD_FOLDER=_site_mainnet ./deploy_site.sh
 #
 # Use defaults:
 #   ./deploy_site.sh
 
-# Default settings if not provided deploys mainnet to the gh-pages branch of the current repo
-BUILD_FOLDER=${BUILD_FOLDER:="_site_mainnet"}
+# Default settings if not provided deploys signet
+BUILD_FOLDER=${BUILD_FOLDER:="_site_signet"}
+DOMAIN=${DOMAIN:="signet.vbtc.exchange"}
 
-# Set commit message to 'Build <DATE> <TIME> UTC' unless provided
-COMMIT_MESSAGE=${COMMIT_MESSAGE:=$(date +"Build %Y-%m-%d %H.%M.%S UTC" -u)}
+HOST="root@$DOMAIN"
+CONN_INFO_FILE=.conn_info
 
-# Commit and push
-cd $BUILD_FOLDER || exit
-git add .
-git commit -m "$COMMIT_MESSAGE"
-git push
+if [ -e "$CONN_INFO_FILE" ]
+then
+  read -r SSH_CONN < $CONN_INFO_FILE
+else
+  SSH_CONN="ssh -o ControlPath=~/.ssh/master-$$ -o ControlMaster=auto -o ControlPersist=3600"
+  echo "$SSH_CONN" > $CONN_INFO_FILE
+fi
 
-echo "Done pushing to GitHub Pages. If using 1 repo, remember to checkout/pull the gh-pages branch in the original repo."
+echo "Logging in to $DOMAIN..."
+# Just a wake-up ssh command to get the output in the right order...
+$SSH_CONN $HOST "echo -e ''"
+
+echo "Syncing files..."
+rsync -a "./$BUILD_FOLDER/*" --exclude=".*" --human-readable --progress --compress-choice=zstd --compress-level=9 -e "$SSH_CONN" $HOST:/var/www/html
