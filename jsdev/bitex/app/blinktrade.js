@@ -4194,41 +4194,6 @@ bitex.app.BlinkTrade.prototype.onUserLoginOk_ = function(e) {
     this.getModel().set('DisplayName', verification_name['first'] + ' ' + verification_name['last']);
   }
 
-  try {
-    if (goog.isDefAndNotNull($zopim) && goog.isDefAndNotNull($zopim.livechat)) {
-      var tags = 'VerificationLevel:';
-      switch(profile['Verified']) {
-        case 0:
-          tags += 'no';
-          break;
-        case 1:
-          tags += 'pending';
-          break;
-        case 2:
-          tags += 'processing';
-          break;
-        default:
-          tags += profile['Verified'] - 2;
-          break;
-      }
-      tags += ', TwoFactorEnabled:' + profile['TwoFactorEnabled'];
-      tags += ', UserID:' + profile['ID'];
-      tags += ', NeedWithdrawEmail:' + profile['NeedWithdrawEmail'];
-      tags += ', TransactionFeeBuy:' + profile['TransactionFeeBuy'];
-      tags += ', TransactionFeeSell:' + profile['TransactionFeeSell'];
-      tags += ', TakerTransactionFeeBuy:' + profile['TakerTransactionFeeBuy'];
-      tags += ', TakerTransactionFeeSell:' + profile['TakerTransactionFeeSell'];
-
-      if (  this.getModel().get('DisplayName') != this.getModel().get('Username') )  {
-        tags += ', Username:' + this.getModel().get('Username');
-      }
-
-      $zopim.livechat.setName( this.getModel().get('DisplayName') );
-      $zopim.livechat.setEmail(profile['Email']);
-      $zopim.livechat.addTags(tags);
-    }
-  } catch (e) {}
-
   var is_pro_trader = false;
   var required_level_to_be_a_pro_trader = this.getModel().get('RequiredLevelProTrader') || 0;
   if (msg['IsMSB'] || profile['IsMarketMaker'] || profile['Verified'] >= required_level_to_be_a_pro_trader  ){

@@ -159,9 +159,6 @@ a:hover:not(.ls-btn),a:focus,a{
         padding: 10px;
     }
 
-    .zopim{
-        display:none;
-    }
     .ls-sidebar{
         -moz-transform: translate(-100%, 0);
         -ms-transform: translate(-100%, 0);
@@ -677,11 +674,6 @@ label.control-label.withdraw-method-label {
 
 .ws-not-connected .bitex-display-if-ws-connected {
   display: none;
-}
-
-.zopim {
-    right: 10px;
-    left: initial!important;
 }
 
 .broker-wallet {

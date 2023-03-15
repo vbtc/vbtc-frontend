@@ -19,10 +19,6 @@ blinktrade_broker_id: 3
 required_level_to_be_a_pro_trader: 0
 
 blinktrade_backend_api: "localhost"
-google_analytics_id: ""
-zopim_key: "30yZGdJAGm7xnjR1MsGVUZsEdmEIsSio"
-
-embedded_chat_id : 4296  # embedded-chat.com
 
 
 # Build settings
