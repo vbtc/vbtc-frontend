@@ -14,7 +14,7 @@ twitter_widget_name: "vbtc_vietnam"
 twitter_widget_theme: "dark"
 twitter_widget_link_color: "#88DA65"
 
-default_country_code: "VN"
+default_country_code: "EN"
 blinktrade_broker_id: 3
 required_level_to_be_a_pro_trader: 0
 
@@ -50,7 +50,7 @@ remittance_box: "{
 
 symbol: "BTCVND"
 
-languages: ["vi", "en_US", "es", "pt_BR", "ro", "zn_CN"]
+languages: ["en_US", "vi", "es", "pt_BR", "ro", "zn_CN"]
 
 video : 'true'
 navbar: 'navbar-inverse'
