@@ -28,4 +28,4 @@ echo "Logging in to $DOMAIN..."
 $SSH_CONN $HOST "echo -e ''"
 
 echo "Syncing files..."
-rsync -a "./$BUILD_FOLDER/*" --exclude=".*" --human-readable --progress --compress-choice=zstd --compress-level=9 -e "$SSH_CONN" $HOST:/var/www/html
+rsync -a ./$BUILD_FOLDER/* --exclude=".*" --human-readable --progress --compress-choice=zstd --compress-level=9 -e "$SSH_CONN" $HOST:/var/www/html
