@@ -5589,7 +5589,6 @@ textarea.span1,
 .fuelux .media-body {
   overflow: hidden;
   *overflow: visible;
-  zoom: 1;
 }
 
 .fuelux .media,
