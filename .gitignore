@@ -34,3 +34,5 @@ vendor
 
 # Built javascript files:
 /assets/js/bitex*.js
+
+/.conn_info
