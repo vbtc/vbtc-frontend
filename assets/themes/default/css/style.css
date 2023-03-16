@@ -217,7 +217,7 @@ ul.parsley-error-list li {
 
 .order-book-drag td {
   border-top-color: red;
-} 
+}
 
 
 .order-book-row {
@@ -229,7 +229,7 @@ ul.parsley-error-list li {
 }
 .order-book-qty,
 .order-book-price {
- cursor: crosshair; 
+ cursor: crosshair;
 }
 
 .order-book-movable td.order-book-price,
@@ -283,7 +283,7 @@ ul.parsley-error-list li {
 }
 
 @media screen and (min-width: 640px) and (max-width: 1024px) {
-  #login { display: block; } 
+  #login { display: block; }
 }
 
 .btn-cancel-order {
@@ -612,7 +612,7 @@ keyframes notification {
   -webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
   -khtml-user-select: none;
-  -moz-user-select: -moz-none;
+  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }

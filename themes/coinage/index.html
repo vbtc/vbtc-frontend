@@ -12,14 +12,14 @@ load_application:       True
       <!-- .home -->
       <div class="home">
         <!-- .home-banner -->
-        <div class="home-banner" style="background-image: url({{ site.url }}{{ site.baseurl }}/assets/themes/coinage/img/home-banner-{{site.exchange}}.jpg)">
+        <div class="home-banner" style="background-image: url({{ site.url }}{{ site.baseurl }}/assets/themes/coinage/img/home-banner.jpg)">
             <!-- .home-banner__table -->
             <div class="home-banner__table">
                 {% if site.video == 'true' %}
                 <div class="home-overlay"></div>
                 <div class="home-media">
-                    <video autoplay loop muted="true" poster="{{ site.url }}{{ site.baseurl }}/assets/themes/coinage/img/{{ site.exchange }}-video-fallback.jpg">
-                        <source src="{{ site.url }}{{ site.baseurl }}/assets/themes/coinage/img/{{ site.exchange }}_video.webm"></source>
+                    <video autoplay loop muted="true" poster="{{ site.url }}{{ site.baseurl }}/assets/themes/coinage/img/video-fallback.jpg">
+                        <source src="{{ site.url }}{{ site.baseurl }}/assets/themes/coinage/img/video.webm"></source>
                     </video>
                 </div>
                 {% endif %}
@@ -1181,7 +1181,7 @@ load_application:       True
                     <div class="col-xs-4">
                       <a href="{{ site.url}}{{ site.baseurl}}/themes/coinage/">
                           <div class="thumb-theme" style="margin:auto;float:none">
-                              <img src="{{ site.url}}{{ site.baseurl }}/assets/exchange_logos/thumb-themes/{{ site.exchange }}-coinage-thumb.jpg" alt="Coinage Theme">
+                              <img src="{{ site.url}}{{ site.baseurl }}/assets/exchange_logos/thumb-themes/coinage-thumb.jpg" alt="Coinage Theme">
                               <h3>Coinage Theme</h3>
                           </div>
                       </a>
@@ -1189,7 +1189,7 @@ load_application:       True
                     <div class="col-xs-4">
                         <a href="{{ site.url}}{{ site.baseurl}}/themes/default/">
                             <div class="thumb-theme">
-                                <img src="{{ site.url}}{{ site.baseurl }}/assets/exchange_logos/thumb-themes/{{ site.exchange }}-default-thumb.jpg" alt="Default Theme">
+                                <img src="{{ site.url}}{{ site.baseurl }}/assets/exchange_logos/thumb-themes/default-thumb.jpg" alt="Default Theme">
                                 <h3 class="ls-title-4">Simple Theme</h3>
                             </div>
                         </a>

@@ -20,11 +20,11 @@
 
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{% if page.url != '/index.html' %}{{ page.url }}{% endif %}">
-  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/exchange_logos/{{ site.exchange_logo }}_social_network_share.png">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/exchange_logos/social_network_share.png">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/exchange_logos/{{ site.exchange_logo }}_favicon.ico">
-  <link rel="icon" href="{{ site.baseurl }}/assets/exchange_logos/{{ site.exchange_logo }}_favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/exchange_logos/favicon.ico">
+  <link rel="icon" href="{{ site.baseurl }}/assets/exchange_logos/favicon.ico" type="image/x-icon">
 
   <!-- Feed -->
   <link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.baseurl }}/feed.xml">
@@ -58,11 +58,11 @@
         <!-- .logo -->
         {% if page.load_application %}
         <a href="#" class="logo brand-face" data-switch-view="offerbook" style="padding-top: 0px;">
-          <img data-switch-view="offerbook" class="logo__img" src="{{ site.baseurl }}/assets/exchange_logos/{{ site.exchange_logo }}_toolbar_logo.png" style="height:30px;margin-top:-10px;margin-bottom:-10px;">
+          <img data-switch-view="offerbook" class="logo__img" src="{{ site.baseurl }}/assets/exchange_logos/toolbar_logo_{{ site.btc_chain }}.png" style="height:30px;margin-top:-10px;margin-bottom:-10px;">
         </a>
         {% else %}
           <a class="logo brand-face" href="{{ site.baseurl }}/" title="">
-            <img src="{{ site.baseurl }}/assets/exchange_logos/{{ site.exchange_logo }}_toolbar_logo.png" alt="" class="logo__img" style="height:30px;margin-top:-10px;margin-bottom:-10px;" />
+            <img src="{{ site.baseurl }}/assets/exchange_logos/toolbar_logo_{{ site.btc_chain }}.png" alt="" class="logo__img" style="height:30px;margin-top:-10px;margin-bottom:-10px;" />
           </a>
         {% endif %}
         <!-- /.logo -->
