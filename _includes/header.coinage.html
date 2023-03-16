@@ -179,11 +179,20 @@
           </button>
 
           {% if page.load_application %}
+            {% if site.btc_chain == "signet" %}
           <a class="navbar-brand" href="#" data-switch-view="trading">
               <img data-switch-view="trading" class="logo__img"
-              src="{{ site.url }}{{ site.baseurl }}/assets/exchange_logos/{% if site.exchange_toolbar_logo %}{{ site.exchange_toolbar_logo }}{% else %}{{ site.exchange_logo }}{% endif %}_toolbar_logo.png"
-              style=" height: 30px; margin-top: -5px; ">
+              src="{{ site.url }}{{ site.baseurl }}/assets/exchange_logos/{% if site.exchange_toolbar_logo %}{{ site.exchange_toolbar_logo }}{% else %}{{ site.exchange_logo }}{% endif %}_toolbar_logo_signet.png"
+              style=" height: 30px; margin-top: -5px;">
           </a>
+            {% else %}
+          <a class="navbar-brand" href="#" data-switch-view="trading">
+            <img data-switch-view="trading" class="logo__img"
+                 src="{{ site.url }}{{ site.baseurl }}/assets/exchange_logos/{% if site.exchange_toolbar_logo %}{{ site.exchange_toolbar_logo }}{% else %}{{ site.exchange_logo }}{% endif %}_toolbar_logo.png"
+                 style=" height: 30px; margin-top: -5px;">
+          </a>
+            {% endif %}
+          
           {% endif %}
         </div>
 

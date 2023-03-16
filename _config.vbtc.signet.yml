@@ -2,3 +2,4 @@
 url: "https://signet.vbtc.exchange"
 blinktrade_backend_api: "api-signet.vbtc.exchange"
 destination: ./_site_signet
+btc_chain: signet

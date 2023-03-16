@@ -2,3 +2,4 @@
 url: "https://vbtc.exchange"
 blinktrade_backend_api: "api.vbtc.exchange"
 destination: ./_site_mainnet
+btc_chain: mainnet
