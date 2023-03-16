@@ -382,8 +382,8 @@
                   <td class="broker-wallet" style="word-wrap: break-word;">
                   {if $crypto_currencies['CurrencyCode'] == 'BTC' }
                     {switch $wallets['address'][0]}
-                      {case 'm','n','2','9','c'}
-                        <a href="https://mempool.space/testnet/address/{$wallets['address']}/" target="_blank">{$wallets['address'] }</a>
+                      {case 'm','n','2','9','c','t'}
+                        <a href="https://mempool.space/signet/address/{$wallets['address']}/" target="_blank">{$wallets['address'] }</a>
                       {default}
                         <a href="https://mempool.space/address/{$wallets['address']}" target="_blank">{$wallets['address'] }</a>
                     {/switch}

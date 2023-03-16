@@ -229,7 +229,8 @@ bitex.ui.DepositList = function( crypto_currencies_def, opt_broker_mode, opt_sho
                   case '2':
                   case '9':
                   case 'c':
-                    blockchain_address = 'https://mempool.space/testnet/address/' + rowSet['Data']['InputAddress'];
+                  case 't':
+                    blockchain_address = 'https://mempool.space/signet/address/' + rowSet['Data']['InputAddress'];
                 }
               }
 
