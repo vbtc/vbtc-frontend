@@ -1,24 +1,24 @@
-@import   'tags'
-        , 'head'
-        , 'logo'
-        , 'main'
-        , 'home'
-        , 'input'
-        , 'select'
-        , 'btn'
-        , 'btn-group'
-        , 'modal'
-        , 'page'
-        , 'table'
-        , 'profile'
-        , 'alert'
-        , 'forgot-password'
-        , 'login'
-        , 'register'
-        , 'broker'
-        , 'market'
-        , 'sidebar'
-        , 'box'
-        , 'trade'
-        , 'foot'
-        , 'wrapper';
+@use 'tags';
+@use 'head';
+@use 'logo';
+@use 'main';
+@use 'home';
+@use 'input';
+@use 'select';
+@use 'btn';
+@use 'btn-group';
+@use 'modal';
+@use 'page';
+@use 'table';
+@use 'profile';
+@use 'alert';
+@use 'forgot-password';
+@use 'login';
+@use 'register';
+@use 'broker';
+@use 'market';
+@use 'sidebar';
+@use 'box';
+@use 'trade';
+@use 'foot';
+@use 'wrapper';

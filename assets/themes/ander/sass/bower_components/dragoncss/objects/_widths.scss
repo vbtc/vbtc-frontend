@@ -1,3 +1,5 @@
+@use "sass:list";
+@use "sass:string";
 /*
 * _widths.scss
 *
@@ -60,7 +62,7 @@ $breakpoint-has-pull:   $breakpoint-has-widths;
  * You do not need to edit anything from this line onward; csswizardry-grids is
  * good to go. Happy griddin’!
  */
-$class-type:            unquote(".");
+$class-type:            string.unquote(".");
 
 /*------------------------------------*\
     $MIXINS
@@ -283,8 +285,8 @@ $class-type:            unquote(".");
     $breakpoint-found: false;
 
     @each $breakpoint in $breakpoints {
-        $name: nth($breakpoint, 1);
-        $declaration: nth($breakpoint, 2);
+        $name: list.nth($breakpoint, 1);
+        $declaration: list.nth($breakpoint, 2);
 
         @if $media-query == $name and $declaration {
             $breakpoint-found: true;

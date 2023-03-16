@@ -1,11 +1,12 @@
+@use "sass:color";
 .box {
 }
 
 .box__head {
-    background-color:lighten(#222, 30%);
+    background-color:color.adjust(#222, $lightness: 30%);
     color:#fff;
     font-weight:700;
-    padding:($half-spacing / 2) $half-spacing;
+    padding:($half-spacing * 0.5) $half-spacing;
 }
 
 .box__body {
@@ -28,12 +29,12 @@
         border-width:0 1px 1px;
         border-color:#ccc;
         border-style:solid;
-        padding:($half-spacing / 2);
+        padding:($half-spacing * 0.5);
     }
 
     .table {
         th, td {
-            padding:($half-spacing / 2);
+            padding:($half-spacing * 0.5);
         }
     }
 }

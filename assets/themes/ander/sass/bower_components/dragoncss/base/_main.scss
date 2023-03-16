@@ -2,10 +2,13 @@
 * _main.scss
 **/
 
+@use "sass:list";
+@use "sass:math";
+
 html{
     background:#eee;
     color:#333;
-    font:#{($font-size/16px)*1em}/#{$line-height / $font-size} $sans-serif;
+    font:list.slash(math.div($font-size, 16px)*1em, math.div($line-height, $font-size)) $sans-serif;
     overflow-y:scroll;
     min-height:100%;
 }

@@ -8,7 +8,7 @@
     border:1px solid #ccc;
     line-height:1.35;
     outline:none;
-    padding:($half-spacing / 2) $half-spacing;
+    padding:($half-spacing * 0.5) $half-spacing;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 
     &:hover {

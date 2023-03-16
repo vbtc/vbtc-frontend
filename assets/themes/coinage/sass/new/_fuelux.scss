@@ -1,3 +1,4 @@
+@use "sass:color";
 .fuelux {
   border-radius: 3px;
   overflow: hidden;
@@ -74,7 +75,7 @@
     border-left: 6px solid $brand-success;
   }
   .order-manager-partial{
-    border-left: 6px solid lighten($brand-success, 40%);
+    border-left: 6px solid color.adjust($brand-success, $lightness: 40%);
   }
 
   .order-manager-cancel{

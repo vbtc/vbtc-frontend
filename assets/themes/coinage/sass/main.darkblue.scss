@@ -1,7 +1,5 @@
----
----
 
 // Core variables and mixins
-@import "bootstrap/mixins";
-@import "variables.darkblue";
-@import 'coinage';
+@use "bootstrap/mixins";
+@use "variables.darkblue";
+@use 'coinage';

@@ -64,7 +64,7 @@
 
 .sidebar-box__head {
     > :last-child {
-        margin-bottom:($half-spacing / 2);
+        margin-bottom:($half-spacing * 0.5);
     }
 }
 

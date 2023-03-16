@@ -1,10 +1,11 @@
+@use "sass:color";
 //
 // Jumbotron
 // --------------------------------------------------
 
 
 .jumbotron {
-  padding: $jumbotron-padding ($jumbotron-padding / 2);
+  padding: $jumbotron-padding ($jumbotron-padding * 0.5);
   margin-bottom: $jumbotron-padding;
   color: $jumbotron-color;
   background-color: $jumbotron-bg;
@@ -15,13 +16,13 @@
   }
 
   p {
-    margin-bottom: ($jumbotron-padding / 2);
+    margin-bottom: ($jumbotron-padding * 0.5);
     font-size: $jumbotron-font-size;
     font-weight: 200;
   }
 
   > hr {
-    border-top-color: darken($jumbotron-bg, 10%);
+    border-top-color: color.adjust($jumbotron-bg, $lightness: -10%);
   }
 
   .container &,

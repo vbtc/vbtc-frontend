@@ -1,6 +1,7 @@
+@use "sass:color";
 .head {
     @include box-shadow(0 1px 6px rgba(#000, .3));
-    @include background-image(linear-gradient(lighten(#222, 5%), #222));
+    @include background-image(linear-gradient(color.adjust(#222, $lightness: 5%), #222));
 
     color:#fff;
     font-size:14px;

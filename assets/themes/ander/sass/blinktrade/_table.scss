@@ -1,8 +1,11 @@
+@use "sass:color";
 /*
 * _table.scss
 **/
 
-$color: lighten(gray, 30%);
+@use "sass:math";
+
+$color: color.adjust(gray, $lightness: 30%);
 
 .table {
     display:table;
@@ -17,7 +20,7 @@ $color: lighten(gray, 30%);
         border:none;
         display:table-cell;
         vertical-align:middle;
-        padding:($half-spacing / 3);
+        padding:math.div($half-spacing, 3);
     }
 }
 
@@ -39,7 +42,7 @@ $color: lighten(gray, 30%);
     tr {
         &:nth-child(odd) {
             td {
-                background-color:lighten($color, 15%);
+                background-color:color.adjust($color, $lightness: 15%);
             }
         }
     }

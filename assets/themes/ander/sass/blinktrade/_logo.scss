@@ -14,7 +14,7 @@
     }
 
     @include media-query(desk) {
-        padding:($half-spacing / 2) 0;
+        padding:($half-spacing * 0.5) 0;
     }
 }
 

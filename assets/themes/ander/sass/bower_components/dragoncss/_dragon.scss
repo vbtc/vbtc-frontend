@@ -3,18 +3,12 @@
 **/
 
         // default
-@import   'defaults'
-
-        // generics
-        , 'generic/normalize'
-        , 'generic/box-sizing'
-        , 'generic/clearfix'
-        , 'generic/reset'
-
-        // objects
-        , 'objects/layout'
-        , 'objects/widths'
-
-        // base
-        , 'base/main'
-        , 'base/typography';
+@use 'defaults';
+@use 'generic/normalize';
+@use 'generic/box-sizing';
+@use 'generic/clearfix';
+@use 'generic/reset';
+@use 'objects/layout';
+@use 'objects/widths';
+@use 'base/main';
+@use 'base/typography';

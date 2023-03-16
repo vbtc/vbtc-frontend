@@ -3,9 +3,11 @@
 **/
 
 // mixin font-size
+@use "sass:math";
+
 @mixin font-size($size) {
     font-size:$size;
-    line-height:ceil($size / $line-height) * ($line-height / $size);
+    line-height:math.ceil(math.div($size, $line-height)) * math.div($line-height, $size);
 }
 
 
